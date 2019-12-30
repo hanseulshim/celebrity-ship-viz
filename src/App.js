@@ -1,11 +1,18 @@
 import React from 'react'
-import Playground from './Playground'
+import { ThemeProvider } from 'styled-components'
+import theme from './styles/colors'
+import GlobalStyle from './styles/GlobalStyle'
+import 'antd/dist/antd.css'
+// import Playground from './Playground'
+
+import ShipViz from './ship-viz'
 
 const App = () => {
   return (
-    <div>
-      <Playground />
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <ShipViz />
+    </ThemeProvider>
   )
 }
 
