@@ -2,8 +2,39 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider } from '@apollo/react-hooks'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const client = new ApolloClient({
+  uri: 'http://localhost:4000'
+
+  //   request: operation => {
+  //     const sessiontoken = getToken()
+  //     if (sessiontoken) {
+  //       operation.setContext({
+  //         headers: {
+  //           sessiontoken,
+  //         },
+  //       })
+  //     }
+  //   },
+  //   onError: ({ graphQLErrors }) => {
+  //     if (graphQLErrors) {
+  //       graphQLErrors.forEach(({ extensions }) => {
+  //         if (extensions.code === 401) {
+  //           removeUser()
+  //         }
+  //       })
+  //     }
+  //   },
+})
+
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('root')
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

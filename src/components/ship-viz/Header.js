@@ -13,7 +13,7 @@ const Container = styled.div`
 `
 
 const Logo = styled.img`
-  width: 100px;
+  width: 150px;
 `
 
 const Header = () => {

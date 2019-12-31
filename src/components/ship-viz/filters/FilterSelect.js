@@ -12,6 +12,7 @@ const Container = styled.div`
 const StyledSelect = styled(Select)`
   .ant-select-selection {
     background-color: ${props => props.theme.galaxyBlue};
+    border: ${props => props.theme.galaxyBlue};
   }
 
   .ant-select-arrow {
@@ -35,8 +36,8 @@ const FilterSelect = ({ label, options }) => {
       <StyledSelect style={{ width: 120 }}>
         {options.map((option, i) => {
           return (
-            <Option value={option} key={'option' + i}>
-              {option}
+            <Option value={option.id} key={'option' + i}>
+              {option.name}
             </Option>
           )
         })}
