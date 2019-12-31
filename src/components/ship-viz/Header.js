@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import logo from '../../assets/logo.png'
 
 const Container = styled.div`
   display: flex;
@@ -11,8 +12,16 @@ const Container = styled.div`
   padding: 1em 0em;
 `
 
+const Logo = styled.img`
+  width: 100px;
+`
+
 const Header = () => {
-  return <Container>Header</Container>
+  return (
+    <Container>
+      <Logo src={logo} />
+    </Container>
+  )
 }
 
 export default Header

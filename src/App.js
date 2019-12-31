@@ -5,7 +5,7 @@ import GlobalStyle from './styles/GlobalStyle'
 import 'antd/dist/antd.css'
 // import Playground from './Playground'
 
-import ShipViz from './ship-viz'
+import ShipViz from './components/ship-viz'
 
 const App = () => {
   return (
