@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import Plot from 'react-plotly.js'
-
-const RED = 'red'
-const YELLOW = 'yellow'
-const GREEN = 'green'
+import colors from 'styles/colors'
 
 const hoverInfo = {
   hoverlabel: {
-    bgcolor: 'rgba(2, 19, 43, 0.7)',
-    bordercolor: '#4a627f',
+    bgcolor: colors.darkSlateBlue,
+    bordercolor: colors.lightBlueGrey,
     font: {
       color: '#FFF'
     }
   },
   hovertemplate:
-    '   Room %{customdata.roomNumber}   <br />   BOOKED   <br />   Max %{customdata.maxOccupancy}   <br />   Booked %{customdata.booked}   <br /><br /><extra></extra>'
+    '   Room %{customdata.roomNumber}   <br />   %{customdata.status}   <br />   Max %{customdata.maxOccupancy}   <br />   Booked %{customdata.booked}   <br /><br /><extra></extra>'
 }
 
 const data = [
@@ -146,28 +143,28 @@ const data = [
 
 const layout = {
   scene: {
-    // xaxis: {
-    //   title: '',
-    //   showgrid: false,
-    //   zeroline: false,
-    //   showticklabels: false,
-    //   showspikes: false
-    // },
-    // yaxis: {
-    //   title: '',
-    //   showgrid: false,
-    //   zeroline: false,
-    //   showticklabels: false,
-    //   showspikes: false
-    // },
-    // zaxis: {
-    //   title: '',
-    //   showgrid: false,
-    //   zeroline: false,
-    //   showline: false,
-    //   showticklabels: false,
-    //   showspikes: false
-    // },
+    xaxis: {
+      title: '',
+      showgrid: false,
+      zeroline: false,
+      showticklabels: false,
+      showspikes: false
+    },
+    yaxis: {
+      title: '',
+      showgrid: false,
+      zeroline: false,
+      showticklabels: false,
+      showspikes: false
+    },
+    zaxis: {
+      title: '',
+      showgrid: false,
+      zeroline: false,
+      showline: false,
+      showticklabels: false,
+      showspikes: false
+    },
     aspectmode: 'auto'
   },
   paper_bgcolor: 'rgba(0,0,0,0)',
@@ -181,13 +178,13 @@ const getStatus = (maxOccupancy, booked) => {
   }
   if (booked === 0) {
     statusObj.status = 'UNBOOKED'
-    statusObj.color = RED
+    statusObj.color = colors.pinkish
   } else if (maxOccupancy === booked) {
     statusObj.status = 'BOOKED'
-    statusObj.color = GREEN
+    statusObj.color = colors.paleTeal
   } else {
     statusObj.status = 'BOOKED'
-    statusObj.color = YELLOW
+    statusObj.color = colors.sicklyYellow
   }
   return statusObj
 }
@@ -213,6 +210,12 @@ const getPolygonCoordinates = (
   const v3 = x1 + h1
 
   // Set hover info
+  customdata[v0] = {
+    roomNumber,
+    status,
+    maxOccupancy,
+    booked
+  }
   customdata[v1] = {
     roomNumber,
     status,
@@ -270,7 +273,7 @@ const createLevels = (data, level) => {
   })
 
   const hover = level === 0 ? hoverInfo : { hoverinfo: 'none' }
-  const opacity = level === 0 ? 1 : 0.5
+  const opacity = level === 0 ? 1 : 0.3
   return {
     x,
     y,
@@ -301,7 +304,6 @@ const Playground = () => {
       revision={Math.random()}
       useResizeHandler={true}
       style={{ width: '100%', height: '900px' }}
-      // onHover={hover => console.log(hover.points[0].data)}
     />
   )
 }
