@@ -1,0 +1,11 @@
+{
+    "javascript.format.semicolons": "remove",
+    "typescript.format.semicolons": "remove",
+    "prettier.semi": false,
+    "typescript.format.enable": false,
+    "eslint.autoFixOnSave": true,
+    "git.ignoreLimitWarning": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
