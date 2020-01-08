@@ -17,7 +17,7 @@ const Label = styled.span`
 `
 
 const SailDatePicker = () => {
-  function onChange(date, dateString) {
+  const onChange = (date, dateString) => {
     console.log(date, dateString)
   }
 
