@@ -6,9 +6,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.theme.galaxyBlue};
+  background-color: ${props => props.theme.black50};
   padding: 1em;
-  color: ${props => props.theme.ghostWhite};
+  color: ${props => props.theme.white};
   padding: 1em 0em;
 `
 

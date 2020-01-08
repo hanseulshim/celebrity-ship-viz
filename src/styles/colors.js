@@ -1,5 +1,10 @@
 export default {
-  galaxyBlue: 'rgba(3,5,46,.6)',
-  minsk: '#353880',
-  ghostWhite: '#f8f8ff'
+  white: '#ffffff',
+  black: '#000000',
+  black50: 'rgba(0,0,0,.5)',
+  paleTeal: '#80cbc4',
+  darkSlateBlue: '#183157',
+  cerulean: '#0088dd',
+  lightNavy: '#143960',
+  lightBlueGrey: '#bad0db'
 }
