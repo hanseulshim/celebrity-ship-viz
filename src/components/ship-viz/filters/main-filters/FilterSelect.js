@@ -14,7 +14,7 @@ const StyledSelect = styled(Select)`
     border: 1px ${props => props.theme.darkSlateBlue};
   }
   .ant-select-selection {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: ${props => props.theme.black50};
     border: 1px ${props => props.theme.darkSlateBlue};
   }
 
