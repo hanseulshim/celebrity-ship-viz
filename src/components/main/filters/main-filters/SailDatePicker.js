@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'components/main/filters/main-filters/node_modules/react'
+import styled from 'components/main/filters/main-filters/node_modules/styled-components'
 
 // Ant design
-import { DatePicker } from 'antd'
+import { DatePicker } from 'components/main/filters/main-filters/node_modules/antd'
 
 // Styled Components
 
@@ -17,7 +17,7 @@ const Label = styled.span`
 `
 
 const SailDatePicker = () => {
-  function onChange (date, dateString) {
+  function onChange(date, dateString) {
     console.log(date, dateString)
   }
 

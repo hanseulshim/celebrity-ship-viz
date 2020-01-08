@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
+import React from 'components/main/filters/main-filters/node_modules/react'
+import styled from 'components/main/filters/main-filters/node_modules/styled-components'
 import FilterSelect from './FilterSelect'
-import { useQuery } from '@apollo/client'
+import { useQuery } from 'components/main/filters/main-filters/node_modules/@apollo/client'
 import DatasetToggle from './DatasetToggle'
 
 // GQL
-import { GET_PRODUCT_LIST } from 'graphql/queries'
+import { GET_PRODUCT_LIST } from 'components/main/filters/main-filters/node_modules/graphql/queries'
 
 import SailDatePicker from './SailDatePicker'
 

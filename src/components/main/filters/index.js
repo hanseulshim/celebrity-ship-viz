@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
+import React from 'components/main/filters/node_modules/react'
+import styled from 'components/main/filters/node_modules/styled-components'
 import MainFilters from './main-filters'
-import PeerGroupFilters from './peer-group-filters'
+// import PeerGroupFilters from './peer-group-filters'
 
 const Container = styled.div`
   background-color: rgb(0, 0, 0, 0);

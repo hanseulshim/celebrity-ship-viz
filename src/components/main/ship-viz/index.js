@@ -291,7 +291,7 @@ const createLevels = (data, level) => {
   }
 }
 
-const Playground = () => {
+const ShipViz = () => {
   const [plotData, setPlotdata] = useState([])
   useEffect(() => {
     const coords = data.map(createLevels)
@@ -309,4 +309,4 @@ const Playground = () => {
   )
 }
 
-export default Playground
+export default ShipViz
