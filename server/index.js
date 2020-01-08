@@ -1,18 +1,6 @@
-// import { resolvers } from './resolvers'
-// import { typeDefs } from './typeDefs'
 const { ApolloServer, gql } = require('apollo-server')
 
 const typeDefs = gql`
-  type Dataset {
-    id: Int
-    name: String
-  }
-
-  type BookingType {
-    id: Int
-    name: String
-  }
-
   type Product {
     id: Int
     name: String
@@ -25,44 +13,13 @@ const typeDefs = gql`
 
   type Query {
     _empty: String
-    datasetList: [Dataset]
-    bookingTypeList: [BookingType]
     productList: [Product]
-    shipList: [Ship]
+    shipList(productId: Int): [Ship]
   }
   type Mutation {
     _empty: String
   }
 `
-const datasetList = [
-  {
-    id: 1,
-    name: 'Absolute Bookings'
-  },
-  {
-    id: 2,
-    name: 'Temporary Bookings'
-  },
-  {
-    id: 3,
-    name: 'Other Bookings'
-  }
-]
-
-const bookingTypeList = [
-  {
-    id: 1,
-    name: 'Individal & Group'
-  },
-  {
-    id: 2,
-    name: 'Individual'
-  },
-  {
-    id: 3,
-    name: 'Group'
-  }
-]
 
 const productList = [
   {
@@ -72,26 +29,36 @@ const productList = [
   {
     id: 2,
     name: 'TRANSPAC'
+  },
+  {
+    id: 3,
+    name: 'INDIART'
+  },
+  {
+    id: 4,
+    name: 'HAWAII'
   }
 ]
 
 const shipList = [
   {
     id: 1,
-    name: 'APEX'
+    name: 'Apex'
   },
   {
     id: 2,
-    name: 'BRAVO'
+    name: 'Constellation'
+  },
+  {
+    id: 3,
+    name: 'Eclipse'
   }
 ]
 
 const resolvers = {
   Query: {
-    datasetList: () => datasetList,
-    bookingTypeList: () => bookingTypeList,
     productList: () => productList,
-    shipList: () => shipList
+    shipList: (_, { id = null }) => (id ? shipList : shipList)
   }
 }
 

@@ -15,7 +15,7 @@ export default createGlobalStyle`
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     @media (max-width : 1336px){
