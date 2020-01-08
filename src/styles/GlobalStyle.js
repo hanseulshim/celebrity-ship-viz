@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import bg from '../assets/starry_night_sky.png'
+import bg from 'assets/starry_night_sky.png'
 
 export default createGlobalStyle`
   html,
