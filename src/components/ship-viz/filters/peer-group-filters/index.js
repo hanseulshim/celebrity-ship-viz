@@ -6,7 +6,7 @@ const Container = styled.div`
   justify-content: space-between;
   width: 80%;
   align-items: center;
-  background-color: rgb(0, 0, 0, 0);
+  background-color: ${props => props.theme.black50};
   color: ${props => props.theme.ghostWhite};
 `
 
