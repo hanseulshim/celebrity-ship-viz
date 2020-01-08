@@ -7,7 +7,8 @@ const hoverInfo = {
     bgcolor: colors.darkSlateBlue,
     bordercolor: colors.lightBlueGrey,
     font: {
-      color: '#FFF'
+      color: '#FFF',
+      size: 16
     }
   },
   hovertemplate:
