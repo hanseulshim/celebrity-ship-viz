@@ -10,21 +10,24 @@ const Container = styled.div`
   justify-content: center;
 `
 const StyledSelect = styled(Select)`
+  .ant-select {
+    border: 1px ${props => props.theme.darkSlateBlue};
+  }
   .ant-select-selection {
-    background-color: ${props => props.theme.galaxyBlue};
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px ${props => props.theme.darkSlateBlue};
   }
 
   .ant-select-arrow {
-    color: ${props => props.theme.ghostWhite};
+    color: ${props => props.theme.white};
   }
 
   .ant-select-selection-selected-value {
-    color: ${props => props.theme.ghostWhite};
+    color: ${props => props.theme.white};
   }
 `
 
 const Label = styled.span`
-  color: ${props => props.theme.ghostWhite};
   margin-right: 1em;
 `
 

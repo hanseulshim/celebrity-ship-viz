@@ -15,15 +15,11 @@ const Container = styled.div`
   width: 80%;
   align-items: center;
   background-color: rgb(0, 0, 0, 0);
-  color: ${props => props.theme.ghostWhite};
+  color: ${props => props.theme.lightBlueGrey};
 `
 
 const MainFilters = () => {
   const { loading, error, data } = useQuery(GET_PRODUCT_LIST)
-
-  // const [filters, setFilter] = useState({
-  //   singleSailing: true
-  // })
 
   if (loading) return <p>Loading available datasets</p>
   return (
