@@ -4,7 +4,19 @@ module.exports = {
     es6: true,
     jest: true
   },
-  extends: ['standard', 'plugin:react/recommended'],
+  extends: [
+    'standard',
+    'plugin:react/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings'
+  ],
+  settings: {
+    'import/resolver': {
+      node: {
+        moduleDirectory: ['node_modules', 'src/']
+      }
+    }
+  },
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
