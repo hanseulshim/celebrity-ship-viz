@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import FilterSelect from './FilterSelect'
-import { useQuery } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/client'
 import DatasetToggle from './DatasetToggle'
 
 // GQL

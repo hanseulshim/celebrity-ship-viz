@@ -2,31 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
-import ApolloClient from 'apollo-boost'
-import { ApolloProvider } from '@apollo/react-hooks'
+import {
+  ApolloClient,
+  ApolloProvider,
+  HttpLink,
+  InMemoryCache
+} from '@apollo/client'
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000'
-
-  //   request: operation => {
-  //     const sessiontoken = getToken()
-  //     if (sessiontoken) {
-  //       operation.setContext({
-  //         headers: {
-  //           sessiontoken,
-  //         },
-  //       })
-  //     }
-  //   },
-  //   onError: ({ graphQLErrors }) => {
-  //     if (graphQLErrors) {
-  //       graphQLErrors.forEach(({ extensions }) => {
-  //         if (extensions.code === 401) {
-  //           removeUser()
-  //         }
-  //       })
-  //     }
-  //   },
+  cache: new InMemoryCache(),
+  link: new HttpLink({
+    uri: 'http://localhost:4000'
+  })
 })
 
 ReactDOM.render(
