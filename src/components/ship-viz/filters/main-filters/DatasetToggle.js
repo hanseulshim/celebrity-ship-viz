@@ -16,14 +16,18 @@ const Label = styled.span`
   margin: 0em 1em;
 `
 
+const StyledSwitch = styled(Switch)`
+  background-color: #1890ff !important;
+`
+
 const DatasetToggle = () => {
-  function onChange (checked) {
+  function onChange(checked) {
     console.log(`switch to ${checked}`)
   }
   return (
     <Container>
       <Label>Single Sailing</Label>
-      <Switch defaultChecked onChange={onChange} />
+      <StyledSwitch onChange={onChange} />
       <Label>Peer Comparison</Label>
     </Container>
   )
