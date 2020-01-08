@@ -9,8 +9,10 @@ const hoverInfo = {
       color: '#FFF'
     }
   },
+  // hovertemplate:
+  //   '   Room 8234   <br />   BOOKED   <br />   Max 4   <br />   Booked 2   <br /><br /><extra></extra>'
   hovertemplate:
-    '   Room 8234   <br />   BOOKED   <br />   Max 4   <br />   Booked 2   <br /><br /><extra></extra>'
+    '   Room %{customdata.status}   <br />   BOOKED   <br />   Max 4   <br />   Booked 2   <br /><br /><extra></extra>'
 }
 
 const data = [
@@ -26,111 +28,153 @@ const data = [
       maxOccupancy: 4,
       booked: 4
     },
+    // {
+    //   x0: 0,
+    //   x1: 2,
+    //   y0: 2,
+    //   y1: 3,
+    //   z: 0,
+    //   roomNumber: 5833,
+    //   status: 'booked',
+    //   maxOccupancy: 2,
+    //   booked: 1
+    // },
+    // {
+    //   x0: 0,
+    //   x1: 2,
+    //   y0: 3,
+    //   y1: 4,
+    //   z: 0,
+    //   roomNumber: 5834,
+    //   status: 'unbooked',
+    //   maxOccupancy: 2,
+    //   booked: 0
+    // },
+    // {
+    //   x0: 0,
+    //   x1: 2,
+    //   y0: 4,
+    //   y1: 5,
+    //   z: 0,
+    //   roomNumber: 5835,
+    //   status: 'unbooked',
+    //   maxOccupancy: 2,
+    //   booked: 2
+    // },
     {
-      x0: 0,
-      x1: 2,
-      y0: 2,
-      y1: 3,
-      z: 0,
-      roomNumber: 5833,
-      status: 'booked',
-      maxOccupancy: 2,
-      booked: 1
-    },
-    {
-      x0: 0,
-      x1: 2,
-      y0: 3,
-      y1: 4,
-      z: 0,
-      roomNumber: 5834,
-      status: 'unbooked',
-      maxOccupancy: 2,
-      booked: 0
-    },
-    {
-      x0: 0,
-      x1: 2,
-      y0: 4,
-      y1: 5,
-      z: 0,
-      roomNumber: 5835,
-      status: 'unbooked',
-      maxOccupancy: 2,
-      booked: 2
-    }
-  ],
-  [
-    {
-      x0: 0,
-      x1: 2,
+      x0: 4,
+      x1: 5,
       y0: 0,
       y1: 2,
-      z: 1,
+      z: 0,
       roomNumber: 5832,
-      status: 'booked',
-      maxOccupancy: 4,
-      booked: 4
-    },
-    {
-      x0: 0,
-      x1: 2,
-      y0: 2,
-      y1: 3,
-      z: 1,
-      roomNumber: 5833,
-      status: 'booked',
-      maxOccupancy: 2,
-      booked: 1
-    },
-    {
-      x0: 0,
-      x1: 2,
-      y0: 3,
-      y1: 4,
-      z: 1,
-      roomNumber: 5834,
-      status: 'unbooked',
-      maxOccupancy: 2,
-      booked: 0
-    },
-    {
-      x0: 0,
-      x1: 2,
-      y0: 4,
-      y1: 5,
-      z: 1,
-      roomNumber: 5835,
       status: 'unbooked',
       maxOccupancy: 2,
       booked: 2
     }
+    // {
+    //   x0: 3,
+    //   x1: 5,
+    //   y0: 2,
+    //   y1: 3,
+    //   z: 0,
+    //   status: 'unbooked',
+    //   maxOccupancy: 2,
+    //   booked: 0
+    // },
+    // {
+    //   x0: 3,
+    //   x1: 5,
+    //   y0: 3,
+    //   y1: 4,
+    //   z: 0,
+    //   roomNumber: 5833,
+    //   status: 'booked',
+    //   maxOccupancy: 2,
+    //   booked: 1
+    // },
+    // {
+    //   x0: 3,
+    //   x1: 5,
+    //   y0: 4,
+    //   y1: 5,
+    //   z: 0,
+    //   status: 'booked',
+    //   maxOccupancy: 4,
+    //   booked: 4
+    // }
   ]
+  // [
+  //   {
+  //     x0: 0,
+  //     x1: 2,
+  //     y0: 0,
+  //     y1: 2,
+  //     z: 1,
+  //     roomNumber: 5832,
+  //     status: 'booked',
+  //     maxOccupancy: 4,
+  //     booked: 4
+  //   },
+  //   {
+  //     x0: 0,
+  //     x1: 2,
+  //     y0: 2,
+  //     y1: 3,
+  //     z: 1,
+  //     roomNumber: 5833,
+  //     status: 'booked',
+  //     maxOccupancy: 2,
+  //     booked: 1
+  //   },
+  //   {
+  //     x0: 0,
+  //     x1: 2,
+  //     y0: 3,
+  //     y1: 4,
+  //     z: 1,
+  //     roomNumber: 5834,
+  //     status: 'unbooked',
+  //     maxOccupancy: 2,
+  //     booked: 0
+  //   },
+  //   {
+  //     x0: 0,
+  //     x1: 2,
+  //     y0: 4,
+  //     y1: 5,
+  //     z: 1,
+  //     roomNumber: 5835,
+  //     status: 'unbooked',
+  //     maxOccupancy: 2,
+  //     booked: 2
+  //   }
+  // ]
 ]
 
 const layout = {
   scene: {
     xaxis: {
-      title: '',
-      showgrid: false,
-      zeroline: false,
-      showticklabels: false,
-      showspikes: false
+      // title: ''
+      // showgrid: false,
+      // zeroline: false,
+      // showticklabels: false,
+      // showspikes: false
     },
     yaxis: {
-      title: '',
-      showgrid: false,
-      zeroline: false,
-      showticklabels: false,
-      showspikes: false
+      // title: ''
+      // showgrid: false,
+      // zeroline: false,
+      // showticklabels: false,
+      // showspikes: false
     },
     zaxis: {
-      title: '',
-      showgrid: false,
-      zeroline: false,
-      showline: false,
-      showticklabels: false,
-      showspikes: false
+      // title: ''
+      // showgrid: false,
+      // zeroline: false,
+      // showline: false,
+      // showticklabels: false,
+      // showspikes: false
     },
     aspectmode: 'auto'
   },
@@ -170,6 +214,9 @@ const getPolygonCoordinates = (
     k: [v2, v3],
     facecolor: [color, color],
     customdata: [
+      { status, maxOccupancy, booked },
+      { status, maxOccupancy, booked },
+      { status, maxOccupancy, booked },
       { status, maxOccupancy, booked },
       { status, maxOccupancy, booked },
       { status, maxOccupancy, booked },
@@ -224,7 +271,6 @@ const createLevels = (data, level) => {
     j,
     k,
     facecolor,
-    text: y,
     customdata,
     ...hover,
     opacity: Math.random(),
