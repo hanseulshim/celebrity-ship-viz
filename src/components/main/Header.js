@@ -1,5 +1,5 @@
-import React from 'components/main/node_modules/react'
-import styled from 'components/main/node_modules/styled-components'
+import React from 'react'
+import styled from 'styled-components'
 import logo from 'assets/logo.png'
 
 const Container = styled.div`

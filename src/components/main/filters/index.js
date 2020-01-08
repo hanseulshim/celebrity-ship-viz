@@ -1,5 +1,5 @@
-import React from 'components/main/filters/node_modules/react'
-import styled from 'components/main/filters/node_modules/styled-components'
+import React from 'react'
+import styled from 'styled-components'
 import MainFilters from './main-filters'
 // import PeerGroupFilters from './peer-group-filters'
 

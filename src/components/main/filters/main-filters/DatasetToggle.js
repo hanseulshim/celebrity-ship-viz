@@ -1,8 +1,8 @@
-import React from 'components/main/filters/main-filters/node_modules/react'
-import styled from 'components/main/filters/main-filters/node_modules/styled-components'
+import React from 'react'
+import styled from 'styled-components'
 
 // Ant design components
-import { Switch } from 'components/main/filters/main-filters/node_modules/antd'
+import { Switch } from 'antd'
 
 // Styled Components
 
