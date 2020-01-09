@@ -6,10 +6,10 @@ export default {
   biscay: '#183157',
   lochmara: '#0088dd',
   jungleMist: '#bad0db',
-  viridian: '#458c61',
-  deYork: '#77c093',
-  lemonGinger: '#b0a723',
-  manz: '#f2ed72',
-  claret: '#701030',
+  silverTree: '#63c086',
+  aquaForest: '#5aaf7b',
+  keyLimePie: '#d0c32a',
+  hokeyPokey: '#bcb226',
+  cabaret: '#d34362',
   mandy: '#e84b6c'
 }

@@ -180,13 +180,13 @@ const getStatus = (maxOccupancy, booked, index) => {
   const even = index % 2 === 0
   if (booked === 0) {
     statusObj.status = 'UNBOOKED'
-    statusObj.color = even ? colors.claret : colors.mandy
+    statusObj.color = even ? colors.cabaret : colors.mandy
   } else if (maxOccupancy === booked) {
     statusObj.status = 'BOOKED'
-    statusObj.color = even ? colors.viridian : colors.deYork
+    statusObj.color = even ? colors.silverTree : colors.aquaForest
   } else {
     statusObj.status = 'BOOKED'
-    statusObj.color = even ? colors.lemonGinger : colors.manz
+    statusObj.color = even ? colors.keyLimePie : colors.hokeyPokey
   }
   return statusObj
 }
