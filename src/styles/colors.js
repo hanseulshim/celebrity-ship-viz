@@ -1,12 +1,15 @@
 export default {
   white: '#ffffff',
   black: '#000000',
-  black50: 'rgba(0,0,0,.5)',
-  paleTeal: '#80cbc4',
-  darkSlateBlue: '#183157',
-  cerulean: '#0088dd',
-  lightNavy: '#143960',
-  lightBlueGrey: '#bad0db',
-  sicklyYellow: '#e3d532',
-  pinkish: '#d4697c'
+  black50: 'rgba(0, 0, 0, 0.5)',
+  black0: 'rgba(0, 0, 0, 0)',
+  biscay: '#183157',
+  lochmara: '#0088dd',
+  jungleMist: '#bad0db',
+  viridian: '#458c61',
+  deYork: '#77c093',
+  lemonGinger: '#b0a723',
+  manz: '#f2ed72',
+  claret: '#701030',
+  mandy: '#e84b6c'
 }

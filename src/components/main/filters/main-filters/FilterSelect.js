@@ -11,11 +11,11 @@ const Container = styled.div`
 `
 const StyledSelect = styled(Select)`
   .ant-select {
-    border: 1px ${props => props.theme.darkSlateBlue};
+    border: 1px ${props => props.theme.biscay};
   }
   .ant-select-selection {
     background-color: ${props => props.theme.black50};
-    border: 1px ${props => props.theme.darkSlateBlue};
+    border: 1px ${props => props.theme.biscay};
   }
 
   .ant-select-arrow {

@@ -15,7 +15,7 @@ const Container = styled.div`
   width: 80%;
   align-items: center;
   background-color: rgb(0, 0, 0, 0);
-  color: ${props => props.theme.lightBlueGrey};
+  color: ${props => props.theme.jungleMist};
 `
 
 const MainFilters = () => {
