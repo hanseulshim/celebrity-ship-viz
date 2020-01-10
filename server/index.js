@@ -18,8 +18,8 @@ const typeDefs = gql`
 
   type Query {
     _empty: String
-    productList: [Product]
-    shipList(id: Int): [Ship]
+    shipList: [Ship]
+    productList(id: Int): [Product]
     itineraryList(id: Int): [Itinerary]
   }
   type Mutation {
@@ -27,7 +27,21 @@ const typeDefs = gql`
   }
 `
 
-const productList = [
+const shipList = [
+  {
+    id: 1,
+    name: 'Apex2'
+  },
+  {
+    id: 2,
+    name: 'Constellation2'
+  },
+  {
+    id: 3,
+    name: 'Eclipse2'
+  }
+]
+const productList1 = [
   {
     id: 1,
     name: 'TRANSATL'
@@ -39,40 +53,21 @@ const productList = [
   {
     id: 3,
     name: 'INDIART'
-  },
-  {
-    id: 4,
-    name: 'HAWAII'
   }
 ]
 
-const shipList1 = [
-  {
-    id: 1,
-    name: 'Apex'
-  },
-  {
-    id: 2,
-    name: 'Constellation'
-  },
-  {
-    id: 3,
-    name: 'Eclipse'
-  }
-]
-
-const shipList2 = [
+const productList2 = [
   {
     id: 4,
-    name: 'Apex2'
+    name: 'BAHAMA3'
   },
   {
     id: 5,
-    name: 'Constellation2'
+    name: 'BAHAMA4'
   },
   {
     id: 6,
-    name: 'Eclipse2'
+    name: 'BERMUDA'
   }
 ]
 
@@ -93,9 +88,9 @@ const itineraryList = [
 
 const resolvers = {
   Query: {
-    productList: () => productList,
-    shipList: (_, { id }) =>
-      id && id === 1 ? shipList1 : id && id > 1 ? shipList2 : [],
+    shipList: () => shipList,
+    productList: (_, { id }) =>
+      id && id === 1 ? productList1 : id && id > 1 ? productList2 : [],
     itineraryList: (_, { id }) => (id ? itineraryList : [])
   }
 }

@@ -23,8 +23,8 @@ const MainFilters = () => {
   return (
     <Container>
       <PeerGroupToggle />
-      <SelectProduct />
       <SelectShip />
+      <SelectProduct />
       <SelectItinerary />
       <SailDatePicker />
     </Container>

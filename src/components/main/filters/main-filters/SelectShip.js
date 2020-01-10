@@ -11,12 +11,9 @@ import { GET_SHIP_LIST } from 'graphql/queries'
 const SelectShip = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { selectedProduct, selectedShip } = state
+  const { selectedShip } = state
 
-  const { loading, error, data } = useQuery(GET_SHIP_LIST, {
-    variables: { id: selectedProduct },
-    fetchPolicy: 'network-only'
-  })
+  const { loading, error, data } = useQuery(GET_SHIP_LIST)
 
   const onChange = value => {
     dispatch({ type: 'setSelectedShip', value })

@@ -15,17 +15,17 @@ const StateProvider = ({ children }) => {
           ...state,
           peerGroupFilters: !state.peerGroupFilters
         }
-      case 'setSelectedProduct':
-        return {
-          ...state,
-          selectedProduct: action.value,
-          selectedShip: null,
-          selectedItinerary: null
-        }
       case 'setSelectedShip':
         return {
           ...state,
           selectedShip: action.value,
+          selectedProduct: null,
+          selectedItinerary: null
+        }
+      case 'setSelectedProduct':
+        return {
+          ...state,
+          selectedProduct: action.value,
           selectedItinerary: null
         }
       case 'setSelectedItinerary':
