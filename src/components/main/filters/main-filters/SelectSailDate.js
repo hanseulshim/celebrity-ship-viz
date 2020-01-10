@@ -6,33 +6,33 @@ import { store } from 'context/store'
 import FilterSelect from 'components/common/FilterSelect'
 
 // GQL
-import { GET_ITINERARY_LIST } from 'graphql/queries'
+import { GET_SAIL_DATE_LIST } from 'graphql/queries'
 
-const SelectItinerary = () => {
+const SelectSailDate = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { selectedShip, selectedItinerary } = state
+  const { selectedItinerary, selectedSailDate } = state
 
-  const { loading, error, data } = useQuery(GET_ITINERARY_LIST, {
-    variables: { id: selectedShip },
+  const { loading, error, data } = useQuery(GET_SAIL_DATE_LIST, {
+    variables: { id: selectedItinerary },
     fetchPolicy: 'network-only'
   })
 
   const onChange = value => {
-    dispatch({ type: 'setSelectedItinerary', value })
+    dispatch({ type: 'setSelectedSailDate', value })
   }
 
   if (loading) return 'Loading...'
   if (error) return `Error! ${error.message}`
   return (
     <FilterSelect
-      label="Itinerary"
-      displayKey="name"
-      options={data.itineraryList}
-      value={selectedItinerary}
+      label="Sail Date"
+      displayKey="date"
+      options={data.sailDateList}
+      value={selectedSailDate}
       onChange={onChange}
     />
   )
 }
 
-export default SelectItinerary
+export default SelectSailDate

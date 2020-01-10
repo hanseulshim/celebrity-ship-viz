@@ -28,6 +28,7 @@ const SelectProduct = () => {
   return (
     <FilterSelect
       label="Product"
+      displayKey="name"
       options={data.productList}
       value={selectedProduct}
       onChange={onChange}

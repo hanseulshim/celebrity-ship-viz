@@ -25,3 +25,12 @@ export const GET_ITINERARY_LIST = gql`
     }
   }
 `
+
+export const GET_SAIL_DATE_LIST = gql`
+  query sailDateList($id: Int) {
+    sailDateList(id: $id) {
+      id
+      date
+    }
+  }
+`

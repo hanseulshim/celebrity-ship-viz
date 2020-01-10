@@ -6,7 +6,7 @@ import SelectProduct from './SelectProduct'
 import SelectItinerary from './SelectItinerary'
 import SelectShip from './SelectShip'
 import PeerGroupToggle from './PeerGroupToggle'
-import SailDatePicker from './SailDatePicker'
+import SelectSailDate from './SelectSailDate'
 
 const Container = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const MainFilters = () => {
       <SelectShip />
       <SelectProduct />
       <SelectItinerary />
-      <SailDatePicker />
+      <SelectSailDate />
     </Container>
   )
 }

@@ -16,11 +16,17 @@ const typeDefs = gql`
     name: String
   }
 
+  type SailDate {
+    id: Int
+    date: String
+  }
+
   type Query {
     _empty: String
     shipList: [Ship]
     productList(id: Int): [Product]
     itineraryList(id: Int): [Itinerary]
+    sailDateList(id: Int): [SailDate]
   }
   type Mutation {
     _empty: String
@@ -86,12 +92,28 @@ const itineraryList = [
   }
 ]
 
+const sailDateList = [
+  {
+    id: 1,
+    date: '09/06/2020'
+  },
+  {
+    id: 2,
+    date: '10/31/2020'
+  },
+  {
+    id: 3,
+    date: '4/15/2021'
+  }
+]
+
 const resolvers = {
   Query: {
     shipList: () => shipList,
     productList: (_, { id }) =>
       id && id === 1 ? productList1 : id && id > 1 ? productList2 : [],
-    itineraryList: (_, { id }) => (id ? itineraryList : [])
+    itineraryList: (_, { id }) => (id ? itineraryList : []),
+    sailDateList: (_, { id }) => (id ? sailDateList : [])
   }
 }
 
