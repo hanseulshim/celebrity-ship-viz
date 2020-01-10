@@ -3,11 +3,12 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 80%;
   align-items: center;
-  background-color: ${props => props.theme.black50};
-  color: ${props => props.theme.ghostWhite};
+  color: ${props => props.theme.lightBlueGrey};
+  padding: 2em 0em;
+  > div {
+    margin-right: 2em;
+  }
 `
 
 const PeerGroupFilters = () => {

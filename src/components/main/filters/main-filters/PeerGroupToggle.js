@@ -14,7 +14,7 @@ const Container = styled.div`
 `
 
 const Label = styled.span`
-  margin: 0em 1em;
+  margin-right: 1em;
 `
 
 const StyledSwitch = styled(Switch)``
