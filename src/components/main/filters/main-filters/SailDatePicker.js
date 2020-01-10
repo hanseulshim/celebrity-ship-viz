@@ -16,6 +16,13 @@ const Label = styled.span`
   margin-right: 1em;
 `
 
+const StyledDatePicker = styled(DatePicker)`
+  .ant-calendar-picker-input {
+    background-color: ${props => props.theme.black};
+    color: ${props => props.theme.white};
+  }
+`
+
 const SailDatePicker = () => {
   const onChange = (date, dateString) => {
     console.log(date, dateString)
@@ -24,7 +31,7 @@ const SailDatePicker = () => {
   return (
     <Container>
       <Label>Sail Date</Label>
-      <DatePicker onChange={onChange} />
+      <StyledDatePicker onChange={onChange} />
     </Container>
   )
 }

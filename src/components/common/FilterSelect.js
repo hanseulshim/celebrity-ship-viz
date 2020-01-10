@@ -31,22 +31,24 @@ const Label = styled.span`
   margin-right: 1em;
 `
 
-const FilterSelect = ({ label, options, ...props }) => {
+const FilterSelect = ({ label, options, value, onChange }) => {
   return (
     <Container>
       <Label>{label}</Label>
       <StyledSelect
-        labelInValue
         style={{ width: 150 }}
-        onChange={value => props.onChange(value)}
+        value={value}
+        onChange={value => onChange(value)}
+        disabled={!options}
       >
-        {options.map((option, i) => {
-          return (
-            <Option value={option.id} key={'option' + i}>
-              {option.name}
-            </Option>
-          )
-        })}
+        {options &&
+          options.map((option, i) => {
+            return (
+              <Option value={option.id} key={'option' + i}>
+                {option.name}
+              </Option>
+            )
+          })}
       </StyledSelect>
     </Container>
   )

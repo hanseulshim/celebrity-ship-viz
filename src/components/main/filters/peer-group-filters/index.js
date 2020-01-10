@@ -1,13 +1,14 @@
-import React from 'components/main/filters/peer-group-filters/node_modules/react'
-import styled from 'components/main/filters/peer-group-filters/node_modules/styled-components'
+import React from 'react'
+import styled from 'styled-components'
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 80%;
   align-items: center;
-  background-color: ${props => props.theme.black50};
-  color: ${props => props.theme.ghostWhite};
+  color: ${props => props.theme.jungleMist};
+  padding: 1em 0em;
+  > div {
+    margin-right: 2em;
+  }
 `
 
 const PeerGroupFilters = () => {
