@@ -39,7 +39,6 @@ const FilterSelect = ({ label, options, value, onChange }) => {
         style={{ width: 150 }}
         value={value}
         onChange={value => onChange(value)}
-        disabled={!options}
       >
         {options &&
           options.map((option, i) => {
