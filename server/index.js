@@ -36,15 +36,15 @@ const typeDefs = gql`
 const shipList = [
   {
     id: 1,
-    name: 'Apex2'
+    name: 'Apex'
   },
   {
     id: 2,
-    name: 'Constellation2'
+    name: 'Constellation'
   },
   {
     id: 3,
-    name: 'Eclipse2'
+    name: 'Eclipse'
   }
 ]
 const productList1 = [
