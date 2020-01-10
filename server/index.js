@@ -14,7 +14,7 @@ const typeDefs = gql`
   type Query {
     _empty: String
     productList: [Product]
-    shipList(productId: Int): [Ship]
+    shipList(id: Int): [Ship]
   }
   type Mutation {
     _empty: String
@@ -40,7 +40,7 @@ const productList = [
   }
 ]
 
-const shipList = [
+const shipList1 = [
   {
     id: 1,
     name: 'Apex'
@@ -55,10 +55,26 @@ const shipList = [
   }
 ]
 
+const shipList2 = [
+  {
+    id: 4,
+    name: 'Apex2'
+  },
+  {
+    id: 5,
+    name: 'Constellation2'
+  },
+  {
+    id: 6,
+    name: 'Eclipse2'
+  }
+]
+
 const resolvers = {
   Query: {
     productList: () => productList,
-    shipList: (_, { id = null }) => (id ? shipList : shipList)
+    shipList: (_, { id }) =>
+      id && id === 1 ? shipList1 : id && id > 1 ? shipList2 : []
   }
 }
 

@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { store } from 'context/store'
+import { useQuery } from '@apollo/client'
+
+// Project Imports
 import MainFilters from './main-filters'
-// import PeerGroupFilters from './peer-group-filters'
+import PeerGroupFilters from './peer-group-filters'
 
 const Container = styled.div`
   background-color: rgb(0, 0, 0, 0);
@@ -9,10 +13,15 @@ const Container = styled.div`
 `
 
 const Filters = () => {
+  const globalState = useContext(store)
+  const {
+    state: { peerGroupFilters }
+  } = globalState
+
   return (
     <Container>
       <MainFilters />
-      {/* <PeerGroupFilters /> */}
+      {peerGroupFilters && <PeerGroupFilters />}
     </Container>
   )
 }
