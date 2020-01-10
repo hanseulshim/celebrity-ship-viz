@@ -7,6 +7,8 @@ import FilterSelect from 'components/common/FilterSelect'
 
 // GQL
 import { GET_PRODUCT_LIST } from 'graphql/queries'
+import Loader from 'components/common/Loader'
+import Notification from 'components/common/Notification'
 
 const SelectProduct = () => {
   const globalState = useContext(store)
@@ -23,8 +25,8 @@ const SelectProduct = () => {
     dispatch({ type: 'setSelectedProduct', value })
   }
 
-  if (loading) return 'Loading...'
-  if (error) return `Error! ${error.message}`
+  if (loading) return <Loader />
+  if (error) return <Notification type="error" message={error.message} />
   return (
     <FilterSelect
       label="Product"

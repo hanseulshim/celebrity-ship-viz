@@ -4,6 +4,8 @@ import { store } from 'context/store'
 
 // Project Components
 import FilterSelect from 'components/common/FilterSelect'
+import Notification from 'components/common/Notification'
+import Loader from 'components/common/Loader'
 
 // GQL
 import { GET_SAIL_DATE_LIST } from 'graphql/queries'
@@ -22,8 +24,8 @@ const SelectSailDate = () => {
     dispatch({ type: 'setSelectedSailDate', value })
   }
 
-  if (loading) return 'Loading...'
-  if (error) return `Error! ${error.message}`
+  if (loading) return <Loader />
+  if (error) return <Notification type="error" message={error.message} />
   return (
     <FilterSelect
       label="Sail Date"
