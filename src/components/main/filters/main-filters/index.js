@@ -8,6 +8,8 @@ import SelectShip from './SelectShip'
 import PeerGroupToggle from './PeerGroupToggle'
 import SelectSailDate from './SelectSailDate'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -37,7 +39,7 @@ const ApplyButton = styled.button`
 const DownloadButton = styled.button`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-left: auto;
   background-color: ${props => props.theme.silverTree};
   padding: 0.5em 1em;
@@ -59,7 +61,10 @@ const MainFilters = () => {
       <SelectItinerary />
       <SelectSailDate />
       <ApplyButton>Apply</ApplyButton>
-      <DownloadButton>Download</DownloadButton>
+      <DownloadButton>
+        <FontAwesomeIcon icon="download" />
+        Download
+      </DownloadButton>
     </Container>
   )
 }
