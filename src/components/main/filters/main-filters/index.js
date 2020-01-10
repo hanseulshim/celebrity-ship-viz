@@ -12,8 +12,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   background-color: rgb(0, 0, 0, 0);
-  color: ${props => props.theme.lightBlueGrey};
-  padding: 2em 0em;
+  color: ${props => props.theme.jungleMist};
+  padding: 1em 0em;
   > div {
     margin-right: 2em;
   }
