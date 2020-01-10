@@ -4,8 +4,8 @@ import colors from 'styles/colors'
 
 const hoverInfo = {
   hoverlabel: {
-    bgcolor: colors.darkSlateBlue,
-    bordercolor: colors.lightBlueGrey,
+    bgcolor: colors.biscay,
+    bordercolor: colors.jungleMist,
     font: {
       color: '#FFF',
       size: 16
@@ -45,7 +45,7 @@ const data = [
       z: 0,
       roomNumber: 5834,
       maxOccupancy: 2,
-      booked: 0
+      booked: 1
     },
     {
       x0: 0,
@@ -55,7 +55,7 @@ const data = [
       z: 0,
       roomNumber: 5835,
       maxOccupancy: 2,
-      booked: 1
+      booked: 0
     },
     {
       x0: 3,
@@ -65,7 +65,7 @@ const data = [
       z: 0,
       roomNumber: 5836,
       maxOccupancy: 2,
-      booked: 2
+      booked: 0
     },
     {
       x0: 3,
@@ -85,7 +85,7 @@ const data = [
       z: 0,
       roomNumber: 5838,
       maxOccupancy: 2,
-      booked: 1
+      booked: 2
     },
     {
       x0: 3,
@@ -168,24 +168,25 @@ const layout = {
     },
     aspectmode: 'auto'
   },
-  paper_bgcolor: 'rgba(0,0,0,0)',
-  plot_bgcolor: 'rgba(0,0,0,0)'
+  paper_bgcolor: colors.black0,
+  plot_bgcolor: colors.black0
 }
 
-const getStatus = (maxOccupancy, booked) => {
+const getStatus = (maxOccupancy, booked, index) => {
   const statusObj = {
     status: '',
     color: ''
   }
+  const even = index % 2 === 0
   if (booked === 0) {
     statusObj.status = 'UNBOOKED'
-    statusObj.color = colors.pinkish
+    statusObj.color = even ? colors.cabaret : colors.mandy
   } else if (maxOccupancy === booked) {
     statusObj.status = 'BOOKED'
-    statusObj.color = colors.paleTeal
+    statusObj.color = even ? colors.silverTree : colors.aquaForest
   } else {
     statusObj.status = 'BOOKED'
-    statusObj.color = colors.sicklyYellow
+    statusObj.color = even ? colors.keyLimePie : colors.hokeyPokey
   }
   return statusObj
 }
@@ -199,9 +200,10 @@ const getPolygonCoordinates = (
   roomNumber,
   maxOccupancy,
   booked,
-  customdata
+  customdata,
+  index
 ) => {
-  const { color, status } = getStatus(maxOccupancy, booked)
+  const { color, status } = getStatus(maxOccupancy, booked, index)
   const h0 = y0 * l // Starting Height
   const h1 = y1 * l // Ending Height
   // Vertices of the polygon
@@ -255,7 +257,7 @@ const createLevels = (data, level) => {
   const j = []
   const k = []
   const facecolor = []
-  data.forEach(point => {
+  data.forEach((point, index) => {
     const coords = getPolygonCoordinates(
       point.x0,
       point.x1,
@@ -265,7 +267,8 @@ const createLevels = (data, level) => {
       point.roomNumber,
       point.maxOccupancy,
       point.booked,
-      customdata
+      customdata,
+      index
     )
     i.push(...coords.i)
     j.push(...coords.j)

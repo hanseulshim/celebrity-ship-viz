@@ -13,7 +13,7 @@ const Container = styled.div`
   align-items: center;
   background-color: rgb(0, 0, 0, 0);
   color: ${props => props.theme.lightBlueGrey};
-
+  padding: 2em 0em;
   > div {
     margin-right: 2em;
   }
