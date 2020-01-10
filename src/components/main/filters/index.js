@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { store } from 'context/store'
-import { useQuery } from '@apollo/client'
 
 // Project Imports
 import MainFilters from './main-filters'

@@ -11,10 +11,16 @@ const typeDefs = gql`
     name: String
   }
 
+  type Itinerary {
+    id: Int
+    name: String
+  }
+
   type Query {
     _empty: String
     productList: [Product]
     shipList(id: Int): [Ship]
+    itineraryList(id: Int): [Itinerary]
   }
   type Mutation {
     _empty: String
@@ -70,11 +76,27 @@ const shipList2 = [
   }
 ]
 
+const itineraryList = [
+  {
+    id: 1,
+    name: '14 Night Spain & Portugal Transatlantic'
+  },
+  {
+    id: 2,
+    name: '7 Night Spain & Portugal Transatlantic'
+  },
+  {
+    id: 3,
+    name: '21 Night Spain & Portugal Transatlantic'
+  }
+]
+
 const resolvers = {
   Query: {
     productList: () => productList,
     shipList: (_, { id }) =>
-      id && id === 1 ? shipList1 : id && id > 1 ? shipList2 : []
+      id && id === 1 ? shipList1 : id && id > 1 ? shipList2 : [],
+    itineraryList: (_, { id }) => (id ? itineraryList : [])
   }
 }
 

@@ -17,3 +17,12 @@ export const GET_SHIP_LIST = gql`
     }
   }
 `
+
+export const GET_ITINERARY_LIST = gql`
+  query itineraryList($id: Int) {
+    itineraryList(id: $id) {
+      id
+      name
+    }
+  }
+`
