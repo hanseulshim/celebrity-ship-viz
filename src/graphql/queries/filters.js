@@ -4,33 +4,39 @@ export const GET_SHIP_LIST = gql`
   {
     shipList {
       id
-      name
+      shipName
+      shipCode
+      shipClass
     }
   }
 `
 export const GET_PRODUCT_LIST = gql`
-  query productList($id: Int) {
-    productList(id: $id) {
+  query productList($shipId: Int) {
+    productList(shipId: $shipId) {
       id
-      name
+      rdssProductCode
     }
   }
 `
 
 export const GET_ITINERARY_LIST = gql`
-  query itineraryList($id: Int) {
-    itineraryList(id: $id) {
+  query itineraryList($shipId: Int, $productId: Int) {
+    itineraryList(shipId: $shipId, productId: $productId) {
       id
-      name
+      itineraryDesc
     }
   }
 `
 
-export const GET_SAIL_DATE_LIST = gql`
-  query sailDateList($id: Int) {
-    sailDateList(id: $id) {
+export const GET_SAILING_DATE_LIST = gql`
+  query sailingDateList($shipId: Int, $productId: Int, $itineraryId: Int) {
+    sailingDateList(
+      shipId: $shipId
+      productId: $productId
+      itineraryId: $itineraryId
+    ) {
       id
-      date
+      sailingDate
     }
   }
 `

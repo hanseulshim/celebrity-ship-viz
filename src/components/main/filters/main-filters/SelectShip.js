@@ -26,7 +26,7 @@ const SelectShip = () => {
   return (
     <FilterSelect
       label="Ship"
-      displayKey="name"
+      displayKey="shipName"
       options={data.shipList}
       value={selectedShip}
       onChange={onChange}

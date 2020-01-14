@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Select } from 'antd'
+import moment from 'moment'
 
 const { Option } = Select
 
@@ -31,12 +32,19 @@ const Label = styled.span`
   margin-right: 1em;
 `
 
-const FilterSelect = ({ label, options, value, onChange, displayKey }) => {
+const FilterSelect = ({
+  label,
+  options,
+  value,
+  onChange,
+  displayKey,
+  width
+}) => {
   return (
     <Container>
       <Label>{label}</Label>
       <StyledSelect
-        style={{ width: 150 }}
+        style={{ width: width || 200 }}
         value={value}
         onChange={value => onChange(value)}
       >
@@ -44,7 +52,9 @@ const FilterSelect = ({ label, options, value, onChange, displayKey }) => {
           options.map((option, i) => {
             return (
               <Option value={option.id} key={'option' + i}>
-                {option[displayKey]}
+                {displayKey === 'sailingDate'
+                  ? moment(option[displayKey]).format('MM-DD-YYYY')
+                  : option[displayKey]}
               </Option>
             )
           })}

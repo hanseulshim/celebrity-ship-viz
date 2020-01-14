@@ -16,7 +16,7 @@ const SelectProduct = () => {
   const { selectedShip, selectedProduct } = state
   const { loading, error, data } = useQuery(GET_PRODUCT_LIST, {
     variables: {
-      id: selectedShip
+      shipId: selectedShip
     },
     fetchPolicy: 'network-only'
   })
@@ -30,7 +30,7 @@ const SelectProduct = () => {
   return (
     <FilterSelect
       label="Product"
-      displayKey="name"
+      displayKey="rdssProductCode"
       options={data.productList}
       value={selectedProduct}
       onChange={onChange}
