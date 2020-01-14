@@ -11,10 +11,14 @@ const Container = styled.div`
   }
 `
 
+const Title = styled.h2`
+  color: ${props => props.theme.jungleMist};
+`
+
 const PeerGroupFilters = () => {
   return (
     <Container>
-      <span>Peer Group Filters</span>
+      <Title>Peer Group</Title>
     </Container>
   )
 }
