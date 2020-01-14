@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
+import { getApi } from './helper'
 import {
   ApolloClient,
   ApolloProvider,
@@ -12,7 +13,7 @@ import {
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
-    uri: 'http://localhost:4000'
+    uri: getApi()
   })
 })
 

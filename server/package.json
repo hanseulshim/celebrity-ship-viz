@@ -4,12 +4,35 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "sls offline -s dev",
+    "start:prod": "sls offline -s prod",
+    "alpha": "sls deploy -s alpha --aws-profile celebrity",
+    "beta": "sls deploy -s beta --aws-profile celebrity",
+    "dev": "sls deploy -s dev --aws-profile celebrity",
+    "prod": "sls deploy -s prod --aws-profile celebrity",
+    "all": "yarn alpha && yarn beta && yarn dev && yarn prod"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.9.15",
-    "graphql": "^14.5.8"
+    "apollo-server-lambda": "^2.9.16",
+    "aws-sdk": "^2.600.0",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.5.8",
+    "knex": "^0.20.7",
+    "lodash": "^4.17.15",
+    "objection": "^2.1.0",
+    "pg": "^7.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-source-map-support": "^2.1.1",
+    "serverless-offline": "^5.12.1",
+    "serverless-plugin-warmup": "^4.7.1-rc.1",
+    "serverless-webpack": "^5.3.1",
+    "webpack": "^4.41.5",
+    "webpack-node-externals": "^1.7.2"
   }
 }
