@@ -17,6 +17,11 @@
 
 # production
 /build
+/server/env.yml
+/server/node_modules
+/server/.serverless
+/server/.webpack
+/server/_warmup
 
 # misc
 .DS_Store
