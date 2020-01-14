@@ -1,4 +1,5 @@
 import { Ship, Product, Itinerary, SailingDate } from '../models'
+import moment from 'moment'
 
 export default {
   Query: {
@@ -26,6 +27,15 @@ export default {
         .where('ships.id', shipId)
         .andWhere('products.id', productId)
         .andWhere('itineraries.id', itineraryId)
+    },
+    bookingWeekList: (_, { sailingDate = null }) => {
+      if (!sailingDate) return []
+      return [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(week => ({
+        week,
+        date: moment(sailingDate)
+          .subtract(week, 'weeks')
+          .format('MM/DD/YY')
+      }))
     }
   }
 }
