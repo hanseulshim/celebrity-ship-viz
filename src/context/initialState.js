@@ -1,6 +1,7 @@
 export default {
   peerGroupFilters: false,
-  selectedProduct: null,
   selectedShip: null,
-  selectedItinerary: null
+  selectedProduct: null,
+  selectedItinerary: null,
+  selectedSailDate: null
 }

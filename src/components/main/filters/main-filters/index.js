@@ -6,7 +6,9 @@ import SelectProduct from './SelectProduct'
 import SelectItinerary from './SelectItinerary'
 import SelectShip from './SelectShip'
 import PeerGroupToggle from './PeerGroupToggle'
-import SailDatePicker from './SailDatePicker'
+import SelectSailDate from './SelectSailDate'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Container = styled.div`
   display: flex;
@@ -19,14 +21,50 @@ const Container = styled.div`
   }
 `
 
+const ApplyButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${props => props.theme.lochmara};
+  padding: 0.5em 1em;
+  color: ${props => props.theme.white};
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+  min-width: 100px;
+`
+
+const DownloadButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: auto;
+  background-color: ${props => props.theme.silverTree};
+  padding: 0.5em 1em;
+  color: ${props => props.theme.black};
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+  min-width: 100px;
+`
+
 const MainFilters = () => {
   return (
     <Container>
       <PeerGroupToggle />
-      <SelectProduct />
       <SelectShip />
+      <SelectProduct />
       <SelectItinerary />
-      <SailDatePicker />
+      <SelectSailDate />
+      <ApplyButton>Apply</ApplyButton>
+      <DownloadButton>
+        <FontAwesomeIcon icon="download" />
+        Download
+      </DownloadButton>
     </Container>
   )
 }

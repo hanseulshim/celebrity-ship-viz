@@ -31,7 +31,7 @@ const Label = styled.span`
   margin-right: 1em;
 `
 
-const FilterSelect = ({ label, options, value, onChange }) => {
+const FilterSelect = ({ label, options, value, onChange, displayKey }) => {
   return (
     <Container>
       <Label>{label}</Label>
@@ -39,13 +39,12 @@ const FilterSelect = ({ label, options, value, onChange }) => {
         style={{ width: 150 }}
         value={value}
         onChange={value => onChange(value)}
-        disabled={!options}
       >
         {options &&
           options.map((option, i) => {
             return (
               <Option value={option.id} key={'option' + i}>
-                {option.name}
+                {option[displayKey]}
               </Option>
             )
           })}
