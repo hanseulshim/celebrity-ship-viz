@@ -16,37 +16,24 @@ const typeDefs = gql`
     name: String
   }
 
+  type SailDate {
+    id: Int
+    date: String
+  }
+
   type Query {
     _empty: String
-    productList: [Product]
-    shipList(id: Int): [Ship]
+    shipList: [Ship]
+    productList(id: Int): [Product]
     itineraryList(id: Int): [Itinerary]
+    sailDateList(id: Int): [SailDate]
   }
   type Mutation {
     _empty: String
   }
 `
 
-const productList = [
-  {
-    id: 1,
-    name: 'TRANSATL'
-  },
-  {
-    id: 2,
-    name: 'TRANSPAC'
-  },
-  {
-    id: 3,
-    name: 'INDIART'
-  },
-  {
-    id: 4,
-    name: 'HAWAII'
-  }
-]
-
-const shipList1 = [
+const shipList = [
   {
     id: 1,
     name: 'Apex'
@@ -60,19 +47,33 @@ const shipList1 = [
     name: 'Eclipse'
   }
 ]
+const productList1 = [
+  {
+    id: 1,
+    name: 'TRANSATL'
+  },
+  {
+    id: 2,
+    name: 'TRANSPAC'
+  },
+  {
+    id: 3,
+    name: 'INDIART'
+  }
+]
 
-const shipList2 = [
+const productList2 = [
   {
     id: 4,
-    name: 'Apex2'
+    name: 'BAHAMA3'
   },
   {
     id: 5,
-    name: 'Constellation2'
+    name: 'BAHAMA4'
   },
   {
     id: 6,
-    name: 'Eclipse2'
+    name: 'BERMUDA'
   }
 ]
 
@@ -91,12 +92,28 @@ const itineraryList = [
   }
 ]
 
+const sailDateList = [
+  {
+    id: 1,
+    date: '09/06/2020'
+  },
+  {
+    id: 2,
+    date: '10/31/2020'
+  },
+  {
+    id: 3,
+    date: '4/15/2021'
+  }
+]
+
 const resolvers = {
   Query: {
-    productList: () => productList,
-    shipList: (_, { id }) =>
-      id && id === 1 ? shipList1 : id && id > 1 ? shipList2 : [],
-    itineraryList: (_, { id }) => (id ? itineraryList : [])
+    shipList: () => shipList,
+    productList: (_, { id }) =>
+      id && id === 1 ? productList1 : id && id > 1 ? productList2 : [],
+    itineraryList: (_, { id }) => (id ? itineraryList : []),
+    sailDateList: (_, { id }) => (id ? sailDateList : [])
   }
 }
 

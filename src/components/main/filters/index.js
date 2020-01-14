@@ -9,6 +9,7 @@ import PeerGroupFilters from './peer-group-filters'
 const Container = styled.div`
   background-color: rgb(0, 0, 0, 0);
   padding: 2em 3em;
+  font-size: 1rem;
 `
 
 const Filters = () => {
