@@ -24,5 +24,10 @@ export default {
         id
         sailingDate
       }
+
+      bookingWeekList(sailingDate: null) {
+        week
+        date
+      }
     }`
 }
