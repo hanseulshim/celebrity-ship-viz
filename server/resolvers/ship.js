@@ -1,9 +1,10 @@
 import { Ship, Product, Itinerary, SailingDate } from '../models'
 import moment from 'moment'
+import { EDGE } from '../constants'
 
 export default {
   Query: {
-    shipList: () => Ship.query(),
+    shipList: () => Ship.query().where('classId', EDGE),
     productList: async (_, { shipId = null }) => {
       if (!shipId) return []
       return Product.query()

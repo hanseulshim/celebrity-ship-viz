@@ -3,7 +3,7 @@ type Ship {
   id: Int
   shipName: String
   shipCode: String
-  shipClass: Int
+  classId: Int
 }
 
 type Product {
