@@ -23,6 +23,7 @@ const StyledSelect = styled(Select)`
   .ant-select-selection--multiple .ant-select-selection__choice {
     background-color: ${props => props.theme.dusk};
     color: ${props => props.theme.white};
+    border: none;
   }
 
   .ant-select-arrow {
