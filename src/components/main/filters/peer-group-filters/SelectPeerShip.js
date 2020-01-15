@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client'
 import { store } from 'context/store'
 
 // Project Components
-import FilterSelect from 'components/common/FilterSelect'
+import FilterSelectGroup from 'components/common/FilterSelectGroup'
 import Notification from 'components/common/Notification'
 import Loader from 'components/common/Loader'
 
@@ -24,9 +24,10 @@ const SelectPeerShip = () => {
   //   })
 
   const options = [
-    { id: 1, name: 'Ship 1' },
-    { id: 2, name: 'Ship 2' },
-    { id: 3, name: 'Ship 3' }
+    { id: 1, name: 'Ship 1', class: 'a' },
+    { id: 2, name: 'Ship 2', class: 'b' },
+    { id: 3, name: 'Ship 3', class: 'b' },
+    { id: 4, name: 'Ship 4', class: 'c' }
   ]
   const onChange = value => {
     dispatch({ type: 'setSelectedPeerShip', value })
@@ -35,12 +36,13 @@ const SelectPeerShip = () => {
   //   if (loading) return <Loader />
   //   if (error) return <Notification type="error" message={error.message} />
   return (
-    <FilterSelect
+    <FilterSelectGroup
       label="Ship(s)"
       mode="multiple"
       displayKey="name"
       //   options={data.sailingDateList}
       options={options}
+      grouping="class"
       value={selectedPeerShip}
       width={500}
       onChange={onChange}

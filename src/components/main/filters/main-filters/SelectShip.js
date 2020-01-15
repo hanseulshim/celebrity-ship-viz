@@ -3,7 +3,7 @@ import { store } from 'context/store'
 import { useQuery } from '@apollo/client'
 
 // Project Components
-import FilterSelect from 'components/common/FilterSelect'
+import FilterSelectGroup from 'components/common/FilterSelectGroup'
 import Notification from 'components/common/Notification'
 import Loader from 'components/common/Loader'
 
@@ -24,9 +24,10 @@ const SelectShip = () => {
   if (loading) return <Loader />
   if (error) return <Notification type="error" message={error.message} />
   return (
-    <FilterSelect
+    <FilterSelectGroup
       label="Ship"
       displayKey="shipName"
+      grouping="class"
       options={data.shipList}
       value={selectedShip}
       onChange={onChange}

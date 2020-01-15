@@ -6,7 +6,8 @@ export const GET_SHIP_LIST = gql`
       id
       shipName
       shipCode
-      shipClass
+      classId
+      className
     }
   }
 `
