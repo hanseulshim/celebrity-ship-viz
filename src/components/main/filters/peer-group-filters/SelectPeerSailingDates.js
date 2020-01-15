@@ -9,6 +9,7 @@ const StyledRangePicker = styled(RangePicker)`
   .ant-input {
     background-color: ${props => props.theme.black50};
     color: ${props => props.theme.white};
+    border: none;
   }
   .ant-calendar-range-picker-separator {
     color: ${props => props.theme.white};
