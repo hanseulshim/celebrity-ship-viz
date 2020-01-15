@@ -4,6 +4,7 @@ type Ship {
   shipName: String
   shipCode: String
   classId: Int
+  className: String
 }
 
 type Product {

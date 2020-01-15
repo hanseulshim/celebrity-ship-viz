@@ -8,6 +8,7 @@ export default {
         shipName
         shipCode
         classId
+        className
       }
 
       productList(shipId: null) {

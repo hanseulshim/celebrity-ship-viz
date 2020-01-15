@@ -3,7 +3,11 @@ import moment from 'moment'
 
 export default {
   Query: {
-    shipList: () => Ship.query(),
+    shipList: async () =>
+      Ship.query()
+        .select('ship.*', 'class.name as className')
+        .joinRelated('class')
+        .orderBy('ship.id'),
     productList: async (_, { shipId = null }) => {
       if (!shipId) return []
       return Product.query()
