@@ -3,11 +3,16 @@ import moment from 'moment'
 
 export default {
   Query: {
-    shipList: async () =>
-      Ship.query()
+    shipList: async () => {
+      const shipList = await Ship.query()
         .select('ship.*', 'class.name as className')
         .joinRelated('class')
-        .orderBy('ship.id'),
+        .orderBy('ship.id')
+      return shipList.map(ship => ({
+        ...ship,
+        shipName: ship.shipName.replace('CELEBRITY ', '')
+      }))
+    },
     productList: async (_, { shipId = null }) => {
       if (!shipId) return []
       return Product.query()
