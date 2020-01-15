@@ -5,7 +5,23 @@ import moment from 'moment'
 
 const { RangePicker } = DatePicker
 
-const StyledRangePicker = styled(RangePicker)``
+const StyledRangePicker = styled(RangePicker)`
+  .ant-input {
+    background-color: ${props => props.theme.black50};
+    color: ${props => props.theme.white};
+  }
+  .ant-calendar-range-picker-separator {
+    color: ${props => props.theme.white};
+  }
+
+  .ant-calendar-picker-icon {
+    color: ${props => props.theme.white};
+  }
+
+  .ant-calendar-picker-clear {
+    color: ${props => props.theme.white};
+  }
+`
 
 const SelectPeerSailingDates = () => {
   return (

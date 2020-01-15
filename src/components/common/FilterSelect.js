@@ -20,6 +20,11 @@ const StyledSelect = styled(Select)`
     font-size: 0.85rem;
   }
 
+  .ant-select-selection--multiple .ant-select-selection__choice {
+    background-color: ${props => props.theme.dusk};
+    color: ${props => props.theme.white};
+  }
+
   .ant-select-arrow {
     color: ${props => props.theme.white};
   }
