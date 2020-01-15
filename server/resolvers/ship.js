@@ -34,12 +34,17 @@ export default {
     },
     bookingWeekList: (_, { sailingDate = null }) => {
       if (!sailingDate) return []
-      return [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(week => ({
-        week,
-        date: moment(sailingDate)
-          .subtract(week, 'weeks')
-          .format('MM/DD/YY')
-      }))
+      const arr = []
+      const diff = moment(sailingDate).diff(moment(), 'weeks')
+      for (let i = 0; i < 11; i++) {
+        arr.push({
+          week: diff + i,
+          date: moment(sailingDate)
+            .subtract(diff + i, 'weeks')
+            .format('MM/DD/YY')
+        })
+      }
+      return arr
     }
   }
 }
