@@ -3,5 +3,6 @@ export default {
   selectedShip: null,
   selectedProduct: null,
   selectedItinerary: null,
-  selectedSailDate: null
+  selectedSailDate: null,
+  selectedPeerShip: []
 }

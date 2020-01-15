@@ -38,15 +38,17 @@ const FilterSelect = ({
   value,
   onChange,
   displayKey,
-  width
+  width,
+  ...props
 }) => {
   return (
     <Container>
       <Label>{label}</Label>
       <StyledSelect
-        style={{ width: width || 200 }}
+        style={{ width: width || 150 }}
         value={value}
         onChange={value => onChange(value)}
+        mode={props.mode}
       >
         {options &&
           options.map((option, i) => {
