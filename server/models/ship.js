@@ -1,5 +1,11 @@
 import { Model } from 'objection'
 
+export class Class extends Model {
+  static get tableName() {
+    return 'class'
+  }
+}
+
 export class Ship extends Model {
   static get tableName() {
     return 'ship'
@@ -17,6 +23,14 @@ export class Ship extends Model {
             to: 'shipProduct.productId'
           },
           to: 'product.id'
+        }
+      },
+      class: {
+        relation: Model.BelongsToOneRelation,
+        modelClass: Class,
+        join: {
+          from: 'ship.classId',
+          to: 'class.id'
         }
       }
     }
