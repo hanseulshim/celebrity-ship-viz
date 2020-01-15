@@ -33,7 +33,7 @@ const SelectItinerary = () => {
       options={data.itineraryList}
       value={selectedItinerary}
       onChange={onChange}
-      width={300}
+      width={250}
     />
   )
 }

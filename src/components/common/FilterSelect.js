@@ -17,6 +17,7 @@ const StyledSelect = styled(Select)`
   .ant-select-selection {
     background-color: ${props => props.theme.black50};
     border: 1px ${props => props.theme.biscay};
+    font-size: 0.85rem;
   }
 
   .ant-select-arrow {

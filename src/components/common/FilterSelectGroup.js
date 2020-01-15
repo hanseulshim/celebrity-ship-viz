@@ -16,6 +16,7 @@ const StyledSelect = styled(Select)`
   .ant-select-selection {
     background-color: ${props => props.theme.black50};
     border: 1px ${props => props.theme.biscay};
+    font-size: 0.85rem;
   }
 
   .ant-select-arrow {
@@ -52,9 +53,9 @@ const FilterSelectGroup = ({
         onChange={value => onChange(value)}
         mode={props.mode}
       >
-        {groups.map(group => {
+        {groups.map((group, i) => {
           return (
-            <OptGroup label={group} key="key">
+            <OptGroup label={group} key={group + i}>
               {options
                 .filter(option => option[grouping] === group)
                 .map((option, i) => {

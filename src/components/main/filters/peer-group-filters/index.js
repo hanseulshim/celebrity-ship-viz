@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import SelectPeerShip from './SelectPeerShip'
+import SelectPeerSailingDates from './SelectPeerSailingDates'
 
 const Container = styled.div`
   display: flex;
@@ -22,6 +23,7 @@ const PeerGroupFilters = () => {
     <Container>
       <Title>Peer Group</Title>
       <SelectPeerShip />
+      <SelectPeerSailingDates />
     </Container>
   )
 }

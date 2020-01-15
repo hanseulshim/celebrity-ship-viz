@@ -22,10 +22,6 @@ const Container = styled.div`
   }
 `
 
-// const Download = styled(Button)`
-//   align-self: flex-end;
-// `
-
 const MainFilters = () => {
   return (
     <Container>
