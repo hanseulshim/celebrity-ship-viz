@@ -3,11 +3,16 @@ import moment from 'moment'
 
 export default {
   Query: {
-    shipList: async () =>
-      Ship.query()
+    shipList: async () => {
+      const shipList = await Ship.query()
         .select('ship.*', 'class.name as className')
         .joinRelated('class')
-        .orderBy('ship.id'),
+        .orderBy('ship.id')
+      return shipList.map(ship => ({
+        ...ship,
+        shipName: ship.shipName.replace('CELEBRITY ', '')
+      }))
+    },
     productList: async (_, { shipId = null }) => {
       if (!shipId) return []
       return Product.query()
@@ -34,12 +39,17 @@ export default {
     },
     bookingWeekList: (_, { sailingDate = null }) => {
       if (!sailingDate) return []
-      return [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(week => ({
-        week,
-        date: moment(sailingDate)
-          .subtract(week, 'weeks')
-          .format('MM/DD/YY')
-      }))
+      const arr = []
+      const diff = moment(sailingDate).diff(moment(), 'weeks')
+      for (let i = 0; i < 11; i++) {
+        arr.push({
+          week: diff + i,
+          date: moment(sailingDate)
+            .subtract(diff + i, 'weeks')
+            .format('MM/DD/YY')
+        })
+      }
+      return arr
     }
   }
 }
