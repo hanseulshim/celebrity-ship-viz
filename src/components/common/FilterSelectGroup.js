@@ -52,18 +52,18 @@ const FilterSelectGroup = ({
         onChange={value => onChange(value)}
         mode={props.mode}
       >
-        {/* {options &&
-          options.map((option, i) => {
-            return (
-              <Option value={option.id} key={'option' + i}>
-                option[displayKey]
-              </Option>
-            )
-          })} */}
-        {groups.forEach(grouping => {
+        {groups.map(group => {
           return (
-            <OptGroup label={grouping}>
-              <Option>Hey</Option>
+            <OptGroup label={group} key="key">
+              {options
+                .filter(option => option[grouping] === group)
+                .map((option, i) => {
+                  return (
+                    <Option value={option.id} key={'option' + i}>
+                      {option[displayKey]}
+                    </Option>
+                  )
+                })}
             </OptGroup>
           )
         })}

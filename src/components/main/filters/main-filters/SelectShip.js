@@ -27,7 +27,7 @@ const SelectShip = () => {
     <FilterSelectGroup
       label="Ship"
       displayKey="shipName"
-      grouping="class"
+      grouping="className"
       options={data.shipList}
       value={selectedShip}
       onChange={onChange}
