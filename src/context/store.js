@@ -41,15 +41,23 @@ const StateProvider = ({ children }) => {
           ...state,
           selectedSailDate: action.value
         }
-      case 'setSelectedPeerProduct':
-        return {
-          ...state,
-          selectedPeerProduct: action.value
-        }
       case 'setSelectedPeerShip':
         return {
           ...state,
           selectedPeerShip: action.value
+        }
+      case 'setSelectedPeerSailingDates':
+        return {
+          ...state,
+          selectedPeerSailingDates: action.value
+        }
+      case 'setSelectedSubFilter':
+        return {
+          ...state,
+          filter: {
+            ...state.filter,
+            [action.title]: action.value
+          }
         }
       default:
         throw new Error()

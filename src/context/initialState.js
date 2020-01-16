@@ -4,5 +4,17 @@ export default {
   selectedProduct: null,
   selectedItinerary: null,
   selectedSailDate: null,
-  selectedPeerShip: []
+  selectedPeerShip: [],
+  selectedPeerSailingDates: [],
+  filter: {
+    channel: [],
+    bookingType: [],
+    pointOfSaleMarket: [],
+    cabinCategoryClass: [],
+    cabinCategory: [],
+    cabinClassRate: [],
+    rateCategory: [],
+    maxOccupancy: [],
+    bookedOccupancy: []
+  }
 }

@@ -41,3 +41,46 @@ export const GET_SAILING_DATE_LIST = gql`
     }
   }
 `
+
+export const GET_SUB_FILTERS = gql`
+  {
+    filter {
+      channel {
+        id
+        value
+      }
+      bookingType {
+        id
+        value
+      }
+      pointOfSaleMarket {
+        id
+        value
+      }
+      cabinCategoryClass {
+        id
+        value
+      }
+      cabinCategory {
+        id
+        value
+      }
+      cabinClassRate {
+        id
+        value
+      }
+      rateCategory {
+        id
+        value
+      }
+      maxOccupancy {
+        id
+        value
+      }
+      bookedOccupancy {
+        id
+        value
+      }
+    }
+  }
+`

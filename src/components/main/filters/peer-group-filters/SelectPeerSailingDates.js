@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { DatePicker } from 'antd'
-import moment from 'moment'
+import { store } from 'context/store'
 
 const { RangePicker } = DatePicker
 
@@ -25,13 +25,19 @@ const StyledRangePicker = styled(RangePicker)`
 `
 
 const SelectPeerSailingDates = () => {
+  const globalState = useContext(store)
+  const { state, dispatch } = globalState
+  const { selectedPeerSailingDates } = state
+
+  const onChange = date => {
+    dispatch({ type: 'setSelectedPeerSailingDates', value: date })
+  }
+
   return (
     <StyledRangePicker
-      defaultValue={[
-        moment('2015/01/01', 'YYYY/MM/DD'),
-        moment('2015/01/01', 'YYYY/MM/DD')
-      ]}
       format={'YYYY/MM/DD'}
+      onChange={onChange}
+      value={selectedPeerSailingDates}
     />
   )
 }
