@@ -27,11 +27,29 @@ type BookingWeek {
   date: String
 }
 
+type Filter {
+  channel: [SubFilter]
+  bookingType: [SubFilter]
+  pointOfSaleMarket: [SubFilter]
+  cabinCategoryClass: [SubFilter]
+  cabinCategory: [SubFilter]
+  cabinClassRate: [SubFilter]
+  rateCategory: [SubFilter]
+  maxOccupancy: [SubFilter]
+  bookedOccupancy: [SubFilter]
+}
+
+type SubFilter {
+  id: Int
+  value: String
+}
+
 extend type Query {
  shipList: [Ship]
  productList(shipId: Int): [Product]
  itineraryList(shipId: Int, productId: Int): [Itinerary]
  sailingDateList(shipId: Int, productId: Int, itineraryId: Int): [SailingDate]
  bookingWeekList(sailingDate: String): [BookingWeek]
+ filter: Filter
 }
 `
