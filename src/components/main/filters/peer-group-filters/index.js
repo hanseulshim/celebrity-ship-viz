@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+
+// Project Imports
 import SelectPeerShip from './SelectPeerShip'
 import SelectPeerSailingDates from './SelectPeerSailingDates'
 
@@ -8,7 +10,8 @@ const Container = styled.div`
   align-items: center;
   color: ${props => props.theme.jungleMist};
   padding: 1em 0em 0em 2em;
-  > div {
+  > div,
+  .ant-calendar-picker {
     margin-right: 2em;
   }
 `

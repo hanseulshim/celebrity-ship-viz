@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useQuery } from '@apollo/client'
 
 // Project Components
-import DropdownMenu from 'components/common/DropdownMenu'
+import DropdownMenu from './DropdownMenu'
 
 // GQL
 import { GET_SUB_FILTERS } from 'graphql/queries'

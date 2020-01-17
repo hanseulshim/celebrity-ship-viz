@@ -12,5 +12,6 @@ export default {
   hokeyPokey: '#bcb226',
   cabaret: '#d34362',
   mandy: '#e84b6c',
-  dusk: '#4a627f'
+  dusk: '#4a627f',
+  babyBlue: '#9dcbff'
 }

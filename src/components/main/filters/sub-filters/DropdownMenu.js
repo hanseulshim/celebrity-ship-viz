@@ -23,7 +23,7 @@ const SaveButton = styled.button`
   align-items: center;
   color: ${props => props.theme.white};
   background-color: ${props => props.theme.biscay};
-  padding: 0.5em 0.5em;
+  padding: 0.25em 0.25em;
   font-weight: 500;
   font-size: 0.75rem;
   border-radius: 2px;
@@ -35,9 +35,36 @@ const SaveButton = styled.button`
 const StyledMenu = styled(Menu)`
   max-height: 300px;
   overflow: scroll;
+  color: ${props => props.theme.white};
+  > div {
+    background-color: ${props => props.theme.black};
+  }
+  .ant-dropdown-menu-item {
+    background-color: ${props => props.theme.black};
+    color: ${props => props.theme.white};
+    font-weight: 500;
+  }
+  .ant-dropdown-menu-item:hover {
+    background-color: ${props => props.theme.black};
+    color: ${props => props.theme.white};
+  }
 `
 
-const StyledDropdown = styled(Dropdown)``
+const StyledCheckbox = styled(Checkbox)`
+  > span {
+    color: ${props => props.theme.white};
+    text-transform: capitalize;
+  }
+  .ant-checkbox-inner {
+    background-color: ${props => props.theme.black};
+    border-color: ${props => props.theme.white};
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: ${props => props.theme.aquaForest};
+    border-color: ${props => props.theme.aquaForest};
+  }
+`
 
 const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const [visible, setVisible] = useState(false)
@@ -58,6 +85,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const handleMenuClick = e => {
     if (e.key === 'save') {
       dispatch({ type: 'setSelectedSubFilter', title, value: subFilter })
+      setVisible(false)
     }
   }
 
@@ -70,12 +98,12 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
     <StyledMenu onClick={handleMenuClick}>
       {options.map((option, i) => (
         <Menu.Item key={'option' + i}>
-          <Checkbox
+          <StyledCheckbox
             onChange={e => handleCheck(option.id)}
             checked={subFilter.includes(option.id)}
           >
             {option[displayKey]}
-          </Checkbox>
+          </StyledCheckbox>
         </Menu.Item>
       ))}
       <Menu.Item key="save">
@@ -85,7 +113,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   )
 
   return (
-    <StyledDropdown
+    <Dropdown
       overlay={menu}
       onVisibleChange={setVisible}
       visible={visible}
@@ -93,7 +121,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
       overlayClassName={'dropdown'}
     >
       <Button>{formatTitle(title)}</Button>
-    </StyledDropdown>
+    </Dropdown>
   )
 }
 
