@@ -6,14 +6,14 @@ import 'antd/dist/antd.css'
 
 // Icons
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faDownload, faFilter } from '@fortawesome/free-solid-svg-icons'
 
 // Context
 import { StateProvider } from 'context/store'
 
 import Main from 'components/main'
 
-library.add(faDownload)
+library.add(faDownload, faFilter)
 
 const App = () => {
   return (

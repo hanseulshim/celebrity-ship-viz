@@ -1,9 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Select } from 'antd'
-import moment from 'moment'
 
-const { Option } = Select
+const { Option, OptGroup } = Select
 
 const Container = styled.div`
   display: flex;
@@ -20,12 +19,6 @@ const StyledSelect = styled(Select)`
     font-size: 0.85rem;
   }
 
-  .ant-select-selection--multiple .ant-select-selection__choice {
-    background-color: ${props => props.theme.dusk};
-    color: ${props => props.theme.white};
-    border: none;
-  }
-
   .ant-select-arrow {
     color: ${props => props.theme.white};
   }
@@ -39,15 +32,18 @@ const Label = styled.span`
   margin-right: 1em;
 `
 
-const FilterSelect = ({
+const FilterSelectGroup = ({
   label,
   options,
   value,
   onChange,
   displayKey,
+  grouping,
   width,
   ...props
 }) => {
+  const groups = [...new Set(options.map(item => item[grouping]))]
+
   return (
     <Container>
       <Label>{label}</Label>
@@ -57,19 +53,24 @@ const FilterSelect = ({
         onChange={value => onChange(value)}
         mode={props.mode}
       >
-        {options &&
-          options.map((option, i) => {
-            return (
-              <Option value={option.id} key={'option' + i}>
-                {displayKey === 'sailingDate'
-                  ? moment(option[displayKey]).format('MM-DD-YYYY')
-                  : option[displayKey]}
-              </Option>
-            )
-          })}
+        {groups.map((group, i) => {
+          return (
+            <OptGroup label={group} key={group + i}>
+              {options
+                .filter(option => option[grouping] === group)
+                .map((option, i) => {
+                  return (
+                    <Option value={option.id} key={'option' + i}>
+                      {option[displayKey]}
+                    </Option>
+                  )
+                })}
+            </OptGroup>
+          )
+        })}
       </StyledSelect>
     </Container>
   )
 }
 
-export default FilterSelect
+export default FilterSelectGroup

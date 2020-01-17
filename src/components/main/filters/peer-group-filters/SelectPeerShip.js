@@ -1,38 +1,38 @@
 import React, { useContext } from 'react'
-import { store } from 'context/store'
 import { useQuery } from '@apollo/client'
+import { store } from 'context/store'
 
 // Project Components
-import FilterSelectGroup from 'components/common/FilterSelectGroup'
+import FilterSelect from 'components/common/FilterSelect'
 import Notification from 'components/common/Notification'
 import Loader from 'components/common/Loader'
 
 // GQL
 import { GET_SHIP_LIST } from 'graphql/queries'
 
-const SelectShip = () => {
+const SelectPeerShip = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { selectedShip } = state
-
-  const { loading, error, data } = useQuery(GET_SHIP_LIST)
-
+  const { selectedPeerShip } = state
+  const { loading, error, data } = useQuery(GET_SHIP_LIST, {
+    fetchPolicy: 'network-only'
+  })
   const onChange = value => {
-    dispatch({ type: 'setSelectedShip', value })
+    dispatch({ type: 'setSelectedPeerShip', value })
   }
-
   if (loading) return <Loader />
   if (error) return <Notification type="error" message={error.message} />
   return (
-    <FilterSelectGroup
-      label="Ship"
+    <FilterSelect
+      label="Ship(s)"
+      mode="multiple"
       displayKey="shipName"
-      grouping="className"
       options={data.shipList}
-      value={selectedShip}
+      value={selectedPeerShip}
+      width={300}
       onChange={onChange}
     />
   )
 }
 
-export default SelectShip
+export default SelectPeerShip

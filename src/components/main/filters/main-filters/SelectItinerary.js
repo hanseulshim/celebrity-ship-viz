@@ -13,10 +13,10 @@ import Notification from 'components/common/Notification'
 const SelectItinerary = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { selectedShip, selectedItinerary } = state
+  const { selectedShip, selectedProduct, selectedItinerary } = state
 
   const { loading, error, data } = useQuery(GET_ITINERARY_LIST, {
-    variables: { id: selectedShip },
+    variables: { shipId: selectedShip, productId: selectedProduct },
     fetchPolicy: 'network-only'
   })
 
@@ -29,10 +29,11 @@ const SelectItinerary = () => {
   return (
     <FilterSelect
       label="Itinerary"
-      displayKey="name"
+      displayKey="itineraryDesc"
       options={data.itineraryList}
       value={selectedItinerary}
       onChange={onChange}
+      width={250}
     />
   )
 }
