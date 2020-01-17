@@ -35,36 +35,9 @@ const SaveButton = styled.button`
 const StyledMenu = styled(Menu)`
   max-height: 300px;
   overflow: scroll;
-  color: ${props => props.theme.white};
-  > div {
-    background-color: ${props => props.theme.black};
-  }
-  .ant-dropdown-menu-item {
-    background-color: ${props => props.theme.black};
-    color: ${props => props.theme.white};
-    font-weight: 500;
-  }
-  .ant-dropdown-menu-item:hover {
-    background-color: ${props => props.theme.black};
-    color: ${props => props.theme.white};
-  }
 `
 
-const StyledCheckbox = styled(Checkbox)`
-  > span {
-    color: ${props => props.theme.white};
-    text-transform: capitalize;
-  }
-  .ant-checkbox-inner {
-    background-color: ${props => props.theme.black};
-    border-color: ${props => props.theme.white};
-  }
-
-  .ant-checkbox-checked .ant-checkbox-inner {
-    background-color: ${props => props.theme.aquaForest};
-    border-color: ${props => props.theme.aquaForest};
-  }
-`
+const StyledCheckbox = styled(Checkbox)``
 
 const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const [visible, setVisible] = useState(false)

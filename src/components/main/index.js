@@ -27,6 +27,25 @@ const VizContainer = styled.div`
   display: flex;
   flex: 5;
   flex-direction: column;
+  padding-right: 2em;
+`
+const ShipVizContainer = styled.div`
+  flex: 4;
+`
+
+const LegendContainer = styled.div`
+  flex: 1;
+  flex-direction: column;
+  border: 3px solid ${props => props.theme.black50};
+`
+
+const TimelineContainer = styled.div`
+  flex: 4;
+  border: 3px solid ${props => props.theme.black50};
+`
+const DeckViewContainer = styled.div`
+  flex: 1;
+  border: 3px solid ${props => props.theme.black50};
 `
 
 const Main = () => {
@@ -38,7 +57,16 @@ const Main = () => {
         <ChartColumn />
         <VizContainer>
           <SubFilters />
-          <ShipViz />
+          <Row style={{ flex: 5 }}>
+            <ShipVizContainer>
+              <ShipViz />
+            </ShipVizContainer>
+            <LegendContainer />
+          </Row>
+          <Row style={{ flex: 1 }}>
+            <TimelineContainer style={{ height: '150px' }} />
+            <DeckViewContainer />
+          </Row>
         </VizContainer>
       </Row>
     </Container>
