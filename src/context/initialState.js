@@ -16,5 +16,6 @@ export default {
     rateCategory: [],
     maxOccupancy: [],
     bookedOccupancy: []
-  }
+  },
+  selectedBookingWeek: null
 }

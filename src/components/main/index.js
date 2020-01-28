@@ -6,6 +6,7 @@ import Header from './Header'
 import Filters from './filters'
 import SubFilters from './filters/sub-filters'
 import ShipViz from './ship-viz'
+import Timeline from './filters/timeline'
 
 const Container = styled.div`
   display: flex;
@@ -42,6 +43,7 @@ const LegendContainer = styled.div`
 const TimelineContainer = styled.div`
   flex: 4;
   border: 3px solid ${props => props.theme.black50};
+  padding: 0em 1em;
 `
 const DeckViewContainer = styled.div`
   flex: 1;
@@ -64,7 +66,9 @@ const Main = () => {
             <LegendContainer />
           </Row>
           <Row style={{ flex: 1 }}>
-            <TimelineContainer style={{ height: '150px' }} />
+            <TimelineContainer style={{ height: '150px' }}>
+              <Timeline />
+            </TimelineContainer>
             <DeckViewContainer />
           </Row>
         </VizContainer>
