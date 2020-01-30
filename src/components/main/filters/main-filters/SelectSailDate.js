@@ -30,7 +30,6 @@ const SelectSailDate = () => {
   })
 
   const onChange = value => {
-    console.log(value)
     dispatch({ type: 'setSelectedSailDate', value })
   }
 
