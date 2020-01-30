@@ -72,8 +72,7 @@ const Dot = styled.div`
 
 const NotificationContainer = styled.div`
   flex: 3;
-  margin-top: 4em;
-  margin-left: 2em;
+  padding: 3em;
 `
 
 const Timeline = () => {
