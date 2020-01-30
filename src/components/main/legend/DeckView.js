@@ -12,7 +12,7 @@ const Container = styled.div`
 const DeckView = () => {
   return (
     <Container>
-      <img src={deckView} />
+      <img src={deckView} alt="deck-view" />
     </Container>
   )
 }

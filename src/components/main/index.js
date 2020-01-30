@@ -8,7 +8,6 @@ import SubFilters from './filters/sub-filters'
 import ShipViz from './ship-viz'
 import Timeline from './filters/timeline'
 import Legend from './legend'
-import deckView from 'assets/ship_nav.png'
 import DeckView from './legend/DeckView'
 
 const Container = styled.div`
@@ -40,11 +39,11 @@ const Main = () => {
         <ChartColumn />
         <VizContainer>
           <SubFilters />
-          <Row style={{ flex: 4 }}>
+          <Row style={{ flex: '4' }}>
             <ShipViz />
             <Legend />
           </Row>
-          <Row style={{ flex: 1 }}>
+          <Row style={{ flex: '1', minHeight: '150px' }}>
             <Timeline />
             <DeckView />
           </Row>

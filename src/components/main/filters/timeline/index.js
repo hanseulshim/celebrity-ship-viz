@@ -13,7 +13,6 @@ import Notification from 'components/common/Notification'
 const LineContainer = styled.div`
   flex: 3;
   position: relative;
-  height: 150px;
   display: flex;
   justify-content: center;
 
@@ -34,6 +33,7 @@ const MarkerContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 90%;
+  flex-flow: row-reverse;
 `
 
 const Marker = styled.div`
@@ -70,74 +70,37 @@ const Dot = styled.div`
   transition: all 0.1s ease;
 `
 
+const NotificationContainer = styled.div`
+  flex: 3;
+  margin-top: 4em;
+  margin-left: 2em;
+`
+
 const Timeline = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
   const { selectedSailDate, selectedBookingWeek } = state
 
-  // const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
-  //   variables: { sailingDate: selectedSailDate },
-  //   fetchPolicy: 'network-only'
-  // })
+  const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
+    variables: { sailingDate: selectedSailDate },
+    fetchPolicy: 'network-only'
+  })
 
   const handleSelect = (e, value) => {
     dispatch({ type: 'setSelectedBookingWeek', value })
   }
 
-  const bookingWeekList = [
-    {
-      week: 41,
-      date: '01/28/20'
-    },
-    {
-      week: 42,
-      date: '01/21/20'
-    },
-    {
-      week: 43,
-      date: '01/14/20'
-    },
-    {
-      week: 44,
-      date: '01/07/20'
-    },
-    {
-      week: 45,
-      date: '12/31/19'
-    },
-    {
-      week: 46,
-      date: '12/24/19'
-    },
-    {
-      week: 47,
-      date: '12/17/19'
-    },
-    {
-      week: 48,
-      date: '12/10/19'
-    },
-    {
-      week: 49,
-      date: '12/03/19'
-    },
-    {
-      week: 50,
-      date: '11/26/19'
-    },
-    {
-      week: 51,
-      date: '11/19/19'
-    }
-  ]
+  if (loading) return <Loader />
+  if (error) return <Notification type="error" message={error.message} />
 
-  // if (loading) return <Loader />
-  // if (error) return <Notification type="error" message={error.message} />
-
-  return (
+  return !data.bookingWeekList.length ? (
+    <NotificationContainer>
+      <Notification type="info" message={'Please select a sail date'} />
+    </NotificationContainer>
+  ) : (
     <LineContainer>
       <MarkerContainer>
-        {bookingWeekList.map((wk, i) => {
+        {data.bookingWeekList.map((wk, i) => {
           return (
             <Marker key={'wk' + i} onClick={e => handleSelect(e, wk.week)}>
               <Dot

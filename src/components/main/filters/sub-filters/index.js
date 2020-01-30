@@ -33,8 +33,8 @@ const SubFilters = () => {
         .filter(v => v !== '__typename')
         .map((subFilter, i) => {
           const options = data.filter[subFilter]
-          if (options.length) {
-            return (
+          return (
+            options.length && (
               <DropdownMenu
                 options={options}
                 title={subFilter}
@@ -42,7 +42,7 @@ const SubFilters = () => {
                 displayKey={'value'}
               />
             )
-          }
+          )
         })}
     </Container>
   )

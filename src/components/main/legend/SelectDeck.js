@@ -56,6 +56,7 @@ const DeckSvg = ({ path, rollOverPath }) => {
       src={image}
       onMouseOver={handleRollover}
       onMouseOut={handleMouseExit}
+      alt="deck"
     />
   )
 }
