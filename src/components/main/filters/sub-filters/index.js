@@ -34,7 +34,7 @@ const SubFilters = () => {
         .map((subFilter, i) => {
           const options = data.filter[subFilter]
           return (
-            options.length && (
+            options.length > 0 && (
               <DropdownMenu
                 options={options}
                 title={subFilter}
