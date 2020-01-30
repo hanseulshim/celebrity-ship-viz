@@ -10,11 +10,12 @@ import { GET_BOOKING_WEEK_LIST } from 'graphql/queries'
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
 
-const Container = styled.div`
-  display: flex;
+const LineContainer = styled.div`
+  flex: 3;
   position: relative;
-  justify-content: space-between;
   height: 150px;
+  display: flex;
+  justify-content: center;
 
   ::after {
     content: '';
@@ -22,7 +23,7 @@ const Container = styled.div`
     height: 2.5px;
     background-color: ${props => props.theme.lochmara};
     top: 50%;
-    width: 100%;
+    width: 90%;
     border-radius: 3px;
   }
 `
@@ -32,7 +33,7 @@ const MarkerContainer = styled.div`
   top: 49%;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
 `
 
 const Marker = styled.div`
@@ -66,7 +67,7 @@ const Dot = styled.div`
   bottom: ${props => (props.selected ? '4px' : '')};
   background-color: ${props => props.theme.white};
   z-index: 3;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 `
 
 const Timeline = () => {
@@ -74,10 +75,10 @@ const Timeline = () => {
   const { state, dispatch } = globalState
   const { selectedSailDate, selectedBookingWeek } = state
 
-  const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
-    variables: { sailingDate: selectedSailDate },
-    fetchPolicy: 'network-only'
-  })
+  // const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
+  //   variables: { sailingDate: selectedSailDate },
+  //   fetchPolicy: 'network-only'
+  // })
 
   const handleSelect = (e, value) => {
     dispatch({ type: 'setSelectedBookingWeek', value })
@@ -130,11 +131,11 @@ const Timeline = () => {
     }
   ]
 
-  if (loading) return <Loader />
-  if (error) return <Notification type="error" message={error.message} />
+  // if (loading) return <Loader />
+  // if (error) return <Notification type="error" message={error.message} />
 
   return (
-    <Container>
+    <LineContainer>
       <MarkerContainer>
         {bookingWeekList.map((wk, i) => {
           return (
@@ -151,7 +152,7 @@ const Timeline = () => {
           )
         })}
       </MarkerContainer>
-    </Container>
+    </LineContainer>
   )
 }
 

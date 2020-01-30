@@ -64,6 +64,11 @@ const StateProvider = ({ children }) => {
           ...state,
           selectedBookingWeek: action.value
         }
+      case 'setSelectedDeck':
+        return {
+          ...state,
+          selectedDeck: action.value
+        }
       default:
         throw new Error()
     }
