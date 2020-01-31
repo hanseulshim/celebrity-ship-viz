@@ -6,46 +6,29 @@ import Header from './Header'
 import Filters from './filters'
 import SubFilters from './filters/sub-filters'
 import ShipViz from './ship-viz'
+import Timeline from './filters/timeline'
+import Legend from './legend'
+import DeckView from './legend/DeckView'
+import charts from 'assets/charts-1x.png'
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
 `
-
 const Row = styled.div`
   display: flex;
 `
-
 const ChartColumn = styled.div`
   display: flex;
   flex: 2;
   flex-direction: column;
   background-color: ${props => props.theme.black50};
 `
-
 const VizContainer = styled.div`
   display: flex;
   flex: 5;
   flex-direction: column;
   padding-right: 2em;
-`
-const ShipVizContainer = styled.div`
-  flex: 4;
-`
-
-const LegendContainer = styled.div`
-  flex: 1;
-  flex-direction: column;
-  border: 3px solid ${props => props.theme.black50};
-`
-
-const TimelineContainer = styled.div`
-  flex: 4;
-  border: 3px solid ${props => props.theme.black50};
-`
-const DeckViewContainer = styled.div`
-  flex: 1;
-  border: 3px solid ${props => props.theme.black50};
 `
 
 const Main = () => {
@@ -54,18 +37,18 @@ const Main = () => {
       <Header />
       <Filters />
       <Row>
-        <ChartColumn />
+        <ChartColumn>
+          <img src={charts} />
+        </ChartColumn>
         <VizContainer>
           <SubFilters />
-          <Row style={{ flex: 5 }}>
-            <ShipVizContainer>
-              <ShipViz />
-            </ShipVizContainer>
-            <LegendContainer />
+          <Row style={{ flex: '4' }}>
+            <ShipViz />
+            <Legend />
           </Row>
-          <Row style={{ flex: 1 }}>
-            <TimelineContainer style={{ height: '150px' }} />
-            <DeckViewContainer />
+          <Row style={{ flex: '1', minHeight: '150px' }}>
+            <Timeline />
+            <DeckView />
           </Row>
         </VizContainer>
       </Row>

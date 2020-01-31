@@ -186,7 +186,7 @@ const ShipViz = () => {
       layout={layout}
       revision={Math.random()}
       useResizeHandler={true}
-      style={{ width: '100%', height: '900px' }}
+      style={{ width: '100%', height: '900px', flex: '5' }}
     />
   )
 }

@@ -16,5 +16,7 @@ export default {
     rateCategory: [],
     maxOccupancy: [],
     bookedOccupancy: []
-  }
+  },
+  selectedBookingWeek: null,
+  selectedDeck: 'Deck04'
 }
