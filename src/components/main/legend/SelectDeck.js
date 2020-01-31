@@ -25,6 +25,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  flex-flow: column-reverse;
   padding: 1em 1em;
   border: 2px solid ${props => props.theme.biscay};
 `

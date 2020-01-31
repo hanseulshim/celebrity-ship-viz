@@ -24,6 +24,7 @@ const ColorItem = styled.div`
   font-size: 0.75em;
   color: ${props => props.theme.jungleMist};
   min-width: 100px;
+  max-height: 50px;
 
   > span {
     max-width: 100px;
