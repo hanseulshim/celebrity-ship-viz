@@ -20,8 +20,9 @@ const Row = styled.div`
 `
 const ChartColumn = styled.div`
   display: flex;
-  flex: 2;
+  flex: 1;
   flex-direction: column;
+  justify-content: center;
   background-color: ${props => props.theme.black50};
 `
 const VizContainer = styled.div`
@@ -38,7 +39,7 @@ const Main = () => {
       <Filters />
       <Row>
         <ChartColumn>
-          <img src={charts} />
+          <img src={charts} style={{ width: '500px', height: '90%' }} />
         </ChartColumn>
         <VizContainer>
           <SubFilters />
