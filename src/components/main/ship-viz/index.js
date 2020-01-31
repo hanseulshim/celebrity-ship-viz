@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Plot from 'react-plotly.js'
 import colors from 'styles/colors'
+import data from './data1'
 
 const hoverInfo = {
   hoverlabel: {
@@ -14,133 +15,6 @@ const hoverInfo = {
   hovertemplate:
     '   Room %{customdata.roomNumber}   <br />   %{customdata.status}   <br />   Max %{customdata.maxOccupancy}   <br />   Booked %{customdata.booked}   <br /><br /><extra></extra>'
 }
-
-const data = [
-  [
-    {
-      x0: 0,
-      x1: 2,
-      y0: 0,
-      y1: 2,
-      z: 0,
-      roomNumber: 5832,
-      maxOccupancy: 4,
-      booked: 4
-    },
-    {
-      x0: 0,
-      x1: 2,
-      y0: 2,
-      y1: 3,
-      z: 0,
-      roomNumber: 5833,
-      maxOccupancy: 2,
-      booked: 1
-    },
-    {
-      x0: 0,
-      x1: 2,
-      y0: 3,
-      y1: 4,
-      z: 0,
-      roomNumber: 5834,
-      maxOccupancy: 2,
-      booked: 1
-    },
-    {
-      x0: 0,
-      x1: 2,
-      y0: 4,
-      y1: 5,
-      z: 0,
-      roomNumber: 5835,
-      maxOccupancy: 2,
-      booked: 0
-    },
-    {
-      x0: 3,
-      x1: 5,
-      y0: 0,
-      y1: 2,
-      z: 0,
-      roomNumber: 5836,
-      maxOccupancy: 2,
-      booked: 0
-    },
-    {
-      x0: 3,
-      x1: 5,
-      y0: 2,
-      y1: 3,
-      z: 0,
-      roomNumber: 5837,
-      maxOccupancy: 2,
-      booked: 0
-    },
-    {
-      x0: 3,
-      x1: 5,
-      y0: 3,
-      y1: 4,
-      z: 0,
-      roomNumber: 5838,
-      maxOccupancy: 2,
-      booked: 2
-    },
-    {
-      x0: 3,
-      x1: 5,
-      y0: 4,
-      y1: 5,
-      z: 0,
-      roomNumber: 5839,
-      maxOccupancy: 4,
-      booked: 4
-    }
-  ],
-  [
-    {
-      x0: 0,
-      x1: 2,
-      y0: 0,
-      y1: 2,
-      z: 1,
-      roomNumber: 5832,
-      maxOccupancy: 4,
-      booked: 4
-    },
-    {
-      x0: 0,
-      x1: 2,
-      y0: 2,
-      y1: 3,
-      z: 1,
-      roomNumber: 5833,
-      maxOccupancy: 2,
-      booked: 1
-    },
-    {
-      x0: 0,
-      x1: 2,
-      y0: 3,
-      y1: 4,
-      z: 1,
-      roomNumber: 5834,
-      maxOccupancy: 2,
-      booked: 0
-    },
-    {
-      x0: 0,
-      x1: 2,
-      y0: 4,
-      y1: 5,
-      z: 1,
-      roomNumber: 5835,
-      maxOccupancy: 2,
-      booked: 2
-    }
-  ]
-]
 
 const layout = {
   scene: {
@@ -166,7 +40,12 @@ const layout = {
       showticklabels: false,
       showspikes: false
     },
-    aspectmode: 'auto'
+    aspectmode: 'manual',
+    aspectratio: {
+      x: 0.5,
+      y: 1,
+      z: 0.5
+    }
   },
   paper_bgcolor: colors.black0,
   plot_bgcolor: colors.black0
@@ -239,7 +118,7 @@ const createLevels = (data, level) => {
   const y = []
   const z = []
   const customdata = []
-  const length = 6
+  const length = 150
   for (let y1 = 0; y1 < length; y1++) {
     for (let x1 = 0; x1 < length; x1++) {
       x.push(x1)
@@ -277,7 +156,7 @@ const createLevels = (data, level) => {
   })
 
   const hover = level === 0 ? hoverInfo : { hoverinfo: 'none' }
-  const opacity = level === 0 ? 1 : 0.3
+  const opacity = level === 0 ? 1 : 0.5
   return {
     x,
     y,
