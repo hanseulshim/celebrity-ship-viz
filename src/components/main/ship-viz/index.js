@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import Plot from 'react-plotly.js'
 import colors from 'styles/colors'
-import data from './data1'
+import data from './data'
 
 const hoverInfo = {
   hoverlabel: {
     bgcolor: colors.biscay,
     bordercolor: colors.jungleMist,
     font: {
-      color: '#FFF',
+      color: colors.white,
       size: 16
     }
   },
@@ -44,8 +44,9 @@ const layout = {
     aspectratio: {
       x: 0.5,
       y: 1,
-      z: 0.5
-    }
+      z: 0.3
+    },
+    camera: { center: { x: 0, y: 0, z: 0 }, eye: { x: 0.35, y: 0.35, z: 0.2 } }
   },
   paper_bgcolor: colors.black0,
   plot_bgcolor: colors.black0
@@ -54,18 +55,31 @@ const layout = {
 const getStatus = (maxOccupancy, booked, index) => {
   const statusObj = {
     status: '',
-    color: ''
+    color: '',
+    maxOccupancyLabel: '',
+    bookedLabel: ''
   }
   const even = index % 2 === 0
-  if (booked === 0) {
+  if (maxOccupancy === null) {
+    statusObj.status = 'N/A'
+    statusObj.color = even ? colors.shuttleGray : colors.fiord
+    statusObj.maxOccupancyLabel = 'N/A'
+    statusObj.bookedLabel = 'N/A'
+  } else if (booked === 0) {
     statusObj.status = 'UNBOOKED'
     statusObj.color = even ? colors.cabaret : colors.mandy
+    statusObj.maxOccupancyLabel = maxOccupancy
+    statusObj.bookedLabel = booked
   } else if (maxOccupancy === booked) {
     statusObj.status = 'BOOKED'
     statusObj.color = even ? colors.silverTree : colors.aquaForest
+    statusObj.maxOccupancyLabel = maxOccupancy
+    statusObj.bookedLabel = booked
   } else {
     statusObj.status = 'BOOKED'
     statusObj.color = even ? colors.keyLimePie : colors.hokeyPokey
+    statusObj.maxOccupancyLabel = maxOccupancy
+    statusObj.bookedLabel = booked
   }
   return statusObj
 }
@@ -82,7 +96,7 @@ const getPolygonCoordinates = (
   customdata,
   index
 ) => {
-  const { color, status } = getStatus(maxOccupancy, booked, index)
+  const { color, status, maxOccupancyLabel, bookedLabel } = getStatus(maxOccupancy, booked, index)
   const h0 = y0 * l // Starting Height
   const h1 = y1 * l // Ending Height
   // Vertices of the polygon
@@ -95,14 +109,14 @@ const getPolygonCoordinates = (
   customdata[v0] = {
     roomNumber,
     status,
-    maxOccupancy,
-    booked
+    maxOccupancy: maxOccupancyLabel,
+    booked: bookedLabel
   }
   customdata[v1] = {
     roomNumber,
     status,
-    maxOccupancy,
-    booked
+    maxOccupancy: maxOccupancyLabel,
+    booked: bookedLabel
   }
 
   return {
@@ -113,7 +127,7 @@ const getPolygonCoordinates = (
   }
 }
 
-const createLevels = (data, level) => {
+const createDeck = (data, deck, selectedDeck) => {
   const x = []
   const y = []
   const z = []
@@ -129,7 +143,7 @@ const createLevels = (data, level) => {
         maxOccupancy: '',
         booked: ''
       })
-      z.push(level)
+      z.push(deck)
     }
   }
   const i = []
@@ -155,8 +169,8 @@ const createLevels = (data, level) => {
     facecolor.push(...coords.facecolor)
   })
 
-  const hover = level === 0 ? hoverInfo : { hoverinfo: 'none' }
-  const opacity = level === 0 ? 1 : 0.5
+  const hover = deck === selectedDeck ? hoverInfo : { hoverinfo: 'none' }
+  const opacity = deck === selectedDeck ? 1 : 0.5
   return {
     x,
     y,
@@ -175,8 +189,10 @@ const createLevels = (data, level) => {
 
 const ShipViz = () => {
   const [plotData, setPlotdata] = useState([])
+  const [selectedDeck] = useState(16)
   useEffect(() => {
-    const coords = data.map(createLevels)
+    const decks = Object.keys(data)
+    const coords = decks.map(deck => createDeck(data[deck], parseInt(deck), selectedDeck))
     setPlotdata(coords)
   }, [])
 

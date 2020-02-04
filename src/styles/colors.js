@@ -13,5 +13,7 @@ export default {
   cabaret: '#d34362',
   mandy: '#e84b6c',
   dusk: '#4a627f',
-  babyBlue: '#9dcbff'
+  babyBlue: '#9dcbff',
+  shuttleGray: '#586475',
+  fiord: '#425268'
 }
