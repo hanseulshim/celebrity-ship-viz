@@ -118,6 +118,18 @@ const getPolygonCoordinates = (
     maxOccupancy: maxOccupancyLabel,
     booked: bookedLabel
   }
+  customdata[v2] = {
+    roomNumber,
+    status,
+    maxOccupancy: maxOccupancyLabel,
+    booked: bookedLabel
+  }
+  customdata[v3] = {
+    roomNumber,
+    status,
+    maxOccupancy: maxOccupancyLabel,
+    booked: bookedLabel
+  }
 
   return {
     i: [v0, v1],
