@@ -4,6 +4,7 @@ import cabin from './cabin'
 
 export default gql`
   scalar Date
+  scalar JSON
   ${ship}
   ${cabin}
   type Query {

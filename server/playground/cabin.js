@@ -3,15 +3,6 @@ export default {
   endpoint: '',
   query: `
     {
-      deckList {
-        deck
-        cabinNumber
-        plotX0
-        plotY0
-        plotX1
-        plotY1
-        bookingStatus
-        cabinColor
-      }
+      deckList(shipId: 4, sailingDateId: 199, weeks: 5)
     }`
 }
