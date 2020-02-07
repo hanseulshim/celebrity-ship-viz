@@ -1,5 +1,4 @@
 import { Cabin } from '../models'
-const { raw } = require('objection')
 
 export default {
   Query: {
@@ -22,12 +21,8 @@ export default {
           'c.plotX1',
           'c.plotY1',
           's.bookingStatus',
-          raw(`CASE
-            WHEN s.booking_status IS NULL THEN 'GREY'
-            WHEN (s.booking_status = 'U' OR s.booking_status = 'C') THEN 'RED'
-            WHEN s.booked_occupancy < c.cabin_capacity THEN 'YELLOW'
-            ELSE 'GREEN'
-          END as "cabinColor"`)
+          'c.cabinCapacity',
+          's.bookedOccupancy'
         )
         .alias('c')
         .leftJoinRelated('bookingSnapshotWeeks', { alias: 's' })

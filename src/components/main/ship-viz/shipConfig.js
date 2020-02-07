@@ -10,7 +10,7 @@ export const hoverInfo = {
     }
   },
   hovertemplate:
-    '   Room %{customdata.roomNumber}   <br />   %{customdata.status}   <br />   Max %{customdata.maxOccupancy}   <br />   Booked %{customdata.booked}   <br /><br /><extra></extra>'
+    '   Room %{customdata.cabinNumber}   <br />   %{customdata.status}   <br />   Max %{customdata.cabinCapacity}   <br />   Booked %{customdata.bookedOccupancy}   <br /><br /><extra></extra>'
 }
 
 export const layout = {

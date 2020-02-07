@@ -8,7 +8,8 @@ export default {
       plotX1: 42,
       plotY1: 85,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -18,7 +19,8 @@ export default {
       plotX1: 9,
       plotY1: 85,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -28,7 +30,8 @@ export default {
       plotX1: 42,
       plotY1: 84,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -38,7 +41,8 @@ export default {
       plotX1: 9,
       plotY1: 84,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -48,7 +52,8 @@ export default {
       plotX1: 42,
       plotY1: 83,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -58,7 +63,8 @@ export default {
       plotX1: 9,
       plotY1: 83,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -68,7 +74,8 @@ export default {
       plotX1: 42,
       plotY1: 82,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 4
     },
     {
       deck: 3,
@@ -78,7 +85,8 @@ export default {
       plotX1: 9,
       plotY1: 82,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -88,7 +96,8 @@ export default {
       plotX1: 42,
       plotY1: 81,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -98,7 +107,8 @@ export default {
       plotX1: 9,
       plotY1: 81,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 3,
@@ -108,7 +118,8 @@ export default {
       plotX1: 42,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -118,7 +129,8 @@ export default {
       plotX1: 9,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -128,7 +140,8 @@ export default {
       plotX1: 42,
       plotY1: 79,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -138,7 +151,8 @@ export default {
       plotX1: 9,
       plotY1: 79,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 3,
@@ -148,7 +162,8 @@ export default {
       plotX1: 42,
       plotY1: 78,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -158,7 +173,8 @@ export default {
       plotX1: 9,
       plotY1: 78,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -168,7 +184,8 @@ export default {
       plotX1: 42,
       plotY1: 77,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -178,7 +195,8 @@ export default {
       plotX1: 9,
       plotY1: 77,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -188,7 +206,8 @@ export default {
       plotX1: 42,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -198,7 +217,8 @@ export default {
       plotX1: 9,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -208,7 +228,8 @@ export default {
       plotX1: 42,
       plotY1: 75,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -218,7 +239,8 @@ export default {
       plotX1: 9,
       plotY1: 75,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -228,7 +250,8 @@ export default {
       plotX1: 42,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -238,7 +261,8 @@ export default {
       plotX1: 9,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -248,7 +272,8 @@ export default {
       plotX1: 42,
       plotY1: 73,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -258,7 +283,8 @@ export default {
       plotX1: 9,
       plotY1: 73,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -268,7 +294,8 @@ export default {
       plotX1: 42,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -278,7 +305,8 @@ export default {
       plotX1: 9,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -288,7 +316,8 @@ export default {
       plotX1: 42,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -298,7 +327,8 @@ export default {
       plotX1: 9,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -308,7 +338,8 @@ export default {
       plotX1: 42,
       plotY1: 70,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -318,7 +349,8 @@ export default {
       plotX1: 9,
       plotY1: 70,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -328,7 +360,8 @@ export default {
       plotX1: 42,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -338,7 +371,8 @@ export default {
       plotX1: 9,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -348,7 +382,8 @@ export default {
       plotX1: 42,
       plotY1: 68,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -358,7 +393,8 @@ export default {
       plotX1: 9,
       plotY1: 68,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -368,7 +404,8 @@ export default {
       plotX1: 42,
       plotY1: 67,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -378,7 +415,8 @@ export default {
       plotX1: 9,
       plotY1: 67,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -388,7 +426,8 @@ export default {
       plotX1: 42,
       plotY1: 66,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -398,7 +437,8 @@ export default {
       plotX1: 9,
       plotY1: 66,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -408,7 +448,8 @@ export default {
       plotX1: 42,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -418,7 +459,8 @@ export default {
       plotX1: 9,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -428,7 +470,8 @@ export default {
       plotX1: 42,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -438,7 +481,8 @@ export default {
       plotX1: 9,
       plotY1: 64,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -448,7 +492,8 @@ export default {
       plotX1: 42,
       plotY1: 63,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -458,7 +503,8 @@ export default {
       plotX1: 9,
       plotY1: 63,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -468,7 +514,8 @@ export default {
       plotX1: 42,
       plotY1: 62,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -478,7 +525,8 @@ export default {
       plotX1: 9,
       plotY1: 62,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -488,7 +536,8 @@ export default {
       plotX1: 42,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -498,7 +547,8 @@ export default {
       plotX1: 9,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -508,7 +558,8 @@ export default {
       plotX1: 42,
       plotY1: 60,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -518,7 +569,8 @@ export default {
       plotX1: 9,
       plotY1: 60,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -528,7 +580,8 @@ export default {
       plotX1: 42,
       plotY1: 59,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -538,7 +591,8 @@ export default {
       plotX1: 9,
       plotY1: 59,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -548,7 +602,8 @@ export default {
       plotX1: 42,
       plotY1: 58,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -558,7 +613,8 @@ export default {
       plotX1: 9,
       plotY1: 58,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -568,7 +624,8 @@ export default {
       plotX1: 42,
       plotY1: 57,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -578,7 +635,8 @@ export default {
       plotX1: 9,
       plotY1: 57,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -588,7 +646,8 @@ export default {
       plotX1: 42,
       plotY1: 56,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -598,7 +657,8 @@ export default {
       plotX1: 9,
       plotY1: 56,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -608,7 +668,8 @@ export default {
       plotX1: 42,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -618,7 +679,8 @@ export default {
       plotX1: 9,
       plotY1: 55,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -628,7 +690,8 @@ export default {
       plotX1: 42,
       plotY1: 54,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -638,7 +701,8 @@ export default {
       plotX1: 9,
       plotY1: 54,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -648,7 +712,8 @@ export default {
       plotX1: 42,
       plotY1: 53,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -658,7 +723,8 @@ export default {
       plotX1: 9,
       plotY1: 53,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -668,7 +734,8 @@ export default {
       plotX1: 42,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -678,7 +745,8 @@ export default {
       plotX1: 9,
       plotY1: 52,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -688,7 +756,8 @@ export default {
       plotX1: 42,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -698,7 +767,8 @@ export default {
       plotX1: 9,
       plotY1: 51,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -708,7 +778,8 @@ export default {
       plotX1: 42,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -718,7 +789,8 @@ export default {
       plotX1: 9,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -728,7 +800,8 @@ export default {
       plotX1: 42,
       plotY1: 49,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -738,7 +811,8 @@ export default {
       plotX1: 9,
       plotY1: 44,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -748,7 +822,8 @@ export default {
       plotX1: 42,
       plotY1: 48,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -758,7 +833,8 @@ export default {
       plotX1: 9,
       plotY1: 43,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -768,7 +844,8 @@ export default {
       plotX1: 42,
       plotY1: 47,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -778,7 +855,8 @@ export default {
       plotX1: 9,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -788,7 +866,8 @@ export default {
       plotX1: 42,
       plotY1: 46,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -798,7 +877,8 @@ export default {
       plotX1: 9,
       plotY1: 41,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -808,7 +888,8 @@ export default {
       plotX1: 42,
       plotY1: 45,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 3,
@@ -818,7 +899,8 @@ export default {
       plotX1: 9,
       plotY1: 40,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -828,7 +910,8 @@ export default {
       plotX1: 42,
       plotY1: 44,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -838,7 +921,8 @@ export default {
       plotX1: 9,
       plotY1: 39,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -848,7 +932,8 @@ export default {
       plotX1: 42,
       plotY1: 43,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -858,7 +943,8 @@ export default {
       plotX1: 9,
       plotY1: 38,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: 3
     },
     {
       deck: 3,
@@ -868,7 +954,8 @@ export default {
       plotX1: 42,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -878,7 +965,8 @@ export default {
       plotX1: 9,
       plotY1: 37,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -888,7 +976,8 @@ export default {
       plotX1: 42,
       plotY1: 41,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -898,7 +987,8 @@ export default {
       plotX1: 9,
       plotY1: 36,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -908,7 +998,8 @@ export default {
       plotX1: 42,
       plotY1: 40,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -918,7 +1009,8 @@ export default {
       plotX1: 9,
       plotY1: 35,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -928,7 +1020,8 @@ export default {
       plotX1: 42,
       plotY1: 39,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -938,7 +1031,8 @@ export default {
       plotX1: 9,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -948,7 +1042,8 @@ export default {
       plotX1: 42,
       plotY1: 38,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -958,7 +1053,8 @@ export default {
       plotX1: 9,
       plotY1: 33,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -968,7 +1064,8 @@ export default {
       plotX1: 42,
       plotY1: 37,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -978,7 +1075,8 @@ export default {
       plotX1: 9,
       plotY1: 32,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -988,7 +1086,8 @@ export default {
       plotX1: 42,
       plotY1: 36,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -998,7 +1097,8 @@ export default {
       plotX1: 9,
       plotY1: 31,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -1008,7 +1108,8 @@ export default {
       plotX1: 42,
       plotY1: 35,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 3,
@@ -1018,7 +1119,8 @@ export default {
       plotX1: 9,
       plotY1: 30,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 3,
@@ -1028,7 +1130,8 @@ export default {
       plotX1: 42,
       plotY1: 34,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     }
   ],
   6: [
@@ -1040,7 +1143,8 @@ export default {
       plotX1: 39,
       plotY1: 100,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 6,
@@ -1050,7 +1154,8 @@ export default {
       plotX1: 12,
       plotY1: 101,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1060,7 +1165,8 @@ export default {
       plotX1: 39,
       plotY1: 99,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1070,7 +1176,8 @@ export default {
       plotX1: 12,
       plotY1: 100,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1080,7 +1187,8 @@ export default {
       plotX1: 39,
       plotY1: 98,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1090,7 +1198,8 @@ export default {
       plotX1: 12,
       plotY1: 99,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1100,7 +1209,8 @@ export default {
       plotX1: 39,
       plotY1: 97,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1110,7 +1220,8 @@ export default {
       plotX1: 12,
       plotY1: 98,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1120,7 +1231,8 @@ export default {
       plotX1: 39,
       plotY1: 96,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1130,7 +1242,8 @@ export default {
       plotX1: 12,
       plotY1: 97,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1140,7 +1253,8 @@ export default {
       plotX1: 39,
       plotY1: 95,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 4
     },
     {
       deck: 6,
@@ -1150,7 +1264,8 @@ export default {
       plotX1: 12,
       plotY1: 96,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1160,7 +1275,8 @@ export default {
       plotX1: 39,
       plotY1: 94,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1170,7 +1286,8 @@ export default {
       plotX1: 12,
       plotY1: 95,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1180,7 +1297,8 @@ export default {
       plotX1: 39,
       plotY1: 93,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1190,7 +1308,8 @@ export default {
       plotX1: 12,
       plotY1: 94,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1200,7 +1319,8 @@ export default {
       plotX1: 39,
       plotY1: 92,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1210,7 +1330,8 @@ export default {
       plotX1: 12,
       plotY1: 93,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1220,7 +1341,8 @@ export default {
       plotX1: 39,
       plotY1: 91,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1230,7 +1352,8 @@ export default {
       plotX1: 12,
       plotY1: 92,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1240,7 +1363,8 @@ export default {
       plotX1: 39,
       plotY1: 90,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1250,7 +1374,8 @@ export default {
       plotX1: 12,
       plotY1: 91,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1260,7 +1385,8 @@ export default {
       plotX1: 39,
       plotY1: 89,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1270,7 +1396,8 @@ export default {
       plotX1: 12,
       plotY1: 90,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1280,7 +1407,8 @@ export default {
       plotX1: 39,
       plotY1: 88,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1290,7 +1418,8 @@ export default {
       plotX1: 12,
       plotY1: 89,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1300,7 +1429,8 @@ export default {
       plotX1: 39,
       plotY1: 87,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1310,7 +1440,8 @@ export default {
       plotX1: 12,
       plotY1: 88,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1320,7 +1451,8 @@ export default {
       plotX1: 36,
       plotY1: 86,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1330,7 +1462,8 @@ export default {
       plotX1: 15,
       plotY1: 87,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1340,7 +1473,8 @@ export default {
       plotX1: 36,
       plotY1: 85,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1350,7 +1484,8 @@ export default {
       plotX1: 15,
       plotY1: 86,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1360,7 +1495,8 @@ export default {
       plotX1: 36,
       plotY1: 84,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1370,7 +1506,8 @@ export default {
       plotX1: 15,
       plotY1: 85,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1380,7 +1517,8 @@ export default {
       plotX1: 36,
       plotY1: 83,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 6,
@@ -1390,7 +1528,8 @@ export default {
       plotX1: 15,
       plotY1: 84,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1400,7 +1539,8 @@ export default {
       plotX1: 36,
       plotY1: 82,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1410,7 +1550,8 @@ export default {
       plotX1: 15,
       plotY1: 83,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 4
     },
     {
       deck: 6,
@@ -1420,7 +1561,8 @@ export default {
       plotX1: 36,
       plotY1: 81,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1430,7 +1572,8 @@ export default {
       plotX1: 15,
       plotY1: 82,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1440,7 +1583,8 @@ export default {
       plotX1: 36,
       plotY1: 80,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1450,7 +1594,8 @@ export default {
       plotX1: 15,
       plotY1: 81,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1460,7 +1605,8 @@ export default {
       plotX1: 36,
       plotY1: 79,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1470,7 +1616,8 @@ export default {
       plotX1: 15,
       plotY1: 80,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1480,7 +1627,8 @@ export default {
       plotX1: 36,
       plotY1: 78,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1490,7 +1638,8 @@ export default {
       plotX1: 15,
       plotY1: 79,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1500,7 +1649,8 @@ export default {
       plotX1: 36,
       plotY1: 77,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1510,7 +1660,8 @@ export default {
       plotX1: 15,
       plotY1: 78,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1520,7 +1671,8 @@ export default {
       plotX1: 36,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1530,7 +1682,8 @@ export default {
       plotX1: 15,
       plotY1: 77,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1540,7 +1693,8 @@ export default {
       plotX1: 36,
       plotY1: 75,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1550,7 +1704,8 @@ export default {
       plotX1: 15,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1560,7 +1715,8 @@ export default {
       plotX1: 36,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1570,7 +1726,8 @@ export default {
       plotX1: 15,
       plotY1: 75,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1580,7 +1737,8 @@ export default {
       plotX1: 36,
       plotY1: 73,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1590,7 +1748,8 @@ export default {
       plotX1: 15,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1600,7 +1759,8 @@ export default {
       plotX1: 36,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1610,7 +1770,8 @@ export default {
       plotX1: 15,
       plotY1: 73,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1620,7 +1781,8 @@ export default {
       plotX1: 36,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1630,7 +1792,8 @@ export default {
       plotX1: 15,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1640,7 +1803,8 @@ export default {
       plotX1: 36,
       plotY1: 70,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1650,7 +1814,8 @@ export default {
       plotX1: 15,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1660,7 +1825,8 @@ export default {
       plotX1: 36,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1670,7 +1836,8 @@ export default {
       plotX1: 15,
       plotY1: 70,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1680,7 +1847,8 @@ export default {
       plotX1: 36,
       plotY1: 68,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1690,7 +1858,8 @@ export default {
       plotX1: 15,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1700,7 +1869,8 @@ export default {
       plotX1: 36,
       plotY1: 67,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1710,7 +1880,8 @@ export default {
       plotX1: 15,
       plotY1: 68,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1720,7 +1891,8 @@ export default {
       plotX1: 36,
       plotY1: 66,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1730,7 +1902,8 @@ export default {
       plotX1: 15,
       plotY1: 67,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1740,7 +1913,8 @@ export default {
       plotX1: 36,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1750,7 +1924,8 @@ export default {
       plotX1: 15,
       plotY1: 66,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 6,
@@ -1760,7 +1935,8 @@ export default {
       plotX1: 36,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1770,7 +1946,8 @@ export default {
       plotX1: 15,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1780,7 +1957,8 @@ export default {
       plotX1: 36,
       plotY1: 63,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1790,7 +1968,8 @@ export default {
       plotX1: 15,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1800,7 +1979,8 @@ export default {
       plotX1: 36,
       plotY1: 62,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1810,7 +1990,8 @@ export default {
       plotX1: 15,
       plotY1: 63,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1820,7 +2001,8 @@ export default {
       plotX1: 36,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1830,7 +2012,8 @@ export default {
       plotX1: 15,
       plotY1: 62,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1840,7 +2023,8 @@ export default {
       plotX1: 36,
       plotY1: 60,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1850,7 +2034,8 @@ export default {
       plotX1: 15,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1860,7 +2045,8 @@ export default {
       plotX1: 36,
       plotY1: 59,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1870,7 +2056,8 @@ export default {
       plotX1: 15,
       plotY1: 60,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1880,7 +2067,8 @@ export default {
       plotX1: 39,
       plotY1: 58,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1890,7 +2078,8 @@ export default {
       plotX1: 15,
       plotY1: 59,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -1900,7 +2089,8 @@ export default {
       plotX1: 33,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1910,7 +2100,8 @@ export default {
       plotX1: 15,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1920,7 +2111,8 @@ export default {
       plotX1: 39,
       plotY1: 57,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1930,7 +2122,8 @@ export default {
       plotX1: 15,
       plotY1: 57,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1940,7 +2133,8 @@ export default {
       plotX1: 39,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1950,7 +2144,8 @@ export default {
       plotX1: 15,
       plotY1: 56,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1960,7 +2155,8 @@ export default {
       plotX1: 33,
       plotY1: 55,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 6,
@@ -1970,7 +2166,8 @@ export default {
       plotX1: 15,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1980,7 +2177,8 @@ export default {
       plotX1: 39,
       plotY1: 54,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -1990,7 +2188,8 @@ export default {
       plotX1: 15,
       plotY1: 54,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2000,7 +2199,8 @@ export default {
       plotX1: 36,
       plotY1: 53,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2010,7 +2210,8 @@ export default {
       plotX1: 15,
       plotY1: 53,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 4
     },
     {
       deck: 6,
@@ -2020,7 +2221,8 @@ export default {
       plotX1: 36,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2030,7 +2232,8 @@ export default {
       plotX1: 15,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2040,7 +2243,8 @@ export default {
       plotX1: 36,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2050,7 +2254,8 @@ export default {
       plotX1: 15,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2060,7 +2265,8 @@ export default {
       plotX1: 36,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2070,7 +2276,8 @@ export default {
       plotX1: 15,
       plotY1: 50,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2080,7 +2287,8 @@ export default {
       plotX1: 36,
       plotY1: 49,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2090,7 +2298,8 @@ export default {
       plotX1: 15,
       plotY1: 49,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2100,7 +2309,8 @@ export default {
       plotX1: 36,
       plotY1: 48,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 6,
@@ -2110,7 +2320,8 @@ export default {
       plotX1: 15,
       plotY1: 48,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2120,7 +2331,8 @@ export default {
       plotX1: 36,
       plotY1: 47,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2130,7 +2342,8 @@ export default {
       plotX1: 15,
       plotY1: 47,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 6,
@@ -2140,7 +2353,8 @@ export default {
       plotX1: 36,
       plotY1: 46,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2150,7 +2364,8 @@ export default {
       plotX1: 15,
       plotY1: 46,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2160,7 +2375,8 @@ export default {
       plotX1: 36,
       plotY1: 45,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2170,7 +2386,8 @@ export default {
       plotX1: 15,
       plotY1: 45,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2180,7 +2397,8 @@ export default {
       plotX1: 36,
       plotY1: 44,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2190,7 +2408,8 @@ export default {
       plotX1: 15,
       plotY1: 44,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2200,7 +2419,8 @@ export default {
       plotX1: 36,
       plotY1: 43,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2210,7 +2430,8 @@ export default {
       plotX1: 15,
       plotY1: 43,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2220,7 +2441,8 @@ export default {
       plotX1: 36,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2230,7 +2452,8 @@ export default {
       plotX1: 15,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2240,7 +2463,8 @@ export default {
       plotX1: 36,
       plotY1: 41,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 6,
@@ -2250,7 +2474,8 @@ export default {
       plotX1: 15,
       plotY1: 41,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2260,7 +2485,8 @@ export default {
       plotX1: 36,
       plotY1: 40,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2270,7 +2496,8 @@ export default {
       plotX1: 15,
       plotY1: 40,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2280,7 +2507,8 @@ export default {
       plotX1: 36,
       plotY1: 39,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2290,7 +2518,8 @@ export default {
       plotX1: 15,
       plotY1: 39,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2300,7 +2529,8 @@ export default {
       plotX1: 36,
       plotY1: 38,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2310,7 +2540,8 @@ export default {
       plotX1: 15,
       plotY1: 38,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2320,7 +2551,8 @@ export default {
       plotX1: 36,
       plotY1: 37,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2330,7 +2562,8 @@ export default {
       plotX1: 15,
       plotY1: 37,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2340,7 +2573,8 @@ export default {
       plotX1: 36,
       plotY1: 36,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 4
     },
     {
       deck: 6,
@@ -2350,7 +2584,8 @@ export default {
       plotX1: 15,
       plotY1: 36,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2360,7 +2595,8 @@ export default {
       plotX1: 36,
       plotY1: 35,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2370,7 +2606,8 @@ export default {
       plotX1: 15,
       plotY1: 35,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2380,7 +2617,8 @@ export default {
       plotX1: 36,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2390,7 +2628,8 @@ export default {
       plotX1: 15,
       plotY1: 34,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2400,7 +2639,8 @@ export default {
       plotX1: 36,
       plotY1: 33,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2410,7 +2650,8 @@ export default {
       plotX1: 15,
       plotY1: 33,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2420,7 +2661,8 @@ export default {
       plotX1: 36,
       plotY1: 32,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2430,7 +2672,8 @@ export default {
       plotX1: 15,
       plotY1: 32,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2440,7 +2683,8 @@ export default {
       plotX1: 36,
       plotY1: 31,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2450,7 +2694,8 @@ export default {
       plotX1: 15,
       plotY1: 31,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2460,7 +2705,8 @@ export default {
       plotX1: 36,
       plotY1: 30,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2470,7 +2716,8 @@ export default {
       plotX1: 15,
       plotY1: 30,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2480,7 +2727,8 @@ export default {
       plotX1: 36,
       plotY1: 29,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2490,7 +2738,8 @@ export default {
       plotX1: 15,
       plotY1: 29,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2500,7 +2749,8 @@ export default {
       plotX1: 36,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2510,7 +2760,8 @@ export default {
       plotX1: 15,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2520,7 +2771,8 @@ export default {
       plotX1: 36,
       plotY1: 27,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2530,7 +2782,8 @@ export default {
       plotX1: 15,
       plotY1: 27,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2540,7 +2793,8 @@ export default {
       plotX1: 36,
       plotY1: 26,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2550,7 +2804,8 @@ export default {
       plotX1: 15,
       plotY1: 26,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2560,7 +2815,8 @@ export default {
       plotX1: 36,
       plotY1: 25,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2570,7 +2826,8 @@ export default {
       plotX1: 15,
       plotY1: 25,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2580,7 +2837,8 @@ export default {
       plotX1: 36,
       plotY1: 24,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 4
     },
     {
       deck: 6,
@@ -2590,7 +2848,8 @@ export default {
       plotX1: 15,
       plotY1: 24,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2600,7 +2859,8 @@ export default {
       plotX1: 36,
       plotY1: 23,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2610,7 +2870,8 @@ export default {
       plotX1: 15,
       plotY1: 23,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2620,7 +2881,8 @@ export default {
       plotX1: 36,
       plotY1: 22,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2630,7 +2892,8 @@ export default {
       plotX1: 15,
       plotY1: 22,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2640,7 +2903,8 @@ export default {
       plotX1: 36,
       plotY1: 21,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2650,7 +2914,8 @@ export default {
       plotX1: 15,
       plotY1: 21,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 6,
@@ -2660,7 +2925,8 @@ export default {
       plotX1: 36,
       plotY1: 20,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2670,7 +2936,8 @@ export default {
       plotX1: 15,
       plotY1: 20,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2680,7 +2947,8 @@ export default {
       plotX1: 36,
       plotY1: 19,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2690,7 +2958,8 @@ export default {
       plotX1: 15,
       plotY1: 19,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2700,7 +2969,8 @@ export default {
       plotX1: 36,
       plotY1: 18,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2710,7 +2980,8 @@ export default {
       plotX1: 15,
       plotY1: 18,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2720,7 +2991,8 @@ export default {
       plotX1: 36,
       plotY1: 17,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2730,7 +3002,8 @@ export default {
       plotX1: 15,
       plotY1: 17,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2740,7 +3013,8 @@ export default {
       plotX1: 36,
       plotY1: 16,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2750,7 +3024,8 @@ export default {
       plotX1: 15,
       plotY1: 16,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2760,7 +3035,8 @@ export default {
       plotX1: 36,
       plotY1: 15,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2770,7 +3046,8 @@ export default {
       plotX1: 15,
       plotY1: 15,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2780,7 +3057,8 @@ export default {
       plotX1: 36,
       plotY1: 14,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 6,
@@ -2790,7 +3068,8 @@ export default {
       plotX1: 15,
       plotY1: 14,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2800,7 +3079,8 @@ export default {
       plotX1: 36,
       plotY1: 13,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 6,
@@ -2810,7 +3090,8 @@ export default {
       plotX1: 15,
       plotY1: 13,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2820,7 +3101,8 @@ export default {
       plotX1: 36,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 6,
@@ -2830,7 +3112,8 @@ export default {
       plotX1: 15,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2840,7 +3123,8 @@ export default {
       plotX1: 36,
       plotY1: 11,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2850,7 +3134,8 @@ export default {
       plotX1: 15,
       plotY1: 11,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2860,7 +3145,8 @@ export default {
       plotX1: 36,
       plotY1: 10,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2870,7 +3156,8 @@ export default {
       plotX1: 15,
       plotY1: 10,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2880,7 +3167,8 @@ export default {
       plotX1: 36,
       plotY1: 9,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2890,7 +3178,8 @@ export default {
       plotX1: 15,
       plotY1: 9,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 6,
@@ -2900,7 +3189,8 @@ export default {
       plotX1: 36,
       plotY1: 8,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 6,
@@ -2910,7 +3200,8 @@ export default {
       plotX1: 15,
       plotY1: 8,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     }
   ],
   7: [
@@ -2922,7 +3213,8 @@ export default {
       plotX1: 27,
       plotY1: 104,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -2932,7 +3224,8 @@ export default {
       plotX1: 24,
       plotY1: 104,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -2942,7 +3235,8 @@ export default {
       plotX1: 30,
       plotY1: 104,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -2952,7 +3246,8 @@ export default {
       plotX1: 21,
       plotY1: 104,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -2962,7 +3257,8 @@ export default {
       plotX1: 33,
       plotY1: 103,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -2972,7 +3268,8 @@ export default {
       plotX1: 18,
       plotY1: 104,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -2982,7 +3279,8 @@ export default {
       plotX1: 36,
       plotY1: 102,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -2992,7 +3290,8 @@ export default {
       plotX1: 15,
       plotY1: 103,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3002,7 +3301,8 @@ export default {
       plotX1: 39,
       plotY1: 100,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3012,7 +3312,8 @@ export default {
       plotX1: 12,
       plotY1: 102,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3022,7 +3323,8 @@ export default {
       plotX1: 39,
       plotY1: 99,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3032,7 +3334,8 @@ export default {
       plotX1: 12,
       plotY1: 100,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3042,7 +3345,8 @@ export default {
       plotX1: 27,
       plotY1: 100,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3052,7 +3356,8 @@ export default {
       plotX1: 12,
       plotY1: 99,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3062,7 +3367,8 @@ export default {
       plotX1: 27,
       plotY1: 97,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3072,7 +3378,8 @@ export default {
       plotX1: 21,
       plotY1: 100,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3082,7 +3389,8 @@ export default {
       plotX1: 39,
       plotY1: 98,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3092,7 +3400,8 @@ export default {
       plotX1: 24,
       plotY1: 100,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3102,7 +3411,8 @@ export default {
       plotX1: 39,
       plotY1: 97,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -3112,7 +3422,8 @@ export default {
       plotX1: 21,
       plotY1: 97,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 4
     },
     {
       deck: 7,
@@ -3122,7 +3433,8 @@ export default {
       plotX1: 39,
       plotY1: 96,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3132,7 +3444,8 @@ export default {
       plotX1: 24,
       plotY1: 97,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3142,7 +3455,8 @@ export default {
       plotX1: 39,
       plotY1: 95,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3152,7 +3466,8 @@ export default {
       plotX1: 12,
       plotY1: 98,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3162,7 +3477,8 @@ export default {
       plotX1: 39,
       plotY1: 94,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3172,7 +3488,8 @@ export default {
       plotX1: 12,
       plotY1: 97,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3182,7 +3499,8 @@ export default {
       plotX1: 39,
       plotY1: 93,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3192,7 +3510,8 @@ export default {
       plotX1: 12,
       plotY1: 96,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3202,7 +3521,8 @@ export default {
       plotX1: 27,
       plotY1: 94,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3212,7 +3532,8 @@ export default {
       plotX1: 12,
       plotY1: 95,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3222,7 +3543,8 @@ export default {
       plotX1: 39,
       plotY1: 92,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3232,7 +3554,8 @@ export default {
       plotX1: 12,
       plotY1: 94,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3242,7 +3565,8 @@ export default {
       plotX1: 39,
       plotY1: 91,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3252,7 +3576,8 @@ export default {
       plotX1: 12,
       plotY1: 93,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3262,7 +3587,8 @@ export default {
       plotX1: 39,
       plotY1: 90,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3272,7 +3598,8 @@ export default {
       plotX1: 21,
       plotY1: 94,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3282,7 +3609,8 @@ export default {
       plotX1: 39,
       plotY1: 89,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3292,7 +3620,8 @@ export default {
       plotX1: 24,
       plotY1: 94,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3302,7 +3631,8 @@ export default {
       plotX1: 39,
       plotY1: 88,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3312,7 +3642,8 @@ export default {
       plotX1: 12,
       plotY1: 92,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -3322,7 +3653,8 @@ export default {
       plotX1: 39,
       plotY1: 87,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3332,7 +3664,8 @@ export default {
       plotX1: 12,
       plotY1: 91,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3342,7 +3675,8 @@ export default {
       plotX1: 39,
       plotY1: 86,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3352,7 +3686,8 @@ export default {
       plotX1: 12,
       plotY1: 90,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3362,7 +3697,8 @@ export default {
       plotX1: 39,
       plotY1: 85,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3372,7 +3708,8 @@ export default {
       plotX1: 12,
       plotY1: 89,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3382,7 +3719,8 @@ export default {
       plotX1: 39,
       plotY1: 84,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3392,7 +3730,8 @@ export default {
       plotX1: 12,
       plotY1: 88,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3402,7 +3741,8 @@ export default {
       plotX1: 39,
       plotY1: 83,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3412,7 +3752,8 @@ export default {
       plotX1: 12,
       plotY1: 87,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3422,7 +3763,8 @@ export default {
       plotX1: 39,
       plotY1: 82,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3432,7 +3774,8 @@ export default {
       plotX1: 12,
       plotY1: 86,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3442,7 +3785,8 @@ export default {
       plotX1: 39,
       plotY1: 81,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3452,7 +3796,8 @@ export default {
       plotX1: 12,
       plotY1: 85,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3462,7 +3807,8 @@ export default {
       plotX1: 39,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3472,7 +3818,8 @@ export default {
       plotX1: 12,
       plotY1: 84,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3482,7 +3829,8 @@ export default {
       plotX1: 39,
       plotY1: 79,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3492,7 +3840,8 @@ export default {
       plotX1: 12,
       plotY1: 83,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3502,7 +3851,8 @@ export default {
       plotX1: 39,
       plotY1: 78,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3512,7 +3862,8 @@ export default {
       plotX1: 12,
       plotY1: 82,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3522,7 +3873,8 @@ export default {
       plotX1: 39,
       plotY1: 77,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -3532,7 +3884,8 @@ export default {
       plotX1: 12,
       plotY1: 81,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -3542,7 +3895,8 @@ export default {
       plotX1: 39,
       plotY1: 76,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3552,7 +3906,8 @@ export default {
       plotX1: 12,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3562,7 +3917,8 @@ export default {
       plotX1: 36,
       plotY1: 75,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3572,7 +3928,8 @@ export default {
       plotX1: 12,
       plotY1: 79,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -3582,7 +3939,8 @@ export default {
       plotX1: 36,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -3592,7 +3950,8 @@ export default {
       plotX1: 12,
       plotY1: 78,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3602,7 +3961,8 @@ export default {
       plotX1: 36,
       plotY1: 73,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3612,7 +3972,8 @@ export default {
       plotX1: 12,
       plotY1: 77,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3622,7 +3983,8 @@ export default {
       plotX1: 36,
       plotY1: 72,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3632,7 +3994,8 @@ export default {
       plotX1: 12,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3642,7 +4005,8 @@ export default {
       plotX1: 36,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -3652,7 +4016,8 @@ export default {
       plotX1: 15,
       plotY1: 75,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3662,7 +4027,8 @@ export default {
       plotX1: 27,
       plotY1: 72,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3672,7 +4038,8 @@ export default {
       plotX1: 15,
       plotY1: 74,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3682,7 +4049,8 @@ export default {
       plotX1: 27,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3692,7 +4060,8 @@ export default {
       plotX1: 15,
       plotY1: 73,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3702,7 +4071,8 @@ export default {
       plotX1: 36,
       plotY1: 70,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3712,7 +4082,8 @@ export default {
       plotX1: 15,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -3722,7 +4093,8 @@ export default {
       plotX1: 36,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -3732,7 +4104,8 @@ export default {
       plotX1: 15,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3742,7 +4115,8 @@ export default {
       plotX1: 36,
       plotY1: 68,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -3752,7 +4126,8 @@ export default {
       plotX1: 21,
       plotY1: 72,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3762,7 +4137,8 @@ export default {
       plotX1: 36,
       plotY1: 67,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3772,7 +4148,8 @@ export default {
       plotX1: 21,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3782,7 +4159,8 @@ export default {
       plotX1: 36,
       plotY1: 66,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3792,7 +4170,8 @@ export default {
       plotX1: 15,
       plotY1: 70,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3802,7 +4181,8 @@ export default {
       plotX1: 36,
       plotY1: 65,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3812,7 +4192,8 @@ export default {
       plotX1: 15,
       plotY1: 69,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3822,7 +4203,8 @@ export default {
       plotX1: 36,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3832,7 +4214,8 @@ export default {
       plotX1: 15,
       plotY1: 68,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3842,7 +4225,8 @@ export default {
       plotX1: 36,
       plotY1: 63,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -3852,7 +4236,8 @@ export default {
       plotX1: 15,
       plotY1: 67,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3862,7 +4247,8 @@ export default {
       plotX1: 36,
       plotY1: 62,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3872,7 +4258,8 @@ export default {
       plotX1: 15,
       plotY1: 66,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -3882,7 +4269,8 @@ export default {
       plotX1: 36,
       plotY1: 61,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3892,7 +4280,8 @@ export default {
       plotX1: 15,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3902,7 +4291,8 @@ export default {
       plotX1: 36,
       plotY1: 60,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3912,7 +4302,8 @@ export default {
       plotX1: 15,
       plotY1: 64,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -3922,7 +4313,8 @@ export default {
       plotX1: 39,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3932,7 +4324,8 @@ export default {
       plotX1: 15,
       plotY1: 63,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3942,7 +4335,8 @@ export default {
       plotX1: 33,
       plotY1: 58,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3952,7 +4346,8 @@ export default {
       plotX1: 15,
       plotY1: 62,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -3962,7 +4357,8 @@ export default {
       plotX1: 39,
       plotY1: 57,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3972,7 +4368,8 @@ export default {
       plotX1: 15,
       plotY1: 61,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3982,7 +4379,8 @@ export default {
       plotX1: 39,
       plotY1: 55,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -3992,7 +4390,8 @@ export default {
       plotX1: 15,
       plotY1: 60,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -4002,7 +4401,8 @@ export default {
       plotX1: 33,
       plotY1: 55,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -4012,7 +4412,8 @@ export default {
       plotX1: 15,
       plotY1: 59,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4022,7 +4423,8 @@ export default {
       plotX1: 39,
       plotY1: 54,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -4032,7 +4434,8 @@ export default {
       plotX1: 15,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4042,7 +4445,8 @@ export default {
       plotX1: 36,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4052,7 +4456,8 @@ export default {
       plotX1: 15,
       plotY1: 57,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4062,7 +4467,8 @@ export default {
       plotX1: 27,
       plotY1: 51,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4072,7 +4478,8 @@ export default {
       plotX1: 15,
       plotY1: 56,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4082,7 +4489,8 @@ export default {
       plotX1: 36,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4092,7 +4500,8 @@ export default {
       plotX1: 15,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4102,7 +4511,8 @@ export default {
       plotX1: 36,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4112,7 +4522,8 @@ export default {
       plotX1: 15,
       plotY1: 54,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4122,7 +4533,8 @@ export default {
       plotX1: 36,
       plotY1: 49,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -4132,7 +4544,8 @@ export default {
       plotX1: 15,
       plotY1: 53,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4142,7 +4555,8 @@ export default {
       plotX1: 36,
       plotY1: 48,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4152,7 +4566,8 @@ export default {
       plotX1: 21,
       plotY1: 51,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4162,7 +4577,8 @@ export default {
       plotX1: 36,
       plotY1: 47,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4172,7 +4588,8 @@ export default {
       plotX1: 15,
       plotY1: 52,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4182,7 +4599,8 @@ export default {
       plotX1: 36,
       plotY1: 46,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -4192,7 +4610,8 @@ export default {
       plotX1: 15,
       plotY1: 51,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -4202,7 +4621,8 @@ export default {
       plotX1: 36,
       plotY1: 45,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -4212,7 +4632,8 @@ export default {
       plotX1: 15,
       plotY1: 50,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4222,7 +4643,8 @@ export default {
       plotX1: 39,
       plotY1: 44,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -4232,7 +4654,8 @@ export default {
       plotX1: 15,
       plotY1: 49,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -4242,7 +4665,8 @@ export default {
       plotX1: 39,
       plotY1: 43,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -4252,7 +4676,8 @@ export default {
       plotX1: 15,
       plotY1: 48,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -4262,7 +4687,8 @@ export default {
       plotX1: 39,
       plotY1: 42,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -4272,7 +4698,8 @@ export default {
       plotX1: 15,
       plotY1: 47,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -4282,7 +4709,8 @@ export default {
       plotX1: 39,
       plotY1: 41,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4292,7 +4720,8 @@ export default {
       plotX1: 15,
       plotY1: 46,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4302,7 +4731,8 @@ export default {
       plotX1: 39,
       plotY1: 40,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4312,7 +4742,8 @@ export default {
       plotX1: 12,
       plotY1: 45,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 4
     },
     {
       deck: 7,
@@ -4322,7 +4753,8 @@ export default {
       plotX1: 39,
       plotY1: 39,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -4332,7 +4764,8 @@ export default {
       plotX1: 12,
       plotY1: 44,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4342,7 +4775,8 @@ export default {
       plotX1: 39,
       plotY1: 38,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4352,7 +4786,8 @@ export default {
       plotX1: 12,
       plotY1: 43,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -4362,7 +4797,8 @@ export default {
       plotX1: 39,
       plotY1: 37,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4372,7 +4808,8 @@ export default {
       plotX1: 12,
       plotY1: 42,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 7,
@@ -4382,7 +4819,8 @@ export default {
       plotX1: 36,
       plotY1: 36,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4392,7 +4830,8 @@ export default {
       plotX1: 12,
       plotY1: 41,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4402,7 +4841,8 @@ export default {
       plotX1: 36,
       plotY1: 35,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4412,7 +4852,8 @@ export default {
       plotX1: 12,
       plotY1: 40,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4422,7 +4863,8 @@ export default {
       plotX1: 36,
       plotY1: 34,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4432,7 +4874,8 @@ export default {
       plotX1: 12,
       plotY1: 39,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4442,7 +4885,8 @@ export default {
       plotX1: 36,
       plotY1: 33,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4452,7 +4896,8 @@ export default {
       plotX1: 12,
       plotY1: 38,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4462,7 +4907,8 @@ export default {
       plotX1: 36,
       plotY1: 32,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4472,7 +4918,8 @@ export default {
       plotX1: 15,
       plotY1: 37,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4482,7 +4929,8 @@ export default {
       plotX1: 36,
       plotY1: 31,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4492,7 +4940,8 @@ export default {
       plotX1: 15,
       plotY1: 36,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4502,7 +4951,8 @@ export default {
       plotX1: 36,
       plotY1: 30,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4512,7 +4962,8 @@ export default {
       plotX1: 15,
       plotY1: 35,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4522,7 +4973,8 @@ export default {
       plotX1: 36,
       plotY1: 29,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4532,7 +4984,8 @@ export default {
       plotX1: 15,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4542,7 +4995,8 @@ export default {
       plotX1: 36,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -4552,7 +5006,8 @@ export default {
       plotX1: 15,
       plotY1: 33,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -4562,7 +5017,8 @@ export default {
       plotX1: 27,
       plotY1: 28,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -4572,7 +5028,8 @@ export default {
       plotX1: 15,
       plotY1: 32,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4582,7 +5039,8 @@ export default {
       plotX1: 36,
       plotY1: 27,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4592,7 +5050,8 @@ export default {
       plotX1: 15,
       plotY1: 31,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -4602,7 +5061,8 @@ export default {
       plotX1: 36,
       plotY1: 26,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4612,7 +5072,8 @@ export default {
       plotX1: 15,
       plotY1: 30,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4622,7 +5083,8 @@ export default {
       plotX1: 36,
       plotY1: 25,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4632,7 +5094,8 @@ export default {
       plotX1: 15,
       plotY1: 29,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -4642,7 +5105,8 @@ export default {
       plotX1: 36,
       plotY1: 24,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4652,7 +5116,8 @@ export default {
       plotX1: 21,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4662,7 +5127,8 @@ export default {
       plotX1: 36,
       plotY1: 23,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 7,
@@ -4672,7 +5138,8 @@ export default {
       plotX1: 15,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4682,7 +5149,8 @@ export default {
       plotX1: 36,
       plotY1: 22,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4692,7 +5160,8 @@ export default {
       plotX1: 15,
       plotY1: 27,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4702,7 +5171,8 @@ export default {
       plotX1: 36,
       plotY1: 21,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4712,7 +5182,8 @@ export default {
       plotX1: 15,
       plotY1: 26,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4722,7 +5193,8 @@ export default {
       plotX1: 36,
       plotY1: 20,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4732,7 +5204,8 @@ export default {
       plotX1: 15,
       plotY1: 25,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4742,7 +5215,8 @@ export default {
       plotX1: 36,
       plotY1: 19,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4752,7 +5226,8 @@ export default {
       plotX1: 15,
       plotY1: 24,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4762,7 +5237,8 @@ export default {
       plotX1: 36,
       plotY1: 18,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4772,7 +5248,8 @@ export default {
       plotX1: 15,
       plotY1: 23,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4782,7 +5259,8 @@ export default {
       plotX1: 36,
       plotY1: 17,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4792,7 +5270,8 @@ export default {
       plotX1: 15,
       plotY1: 22,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4802,7 +5281,8 @@ export default {
       plotX1: 36,
       plotY1: 16,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4812,7 +5292,8 @@ export default {
       plotX1: 15,
       plotY1: 21,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4822,7 +5303,8 @@ export default {
       plotX1: 36,
       plotY1: 15,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4832,7 +5314,8 @@ export default {
       plotX1: 15,
       plotY1: 20,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4842,7 +5325,8 @@ export default {
       plotX1: 36,
       plotY1: 14,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4852,7 +5336,8 @@ export default {
       plotX1: 15,
       plotY1: 19,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -4862,7 +5347,8 @@ export default {
       plotX1: 36,
       plotY1: 13,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4872,7 +5358,8 @@ export default {
       plotX1: 15,
       plotY1: 18,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4882,7 +5369,8 @@ export default {
       plotX1: 36,
       plotY1: 12,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -4892,7 +5380,8 @@ export default {
       plotX1: 15,
       plotY1: 17,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4902,7 +5391,8 @@ export default {
       plotX1: 36,
       plotY1: 11,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4912,7 +5402,8 @@ export default {
       plotX1: 15,
       plotY1: 16,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4922,7 +5413,8 @@ export default {
       plotX1: 36,
       plotY1: 10,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4932,7 +5424,8 @@ export default {
       plotX1: 15,
       plotY1: 15,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4942,7 +5435,8 @@ export default {
       plotX1: 36,
       plotY1: 9,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4952,7 +5446,8 @@ export default {
       plotX1: 15,
       plotY1: 14,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4962,7 +5457,8 @@ export default {
       plotX1: 36,
       plotY1: 8,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4972,7 +5468,8 @@ export default {
       plotX1: 15,
       plotY1: 13,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4982,7 +5479,8 @@ export default {
       plotX1: 36,
       plotY1: 7,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -4992,7 +5490,8 @@ export default {
       plotX1: 15,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -5002,7 +5501,8 @@ export default {
       plotX1: 33,
       plotY1: 6,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 7,
@@ -5012,7 +5512,8 @@ export default {
       plotX1: 15,
       plotY1: 11,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -5022,7 +5523,8 @@ export default {
       plotX1: 30,
       plotY1: 5,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -5032,7 +5534,8 @@ export default {
       plotX1: 15,
       plotY1: 10,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -5042,7 +5545,8 @@ export default {
       plotX1: 27,
       plotY1: 4,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -5052,7 +5556,8 @@ export default {
       plotX1: 15,
       plotY1: 9,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 7,
@@ -5062,7 +5567,8 @@ export default {
       plotX1: 15,
       plotY1: 8,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     }
   ],
   8: [
@@ -5074,7 +5580,8 @@ export default {
       plotX1: 27,
       plotY1: 104,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5084,7 +5591,8 @@ export default {
       plotX1: 24,
       plotY1: 104,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5094,7 +5602,8 @@ export default {
       plotX1: 30,
       plotY1: 104,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5104,7 +5613,8 @@ export default {
       plotX1: 21,
       plotY1: 104,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5114,7 +5624,8 @@ export default {
       plotX1: 33,
       plotY1: 103,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5124,7 +5635,8 @@ export default {
       plotX1: 18,
       plotY1: 104,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5134,7 +5646,8 @@ export default {
       plotX1: 36,
       plotY1: 102,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5144,7 +5657,8 @@ export default {
       plotX1: 15,
       plotY1: 103,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5154,7 +5668,8 @@ export default {
       plotX1: 39,
       plotY1: 100,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5164,7 +5679,8 @@ export default {
       plotX1: 12,
       plotY1: 102,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5174,7 +5690,8 @@ export default {
       plotX1: 39,
       plotY1: 99,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5184,7 +5701,8 @@ export default {
       plotX1: 12,
       plotY1: 100,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5194,7 +5712,8 @@ export default {
       plotX1: 27,
       plotY1: 100,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -5204,7 +5723,8 @@ export default {
       plotX1: 12,
       plotY1: 99,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5214,7 +5734,8 @@ export default {
       plotX1: 27,
       plotY1: 97,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -5224,7 +5745,8 @@ export default {
       plotX1: 21,
       plotY1: 100,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -5234,7 +5756,8 @@ export default {
       plotX1: 39,
       plotY1: 98,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5244,7 +5767,8 @@ export default {
       plotX1: 24,
       plotY1: 100,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -5254,7 +5778,8 @@ export default {
       plotX1: 39,
       plotY1: 97,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -5264,7 +5789,8 @@ export default {
       plotX1: 21,
       plotY1: 97,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -5274,7 +5800,8 @@ export default {
       plotX1: 39,
       plotY1: 96,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5284,7 +5811,8 @@ export default {
       plotX1: 24,
       plotY1: 97,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -5294,7 +5822,8 @@ export default {
       plotX1: 39,
       plotY1: 95,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5304,7 +5833,8 @@ export default {
       plotX1: 12,
       plotY1: 98,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5314,7 +5844,8 @@ export default {
       plotX1: 39,
       plotY1: 94,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -5324,7 +5855,8 @@ export default {
       plotX1: 12,
       plotY1: 97,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 8,
@@ -5334,7 +5866,8 @@ export default {
       plotX1: 39,
       plotY1: 93,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5344,7 +5877,8 @@ export default {
       plotX1: 12,
       plotY1: 96,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5354,7 +5888,8 @@ export default {
       plotX1: 27,
       plotY1: 94,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5364,7 +5899,8 @@ export default {
       plotX1: 12,
       plotY1: 95,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -5374,7 +5910,8 @@ export default {
       plotX1: 39,
       plotY1: 92,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5384,7 +5921,8 @@ export default {
       plotX1: 12,
       plotY1: 94,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5394,7 +5932,8 @@ export default {
       plotX1: 39,
       plotY1: 91,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5404,7 +5943,8 @@ export default {
       plotX1: 12,
       plotY1: 93,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5414,7 +5954,8 @@ export default {
       plotX1: 39,
       plotY1: 90,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -5424,7 +5965,8 @@ export default {
       plotX1: 21,
       plotY1: 94,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5434,7 +5976,8 @@ export default {
       plotX1: 39,
       plotY1: 89,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5444,7 +5987,8 @@ export default {
       plotX1: 24,
       plotY1: 94,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -5454,7 +5998,8 @@ export default {
       plotX1: 39,
       plotY1: 88,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5464,7 +6009,8 @@ export default {
       plotX1: 12,
       plotY1: 92,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -5474,7 +6020,8 @@ export default {
       plotX1: 39,
       plotY1: 87,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5484,7 +6031,8 @@ export default {
       plotX1: 12,
       plotY1: 91,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5494,7 +6042,8 @@ export default {
       plotX1: 39,
       plotY1: 86,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5504,7 +6053,8 @@ export default {
       plotX1: 12,
       plotY1: 90,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5514,7 +6064,8 @@ export default {
       plotX1: 39,
       plotY1: 85,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5524,7 +6075,8 @@ export default {
       plotX1: 12,
       plotY1: 89,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5534,7 +6086,8 @@ export default {
       plotX1: 39,
       plotY1: 84,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -5544,7 +6097,8 @@ export default {
       plotX1: 12,
       plotY1: 88,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5554,7 +6108,8 @@ export default {
       plotX1: 39,
       plotY1: 83,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5564,7 +6119,8 @@ export default {
       plotX1: 12,
       plotY1: 87,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5574,7 +6130,8 @@ export default {
       plotX1: 39,
       plotY1: 82,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -5584,7 +6141,8 @@ export default {
       plotX1: 12,
       plotY1: 86,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5594,7 +6152,8 @@ export default {
       plotX1: 39,
       plotY1: 81,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5604,7 +6163,8 @@ export default {
       plotX1: 12,
       plotY1: 85,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5614,7 +6174,8 @@ export default {
       plotX1: 39,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -5624,7 +6185,8 @@ export default {
       plotX1: 12,
       plotY1: 84,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5634,7 +6196,8 @@ export default {
       plotX1: 39,
       plotY1: 79,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5644,7 +6207,8 @@ export default {
       plotX1: 12,
       plotY1: 83,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 8,
@@ -5654,7 +6218,8 @@ export default {
       plotX1: 39,
       plotY1: 78,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5664,7 +6229,8 @@ export default {
       plotX1: 12,
       plotY1: 82,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 3
     },
     {
       deck: 8,
@@ -5674,7 +6240,8 @@ export default {
       plotX1: 39,
       plotY1: 77,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5684,7 +6251,8 @@ export default {
       plotX1: 12,
       plotY1: 81,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 8,
@@ -5694,7 +6262,8 @@ export default {
       plotX1: 39,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5704,7 +6273,8 @@ export default {
       plotX1: 12,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5714,7 +6284,8 @@ export default {
       plotX1: 36,
       plotY1: 75,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5724,7 +6295,8 @@ export default {
       plotX1: 12,
       plotY1: 79,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 4
     },
     {
       deck: 8,
@@ -5734,7 +6306,8 @@ export default {
       plotX1: 36,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 8,
@@ -5744,7 +6317,8 @@ export default {
       plotX1: 12,
       plotY1: 78,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5754,7 +6328,8 @@ export default {
       plotX1: 36,
       plotY1: 73,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5764,7 +6339,8 @@ export default {
       plotX1: 12,
       plotY1: 77,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5774,7 +6350,8 @@ export default {
       plotX1: 36,
       plotY1: 72,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: 3
     },
     {
       deck: 8,
@@ -5784,7 +6361,8 @@ export default {
       plotX1: 12,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5794,7 +6372,8 @@ export default {
       plotX1: 36,
       plotY1: 71,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5804,7 +6383,8 @@ export default {
       plotX1: 15,
       plotY1: 75,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -5814,7 +6394,8 @@ export default {
       plotX1: 27,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5824,7 +6405,8 @@ export default {
       plotX1: 15,
       plotY1: 74,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5834,7 +6416,8 @@ export default {
       plotX1: 27,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5844,7 +6427,8 @@ export default {
       plotX1: 15,
       plotY1: 73,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5854,7 +6438,8 @@ export default {
       plotX1: 36,
       plotY1: 70,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5864,7 +6449,8 @@ export default {
       plotX1: 15,
       plotY1: 72,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5874,7 +6460,8 @@ export default {
       plotX1: 36,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5884,7 +6471,8 @@ export default {
       plotX1: 15,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5894,7 +6482,8 @@ export default {
       plotX1: 36,
       plotY1: 68,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5904,7 +6493,8 @@ export default {
       plotX1: 21,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5914,7 +6504,8 @@ export default {
       plotX1: 36,
       plotY1: 67,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -5924,7 +6515,8 @@ export default {
       plotX1: 21,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5934,7 +6526,8 @@ export default {
       plotX1: 36,
       plotY1: 66,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5944,7 +6537,8 @@ export default {
       plotX1: 15,
       plotY1: 70,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5954,7 +6548,8 @@ export default {
       plotX1: 36,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5964,7 +6559,8 @@ export default {
       plotX1: 15,
       plotY1: 69,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: 3
     },
     {
       deck: 8,
@@ -5974,7 +6570,8 @@ export default {
       plotX1: 36,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5984,7 +6581,8 @@ export default {
       plotX1: 15,
       plotY1: 68,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -5994,7 +6592,8 @@ export default {
       plotX1: 36,
       plotY1: 63,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6004,7 +6603,8 @@ export default {
       plotX1: 15,
       plotY1: 67,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6014,7 +6614,8 @@ export default {
       plotX1: 36,
       plotY1: 62,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6024,7 +6625,8 @@ export default {
       plotX1: 15,
       plotY1: 66,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6034,7 +6636,8 @@ export default {
       plotX1: 36,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6044,7 +6647,8 @@ export default {
       plotX1: 15,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6054,7 +6658,8 @@ export default {
       plotX1: 36,
       plotY1: 60,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 4,
+      bookedOccupancy: 4
     },
     {
       deck: 8,
@@ -6064,7 +6669,8 @@ export default {
       plotX1: 15,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6074,7 +6680,8 @@ export default {
       plotX1: 39,
       plotY1: 58,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6084,7 +6691,8 @@ export default {
       plotX1: 15,
       plotY1: 63,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6094,7 +6702,8 @@ export default {
       plotX1: 33,
       plotY1: 58,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -6104,7 +6713,8 @@ export default {
       plotX1: 15,
       plotY1: 62,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6114,7 +6724,8 @@ export default {
       plotX1: 39,
       plotY1: 57,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6124,7 +6735,8 @@ export default {
       plotX1: 15,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6134,7 +6746,8 @@ export default {
       plotX1: 39,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6144,7 +6757,8 @@ export default {
       plotX1: 15,
       plotY1: 60,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6154,7 +6768,8 @@ export default {
       plotX1: 33,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6164,7 +6779,8 @@ export default {
       plotX1: 15,
       plotY1: 59,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6174,7 +6790,8 @@ export default {
       plotX1: 39,
       plotY1: 54,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6184,7 +6801,8 @@ export default {
       plotX1: 15,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6194,7 +6812,8 @@ export default {
       plotX1: 36,
       plotY1: 52,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6204,7 +6823,8 @@ export default {
       plotX1: 15,
       plotY1: 57,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6214,7 +6834,8 @@ export default {
       plotX1: 27,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6224,7 +6845,8 @@ export default {
       plotX1: 15,
       plotY1: 56,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6234,7 +6856,8 @@ export default {
       plotX1: 36,
       plotY1: 51,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 8,
@@ -6244,7 +6867,8 @@ export default {
       plotX1: 15,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6254,7 +6878,8 @@ export default {
       plotX1: 36,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6264,7 +6889,8 @@ export default {
       plotX1: 15,
       plotY1: 54,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -6274,7 +6900,8 @@ export default {
       plotX1: 36,
       plotY1: 49,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6284,7 +6911,8 @@ export default {
       plotX1: 15,
       plotY1: 53,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6294,7 +6922,8 @@ export default {
       plotX1: 36,
       plotY1: 48,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6304,7 +6933,8 @@ export default {
       plotX1: 21,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6314,7 +6944,8 @@ export default {
       plotX1: 36,
       plotY1: 47,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6324,7 +6955,8 @@ export default {
       plotX1: 15,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6334,7 +6966,8 @@ export default {
       plotX1: 36,
       plotY1: 46,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6344,7 +6977,8 @@ export default {
       plotX1: 15,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6354,7 +6988,8 @@ export default {
       plotX1: 36,
       plotY1: 45,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6364,7 +6999,8 @@ export default {
       plotX1: 15,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6374,7 +7010,8 @@ export default {
       plotX1: 39,
       plotY1: 44,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6384,7 +7021,8 @@ export default {
       plotX1: 15,
       plotY1: 49,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -6394,7 +7032,8 @@ export default {
       plotX1: 39,
       plotY1: 43,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 8,
@@ -6404,7 +7043,8 @@ export default {
       plotX1: 15,
       plotY1: 48,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6414,7 +7054,8 @@ export default {
       plotX1: 39,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6424,7 +7065,8 @@ export default {
       plotX1: 15,
       plotY1: 47,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6434,7 +7076,8 @@ export default {
       plotX1: 39,
       plotY1: 41,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -6444,7 +7087,8 @@ export default {
       plotX1: 15,
       plotY1: 46,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6454,7 +7098,8 @@ export default {
       plotX1: 39,
       plotY1: 40,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6464,7 +7109,8 @@ export default {
       plotX1: 12,
       plotY1: 45,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6474,7 +7120,8 @@ export default {
       plotX1: 39,
       plotY1: 39,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6484,7 +7131,8 @@ export default {
       plotX1: 12,
       plotY1: 44,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6494,7 +7142,8 @@ export default {
       plotX1: 39,
       plotY1: 38,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6504,7 +7153,8 @@ export default {
       plotX1: 12,
       plotY1: 43,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6514,7 +7164,8 @@ export default {
       plotX1: 39,
       plotY1: 37,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6524,7 +7175,8 @@ export default {
       plotX1: 12,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6534,7 +7186,8 @@ export default {
       plotX1: 36,
       plotY1: 36,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6544,7 +7197,8 @@ export default {
       plotX1: 12,
       plotY1: 41,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6554,7 +7208,8 @@ export default {
       plotX1: 36,
       plotY1: 35,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6564,7 +7219,8 @@ export default {
       plotX1: 12,
       plotY1: 40,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6574,7 +7230,8 @@ export default {
       plotX1: 36,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6584,7 +7241,8 @@ export default {
       plotX1: 12,
       plotY1: 39,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6594,7 +7252,8 @@ export default {
       plotX1: 36,
       plotY1: 33,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6604,7 +7263,8 @@ export default {
       plotX1: 12,
       plotY1: 38,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6614,7 +7274,8 @@ export default {
       plotX1: 36,
       plotY1: 32,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6624,7 +7285,8 @@ export default {
       plotX1: 15,
       plotY1: 37,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6634,7 +7296,8 @@ export default {
       plotX1: 36,
       plotY1: 31,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6644,7 +7307,8 @@ export default {
       plotX1: 15,
       plotY1: 36,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6654,7 +7318,8 @@ export default {
       plotX1: 36,
       plotY1: 30,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6664,7 +7329,8 @@ export default {
       plotX1: 15,
       plotY1: 35,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6674,7 +7340,8 @@ export default {
       plotX1: 36,
       plotY1: 29,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 8,
@@ -6684,7 +7351,8 @@ export default {
       plotX1: 15,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6694,7 +7362,8 @@ export default {
       plotX1: 36,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6704,7 +7373,8 @@ export default {
       plotX1: 15,
       plotY1: 33,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6714,7 +7384,8 @@ export default {
       plotX1: 27,
       plotY1: 28,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -6724,7 +7395,8 @@ export default {
       plotX1: 15,
       plotY1: 32,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6734,7 +7406,8 @@ export default {
       plotX1: 36,
       plotY1: 27,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 4
     },
     {
       deck: 8,
@@ -6744,7 +7417,8 @@ export default {
       plotX1: 15,
       plotY1: 31,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6754,7 +7428,8 @@ export default {
       plotX1: 36,
       plotY1: 26,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6764,7 +7439,8 @@ export default {
       plotX1: 15,
       plotY1: 30,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6774,7 +7450,8 @@ export default {
       plotX1: 36,
       plotY1: 25,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6784,7 +7461,8 @@ export default {
       plotX1: 15,
       plotY1: 29,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6794,7 +7472,8 @@ export default {
       plotX1: 36,
       plotY1: 24,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6804,7 +7483,8 @@ export default {
       plotX1: 21,
       plotY1: 28,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 8,
@@ -6814,7 +7494,8 @@ export default {
       plotX1: 36,
       plotY1: 23,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 4,
+      bookedOccupancy: 4
     },
     {
       deck: 8,
@@ -6824,7 +7505,8 @@ export default {
       plotX1: 15,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6834,7 +7516,8 @@ export default {
       plotX1: 36,
       plotY1: 22,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6844,7 +7527,8 @@ export default {
       plotX1: 15,
       plotY1: 27,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6854,7 +7538,8 @@ export default {
       plotX1: 36,
       plotY1: 21,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6864,7 +7549,8 @@ export default {
       plotX1: 15,
       plotY1: 26,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6874,7 +7560,8 @@ export default {
       plotX1: 36,
       plotY1: 20,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6884,7 +7571,8 @@ export default {
       plotX1: 15,
       plotY1: 25,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6894,7 +7582,8 @@ export default {
       plotX1: 36,
       plotY1: 19,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6904,7 +7593,8 @@ export default {
       plotX1: 15,
       plotY1: 24,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6914,7 +7604,8 @@ export default {
       plotX1: 36,
       plotY1: 18,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6924,7 +7615,8 @@ export default {
       plotX1: 15,
       plotY1: 23,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6934,7 +7626,8 @@ export default {
       plotX1: 36,
       plotY1: 17,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6944,7 +7637,8 @@ export default {
       plotX1: 15,
       plotY1: 22,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6954,7 +7648,8 @@ export default {
       plotX1: 36,
       plotY1: 16,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6964,7 +7659,8 @@ export default {
       plotX1: 15,
       plotY1: 21,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6974,7 +7670,8 @@ export default {
       plotX1: 36,
       plotY1: 15,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -6984,7 +7681,8 @@ export default {
       plotX1: 15,
       plotY1: 20,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -6994,7 +7692,8 @@ export default {
       plotX1: 36,
       plotY1: 14,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -7004,7 +7703,8 @@ export default {
       plotX1: 15,
       plotY1: 19,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7014,7 +7714,8 @@ export default {
       plotX1: 36,
       plotY1: 13,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7024,7 +7725,8 @@ export default {
       plotX1: 15,
       plotY1: 18,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -7034,7 +7736,8 @@ export default {
       plotX1: 36,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7044,7 +7747,8 @@ export default {
       plotX1: 15,
       plotY1: 17,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7054,7 +7758,8 @@ export default {
       plotX1: 36,
       plotY1: 11,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7064,7 +7769,8 @@ export default {
       plotX1: 15,
       plotY1: 16,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -7074,7 +7780,8 @@ export default {
       plotX1: 36,
       plotY1: 10,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7084,7 +7791,8 @@ export default {
       plotX1: 15,
       plotY1: 15,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7094,7 +7802,8 @@ export default {
       plotX1: 36,
       plotY1: 9,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7104,7 +7813,8 @@ export default {
       plotX1: 15,
       plotY1: 14,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7114,7 +7824,8 @@ export default {
       plotX1: 36,
       plotY1: 8,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7124,7 +7835,8 @@ export default {
       plotX1: 15,
       plotY1: 13,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7134,7 +7846,8 @@ export default {
       plotX1: 36,
       plotY1: 7,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7144,7 +7857,8 @@ export default {
       plotX1: 15,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -7154,7 +7868,8 @@ export default {
       plotX1: 33,
       plotY1: 6,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7164,7 +7879,8 @@ export default {
       plotX1: 15,
       plotY1: 11,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -7174,7 +7890,8 @@ export default {
       plotX1: 30,
       plotY1: 5,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7184,7 +7901,8 @@ export default {
       plotX1: 15,
       plotY1: 10,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 8,
@@ -7194,7 +7912,8 @@ export default {
       plotX1: 27,
       plotY1: 4,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 8,
@@ -7204,7 +7923,8 @@ export default {
       plotX1: 15,
       plotY1: 9,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7214,7 +7934,8 @@ export default {
       plotX1: 24,
       plotY1: 3,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7224,7 +7945,8 @@ export default {
       plotX1: 15,
       plotY1: 8,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7234,7 +7956,8 @@ export default {
       plotX1: 24,
       plotY1: 7,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7244,7 +7967,8 @@ export default {
       plotX1: 12,
       plotY1: 6,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7254,7 +7978,8 @@ export default {
       plotX1: 15,
       plotY1: 5,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7264,7 +7989,8 @@ export default {
       plotX1: 18,
       plotY1: 4,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 8,
@@ -7274,7 +8000,8 @@ export default {
       plotX1: 21,
       plotY1: 3,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     }
   ],
   9: [
@@ -7286,7 +8013,8 @@ export default {
       plotX1: 27,
       plotY1: 102,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7296,7 +8024,8 @@ export default {
       plotX1: 24,
       plotY1: 102,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7306,7 +8035,8 @@ export default {
       plotX1: 27,
       plotY1: 99,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7316,7 +8046,8 @@ export default {
       plotX1: 21,
       plotY1: 103,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 9,
@@ -7326,7 +8057,8 @@ export default {
       plotX1: 30,
       plotY1: 103,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7336,7 +8068,8 @@ export default {
       plotX1: 24,
       plotY1: 99,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7346,7 +8079,8 @@ export default {
       plotX1: 33,
       plotY1: 102,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7356,7 +8090,8 @@ export default {
       plotX1: 21,
       plotY1: 99,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7366,7 +8101,8 @@ export default {
       plotX1: 36,
       plotY1: 101,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7376,7 +8112,8 @@ export default {
       plotX1: 18,
       plotY1: 103,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7386,7 +8123,8 @@ export default {
       plotX1: 39,
       plotY1: 101,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7396,7 +8134,8 @@ export default {
       plotX1: 15,
       plotY1: 102,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7406,7 +8145,8 @@ export default {
       plotX1: 39,
       plotY1: 100,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7416,7 +8156,8 @@ export default {
       plotX1: 12,
       plotY1: 101,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7426,7 +8167,8 @@ export default {
       plotX1: 39,
       plotY1: 99,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7436,7 +8178,8 @@ export default {
       plotX1: 12,
       plotY1: 101,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7446,7 +8189,8 @@ export default {
       plotX1: 39,
       plotY1: 98,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7456,7 +8200,8 @@ export default {
       plotX1: 12,
       plotY1: 100,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7466,7 +8211,8 @@ export default {
       plotX1: 27,
       plotY1: 96,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7476,7 +8222,8 @@ export default {
       plotX1: 12,
       plotY1: 99,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7486,7 +8233,8 @@ export default {
       plotX1: 27,
       plotY1: 93,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7496,7 +8244,8 @@ export default {
       plotX1: 12,
       plotY1: 98,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7506,7 +8255,8 @@ export default {
       plotX1: 39,
       plotY1: 97,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7516,7 +8266,8 @@ export default {
       plotX1: 21,
       plotY1: 96,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7526,7 +8277,8 @@ export default {
       plotX1: 39,
       plotY1: 96,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7536,7 +8288,8 @@ export default {
       plotX1: 24,
       plotY1: 96,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7546,7 +8299,8 @@ export default {
       plotX1: 39,
       plotY1: 95,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7556,7 +8310,8 @@ export default {
       plotX1: 21,
       plotY1: 93,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7566,7 +8321,8 @@ export default {
       plotX1: 39,
       plotY1: 94,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7576,7 +8332,8 @@ export default {
       plotX1: 24,
       plotY1: 93,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7586,7 +8343,8 @@ export default {
       plotX1: 39,
       plotY1: 93,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7596,7 +8354,8 @@ export default {
       plotX1: 12,
       plotY1: 97,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7606,7 +8365,8 @@ export default {
       plotX1: 39,
       plotY1: 92,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7616,7 +8376,8 @@ export default {
       plotX1: 12,
       plotY1: 96,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7626,7 +8387,8 @@ export default {
       plotX1: 39,
       plotY1: 91,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7636,7 +8398,8 @@ export default {
       plotX1: 12,
       plotY1: 95,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7646,7 +8409,8 @@ export default {
       plotX1: 39,
       plotY1: 90,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7656,7 +8420,8 @@ export default {
       plotX1: 12,
       plotY1: 94,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7666,7 +8431,8 @@ export default {
       plotX1: 39,
       plotY1: 89,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7676,7 +8442,8 @@ export default {
       plotX1: 12,
       plotY1: 93,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7686,7 +8453,8 @@ export default {
       plotX1: 39,
       plotY1: 88,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7696,7 +8464,8 @@ export default {
       plotX1: 12,
       plotY1: 92,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7706,7 +8475,8 @@ export default {
       plotX1: 39,
       plotY1: 87,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7716,7 +8486,8 @@ export default {
       plotX1: 12,
       plotY1: 91,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7726,7 +8497,8 @@ export default {
       plotX1: 39,
       plotY1: 86,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7736,7 +8508,8 @@ export default {
       plotX1: 12,
       plotY1: 90,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7746,7 +8519,8 @@ export default {
       plotX1: 39,
       plotY1: 85,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7756,7 +8530,8 @@ export default {
       plotX1: 12,
       plotY1: 89,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7766,7 +8541,8 @@ export default {
       plotX1: 39,
       plotY1: 84,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7776,7 +8552,8 @@ export default {
       plotX1: 12,
       plotY1: 88,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7786,7 +8563,8 @@ export default {
       plotX1: 39,
       plotY1: 83,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7796,7 +8574,8 @@ export default {
       plotX1: 12,
       plotY1: 87,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7806,7 +8585,8 @@ export default {
       plotX1: 39,
       plotY1: 82,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7816,7 +8596,8 @@ export default {
       plotX1: 12,
       plotY1: 86,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7826,7 +8607,8 @@ export default {
       plotX1: 39,
       plotY1: 81,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7836,7 +8618,8 @@ export default {
       plotX1: 12,
       plotY1: 85,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7846,7 +8629,8 @@ export default {
       plotX1: 39,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7856,7 +8640,8 @@ export default {
       plotX1: 12,
       plotY1: 84,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7866,7 +8651,8 @@ export default {
       plotX1: 39,
       plotY1: 79,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7876,7 +8662,8 @@ export default {
       plotX1: 12,
       plotY1: 83,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7886,7 +8673,8 @@ export default {
       plotX1: 36,
       plotY1: 78,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7896,7 +8684,8 @@ export default {
       plotX1: 12,
       plotY1: 82,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7906,7 +8695,8 @@ export default {
       plotX1: 27,
       plotY1: 74,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7916,7 +8706,8 @@ export default {
       plotX1: 12,
       plotY1: 81,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7926,7 +8717,8 @@ export default {
       plotX1: 27,
       plotY1: 75,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7936,7 +8728,8 @@ export default {
       plotX1: 12,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7946,7 +8739,8 @@ export default {
       plotX1: 36,
       plotY1: 77,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7956,7 +8750,8 @@ export default {
       plotX1: 12,
       plotY1: 79,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -7966,7 +8761,8 @@ export default {
       plotX1: 36,
       plotY1: 76,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7976,7 +8772,8 @@ export default {
       plotX1: 15,
       plotY1: 78,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -7986,7 +8783,8 @@ export default {
       plotX1: 36,
       plotY1: 75,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -7996,7 +8794,8 @@ export default {
       plotX1: 21,
       plotY1: 62,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8006,7 +8805,8 @@ export default {
       plotX1: 36,
       plotY1: 74,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8016,7 +8816,8 @@ export default {
       plotX1: 21,
       plotY1: 59,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8026,7 +8827,8 @@ export default {
       plotX1: 36,
       plotY1: 73,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8036,7 +8838,8 @@ export default {
       plotX1: 15,
       plotY1: 77,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -8046,7 +8849,8 @@ export default {
       plotX1: 27,
       plotY1: 57,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8056,7 +8860,8 @@ export default {
       plotX1: 15,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -8066,7 +8871,8 @@ export default {
       plotX1: 36,
       plotY1: 72,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8076,7 +8882,8 @@ export default {
       plotX1: 15,
       plotY1: 75,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 9,
@@ -8086,7 +8893,8 @@ export default {
       plotX1: 36,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8096,7 +8904,8 @@ export default {
       plotX1: 15,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8106,7 +8915,8 @@ export default {
       plotX1: 36,
       plotY1: 70,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8116,7 +8926,8 @@ export default {
       plotX1: 15,
       plotY1: 73,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8126,7 +8937,8 @@ export default {
       plotX1: 36,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8136,7 +8948,8 @@ export default {
       plotX1: 21,
       plotY1: 57,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8146,7 +8959,8 @@ export default {
       plotX1: 36,
       plotY1: 68,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8156,7 +8970,8 @@ export default {
       plotX1: 15,
       plotY1: 72,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8166,7 +8981,8 @@ export default {
       plotX1: 36,
       plotY1: 67,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8176,7 +8992,8 @@ export default {
       plotX1: 15,
       plotY1: 71,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8186,7 +9003,8 @@ export default {
       plotX1: 39,
       plotY1: 66,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8196,7 +9014,8 @@ export default {
       plotX1: 15,
       plotY1: 70,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8206,7 +9025,8 @@ export default {
       plotX1: 27,
       plotY1: 62,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8216,7 +9036,8 @@ export default {
       plotX1: 15,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8226,7 +9047,8 @@ export default {
       plotX1: 27,
       plotY1: 59,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8236,7 +9058,8 @@ export default {
       plotX1: 15,
       plotY1: 68,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8246,7 +9069,8 @@ export default {
       plotX1: 33,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8256,7 +9080,8 @@ export default {
       plotX1: 15,
       plotY1: 67,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8266,7 +9091,8 @@ export default {
       plotX1: 39,
       plotY1: 65,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8276,7 +9102,8 @@ export default {
       plotX1: 21,
       plotY1: 62,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8286,7 +9113,8 @@ export default {
       plotX1: 39,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8296,7 +9124,8 @@ export default {
       plotX1: 21,
       plotY1: 59,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8306,7 +9135,8 @@ export default {
       plotX1: 33,
       plotY1: 59,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8316,7 +9146,8 @@ export default {
       plotX1: 15,
       plotY1: 66,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8326,7 +9157,8 @@ export default {
       plotX1: 39,
       plotY1: 63,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8336,7 +9168,8 @@ export default {
       plotX1: 15,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8346,7 +9179,8 @@ export default {
       plotX1: 36,
       plotY1: 59,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8356,7 +9190,8 @@ export default {
       plotX1: 15,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8366,7 +9201,8 @@ export default {
       plotX1: 27,
       plotY1: 57,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8376,7 +9212,8 @@ export default {
       plotX1: 15,
       plotY1: 63,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8386,7 +9223,8 @@ export default {
       plotX1: 24,
       plotY1: 56,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8396,7 +9234,8 @@ export default {
       plotX1: 21,
       plotY1: 57,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8406,7 +9245,8 @@ export default {
       plotX1: 36,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8416,7 +9256,8 @@ export default {
       plotX1: 15,
       plotY1: 62,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8426,7 +9267,8 @@ export default {
       plotX1: 36,
       plotY1: 57,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -8436,7 +9278,8 @@ export default {
       plotX1: 15,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8446,7 +9289,8 @@ export default {
       plotX1: 36,
       plotY1: 56,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -8456,7 +9300,8 @@ export default {
       plotX1: 15,
       plotY1: 60,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8466,7 +9311,8 @@ export default {
       plotX1: 36,
       plotY1: 55,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8476,7 +9322,8 @@ export default {
       plotX1: 15,
       plotY1: 59,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -8486,7 +9333,8 @@ export default {
       plotX1: 36,
       plotY1: 54,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8496,7 +9344,8 @@ export default {
       plotX1: 15,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8506,7 +9355,8 @@ export default {
       plotX1: 36,
       plotY1: 53,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8516,7 +9366,8 @@ export default {
       plotX1: 15,
       plotY1: 57,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8526,7 +9377,8 @@ export default {
       plotX1: 36,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8536,7 +9388,8 @@ export default {
       plotX1: 12,
       plotY1: 56,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8546,7 +9399,8 @@ export default {
       plotX1: 39,
       plotY1: 51,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8556,7 +9410,8 @@ export default {
       plotX1: 12,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8566,7 +9421,8 @@ export default {
       plotX1: 39,
       plotY1: 50,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8576,7 +9432,8 @@ export default {
       plotX1: 12,
       plotY1: 54,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8586,7 +9443,8 @@ export default {
       plotX1: 39,
       plotY1: 49,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8596,7 +9454,8 @@ export default {
       plotX1: 12,
       plotY1: 53,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -8606,7 +9465,8 @@ export default {
       plotX1: 39,
       plotY1: 48,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8616,7 +9476,8 @@ export default {
       plotX1: 12,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -8626,7 +9487,8 @@ export default {
       plotX1: 39,
       plotY1: 47,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8636,7 +9498,8 @@ export default {
       plotX1: 12,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8646,7 +9509,8 @@ export default {
       plotX1: 39,
       plotY1: 46,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8656,7 +9520,8 @@ export default {
       plotX1: 12,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8666,7 +9531,8 @@ export default {
       plotX1: 39,
       plotY1: 45,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8676,7 +9542,8 @@ export default {
       plotX1: 12,
       plotY1: 49,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8686,7 +9553,8 @@ export default {
       plotX1: 39,
       plotY1: 44,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8696,7 +9564,8 @@ export default {
       plotX1: 15,
       plotY1: 48,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8706,7 +9575,8 @@ export default {
       plotX1: 36,
       plotY1: 43,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8716,7 +9586,8 @@ export default {
       plotX1: 15,
       plotY1: 47,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8726,7 +9597,8 @@ export default {
       plotX1: 36,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8736,7 +9608,8 @@ export default {
       plotX1: 15,
       plotY1: 46,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8746,7 +9619,8 @@ export default {
       plotX1: 36,
       plotY1: 41,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8756,7 +9630,8 @@ export default {
       plotX1: 15,
       plotY1: 45,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8766,7 +9641,8 @@ export default {
       plotX1: 36,
       plotY1: 40,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8776,7 +9652,8 @@ export default {
       plotX1: 15,
       plotY1: 44,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8786,7 +9663,8 @@ export default {
       plotX1: 36,
       plotY1: 39,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8796,7 +9674,8 @@ export default {
       plotX1: 15,
       plotY1: 43,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8806,7 +9685,8 @@ export default {
       plotX1: 36,
       plotY1: 38,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8816,7 +9696,8 @@ export default {
       plotX1: 15,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8826,7 +9707,8 @@ export default {
       plotX1: 36,
       plotY1: 37,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8836,7 +9718,8 @@ export default {
       plotX1: 21,
       plotY1: 36,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8846,7 +9729,8 @@ export default {
       plotX1: 27,
       plotY1: 36,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8856,7 +9740,8 @@ export default {
       plotX1: 15,
       plotY1: 41,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8866,7 +9751,8 @@ export default {
       plotX1: 36,
       plotY1: 36,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8876,7 +9762,8 @@ export default {
       plotX1: 15,
       plotY1: 40,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8886,7 +9773,8 @@ export default {
       plotX1: 36,
       plotY1: 35,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8896,7 +9784,8 @@ export default {
       plotX1: 15,
       plotY1: 39,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8906,7 +9795,8 @@ export default {
       plotX1: 36,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8916,7 +9806,8 @@ export default {
       plotX1: 15,
       plotY1: 38,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -8926,7 +9817,8 @@ export default {
       plotX1: 36,
       plotY1: 33,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8936,7 +9828,8 @@ export default {
       plotX1: 15,
       plotY1: 37,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8946,7 +9839,8 @@ export default {
       plotX1: 36,
       plotY1: 32,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8956,7 +9850,8 @@ export default {
       plotX1: 15,
       plotY1: 36,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8966,7 +9861,8 @@ export default {
       plotX1: 36,
       plotY1: 31,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8976,7 +9872,8 @@ export default {
       plotX1: 21,
       plotY1: 33,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8986,7 +9883,8 @@ export default {
       plotX1: 27,
       plotY1: 33,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -8996,7 +9894,8 @@ export default {
       plotX1: 21,
       plotY1: 31,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9006,7 +9905,8 @@ export default {
       plotX1: 27,
       plotY1: 31,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9016,7 +9916,8 @@ export default {
       plotX1: 15,
       plotY1: 35,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9026,7 +9927,8 @@ export default {
       plotX1: 36,
       plotY1: 30,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9036,7 +9938,8 @@ export default {
       plotX1: 15,
       plotY1: 34,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9046,7 +9949,8 @@ export default {
       plotX1: 36,
       plotY1: 29,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9056,7 +9960,8 @@ export default {
       plotX1: 15,
       plotY1: 33,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9066,7 +9971,8 @@ export default {
       plotX1: 36,
       plotY1: 28,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9076,7 +9982,8 @@ export default {
       plotX1: 15,
       plotY1: 32,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9086,7 +9993,8 @@ export default {
       plotX1: 36,
       plotY1: 27,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9096,7 +10004,8 @@ export default {
       plotX1: 15,
       plotY1: 31,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9106,7 +10015,8 @@ export default {
       plotX1: 36,
       plotY1: 26,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9116,7 +10026,8 @@ export default {
       plotX1: 15,
       plotY1: 30,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9126,7 +10037,8 @@ export default {
       plotX1: 36,
       plotY1: 25,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9136,7 +10048,8 @@ export default {
       plotX1: 15,
       plotY1: 29,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9146,7 +10059,8 @@ export default {
       plotX1: 36,
       plotY1: 24,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9156,7 +10070,8 @@ export default {
       plotX1: 15,
       plotY1: 28,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9166,7 +10081,8 @@ export default {
       plotX1: 36,
       plotY1: 23,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9176,7 +10092,8 @@ export default {
       plotX1: 15,
       plotY1: 27,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9186,7 +10103,8 @@ export default {
       plotX1: 36,
       plotY1: 22,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9196,7 +10114,8 @@ export default {
       plotX1: 15,
       plotY1: 26,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 1
     },
     {
       deck: 9,
@@ -9206,7 +10125,8 @@ export default {
       plotX1: 36,
       plotY1: 21,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9216,7 +10136,8 @@ export default {
       plotX1: 15,
       plotY1: 25,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9226,7 +10147,8 @@ export default {
       plotX1: 36,
       plotY1: 20,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9236,7 +10158,8 @@ export default {
       plotX1: 15,
       plotY1: 24,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9246,7 +10169,8 @@ export default {
       plotX1: 36,
       plotY1: 19,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9256,7 +10180,8 @@ export default {
       plotX1: 15,
       plotY1: 23,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9266,7 +10191,8 @@ export default {
       plotX1: 36,
       plotY1: 18,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9276,7 +10202,8 @@ export default {
       plotX1: 15,
       plotY1: 22,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9286,7 +10213,8 @@ export default {
       plotX1: 36,
       plotY1: 17,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9296,7 +10224,8 @@ export default {
       plotX1: 15,
       plotY1: 21,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9306,7 +10235,8 @@ export default {
       plotX1: 36,
       plotY1: 16,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 9,
@@ -9316,7 +10246,8 @@ export default {
       plotX1: 15,
       plotY1: 20,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -9326,7 +10257,8 @@ export default {
       plotX1: 36,
       plotY1: 15,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -9336,7 +10268,8 @@ export default {
       plotX1: 15,
       plotY1: 12,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -9346,7 +10279,8 @@ export default {
       plotX1: 36,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -9356,7 +10290,8 @@ export default {
       plotX1: 18,
       plotY1: 11,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -9366,7 +10301,8 @@ export default {
       plotX1: 33,
       plotY1: 11,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -9376,7 +10312,8 @@ export default {
       plotX1: 21,
       plotY1: 10,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     },
     {
       deck: 9,
@@ -9386,7 +10323,8 @@ export default {
       plotX1: 30,
       plotY1: 10,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 9,
@@ -9396,7 +10334,8 @@ export default {
       plotX1: 24,
       plotY1: 9,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 3
     },
     {
       deck: 9,
@@ -9406,7 +10345,8 @@ export default {
       plotX1: 27,
       plotY1: 9,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: 2
     }
   ],
   10: [
@@ -9418,7 +10358,8 @@ export default {
       plotX1: 39,
       plotY1: 87,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9428,7 +10369,8 @@ export default {
       plotX1: 12,
       plotY1: 84,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9438,7 +10380,8 @@ export default {
       plotX1: 39,
       plotY1: 86,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -9448,7 +10391,8 @@ export default {
       plotX1: 12,
       plotY1: 83,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9458,7 +10402,8 @@ export default {
       plotX1: 39,
       plotY1: 85,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9468,7 +10413,8 @@ export default {
       plotX1: 12,
       plotY1: 82,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9478,7 +10424,8 @@ export default {
       plotX1: 39,
       plotY1: 84,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9488,7 +10435,8 @@ export default {
       plotX1: 12,
       plotY1: 81,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9498,7 +10446,8 @@ export default {
       plotX1: 39,
       plotY1: 83,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9508,7 +10457,8 @@ export default {
       plotX1: 12,
       plotY1: 80,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9518,7 +10468,8 @@ export default {
       plotX1: 39,
       plotY1: 82,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9528,7 +10479,8 @@ export default {
       plotX1: 12,
       plotY1: 79,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -9538,7 +10490,8 @@ export default {
       plotX1: 39,
       plotY1: 81,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 10,
@@ -9548,7 +10501,8 @@ export default {
       plotX1: 12,
       plotY1: 78,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 4,
+      bookedOccupancy: 4
     },
     {
       deck: 10,
@@ -9558,7 +10512,8 @@ export default {
       plotX1: 39,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -9568,7 +10523,8 @@ export default {
       plotX1: 12,
       plotY1: 77,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9578,7 +10534,8 @@ export default {
       plotX1: 39,
       plotY1: 79,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9588,7 +10545,8 @@ export default {
       plotX1: 12,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9598,7 +10556,8 @@ export default {
       plotX1: 39,
       plotY1: 78,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9608,7 +10567,8 @@ export default {
       plotX1: 12,
       plotY1: 75,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -9618,7 +10578,8 @@ export default {
       plotX1: 39,
       plotY1: 77,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9628,7 +10589,8 @@ export default {
       plotX1: 12,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9638,7 +10600,8 @@ export default {
       plotX1: 39,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9648,7 +10611,8 @@ export default {
       plotX1: 12,
       plotY1: 73,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9658,7 +10622,8 @@ export default {
       plotX1: 39,
       plotY1: 75,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9668,7 +10633,8 @@ export default {
       plotX1: 12,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9678,7 +10644,8 @@ export default {
       plotX1: 39,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9688,7 +10655,8 @@ export default {
       plotX1: 12,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -9698,7 +10666,8 @@ export default {
       plotX1: 39,
       plotY1: 73,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -9708,7 +10677,8 @@ export default {
       plotX1: 12,
       plotY1: 70,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -9718,7 +10688,8 @@ export default {
       plotX1: 39,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9728,7 +10699,8 @@ export default {
       plotX1: 12,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -9738,7 +10710,8 @@ export default {
       plotX1: 36,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -9748,7 +10721,8 @@ export default {
       plotX1: 15,
       plotY1: 68,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -9758,7 +10732,8 @@ export default {
       plotX1: 27,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9768,7 +10743,8 @@ export default {
       plotX1: 21,
       plotY1: 72,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -9778,7 +10754,8 @@ export default {
       plotX1: 27,
       plotY1: 69,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -9788,7 +10765,8 @@ export default {
       plotX1: 21,
       plotY1: 69,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -9798,7 +10776,8 @@ export default {
       plotX1: 36,
       plotY1: 70,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -9808,7 +10787,8 @@ export default {
       plotX1: 15,
       plotY1: 67,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9818,7 +10798,8 @@ export default {
       plotX1: 36,
       plotY1: 69,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 10,
@@ -9828,7 +10809,8 @@ export default {
       plotX1: 15,
       plotY1: 66,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9838,7 +10820,8 @@ export default {
       plotX1: 36,
       plotY1: 68,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9848,7 +10831,8 @@ export default {
       plotX1: 15,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9858,7 +10842,8 @@ export default {
       plotX1: 36,
       plotY1: 67,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9868,7 +10853,8 @@ export default {
       plotX1: 15,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9878,7 +10864,8 @@ export default {
       plotX1: 36,
       plotY1: 66,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9888,7 +10875,8 @@ export default {
       plotX1: 15,
       plotY1: 63,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9898,7 +10886,8 @@ export default {
       plotX1: 27,
       plotY1: 67,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -9908,7 +10897,8 @@ export default {
       plotX1: 21,
       plotY1: 67,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -9918,7 +10908,8 @@ export default {
       plotX1: 36,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9928,7 +10919,8 @@ export default {
       plotX1: 15,
       plotY1: 62,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9938,7 +10930,8 @@ export default {
       plotX1: 36,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9948,7 +10941,8 @@ export default {
       plotX1: 15,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9958,7 +10952,8 @@ export default {
       plotX1: 36,
       plotY1: 63,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9968,7 +10963,8 @@ export default {
       plotX1: 15,
       plotY1: 60,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9978,7 +10974,8 @@ export default {
       plotX1: 36,
       plotY1: 62,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9988,7 +10985,8 @@ export default {
       plotX1: 15,
       plotY1: 59,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -9998,7 +10996,8 @@ export default {
       plotX1: 36,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10008,7 +11007,8 @@ export default {
       plotX1: 15,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10018,7 +11018,8 @@ export default {
       plotX1: 36,
       plotY1: 60,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10028,7 +11029,8 @@ export default {
       plotX1: 15,
       plotY1: 57,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10038,7 +11040,8 @@ export default {
       plotX1: 39,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10048,7 +11051,8 @@ export default {
       plotX1: 21,
       plotY1: 61,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10058,7 +11062,8 @@ export default {
       plotX1: 27,
       plotY1: 61,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10068,7 +11073,8 @@ export default {
       plotX1: 21,
       plotY1: 58,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10078,7 +11084,8 @@ export default {
       plotX1: 27,
       plotY1: 58,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10088,7 +11095,8 @@ export default {
       plotX1: 15,
       plotY1: 56,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10098,7 +11106,8 @@ export default {
       plotX1: 33,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10108,7 +11117,8 @@ export default {
       plotX1: 15,
       plotY1: 55,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10118,7 +11128,8 @@ export default {
       plotX1: 39,
       plotY1: 57,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10128,7 +11139,8 @@ export default {
       plotX1: 15,
       plotY1: 54,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10138,7 +11150,8 @@ export default {
       plotX1: 39,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10148,7 +11161,8 @@ export default {
       plotX1: 15,
       plotY1: 53,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10158,7 +11172,8 @@ export default {
       plotX1: 33,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10168,7 +11183,8 @@ export default {
       plotX1: 21,
       plotY1: 56,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10178,7 +11194,8 @@ export default {
       plotX1: 39,
       plotY1: 54,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10188,7 +11205,8 @@ export default {
       plotX1: 15,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 3,
+      bookedOccupancy: 3
     },
     {
       deck: 10,
@@ -10198,7 +11216,8 @@ export default {
       plotX1: 36,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10208,7 +11227,8 @@ export default {
       plotX1: 15,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10218,7 +11238,8 @@ export default {
       plotX1: 27,
       plotY1: 56,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10228,7 +11249,8 @@ export default {
       plotX1: 15,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10238,7 +11260,8 @@ export default {
       plotX1: 24,
       plotY1: 53,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10248,7 +11271,8 @@ export default {
       plotX1: 21,
       plotY1: 51,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10258,7 +11282,8 @@ export default {
       plotX1: 36,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10268,7 +11293,8 @@ export default {
       plotX1: 15,
       plotY1: 49,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10278,7 +11304,8 @@ export default {
       plotX1: 36,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -10288,7 +11315,8 @@ export default {
       plotX1: 15,
       plotY1: 48,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10298,7 +11326,8 @@ export default {
       plotX1: 36,
       plotY1: 49,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -10308,7 +11337,8 @@ export default {
       plotX1: 15,
       plotY1: 47,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10318,7 +11348,8 @@ export default {
       plotX1: 36,
       plotY1: 48,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10328,7 +11359,8 @@ export default {
       plotX1: 12,
       plotY1: 46,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10338,7 +11370,8 @@ export default {
       plotX1: 27,
       plotY1: 51,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10348,7 +11381,8 @@ export default {
       plotX1: 12,
       plotY1: 45,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10358,7 +11392,8 @@ export default {
       plotX1: 36,
       plotY1: 47,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10368,7 +11403,8 @@ export default {
       plotX1: 12,
       plotY1: 44,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10378,7 +11414,8 @@ export default {
       plotX1: 36,
       plotY1: 46,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10388,7 +11425,8 @@ export default {
       plotX1: 12,
       plotY1: 43,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10398,7 +11436,8 @@ export default {
       plotX1: 36,
       plotY1: 45,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10408,7 +11447,8 @@ export default {
       plotX1: 12,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10418,7 +11458,8 @@ export default {
       plotX1: 36,
       plotY1: 44,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10428,7 +11469,8 @@ export default {
       plotX1: 12,
       plotY1: 41,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10438,7 +11480,8 @@ export default {
       plotX1: 36,
       plotY1: 43,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10448,7 +11491,8 @@ export default {
       plotX1: 12,
       plotY1: 40,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10458,7 +11502,8 @@ export default {
       plotX1: 36,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10468,7 +11513,8 @@ export default {
       plotX1: 12,
       plotY1: 39,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10478,7 +11524,8 @@ export default {
       plotX1: 36,
       plotY1: 41,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10488,7 +11535,8 @@ export default {
       plotX1: 12,
       plotY1: 38,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10498,7 +11546,8 @@ export default {
       plotX1: 36,
       plotY1: 40,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 10,
@@ -10508,7 +11557,8 @@ export default {
       plotX1: 12,
       plotY1: 37,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10518,7 +11568,8 @@ export default {
       plotX1: 36,
       plotY1: 39,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10528,7 +11579,8 @@ export default {
       plotX1: 12,
       plotY1: 36,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -10538,7 +11590,8 @@ export default {
       plotX1: 36,
       plotY1: 38,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10548,7 +11601,8 @@ export default {
       plotX1: 12,
       plotY1: 35,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10558,7 +11612,8 @@ export default {
       plotX1: 36,
       plotY1: 37,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10568,7 +11623,8 @@ export default {
       plotX1: 15,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10578,7 +11634,8 @@ export default {
       plotX1: 36,
       plotY1: 36,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10588,7 +11645,8 @@ export default {
       plotX1: 21,
       plotY1: 33,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10598,7 +11656,8 @@ export default {
       plotX1: 36,
       plotY1: 35,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10608,7 +11667,8 @@ export default {
       plotX1: 15,
       plotY1: 33,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10618,7 +11678,8 @@ export default {
       plotX1: 36,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10628,7 +11689,8 @@ export default {
       plotX1: 15,
       plotY1: 32,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10638,7 +11700,8 @@ export default {
       plotX1: 36,
       plotY1: 33,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10648,7 +11711,8 @@ export default {
       plotX1: 15,
       plotY1: 31,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10658,7 +11722,8 @@ export default {
       plotX1: 36,
       plotY1: 32,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10668,7 +11733,8 @@ export default {
       plotX1: 15,
       plotY1: 30,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10678,7 +11744,8 @@ export default {
       plotX1: 27,
       plotY1: 33,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10688,7 +11755,8 @@ export default {
       plotX1: 15,
       plotY1: 29,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10698,7 +11766,8 @@ export default {
       plotX1: 36,
       plotY1: 31,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10708,7 +11777,8 @@ export default {
       plotX1: 15,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10718,7 +11788,8 @@ export default {
       plotX1: 36,
       plotY1: 30,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10728,7 +11799,8 @@ export default {
       plotX1: 21,
       plotY1: 30,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10738,7 +11810,8 @@ export default {
       plotX1: 36,
       plotY1: 29,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10748,7 +11821,8 @@ export default {
       plotX1: 21,
       plotY1: 27,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10758,7 +11832,8 @@ export default {
       plotX1: 36,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10768,7 +11843,8 @@ export default {
       plotX1: 15,
       plotY1: 27,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10778,7 +11854,8 @@ export default {
       plotX1: 36,
       plotY1: 27,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10788,7 +11865,8 @@ export default {
       plotX1: 15,
       plotY1: 26,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10798,7 +11876,8 @@ export default {
       plotX1: 36,
       plotY1: 26,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10808,7 +11887,8 @@ export default {
       plotX1: 15,
       plotY1: 25,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10818,7 +11898,8 @@ export default {
       plotX1: 27,
       plotY1: 30,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10828,7 +11909,8 @@ export default {
       plotX1: 15,
       plotY1: 24,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10838,7 +11920,8 @@ export default {
       plotX1: 27,
       plotY1: 27,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10848,7 +11931,8 @@ export default {
       plotX1: 15,
       plotY1: 23,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10858,7 +11942,8 @@ export default {
       plotX1: 36,
       plotY1: 25,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10868,7 +11953,8 @@ export default {
       plotX1: 15,
       plotY1: 22,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 10,
@@ -10878,7 +11964,8 @@ export default {
       plotX1: 36,
       plotY1: 24,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10888,7 +11975,8 @@ export default {
       plotX1: 15,
       plotY1: 21,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10898,7 +11986,8 @@ export default {
       plotX1: 36,
       plotY1: 23,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10908,7 +11997,8 @@ export default {
       plotX1: 15,
       plotY1: 20,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10918,7 +12008,8 @@ export default {
       plotX1: 36,
       plotY1: 22,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10928,7 +12019,8 @@ export default {
       plotX1: 15,
       plotY1: 19,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10938,7 +12030,8 @@ export default {
       plotX1: 36,
       plotY1: 21,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10948,7 +12041,8 @@ export default {
       plotX1: 15,
       plotY1: 18,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -10958,7 +12052,8 @@ export default {
       plotX1: 36,
       plotY1: 20,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10968,7 +12063,8 @@ export default {
       plotX1: 15,
       plotY1: 17,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10978,7 +12074,8 @@ export default {
       plotX1: 36,
       plotY1: 19,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10988,7 +12085,8 @@ export default {
       plotX1: 15,
       plotY1: 16,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -10998,7 +12096,8 @@ export default {
       plotX1: 36,
       plotY1: 18,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -11008,7 +12107,8 @@ export default {
       plotX1: 15,
       plotY1: 15,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -11018,7 +12118,8 @@ export default {
       plotX1: 36,
       plotY1: 17,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -11028,7 +12129,8 @@ export default {
       plotX1: 15,
       plotY1: 14,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -11038,7 +12140,8 @@ export default {
       plotX1: 36,
       plotY1: 16,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -11048,7 +12151,8 @@ export default {
       plotX1: 24,
       plotY1: 10,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -11058,7 +12162,8 @@ export default {
       plotX1: 36,
       plotY1: 15,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -11068,7 +12173,8 @@ export default {
       plotX1: 15,
       plotY1: 13,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -11078,7 +12184,8 @@ export default {
       plotX1: 36,
       plotY1: 14,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -11088,7 +12195,8 @@ export default {
       plotX1: 12,
       plotY1: 10,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -11098,7 +12206,8 @@ export default {
       plotX1: 36,
       plotY1: 13,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -11108,7 +12217,8 @@ export default {
       plotX1: 15,
       plotY1: 9,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -11118,7 +12228,8 @@ export default {
       plotX1: 36,
       plotY1: 12,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -11128,7 +12239,8 @@ export default {
       plotX1: 18,
       plotY1: 8,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -11138,7 +12250,8 @@ export default {
       plotX1: 36,
       plotY1: 11,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 10,
@@ -11148,7 +12261,8 @@ export default {
       plotX1: 21,
       plotY1: 7,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -11158,7 +12272,8 @@ export default {
       plotX1: 33,
       plotY1: 10,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -11168,7 +12283,8 @@ export default {
       plotX1: 30,
       plotY1: 9,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -11178,7 +12294,8 @@ export default {
       plotX1: 27,
       plotY1: 8,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 10,
@@ -11188,7 +12305,8 @@ export default {
       plotX1: 24,
       plotY1: 7,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     }
   ],
   11: [
@@ -11200,7 +12318,8 @@ export default {
       plotX1: 39,
       plotY1: 95,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11210,7 +12329,8 @@ export default {
       plotX1: 12,
       plotY1: 95,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11220,7 +12340,8 @@ export default {
       plotX1: 39,
       plotY1: 93,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11230,7 +12351,8 @@ export default {
       plotX1: 12,
       plotY1: 93,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11240,7 +12362,8 @@ export default {
       plotX1: 39,
       plotY1: 91,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11250,7 +12373,8 @@ export default {
       plotX1: 12,
       plotY1: 91,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11260,7 +12384,8 @@ export default {
       plotX1: 39,
       plotY1: 89,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11270,7 +12395,8 @@ export default {
       plotX1: 12,
       plotY1: 89,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11280,7 +12406,8 @@ export default {
       plotX1: 39,
       plotY1: 87,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11290,7 +12417,8 @@ export default {
       plotX1: 12,
       plotY1: 87,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11300,7 +12428,8 @@ export default {
       plotX1: 39,
       plotY1: 85,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11310,7 +12439,8 @@ export default {
       plotX1: 12,
       plotY1: 85,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11320,7 +12450,8 @@ export default {
       plotX1: 39,
       plotY1: 83,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 11,
@@ -11330,7 +12461,8 @@ export default {
       plotX1: 12,
       plotY1: 83,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11340,7 +12472,8 @@ export default {
       plotX1: 39,
       plotY1: 81,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11350,7 +12483,8 @@ export default {
       plotX1: 12,
       plotY1: 81,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11360,7 +12494,8 @@ export default {
       plotX1: 39,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11370,7 +12505,8 @@ export default {
       plotX1: 12,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11380,7 +12516,8 @@ export default {
       plotX1: 39,
       plotY1: 79,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11390,7 +12527,8 @@ export default {
       plotX1: 12,
       plotY1: 79,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11400,7 +12538,8 @@ export default {
       plotX1: 39,
       plotY1: 77,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11410,7 +12549,8 @@ export default {
       plotX1: 12,
       plotY1: 78,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11420,7 +12560,8 @@ export default {
       plotX1: 36,
       plotY1: 75,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11430,7 +12571,8 @@ export default {
       plotX1: 12,
       plotY1: 77,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11440,7 +12582,8 @@ export default {
       plotX1: 27,
       plotY1: 76,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11450,7 +12593,8 @@ export default {
       plotX1: 15,
       plotY1: 75,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11460,7 +12604,8 @@ export default {
       plotX1: 27,
       plotY1: 72,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11470,7 +12615,8 @@ export default {
       plotX1: 21,
       plotY1: 76,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11480,7 +12626,8 @@ export default {
       plotX1: 36,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11490,7 +12637,8 @@ export default {
       plotX1: 21,
       plotY1: 72,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11500,7 +12648,8 @@ export default {
       plotX1: 36,
       plotY1: 73,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11510,7 +12659,8 @@ export default {
       plotX1: 15,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11520,7 +12670,8 @@ export default {
       plotX1: 36,
       plotY1: 72,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11530,7 +12681,8 @@ export default {
       plotX1: 15,
       plotY1: 73,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11540,7 +12692,8 @@ export default {
       plotX1: 36,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11550,7 +12703,8 @@ export default {
       plotX1: 15,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11560,7 +12714,8 @@ export default {
       plotX1: 36,
       plotY1: 70,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11570,7 +12725,8 @@ export default {
       plotX1: 15,
       plotY1: 71,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11580,7 +12736,8 @@ export default {
       plotX1: 36,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11590,7 +12747,8 @@ export default {
       plotX1: 15,
       plotY1: 70,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11600,7 +12758,8 @@ export default {
       plotX1: 27,
       plotY1: 69,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11610,7 +12769,8 @@ export default {
       plotX1: 15,
       plotY1: 69,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11620,7 +12780,8 @@ export default {
       plotX1: 36,
       plotY1: 68,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11630,7 +12791,8 @@ export default {
       plotX1: 21,
       plotY1: 69,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11640,7 +12802,8 @@ export default {
       plotX1: 36,
       plotY1: 67,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11650,7 +12813,8 @@ export default {
       plotX1: 15,
       plotY1: 68,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11660,7 +12824,8 @@ export default {
       plotX1: 36,
       plotY1: 66,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11670,7 +12835,8 @@ export default {
       plotX1: 15,
       plotY1: 67,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11680,7 +12846,8 @@ export default {
       plotX1: 36,
       plotY1: 65,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11690,7 +12857,8 @@ export default {
       plotX1: 15,
       plotY1: 66,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11700,7 +12868,8 @@ export default {
       plotX1: 36,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11710,7 +12879,8 @@ export default {
       plotX1: 15,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11720,7 +12890,8 @@ export default {
       plotX1: 36,
       plotY1: 63,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -11730,7 +12901,8 @@ export default {
       plotX1: 15,
       plotY1: 64,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11740,7 +12912,8 @@ export default {
       plotX1: 36,
       plotY1: 62,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11750,7 +12923,8 @@ export default {
       plotX1: 15,
       plotY1: 63,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11760,7 +12934,8 @@ export default {
       plotX1: 36,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11770,7 +12945,8 @@ export default {
       plotX1: 15,
       plotY1: 62,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11780,7 +12956,8 @@ export default {
       plotX1: 36,
       plotY1: 60,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11790,7 +12967,8 @@ export default {
       plotX1: 15,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11800,7 +12978,8 @@ export default {
       plotX1: 39,
       plotY1: 58,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11810,7 +12989,8 @@ export default {
       plotX1: 15,
       plotY1: 60,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11820,7 +13000,8 @@ export default {
       plotX1: 27,
       plotY1: 57,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11830,7 +13011,8 @@ export default {
       plotX1: 15,
       plotY1: 59,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11840,7 +13022,8 @@ export default {
       plotX1: 27,
       plotY1: 54,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11850,7 +13033,8 @@ export default {
       plotX1: 21,
       plotY1: 57,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11860,7 +13044,8 @@ export default {
       plotX1: 33,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11870,7 +13055,8 @@ export default {
       plotX1: 21,
       plotY1: 54,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11880,7 +13066,8 @@ export default {
       plotX1: 39,
       plotY1: 57,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11890,7 +13077,8 @@ export default {
       plotX1: 15,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11900,7 +13088,8 @@ export default {
       plotX1: 39,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11910,7 +13099,8 @@ export default {
       plotX1: 15,
       plotY1: 57,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11920,7 +13110,8 @@ export default {
       plotX1: 33,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11930,7 +13121,8 @@ export default {
       plotX1: 15,
       plotY1: 56,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11940,7 +13132,8 @@ export default {
       plotX1: 39,
       plotY1: 54,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11950,7 +13143,8 @@ export default {
       plotX1: 15,
       plotY1: 55,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11960,7 +13154,8 @@ export default {
       plotX1: 36,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11970,7 +13165,8 @@ export default {
       plotX1: 15,
       plotY1: 54,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -11980,7 +13176,8 @@ export default {
       plotX1: 27,
       plotY1: 51,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -11990,7 +13187,8 @@ export default {
       plotX1: 15,
       plotY1: 53,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 11,
@@ -12000,7 +13198,8 @@ export default {
       plotX1: 27,
       plotY1: 48,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12010,7 +13209,8 @@ export default {
       plotX1: 21,
       plotY1: 51,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12020,7 +13220,8 @@ export default {
       plotX1: 36,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12030,7 +13231,8 @@ export default {
       plotX1: 15,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12040,7 +13242,8 @@ export default {
       plotX1: 36,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12050,7 +13253,8 @@ export default {
       plotX1: 15,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12060,7 +13264,8 @@ export default {
       plotX1: 36,
       plotY1: 49,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12070,7 +13275,8 @@ export default {
       plotX1: 15,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12080,7 +13286,8 @@ export default {
       plotX1: 36,
       plotY1: 48,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12090,7 +13297,8 @@ export default {
       plotX1: 15,
       plotY1: 49,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12100,7 +13308,8 @@ export default {
       plotX1: 36,
       plotY1: 47,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12110,7 +13319,8 @@ export default {
       plotX1: 15,
       plotY1: 48,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12120,7 +13330,8 @@ export default {
       plotX1: 36,
       plotY1: 46,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 3
     },
     {
       deck: 11,
@@ -12130,7 +13341,8 @@ export default {
       plotX1: 15,
       plotY1: 47,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12140,7 +13352,8 @@ export default {
       plotX1: 36,
       plotY1: 45,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12150,7 +13363,8 @@ export default {
       plotX1: 15,
       plotY1: 46,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12160,7 +13374,8 @@ export default {
       plotX1: 39,
       plotY1: 44,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12170,7 +13385,8 @@ export default {
       plotX1: 12,
       plotY1: 44,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12180,7 +13396,8 @@ export default {
       plotX1: 39,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12190,7 +13407,8 @@ export default {
       plotX1: 12,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12200,7 +13418,8 @@ export default {
       plotX1: 39,
       plotY1: 40,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12210,7 +13429,8 @@ export default {
       plotX1: 12,
       plotY1: 40,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12220,7 +13440,8 @@ export default {
       plotX1: 39,
       plotY1: 38,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12230,7 +13451,8 @@ export default {
       plotX1: 12,
       plotY1: 38,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12240,7 +13462,8 @@ export default {
       plotX1: 39,
       plotY1: 36,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12250,7 +13473,8 @@ export default {
       plotX1: 12,
       plotY1: 36,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12260,7 +13484,8 @@ export default {
       plotX1: 39,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12270,7 +13495,8 @@ export default {
       plotX1: 12,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12280,7 +13506,8 @@ export default {
       plotX1: 39,
       plotY1: 32,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12290,7 +13517,8 @@ export default {
       plotX1: 12,
       plotY1: 32,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12300,7 +13528,8 @@ export default {
       plotX1: 39,
       plotY1: 30,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12310,7 +13539,8 @@ export default {
       plotX1: 12,
       plotY1: 30,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12320,7 +13550,8 @@ export default {
       plotX1: 39,
       plotY1: 28,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12330,7 +13561,8 @@ export default {
       plotX1: 12,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12340,7 +13572,8 @@ export default {
       plotX1: 39,
       plotY1: 27,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12350,7 +13583,8 @@ export default {
       plotX1: 12,
       plotY1: 27,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12360,7 +13594,8 @@ export default {
       plotX1: 39,
       plotY1: 26,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12370,7 +13605,8 @@ export default {
       plotX1: 12,
       plotY1: 26,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12380,7 +13616,8 @@ export default {
       plotX1: 39,
       plotY1: 25,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12390,7 +13627,8 @@ export default {
       plotX1: 12,
       plotY1: 25,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12400,7 +13638,8 @@ export default {
       plotX1: 36,
       plotY1: 24,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12410,7 +13649,8 @@ export default {
       plotX1: 15,
       plotY1: 24,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12420,7 +13660,8 @@ export default {
       plotX1: 27,
       plotY1: 23,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12430,7 +13671,8 @@ export default {
       plotX1: 21,
       plotY1: 23,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12440,7 +13682,8 @@ export default {
       plotX1: 36,
       plotY1: 23,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12450,7 +13693,8 @@ export default {
       plotX1: 15,
       plotY1: 23,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12460,7 +13704,8 @@ export default {
       plotX1: 36,
       plotY1: 22,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12470,7 +13715,8 @@ export default {
       plotX1: 15,
       plotY1: 22,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12480,7 +13726,8 @@ export default {
       plotX1: 36,
       plotY1: 21,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12490,7 +13737,8 @@ export default {
       plotX1: 15,
       plotY1: 21,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12500,7 +13748,8 @@ export default {
       plotX1: 36,
       plotY1: 20,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12510,7 +13759,8 @@ export default {
       plotX1: 15,
       plotY1: 20,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12520,7 +13770,8 @@ export default {
       plotX1: 36,
       plotY1: 19,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12530,7 +13781,8 @@ export default {
       plotX1: 15,
       plotY1: 19,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12540,7 +13792,8 @@ export default {
       plotX1: 36,
       plotY1: 18,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12550,7 +13803,8 @@ export default {
       plotX1: 15,
       plotY1: 18,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12560,7 +13814,8 @@ export default {
       plotX1: 27,
       plotY1: 20,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12570,7 +13825,8 @@ export default {
       plotX1: 21,
       plotY1: 20,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12580,7 +13836,8 @@ export default {
       plotX1: 27,
       plotY1: 17,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12590,7 +13847,8 @@ export default {
       plotX1: 21,
       plotY1: 17,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12600,7 +13858,8 @@ export default {
       plotX1: 36,
       plotY1: 17,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 11,
@@ -12610,7 +13869,8 @@ export default {
       plotX1: 15,
       plotY1: 17,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12620,7 +13880,8 @@ export default {
       plotX1: 36,
       plotY1: 16,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12630,7 +13891,8 @@ export default {
       plotX1: 15,
       plotY1: 16,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 3,
+      bookedOccupancy: 3
     },
     {
       deck: 11,
@@ -12640,7 +13902,8 @@ export default {
       plotX1: 36,
       plotY1: 15,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12650,7 +13913,8 @@ export default {
       plotX1: 15,
       plotY1: 15,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12660,7 +13924,8 @@ export default {
       plotX1: 36,
       plotY1: 14,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12670,7 +13935,8 @@ export default {
       plotX1: 15,
       plotY1: 14,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12680,7 +13946,8 @@ export default {
       plotX1: 36,
       plotY1: 13,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12690,7 +13957,8 @@ export default {
       plotX1: 15,
       plotY1: 13,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12700,7 +13968,8 @@ export default {
       plotX1: 36,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 11,
@@ -12710,7 +13979,8 @@ export default {
       plotX1: 15,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12720,7 +13990,8 @@ export default {
       plotX1: 36,
       plotY1: 11,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 3,
+      bookedOccupancy: 1
     },
     {
       deck: 11,
@@ -12730,7 +14001,8 @@ export default {
       plotX1: 15,
       plotY1: 11,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12740,7 +14012,8 @@ export default {
       plotX1: 36,
       plotY1: 10,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12750,7 +14023,8 @@ export default {
       plotX1: 15,
       plotY1: 10,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12760,7 +14034,8 @@ export default {
       plotX1: 36,
       plotY1: 9,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12770,7 +14045,8 @@ export default {
       plotX1: 15,
       plotY1: 9,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12780,7 +14056,8 @@ export default {
       plotX1: 36,
       plotY1: 8,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12790,7 +14067,8 @@ export default {
       plotX1: 15,
       plotY1: 8,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12800,7 +14078,8 @@ export default {
       plotX1: 36,
       plotY1: 7,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12810,7 +14089,8 @@ export default {
       plotX1: 15,
       plotY1: 7,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12820,7 +14100,8 @@ export default {
       plotX1: 36,
       plotY1: 6,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12830,7 +14111,8 @@ export default {
       plotX1: 15,
       plotY1: 6,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12840,7 +14122,8 @@ export default {
       plotX1: 36,
       plotY1: 5,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12850,7 +14133,8 @@ export default {
       plotX1: 15,
       plotY1: 5,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12860,7 +14144,8 @@ export default {
       plotX1: 36,
       plotY1: 4,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12870,7 +14155,8 @@ export default {
       plotX1: 15,
       plotY1: 4,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12880,7 +14166,8 @@ export default {
       plotX1: 33,
       plotY1: 6,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12890,7 +14177,8 @@ export default {
       plotX1: 12,
       plotY1: 6,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12900,7 +14188,8 @@ export default {
       plotX1: 30,
       plotY1: 5,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12910,7 +14199,8 @@ export default {
       plotX1: 15,
       plotY1: 5,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12920,7 +14210,8 @@ export default {
       plotX1: 27,
       plotY1: 4,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12930,7 +14221,8 @@ export default {
       plotX1: 18,
       plotY1: 4,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12940,7 +14232,8 @@ export default {
       plotX1: 24,
       plotY1: 3,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12950,7 +14243,8 @@ export default {
       plotX1: 21,
       plotY1: 3,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 11,
@@ -12960,7 +14254,8 @@ export default {
       plotX1: 27,
       plotY1: 7,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     }
   ],
   12: [
@@ -12972,7 +14267,8 @@ export default {
       plotX1: 276,
       plotY1: 96,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 6,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -12982,7 +14278,8 @@ export default {
       plotX1: 276,
       plotY1: 96,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 6,
+      bookedOccupancy: 4
     },
     {
       deck: 12,
@@ -12992,7 +14289,8 @@ export default {
       plotX1: 267,
       plotY1: 92,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13002,7 +14300,8 @@ export default {
       plotX1: 234,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 4,
+      bookedOccupancy: 4
     },
     {
       deck: 12,
@@ -13012,7 +14311,8 @@ export default {
       plotX1: 261,
       plotY1: 89,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13022,7 +14322,8 @@ export default {
       plotX1: 228,
       plotY1: 78,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13032,7 +14333,8 @@ export default {
       plotX1: 261,
       plotY1: 89,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 6,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13042,7 +14344,8 @@ export default {
       plotX1: 225,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13052,7 +14355,8 @@ export default {
       plotX1: 240,
       plotY1: 83,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 12,
@@ -13062,7 +14366,8 @@ export default {
       plotX1: 222,
       plotY1: 75,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13072,7 +14377,8 @@ export default {
       plotX1: 228,
       plotY1: 80,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 6,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13082,7 +14388,8 @@ export default {
       plotX1: 213,
       plotY1: 74,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13092,7 +14399,8 @@ export default {
       plotX1: 225,
       plotY1: 76,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13102,7 +14410,8 @@ export default {
       plotX1: 219,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13112,7 +14421,8 @@ export default {
       plotX1: 222,
       plotY1: 75,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13122,7 +14432,8 @@ export default {
       plotX1: 216,
       plotY1: 73,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13132,7 +14443,8 @@ export default {
       plotX1: 213,
       plotY1: 74,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13142,7 +14454,8 @@ export default {
       plotX1: 213,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13152,7 +14465,8 @@ export default {
       plotX1: 219,
       plotY1: 74,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13162,7 +14476,8 @@ export default {
       plotX1: 210,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13172,7 +14487,8 @@ export default {
       plotX1: 216,
       plotY1: 73,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13182,7 +14498,8 @@ export default {
       plotX1: 207,
       plotY1: 70,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13192,7 +14509,8 @@ export default {
       plotX1: 213,
       plotY1: 72,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13202,7 +14520,8 @@ export default {
       plotX1: 204,
       plotY1: 69,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13212,7 +14531,8 @@ export default {
       plotX1: 210,
       plotY1: 71,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13222,7 +14542,8 @@ export default {
       plotX1: 216,
       plotY1: 73,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13232,7 +14553,8 @@ export default {
       plotX1: 207,
       plotY1: 70,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13242,7 +14564,8 @@ export default {
       plotX1: 201,
       plotY1: 68,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13252,7 +14575,8 @@ export default {
       plotX1: 204,
       plotY1: 69,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13262,7 +14586,8 @@ export default {
       plotX1: 198,
       plotY1: 67,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13272,7 +14597,8 @@ export default {
       plotX1: 204,
       plotY1: 70,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13282,7 +14608,8 @@ export default {
       plotX1: 195,
       plotY1: 66,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13292,7 +14619,8 @@ export default {
       plotX1: 201,
       plotY1: 68,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13302,7 +14630,8 @@ export default {
       plotX1: 192,
       plotY1: 65,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13312,7 +14641,8 @@ export default {
       plotX1: 198,
       plotY1: 67,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13322,7 +14652,8 @@ export default {
       plotX1: 189,
       plotY1: 64,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13332,7 +14663,8 @@ export default {
       plotX1: 195,
       plotY1: 66,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13342,7 +14674,8 @@ export default {
       plotX1: 186,
       plotY1: 63,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13352,7 +14685,8 @@ export default {
       plotX1: 192,
       plotY1: 65,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13362,7 +14696,8 @@ export default {
       plotX1: 186,
       plotY1: 65,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13372,7 +14707,8 @@ export default {
       plotX1: 9,
       plotY1: 64,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13382,7 +14718,8 @@ export default {
       plotX1: 183,
       plotY1: 62,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13392,7 +14729,8 @@ export default {
       plotX1: 186,
       plotY1: 63,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13402,7 +14740,8 @@ export default {
       plotX1: 180,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13412,7 +14751,8 @@ export default {
       plotX1: 186,
       plotY1: 65,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13422,7 +14762,8 @@ export default {
       plotX1: 177,
       plotY1: 60,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13432,7 +14773,8 @@ export default {
       plotX1: 183,
       plotY1: 62,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13442,7 +14784,8 @@ export default {
       plotX1: 174,
       plotY1: 59,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13452,7 +14795,8 @@ export default {
       plotX1: 180,
       plotY1: 61,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13462,7 +14806,8 @@ export default {
       plotX1: 174,
       plotY1: 61,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13472,7 +14817,8 @@ export default {
       plotX1: 177,
       plotY1: 60,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13482,7 +14828,8 @@ export default {
       plotX1: 162,
       plotY1: 57,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13492,7 +14839,8 @@ export default {
       plotX1: 171,
       plotY1: 58,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13502,7 +14850,8 @@ export default {
       plotX1: 171,
       plotY1: 58,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13512,7 +14861,8 @@ export default {
       plotX1: 174,
       plotY1: 61,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13522,7 +14872,8 @@ export default {
       plotX1: 168,
       plotY1: 57,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13532,7 +14883,8 @@ export default {
       plotX1: 162,
       plotY1: 57,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13542,7 +14894,8 @@ export default {
       plotX1: 165,
       plotY1: 56,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13552,7 +14905,8 @@ export default {
       plotX1: 168,
       plotY1: 57,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13562,7 +14916,8 @@ export default {
       plotX1: 162,
       plotY1: 55,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13572,7 +14927,8 @@ export default {
       plotX1: 162,
       plotY1: 55,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13582,7 +14938,8 @@ export default {
       plotX1: 159,
       plotY1: 54,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13592,7 +14949,8 @@ export default {
       plotX1: 159,
       plotY1: 54,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13602,7 +14960,8 @@ export default {
       plotX1: 156,
       plotY1: 53,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13612,7 +14971,8 @@ export default {
       plotX1: 153,
       plotY1: 52,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13622,7 +14982,8 @@ export default {
       plotX1: 153,
       plotY1: 54,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13632,7 +14993,8 @@ export default {
       plotX1: 153,
       plotY1: 54,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 3,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13642,7 +15004,8 @@ export default {
       plotX1: 144,
       plotY1: 50,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 12,
@@ -13652,7 +15015,8 @@ export default {
       plotX1: 144,
       plotY1: 50,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13662,7 +15026,8 @@ export default {
       plotX1: 153,
       plotY1: 52,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13672,7 +15037,8 @@ export default {
       plotX1: 150,
       plotY1: 51,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13682,7 +15048,8 @@ export default {
       plotX1: 150,
       plotY1: 51,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13692,7 +15059,8 @@ export default {
       plotX1: 147,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13702,7 +15070,8 @@ export default {
       plotX1: 147,
       plotY1: 50,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13712,7 +15081,8 @@ export default {
       plotX1: 144,
       plotY1: 49,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13722,7 +15092,8 @@ export default {
       plotX1: 147,
       plotY1: 49,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13732,7 +15103,8 @@ export default {
       plotX1: 141,
       plotY1: 48,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13742,7 +15114,8 @@ export default {
       plotX1: 141,
       plotY1: 48,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13752,7 +15125,8 @@ export default {
       plotX1: 138,
       plotY1: 47,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13762,7 +15136,8 @@ export default {
       plotX1: 138,
       plotY1: 47,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 12,
@@ -13772,7 +15147,8 @@ export default {
       plotX1: 135,
       plotY1: 46,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13782,7 +15158,8 @@ export default {
       plotX1: 135,
       plotY1: 46,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13792,7 +15169,8 @@ export default {
       plotX1: 132,
       plotY1: 45,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13802,7 +15180,8 @@ export default {
       plotX1: 135,
       plotY1: 47,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13812,7 +15191,8 @@ export default {
       plotX1: 135,
       plotY1: 47,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13822,7 +15202,8 @@ export default {
       plotX1: 135,
       plotY1: 47,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13832,7 +15213,8 @@ export default {
       plotX1: 135,
       plotY1: 46,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13842,7 +15224,8 @@ export default {
       plotX1: 129,
       plotY1: 44,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 12,
@@ -13852,7 +15235,8 @@ export default {
       plotX1: 129,
       plotY1: 44,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13862,7 +15246,8 @@ export default {
       plotX1: 126,
       plotY1: 43,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13872,7 +15257,8 @@ export default {
       plotX1: 126,
       plotY1: 43,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13882,7 +15268,8 @@ export default {
       plotX1: 123,
       plotY1: 42,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13892,7 +15279,8 @@ export default {
       plotX1: 123,
       plotY1: 42,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13902,7 +15290,8 @@ export default {
       plotX1: 120,
       plotY1: 41,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13912,7 +15301,8 @@ export default {
       plotX1: 120,
       plotY1: 41,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13922,7 +15312,8 @@ export default {
       plotX1: 117,
       plotY1: 40,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13932,7 +15323,8 @@ export default {
       plotX1: 117,
       plotY1: 40,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13942,7 +15334,8 @@ export default {
       plotX1: 114,
       plotY1: 39,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13952,7 +15345,8 @@ export default {
       plotX1: 114,
       plotY1: 39,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: null
     },
     {
       deck: 12,
@@ -13962,7 +15356,8 @@ export default {
       plotX1: 111,
       plotY1: 38,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13972,7 +15367,8 @@ export default {
       plotX1: 111,
       plotY1: 38,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -13982,7 +15378,8 @@ export default {
       plotX1: 108,
       plotY1: 37,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -13992,7 +15389,8 @@ export default {
       plotX1: 108,
       plotY1: 37,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14002,7 +15400,8 @@ export default {
       plotX1: 105,
       plotY1: 36,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14012,7 +15411,8 @@ export default {
       plotX1: 105,
       plotY1: 36,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14022,7 +15422,8 @@ export default {
       plotX1: 102,
       plotY1: 35,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -14032,7 +15433,8 @@ export default {
       plotX1: 102,
       plotY1: 35,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14042,7 +15444,8 @@ export default {
       plotX1: 99,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -14052,7 +15455,8 @@ export default {
       plotX1: 99,
       plotY1: 34,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14062,7 +15466,8 @@ export default {
       plotX1: 96,
       plotY1: 33,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -14072,7 +15477,8 @@ export default {
       plotX1: 96,
       plotY1: 33,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -14082,7 +15488,8 @@ export default {
       plotX1: 93,
       plotY1: 32,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14092,7 +15499,8 @@ export default {
       plotX1: 93,
       plotY1: 32,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14102,7 +15510,8 @@ export default {
       plotX1: 90,
       plotY1: 31,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14112,7 +15521,8 @@ export default {
       plotX1: 90,
       plotY1: 31,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14122,7 +15532,8 @@ export default {
       plotX1: 87,
       plotY1: 30,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -14132,7 +15543,8 @@ export default {
       plotX1: 87,
       plotY1: 30,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14142,7 +15554,8 @@ export default {
       plotX1: 84,
       plotY1: 29,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14152,7 +15565,8 @@ export default {
       plotX1: 84,
       plotY1: 29,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14162,7 +15576,8 @@ export default {
       plotX1: 81,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14172,7 +15587,8 @@ export default {
       plotX1: 81,
       plotY1: 28,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14182,7 +15598,8 @@ export default {
       plotX1: 78,
       plotY1: 27,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14192,7 +15609,8 @@ export default {
       plotX1: 78,
       plotY1: 27,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14202,7 +15620,8 @@ export default {
       plotX1: 75,
       plotY1: 26,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14212,7 +15631,8 @@ export default {
       plotX1: 75,
       plotY1: 26,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14222,7 +15642,8 @@ export default {
       plotX1: 72,
       plotY1: 25,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14232,7 +15653,8 @@ export default {
       plotX1: 72,
       plotY1: 25,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14242,7 +15664,8 @@ export default {
       plotX1: 69,
       plotY1: 24,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14252,7 +15675,8 @@ export default {
       plotX1: 69,
       plotY1: 24,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14262,7 +15686,8 @@ export default {
       plotX1: 66,
       plotY1: 23,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14272,7 +15697,8 @@ export default {
       plotX1: 66,
       plotY1: 23,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14282,7 +15708,8 @@ export default {
       plotX1: 63,
       plotY1: 22,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14292,7 +15719,8 @@ export default {
       plotX1: 63,
       plotY1: 22,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14302,7 +15730,8 @@ export default {
       plotX1: 60,
       plotY1: 21,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -14312,7 +15741,8 @@ export default {
       plotX1: 60,
       plotY1: 21,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14322,7 +15752,8 @@ export default {
       plotX1: 57,
       plotY1: 20,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14332,7 +15763,8 @@ export default {
       plotX1: 57,
       plotY1: 20,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14342,7 +15774,8 @@ export default {
       plotX1: 54,
       plotY1: 19,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14352,7 +15785,8 @@ export default {
       plotX1: 54,
       plotY1: 19,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14362,7 +15796,8 @@ export default {
       plotX1: 51,
       plotY1: 18,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -14372,7 +15807,8 @@ export default {
       plotX1: 51,
       plotY1: 18,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 2,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -14382,7 +15818,8 @@ export default {
       plotX1: 48,
       plotY1: 17,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14392,7 +15829,8 @@ export default {
       plotX1: 48,
       plotY1: 17,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14402,7 +15840,8 @@ export default {
       plotX1: 45,
       plotY1: 16,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14412,7 +15851,8 @@ export default {
       plotX1: 45,
       plotY1: 16,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14422,7 +15862,8 @@ export default {
       plotX1: 42,
       plotY1: 15,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14432,7 +15873,8 @@ export default {
       plotX1: 42,
       plotY1: 15,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14442,7 +15884,8 @@ export default {
       plotX1: 39,
       plotY1: 14,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14452,7 +15895,8 @@ export default {
       plotX1: 39,
       plotY1: 14,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14462,7 +15906,8 @@ export default {
       plotX1: 36,
       plotY1: 13,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14472,7 +15917,8 @@ export default {
       plotX1: 36,
       plotY1: 13,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -14482,7 +15928,8 @@ export default {
       plotX1: 33,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14492,7 +15939,8 @@ export default {
       plotX1: 33,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14502,7 +15950,8 @@ export default {
       plotX1: 30,
       plotY1: 11,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14512,7 +15961,8 @@ export default {
       plotX1: 30,
       plotY1: 11,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 1
     },
     {
       deck: 12,
@@ -14522,7 +15972,8 @@ export default {
       plotX1: 27,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14532,7 +15983,8 @@ export default {
       plotX1: 27,
       plotY1: 12,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14542,7 +15994,8 @@ export default {
       plotX1: 24,
       plotY1: 9,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14552,7 +16005,8 @@ export default {
       plotX1: 24,
       plotY1: 9,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14562,7 +16016,8 @@ export default {
       plotX1: 21,
       plotY1: 9,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14572,7 +16027,8 @@ export default {
       plotX1: 21,
       plotY1: 9,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14582,7 +16038,8 @@ export default {
       plotX1: 18,
       plotY1: 8,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14592,7 +16049,8 @@ export default {
       plotX1: 18,
       plotY1: 8,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14602,7 +16060,8 @@ export default {
       plotX1: 15,
       plotY1: 7,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     },
     {
       deck: 12,
@@ -14612,7 +16071,8 @@ export default {
       plotX1: 15,
       plotY1: 7,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 3
     },
     {
       deck: 12,
@@ -14622,7 +16082,8 @@ export default {
       plotX1: 12,
       plotY1: 6,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 4,
+      bookedOccupancy: 4
     },
     {
       deck: 12,
@@ -14632,7 +16093,8 @@ export default {
       plotX1: 12,
       plotY1: 6,
       bookingStatus: 'B',
-      cabinColor: 'GREEN'
+      cabinCapacity: 2,
+      bookedOccupancy: 2
     }
   ],
   15: [
@@ -14644,7 +16106,8 @@ export default {
       plotX1: 39,
       plotY1: 88,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 15,
@@ -14654,7 +16117,8 @@ export default {
       plotX1: 12,
       plotY1: 82,
       bookingStatus: 'C',
-      cabinColor: 'RED'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 15,
@@ -14664,7 +16128,8 @@ export default {
       plotX1: 39,
       plotY1: 85,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 15,
@@ -14674,7 +16139,8 @@ export default {
       plotX1: 12,
       plotY1: 79,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 15,
@@ -14684,7 +16150,8 @@ export default {
       plotX1: 39,
       plotY1: 82,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     },
     {
       deck: 15,
@@ -14694,7 +16161,8 @@ export default {
       plotX1: 39,
       plotY1: 79,
       bookingStatus: 'B',
-      cabinColor: 'YELLOW'
+      cabinCapacity: 4,
+      bookedOccupancy: 2
     }
   ],
   16: [
@@ -14706,7 +16174,8 @@ export default {
       plotX1: 39,
       plotY1: 88,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 16,
@@ -14716,7 +16185,8 @@ export default {
       plotX1: 12,
       plotY1: 82,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 16,
@@ -14726,7 +16196,8 @@ export default {
       plotX1: 39,
       plotY1: 85,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 16,
@@ -14736,7 +16207,8 @@ export default {
       plotX1: 12,
       plotY1: 79,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 16,
@@ -14746,7 +16218,8 @@ export default {
       plotX1: 39,
       plotY1: 82,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     },
     {
       deck: 16,
@@ -14756,7 +16229,8 @@ export default {
       plotX1: 39,
       plotY1: 79,
       bookingStatus: 'U',
-      cabinColor: 'RED'
+      cabinCapacity: null,
+      bookedOccupancy: null
     }
   ]
 }
