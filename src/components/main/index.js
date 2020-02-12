@@ -9,7 +9,8 @@ import ShipViz from './ship-viz'
 import Timeline from './filters/timeline'
 import Legend from './legend'
 import DeckView from './legend/DeckView'
-import charts from 'assets/charts-1x.png'
+// import charts from 'assets/charts-1x.png'
+import Charts from './charts'
 
 const Container = styled.div`
   display: flex;
@@ -27,7 +28,7 @@ const ChartColumn = styled.div`
 `
 const VizContainer = styled.div`
   display: flex;
-  flex: 5;
+  flex: 4;
   flex-direction: column;
   padding-right: 2em;
 `
@@ -39,7 +40,7 @@ const Main = () => {
       <Filters />
       <Row>
         <ChartColumn>
-          <img src={charts} style={{ width: '500px', height: '90%' }} />
+          <Charts />
         </ChartColumn>
         <VizContainer>
           <SubFilters />
