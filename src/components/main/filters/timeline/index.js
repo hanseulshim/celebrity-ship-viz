@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
 import { store } from 'context/store'
 import styled from 'styled-components'
@@ -89,6 +89,27 @@ const Timeline = () => {
     dispatch({ type: 'setSelectedBookingWeek', value })
   }
 
+  useEffect(() => {
+    const onCompleted = data => {
+      if (data.bookingWeekList.length) {
+        dispatch({
+          type: 'setSelectedBookingWeek',
+          value: data.bookingWeekList[0].week
+        })
+      }
+    }
+    const onError = error => {
+      return <Notification type="error" message={error.message} />
+    }
+    if (onCompleted || onError) {
+      if (onCompleted && !loading && !error) {
+        onCompleted(data)
+      } else if (onError && !loading && error) {
+        onError(error)
+      }
+    }
+  }, [loading, data, error])
+
   if (loading) return <Loader />
   if (error) return <Notification type="error" message={error.message} />
 
@@ -102,10 +123,7 @@ const Timeline = () => {
         {data.bookingWeekList.map((wk, i) => {
           return (
             <Marker key={'wk' + i} onClick={e => handleSelect(e, wk.week)}>
-              <Dot
-                selected={selectedBookingWeek === wk.week}
-                className="ripple"
-              />
+              <Dot selected={selectedBookingWeek === wk.week} />
               <Label>
                 <span className="week">{`${wk.week} wk`}</span>
                 <span className="date">{`${wk.date}`}</span>
