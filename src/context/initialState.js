@@ -19,5 +19,5 @@ export default {
   },
   selectedBookingWeek: null,
   selectedDeck: null,
-  shipData: null
+  shipData: {}
 }

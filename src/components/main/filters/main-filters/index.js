@@ -41,15 +41,14 @@ const MainFilters = () => {
     selectedSailDate,
     selectedBookingWeek
   } = state
-  const [applyFilters, { loading, data }] = useLazyQuery(GET_VISUAL_DECK_LIST)
+  const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
+    onCompleted: data => {
+      dispatch({ type: 'setShipData', value: data.deckVisualList })
+    }
+  })
 
   const enableApply = () =>
     selectedShip && selectedProduct && selectedItinerary && selectedSailDate
-
-  if (data && data.deckVisualList) {
-    // dispatch({ type: 'setShipData', value: data })
-    console.log(data)
-  }
 
   return (
     <Container>
