@@ -1,5 +1,5 @@
 import colors from 'styles/colors'
-import { hoverInfo } from './shipConfig'
+import { hoverInfo } from './config'
 
 const getStatus = (point, colorCount) => {
   const statusObj = {}

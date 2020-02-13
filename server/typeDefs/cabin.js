@@ -1,5 +1,6 @@
 export default `
 extend type Query {
- deckList(shipId: Int, sailingDateId: Int, weeks: Int): JSON
+  deckVisualList(shipId: Int, sailingDateId: Int, weeks: Int): JSON
+  deckList(shipId: Int): [Int]
 }
 `
