@@ -1,7 +1,11 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import { store } from 'context/store'
 import styled from 'styled-components'
-import { deckList, SVG_URL } from './config'
+import { SVG_URL } from './config'
+import { GET_DECK_LIST } from 'graphql/queries'
+import Loader from 'components/common/Loader'
+import Notification from 'components/common/Notification'
+import { useQuery } from '@apollo/client'
 import numeral from 'numeral'
 
 const Container = styled.div`
@@ -45,15 +49,22 @@ const DeckSvg = ({ deck, selectedDeck }) => {
 const SelectDeck = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { selectedDeck } = state
-
-  useEffect(() => {
-    dispatch({ type: 'setSelectedDeck', value: Math.min(...deckList) })
-  }, [])
+  const { selectedDeck, selectedShip } = state
+  const [deckList, setDeckList] = useState([])
+  const { loading, error } = useQuery(GET_DECK_LIST, {
+    variables: { shipId: selectedShip },
+    onCompleted({ deckList }) {
+      dispatch({ type: 'setSelectedDeck', value: Math.min(...deckList) })
+      setDeckList(deckList)
+    }
+  })
 
   const handleSelect = value => {
     dispatch({ type: 'setSelectedDeck', value })
   }
+
+  if (loading) return <Loader />
+  if (error) return <Notification type="error" message={error.message} />
 
   return (
     <Container>
