@@ -18,12 +18,8 @@ const StyledButton = styled.button`
   border: none;
 `
 
-const Button = ({ primary, children, ...style }) => {
-  return (
-    <StyledButton primary={primary} {...style}>
-      {children}
-    </StyledButton>
-  )
+const Button = ({ children, ...props }) => {
+  return <StyledButton {...props}>{children}</StyledButton>
 }
 
 export default Button

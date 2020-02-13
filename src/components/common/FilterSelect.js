@@ -60,10 +60,7 @@ const FilterSelect = ({
         {options &&
           options.map((option, i) => {
             return displayKey === 'sailingDate' ? (
-              <Option
-                value={moment(option[displayKey]).format('MM-DD-YYYY')}
-                key={'option' + i}
-              >
+              <Option value={option} key={'option' + i}>
                 {moment(option[displayKey]).format('MM-DD-YYYY')}
               </Option>
             ) : (
