@@ -1,7 +1,9 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { store } from 'context/store'
+import { useLazyQuery } from '@apollo/client'
 import { Menu, Dropdown, Checkbox } from 'antd'
+import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
 
 const Button = styled.button`
   display: flex;
@@ -43,8 +45,20 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const [visible, setVisible] = useState(false)
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { filter } = state
+  const { filter, selectedShip, selectedSailDate, selectedBookingWeek } = state
+
+  const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
+    onCompleted: data => {
+      dispatch({ type: 'setShipData', value: data.deckVisualList })
+    }
+  })
+
+  // keep local state array for save button
   const [subFilter, setSubFilter] = useState(filter[title])
+
+  useEffect(() => {
+    setSubFilter(filter[title])
+  }, [filter])
 
   const handleCheck = id => {
     const index = subFilter.indexOf(id)
@@ -55,10 +69,24 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
     }
   }
 
-  const handleMenuClick = e => {
+  const handleSave = e => {
     if (e.key === 'save') {
       dispatch({ type: 'setSelectedSubFilter', title, value: subFilter })
       setVisible(false)
+      applyFilters({
+        variables: {
+          shipId: selectedShip,
+          sailingDateId: selectedSailDate.id,
+          weeks: selectedBookingWeek
+        }
+      })
+    }
+  }
+
+  const handleVisibleChange = v => {
+    setVisible(v)
+    if (!v) {
+      setSubFilter(filter[title])
     }
   }
 
@@ -68,7 +96,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   }
 
   const menu = (
-    <StyledMenu onClick={handleMenuClick}>
+    <StyledMenu onClick={handleSave}>
       {options.map((option, i) => (
         <Menu.Item key={'option' + i}>
           <StyledCheckbox
@@ -88,10 +116,8 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   return (
     <Dropdown
       overlay={menu}
-      onVisibleChange={setVisible}
+      onVisibleChange={handleVisibleChange}
       visible={visible}
-      overlayStyle={{ backgroundColor: 'rgba(0,0,0,.5)' }}
-      overlayClassName={'dropdown'}
     >
       <Button>{formatTitle(title)}</Button>
     </Dropdown>

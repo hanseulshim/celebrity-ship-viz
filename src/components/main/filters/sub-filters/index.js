@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { store } from 'context/store'
 import styled from 'styled-components'
 import { useQuery } from '@apollo/client'
 
@@ -20,8 +21,22 @@ const Container = styled.div`
   }
 `
 const SubFilters = () => {
+  const globalState = useContext(store)
+  const { dispatch } = globalState
   const { loading, error, data } = useQuery(GET_SUB_FILTERS, {
-    fetchPolicy: 'network-only'
+    fetchPolicy: 'network-only',
+    onCompleted: data =>
+      Object.keys(data.filter)
+        .filter(v => v !== '__typename')
+        .map(subFilter => {
+          const arr = []
+          data.filter[subFilter].map(v => arr.push(v.id))
+          dispatch({
+            type: 'setSelectedSubFilter',
+            title: subFilter,
+            value: arr
+          })
+        })
   })
 
   if (loading) return <Loader />
@@ -34,14 +49,12 @@ const SubFilters = () => {
         .map((subFilter, i) => {
           const options = data.filter[subFilter]
           return (
-            options.length > 0 && (
-              <DropdownMenu
-                options={options}
-                title={subFilter}
-                key={subFilter + i}
-                displayKey={'value'}
-              />
-            )
+            <DropdownMenu
+              options={options}
+              title={subFilter}
+              key={subFilter + i}
+              displayKey={'value'}
+            />
           )
         })}
     </Container>

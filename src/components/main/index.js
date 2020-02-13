@@ -41,6 +41,11 @@ const Main = () => {
       <Row>
         <ChartColumn>
           <Charts />
+          {/* <img
+            src={charts}
+            style={{ width: '500px', height: '90%' }}
+            alt="charts"
+          /> */}
         </ChartColumn>
         <VizContainer>
           <SubFilters />
