@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
 import { store } from 'context/store'
 import styled from 'styled-components'
+import moment from 'moment'
 
 // GQL
 import { GET_BOOKING_WEEK_LIST } from 'graphql/queries'
@@ -81,7 +82,11 @@ const Timeline = () => {
   const { selectedSailDate, selectedBookingWeek } = state
 
   const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
-    variables: { sailingDate: selectedSailDate },
+    variables: {
+      sailingDate: Object.keys(selectedSailDate).length
+        ? moment(selectedSailDate.sailingDate).format('MM-DD-YYYY')
+        : null
+    },
     fetchPolicy: 'network-only'
   })
 
@@ -89,8 +94,35 @@ const Timeline = () => {
     dispatch({ type: 'setSelectedBookingWeek', value })
   }
 
+  useEffect(() => {
+    const onCompleted = data => {
+      if (data.bookingWeekList.length) {
+        dispatch({
+          type: 'setSelectedBookingWeek',
+          value: data.bookingWeekList[0].week
+        })
+      }
+    }
+    const onError = error => {
+      return <Notification type="error" message={error.message} />
+    }
+    if (onCompleted || onError) {
+      if (onCompleted && !loading && !error) {
+        onCompleted(data)
+      } else if (onError && !loading && error) {
+        onError(error)
+      }
+    }
+  }, [loading, data, error])
+
   if (loading) return <Loader />
-  if (error) return <Notification type="error" message={error.message} />
+  if (error) {
+    return (
+      <NotificationContainer>
+        <Notification type="error" message={error.message} />
+      </NotificationContainer>
+    )
+  }
 
   return !data.bookingWeekList.length ? (
     <NotificationContainer>
@@ -102,10 +134,7 @@ const Timeline = () => {
         {data.bookingWeekList.map((wk, i) => {
           return (
             <Marker key={'wk' + i} onClick={e => handleSelect(e, wk.week)}>
-              <Dot
-                selected={selectedBookingWeek === wk.week}
-                className="ripple"
-              />
+              <Dot selected={selectedBookingWeek === wk.week} />
               <Label>
                 <span className="week">{`${wk.week} wk`}</span>
                 <span className="date">{`${wk.date}`}</span>

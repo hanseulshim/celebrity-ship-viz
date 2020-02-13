@@ -30,7 +30,8 @@ const SelectSailDate = () => {
   })
 
   const onChange = value => {
-    dispatch({ type: 'setSelectedSailDate', value })
+    const sailDate = data.sailingDateList.find(date => date.id === value)
+    dispatch({ type: 'setSelectedSailDate', value: sailDate })
   }
 
   if (loading) return <Loader />
@@ -40,7 +41,7 @@ const SelectSailDate = () => {
       label="Sail Date"
       displayKey="sailingDate"
       options={data.sailingDateList}
-      value={selectedSailDate}
+      value={selectedSailDate.id}
       onChange={onChange}
     />
   )

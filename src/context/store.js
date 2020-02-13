@@ -19,22 +19,22 @@ const StateProvider = ({ children }) => {
         return {
           ...state,
           selectedShip: action.value,
-          selectedProduct: null,
-          selectedItinerary: null,
-          selectedSailDate: null
+          selectedProduct: initialState.selectedProduct,
+          selectedItinerary: initialState.selectedItinerary,
+          selectedSailDate: initialState.selectedSailDate
         }
       case 'setSelectedProduct':
         return {
           ...state,
           selectedProduct: action.value,
-          selectedItinerary: null,
-          selectedSailDate: null
+          selectedItinerary: initialState.selectedItinerary,
+          selectedSailDate: initialState.selectedSailDate
         }
       case 'setSelectedItinerary':
         return {
           ...state,
           selectedItinerary: action.value,
-          selectedSailDate: null
+          selectedSailDate: initialState.selectedSailDate
         }
       case 'setSelectedSailDate':
         return {
@@ -68,6 +68,11 @@ const StateProvider = ({ children }) => {
         return {
           ...state,
           selectedDeck: action.value
+        }
+      case 'setShipData':
+        return {
+          ...state,
+          shipData: action.value
         }
       default:
         throw new Error()
