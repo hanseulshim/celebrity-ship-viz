@@ -6,9 +6,6 @@ export const GET_VISUAL_DECK_LIST = gql`
       shipId: $shipId
       sailingDateId: $sailingDateId
       weeks: $weeks
-    ) {
-      week
-      date
-    }
+    )
   }
 `

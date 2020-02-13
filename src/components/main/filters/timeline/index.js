@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
 import { store } from 'context/store'
 import styled from 'styled-components'
+import moment from 'moment'
 
 // GQL
 import { GET_BOOKING_WEEK_LIST } from 'graphql/queries'
@@ -81,7 +82,11 @@ const Timeline = () => {
   const { selectedSailDate, selectedBookingWeek } = state
 
   const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
-    variables: { sailingDate: selectedSailDate },
+    variables: {
+      sailingDate: Object.keys(selectedSailDate).length
+        ? moment(selectedSailDate.sailingDate).format('MM-DD-YYYY')
+        : null
+    },
     fetchPolicy: 'network-only'
   })
 
@@ -111,7 +116,13 @@ const Timeline = () => {
   }, [loading, data, error])
 
   if (loading) return <Loader />
-  if (error) return <Notification type="error" message={error.message} />
+  if (error) {
+    return (
+      <NotificationContainer>
+        <Notification type="error" message={error.message} />
+      </NotificationContainer>
+    )
+  }
 
   return !data.bookingWeekList.length ? (
     <NotificationContainer>

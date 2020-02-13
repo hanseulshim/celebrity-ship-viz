@@ -13,7 +13,7 @@ import Button from 'components/common/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Graphql
-import { GET_DECK_LIST } from 'graphql/queries'
+import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
 
 const Container = styled.div`
   display: flex;
@@ -41,13 +41,14 @@ const MainFilters = () => {
     selectedSailDate,
     selectedBookingWeek
   } = state
-  const [applyFilters, { loading, data }] = useLazyQuery(GET_DECK_LIST)
+  const [applyFilters, { loading, data }] = useLazyQuery(GET_VISUAL_DECK_LIST)
 
   const enableApply = () =>
     selectedShip && selectedProduct && selectedItinerary && selectedSailDate
 
-  if (data && data.deckList.length) {
-    dispatch({ type: 'setShipData', value: data.deckList })
+  if (data && data.deckVisualList) {
+    // dispatch({ type: 'setShipData', value: data })
+    console.log(data)
   }
 
   return (
