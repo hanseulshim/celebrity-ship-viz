@@ -1,7 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { store } from 'context/store'
+import { useLazyQuery } from '@apollo/client'
 import { Menu, Dropdown, Checkbox } from 'antd'
+import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
 
 const Button = styled.button`
   display: flex;
@@ -43,7 +45,13 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const [visible, setVisible] = useState(false)
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { filter } = state
+  const { filter, selectedShip, selectedSailDate, selectedBookingWeek } = state
+
+  const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
+    onCompleted: data => {
+      dispatch({ type: 'setShipData', value: data.deckVisualList })
+    }
+  })
 
   // keep local state array for save button
   const [subFilter, setSubFilter] = useState(filter[title])
@@ -65,6 +73,13 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
     if (e.key === 'save') {
       dispatch({ type: 'setSelectedSubFilter', title, value: subFilter })
       setVisible(false)
+      applyFilters({
+        variables: {
+          shipId: selectedShip,
+          sailingDateId: selectedSailDate.id,
+          weeks: selectedBookingWeek
+        }
+      })
     }
   }
 

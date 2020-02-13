@@ -73,10 +73,6 @@ export const GET_SUB_FILTERS = gql`
         id
         value
       }
-      maxOccupancy {
-        id
-        value
-      }
       bookedOccupancy {
         id
         value
