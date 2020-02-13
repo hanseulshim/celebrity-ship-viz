@@ -17,7 +17,8 @@ const rollOvers = svgs.filter(svg => svg.path.includes('_ro'))
 const decks = originals.map((obj, i) => ({
   ...obj,
   rollOver: rollOvers[i].file,
-  name: obj.path.replace('.svg', '').slice(2)
+  name: obj.path.replace(/\.\/|\.svg/g, ''),
+  value: parseInt(obj.path.replace(/\.\/[A-z]+|\.svg/g, ''))
 }))
 
 const Container = styled.div`
@@ -76,8 +77,8 @@ const SelectDeck = () => {
         return (
           <Deck
             key={'deck' + i}
-            onClick={() => handleSelect(deck.name)}
-            selected={selectedDeck === deck.name}
+            onClick={() => handleSelect(deck.value)}
+            selected={selectedDeck === deck.value}
           >
             <span>{deck.name}</span>
             <DeckSvg path={deck.file} rollOverPath={deck.rollOver} />
