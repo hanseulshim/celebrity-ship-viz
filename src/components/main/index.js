@@ -39,7 +39,11 @@ const Main = () => {
       <Filters />
       <Row>
         <ChartColumn>
-          <img src={charts} style={{ width: '500px', height: '90%' }} />
+          <img
+            src={charts}
+            style={{ width: '500px', height: '90%' }}
+            alt="charts"
+          />
         </ChartColumn>
         <VizContainer>
           <SubFilters />

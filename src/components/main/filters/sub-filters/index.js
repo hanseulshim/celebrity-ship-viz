@@ -22,7 +22,7 @@ const Container = styled.div`
 `
 const SubFilters = () => {
   const globalState = useContext(store)
-  const { state, dispatch } = globalState
+  const { dispatch } = globalState
   const { loading, error, data } = useQuery(GET_SUB_FILTERS, {
     fetchPolicy: 'network-only',
     onCompleted: data =>
