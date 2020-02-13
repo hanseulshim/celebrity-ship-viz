@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { store } from 'context/store'
 import { Menu, Dropdown, Checkbox } from 'antd'
@@ -44,7 +44,13 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
   const { filter } = state
+
+  // keep local state array for save button
   const [subFilter, setSubFilter] = useState(filter[title])
+
+  useEffect(() => {
+    setSubFilter(filter[title])
+  }, [filter])
 
   const handleCheck = id => {
     const index = subFilter.indexOf(id)
@@ -55,10 +61,17 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
     }
   }
 
-  const handleMenuClick = e => {
+  const handleSave = e => {
     if (e.key === 'save') {
       dispatch({ type: 'setSelectedSubFilter', title, value: subFilter })
       setVisible(false)
+    }
+  }
+
+  const handleVisibleChange = v => {
+    setVisible(v)
+    if (!v) {
+      setSubFilter(filter[title])
     }
   }
 
@@ -68,7 +81,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   }
 
   const menu = (
-    <StyledMenu onClick={handleMenuClick}>
+    <StyledMenu onClick={handleSave}>
       {options.map((option, i) => (
         <Menu.Item key={'option' + i}>
           <StyledCheckbox
@@ -88,10 +101,8 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   return (
     <Dropdown
       overlay={menu}
-      onVisibleChange={setVisible}
+      onVisibleChange={handleVisibleChange}
       visible={visible}
-      overlayStyle={{ backgroundColor: 'rgba(0,0,0,.5)' }}
-      overlayClassName={'dropdown'}
     >
       <Button>{formatTitle(title)}</Button>
     </Dropdown>
