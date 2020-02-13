@@ -18,5 +18,5 @@ export default {
     bookedOccupancy: []
   },
   selectedBookingWeek: null,
-  selectedDeck: 3
+  selectedDeck: null
 }

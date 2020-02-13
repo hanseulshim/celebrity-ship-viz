@@ -1,25 +1,8 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { store } from 'context/store'
 import styled from 'styled-components'
-
-// Get array of all SVGS from assets
-
-const reqSvgs = require.context('assets/deck_slices', true, /\.svg$/)
-
-// Create array of Objects
-const svgs = reqSvgs.keys().map(path => ({ path, file: reqSvgs(path) }))
-
-// Split array into two. One of originals and one of rolllovers
-const originals = svgs.filter(svg => !svg.path.includes('_ro'))
-const rollOvers = svgs.filter(svg => svg.path.includes('_ro'))
-
-// Create array of deck objects with path to original, rollover, and name
-const decks = originals.map((obj, i) => ({
-  ...obj,
-  rollOver: rollOvers[i].file,
-  name: obj.path.replace(/\.\/|\.svg/g, ''),
-  value: parseInt(obj.path.replace(/\.\/[A-z]+|\.svg/g, ''))
-}))
+import { deckList, SVG_URL } from './config'
+import numeral from 'numeral'
 
 const Container = styled.div`
   flex: 4;
@@ -43,21 +26,17 @@ const Deck = styled.div`
   }
 `
 
-const DeckSvg = ({ path, rollOverPath }) => {
-  const [image, setImage] = useState(path)
-
-  const handleRollover = () => {
-    setImage(rollOverPath)
-  }
-
-  const handleMouseExit = () => {
-    setImage(path)
-  }
+const DeckSvg = ({ deck, selectedDeck }) => {
+  const [hover, setHover] = useState(false)
+  const getSrc = () =>
+    hover || selectedDeck === deck
+      ? SVG_URL.replace('{SHIP_CLASS}', 3).replace('{DECK}', `${deck}_ro`)
+      : SVG_URL.replace('{SHIP_CLASS}', 3).replace('{DECK}', deck)
   return (
     <img
-      src={image}
-      onMouseOver={handleRollover}
-      onMouseOut={handleMouseExit}
+      src={getSrc()}
+      onMouseOver={() => setHover(true)}
+      onMouseOut={() => setHover(false)}
       alt="deck"
     />
   )
@@ -68,20 +47,25 @@ const SelectDeck = () => {
   const { state, dispatch } = globalState
   const { selectedDeck } = state
 
+  useEffect(() => {
+    dispatch({ type: 'setSelectedDeck', value: Math.min(...deckList) })
+  }, [])
+
   const handleSelect = value => {
     dispatch({ type: 'setSelectedDeck', value })
   }
+
   return (
     <Container>
-      {decks.map((deck, i) => {
+      {deckList.map((deck, i) => {
         return (
           <Deck
             key={'deck' + i}
-            onClick={() => handleSelect(deck.value)}
-            selected={selectedDeck === deck.value}
+            onClick={() => handleSelect(deck)}
+            selected={selectedDeck === deck}
           >
-            <span>{deck.name}</span>
-            <DeckSvg path={deck.file} rollOverPath={deck.rollOver} />
+            <span>Deck {numeral(deck).format('00')}</span>
+            <DeckSvg deck={deck} selectedDeck={selectedDeck} />
           </Deck>
         )
       })}

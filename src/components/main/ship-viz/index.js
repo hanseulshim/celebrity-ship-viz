@@ -2,8 +2,8 @@ import React, { useState, useEffect, useContext } from 'react'
 import { store } from 'context/store'
 import Plot from 'react-plotly.js'
 import data from './data'
-import { layout } from './shipConfig'
-import { createDeck } from './shipHelper'
+import { layout } from './config'
+import { createDeck } from './helper'
 
 const ShipViz = () => {
   const [plotData, setPlotdata] = useState([])
