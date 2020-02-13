@@ -63,8 +63,8 @@ const SelectDeck = () => {
     dispatch({ type: 'setSelectedDeck', value })
   }
 
-  if (loading) return <Loader />
-  if (error) return <Notification type="error" message={error.message} />
+  if (loading) return <Container><Loader /></Container>
+  if (error) return <Container><Notification type="error" message={error.message} /></Container>
 
   return (
     <Container>
