@@ -3,7 +3,7 @@ export default {
   selectedShip: null,
   selectedProduct: null,
   selectedItinerary: null,
-  selectedSailDate: null,
+  selectedSailDate: {},
   selectedPeerShip: [],
   selectedPeerSailingDates: [],
   filter: {
@@ -18,5 +18,6 @@ export default {
     bookedOccupancy: []
   },
   selectedBookingWeek: null,
-  selectedDeck: 'Deck04'
+  selectedDeck: null,
+  shipData: {}
 }
