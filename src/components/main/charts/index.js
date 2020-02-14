@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import SupplyBurndown from './SupplyBurndown'
+import CategoryClass from './CategoryClass'
 
 const Container = styled.div`
   flex: 1;
@@ -20,7 +21,9 @@ const Charts = () => {
       <Chart>
         <SupplyBurndown />
       </Chart>
-      <Chart>Chart 2</Chart>
+      <Chart>
+        <CategoryClass />
+      </Chart>
       <Chart>Chart 3</Chart>
     </Container>
   )

@@ -21,14 +21,14 @@ const Row = styled.div`
 `
 const ChartColumn = styled.div`
   display: flex;
-  flex: 1;
+  flex: 2;
   flex-direction: column;
   justify-content: center;
   background-color: ${props => props.theme.black50};
 `
 const VizContainer = styled.div`
   display: flex;
-  flex: 4;
+  flex: 5;
   flex-direction: column;
   padding-right: 2em;
 `

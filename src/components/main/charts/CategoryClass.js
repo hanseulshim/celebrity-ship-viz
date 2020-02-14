@@ -3,37 +3,53 @@ import React from 'react'
 import colors from 'styles/colors'
 import Plot from 'react-plotly.js'
 
-const SupplyBurndown = () => {
+const CategoryClass = () => {
   return (
     <>
       <Plot
         data={[
           {
-            x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-            y: [99, 81, 75, 61, 52, 46, 38, 29, 25, 21],
-            type: 'line',
-            mode: 'lines',
-            name: 'Selected Ship',
+            x: [30, 110, 403, 890, 160, 520, 275],
+            y: [
+              'Aqua',
+              'Concierge',
+              'Inside',
+              'Outside',
+              'Suites',
+              'Veranda',
+              'GTY'
+            ],
+            type: 'bar',
+            orientation: 'h',
+            name: 'Booked',
             marker: {
-              color: colors.aquaForest
+              color: colors.lochmara
             },
             hoverinfo: 'text',
             hoverlabel: {
-              bgcolor: colors.aquaForest,
-              bordercolor: colors.aquaForest,
+              bgcolor: colors.lochmara,
+              bordercolor: colors.lochmara,
               font: {
                 color: colors.black,
                 size: 14
               }
             },
-            hovertemplate: '   %{y}%<extra></extra>'
+            hovertemplate: '   %{x}<extra></extra>'
           },
           {
-            x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-            y: [99, 85, 77, 64, 58, 49, 40, 32, 25, 15],
-            type: 'line',
-            mode: 'lines',
-            name: 'All ships',
+            x: [50, 20, 120, 100, 160, 60, 10],
+            y: [
+              'Aqua',
+              'Concierge',
+              'Inside',
+              'Outside',
+              'Suites',
+              'Veranda',
+              'GTY'
+            ],
+            type: 'bar',
+            orientation: 'h',
+            name: 'Available',
             marker: {
               color: colors.babyBlue
             },
@@ -46,21 +62,23 @@ const SupplyBurndown = () => {
                 size: 14
               }
             },
-            hovertemplate: '   %{y}%<extra></extra>'
+            hovertemplate: '   %{x}<extra></extra>'
           }
         ]}
         layout={{
           width: 450,
           height: 300,
+          barmode: 'stack',
           hovermode: 'closest',
           margin: {
-            l: 25,
+            l: 50,
             r: 0,
-            t: 5,
-            b: 5
+            t: 0,
+            b: 30,
+            pad: 5
           },
           title: {
-            text: 'Supply Burndown',
+            text: 'Category Class',
             font: {
               color: colors.white,
               size: 24
@@ -82,7 +100,13 @@ const SupplyBurndown = () => {
           xaxis: {
             showgrid: true,
             gridcolor: 'rgba(255, 255, 255, 0.3)',
-            showticklabels: false
+            layout: {
+              ticks: 'outside'
+            },
+            tickfont: {
+              size: 8,
+              color: colors.white
+            }
           },
           yaxis: {
             showgrid: false,
@@ -91,7 +115,8 @@ const SupplyBurndown = () => {
               ticks: 'outside'
             },
             tickfont: {
-              size: 8
+              size: 8,
+              color: colors.white
             }
           }
         }}
@@ -100,4 +125,4 @@ const SupplyBurndown = () => {
   )
 }
 
-export default SupplyBurndown
+export default CategoryClass
