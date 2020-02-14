@@ -25,10 +25,10 @@ const SubFilters = () => {
   const { dispatch } = globalState
   const { loading, error, data } = useQuery(GET_SUB_FILTERS, {
     fetchPolicy: 'network-only',
-    onCompleted: data =>
+    onCompleted: data => {
       Object.keys(data.filter)
         .filter(v => v !== '__typename')
-        .map(subFilter => {
+        .forEach(subFilter => {
           const arr = []
           data.filter[subFilter].map(v => arr.push(v.id))
           dispatch({
@@ -37,6 +37,7 @@ const SubFilters = () => {
             value: arr
           })
         })
+    }
   })
 
   if (loading) return <Loader />

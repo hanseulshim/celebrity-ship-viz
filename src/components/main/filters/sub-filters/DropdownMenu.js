@@ -58,7 +58,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
 
   useEffect(() => {
     setSubFilter(filter[title])
-  }, [filter])
+  }, [filter, title])
 
   const handleCheck = id => {
     const index = subFilter.indexOf(id)

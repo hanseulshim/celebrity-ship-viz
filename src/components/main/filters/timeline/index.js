@@ -113,7 +113,7 @@ const Timeline = () => {
         onError(error)
       }
     }
-  }, [loading, data, error])
+  }, [loading, data, error, dispatch])
 
   if (loading) return <Loader />
   if (error) {
