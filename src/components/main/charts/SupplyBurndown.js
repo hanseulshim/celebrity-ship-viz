@@ -9,23 +9,65 @@ const SupplyBurndown = () => {
       <Plot
         data={[
           {
-            x: [1, 2, 3],
-            y: [8, 6, 5],
+            x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            y: [99, 81, 75, 61, 52, 46, 38, 29, 25, 21],
             type: 'line',
             mode: 'lines',
-            marker: { color: colors.lochmara }
+            marker: {
+              color: colors.aquaForest
+            },
+            hoverinfo: 'text',
+            hoverlabel: {
+              bgcolor: colors.aquaForest,
+              bordercolor: colors.aquaForest,
+              font: {
+                color: colors.black,
+                size: 12
+              }
+            },
+            hovertemplate: '   %{y}%<extra></extra>'
           },
           {
-            x: [1, 2, 3],
-            y: [9, 5, 3],
+            x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            y: [99, 85, 77, 64, 58, 49, 40, 32, 25, 15],
             type: 'line',
             mode: 'lines',
-            marker: { color: colors.white }
+            marker: {
+              color: colors.jungleMist
+            },
+            hoverinfo: 'text',
+            hoverlabel: {
+              bgcolor: colors.jungleMist,
+              bordercolor: colors.jungleMist,
+              font: {
+                color: colors.black,
+                size: 12
+              }
+            },
+            hovertemplate: '   %{y}%<extra></extra>'
           }
         ]}
         layout={{
-          width: 500,
-          height: 400,
+          hoverInfo: {
+            hoverlabel: {
+              bgcolor: colors.biscay,
+              bordercolor: colors.jungleMist,
+              font: {
+                color: colors.white,
+                size: 16
+              }
+            },
+            hovertemplate: '   {y} %<extra></extra>'
+          },
+          width: 350,
+          height: 250,
+          hovermode: 'closest',
+          margin: {
+            l: 25,
+            r: 0,
+            t: 5,
+            b: 5
+          },
           title: {
             text: 'Supply Burndown',
             font: {
@@ -34,9 +76,14 @@ const SupplyBurndown = () => {
             x: 0
           },
           legend: {
-            y: 1.4,
-            // x: 3,
-            orientation: 'h'
+            y: 1.2,
+            x: 1,
+            xanchor: 'right',
+            orientation: 'h',
+            font: {
+              size: 8,
+              color: colors.white
+            }
           },
           paper_bgcolor: colors.black0,
           plot_bgcolor: colors.black0,
@@ -46,7 +93,14 @@ const SupplyBurndown = () => {
             showticklabels: false
           },
           yaxis: {
-            showgrid: false
+            showgrid: false,
+            zeroline: true,
+            layout: {
+              ticks: 'outside'
+            },
+            tickfont: {
+              size: 8
+            }
           }
         }}
       />
