@@ -122,7 +122,7 @@ const Decks = () => {
               ticks: 'outside'
             },
             tickfont: {
-              size: 8,
+              size: 10,
               color: colors.white
             }
           }

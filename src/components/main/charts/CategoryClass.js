@@ -1,5 +1,4 @@
 import React from 'react'
-
 import colors from 'styles/colors'
 import Plot from 'react-plotly.js'
 
@@ -37,7 +36,7 @@ const CategoryClass = () => {
             hovertemplate: '   %{x}<extra></extra>'
           },
           {
-            x: [50, 20, 120, 100, 160, 60, 10],
+            x: [50, 20, 120, 100, 160, 60, 40],
             y: [
               'Aqua',
               'Concierge',
@@ -71,7 +70,7 @@ const CategoryClass = () => {
           barmode: 'stack',
           hovermode: 'closest',
           margin: {
-            l: 50,
+            l: 55,
             r: 0,
             t: 0,
             b: 30,
@@ -115,7 +114,7 @@ const CategoryClass = () => {
               ticks: 'outside'
             },
             tickfont: {
-              size: 8,
+              size: 10,
               color: colors.white
             }
           }
