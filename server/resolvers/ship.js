@@ -41,11 +41,12 @@ export default {
       if (!sailingDate) return []
       const arr = []
       const diff = moment(sailingDate).diff(moment(), 'weeks')
+      const start = diff <= 0 ? 0 : diff
       for (let i = 0; i < 11; i++) {
         arr.push({
-          week: diff + i,
+          week: start + i,
           date: moment(sailingDate)
-            .subtract(diff + i, 'weeks')
+            .subtract(start + i, 'weeks')
             .format('MM/DD/YY')
         })
       }

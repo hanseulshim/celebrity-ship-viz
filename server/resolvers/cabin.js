@@ -11,7 +11,7 @@ export default {
       return deckList.map(d => d.deck)
     },
     deckVisualList: async (_, { shipId, sailingDateId, weeks }) => {
-      if (!shipId || !sailingDateId || !weeks) return {}
+      if (!shipId || !sailingDateId || weeks === null) return {}
       const deckList = await Cabin.query()
         .distinct('deck')
         .where('shipId', shipId)

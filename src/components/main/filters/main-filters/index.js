@@ -44,7 +44,8 @@ const MainFilters = () => {
   const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
     onCompleted: data => {
       dispatch({ type: 'setShipData', value: data.deckVisualList })
-    }
+    },
+    fetchPolicy: 'network-only'
   })
 
   const enableApply = () =>
