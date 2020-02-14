@@ -1,24 +1,31 @@
 import React, { useState, useEffect, useContext } from 'react'
+import styled from 'styled-components'
 import { store } from 'context/store'
 import Plot from 'react-plotly.js'
-import data from './data'
+// import data from './data' KEEP FOR NOW BUT EVENTUALLY DELETE
 import { layout } from './config'
 import { createDeck } from './helper'
+
+const Container = styled.div`
+  width: 100%;
+  height: 900px;
+`
 
 const ShipViz = () => {
   const [plotData, setPlotdata] = useState([])
   const globalState = useContext(store)
   const { state } = globalState
-  const { selectedDeck } = state
+  const { selectedDeck, shipData } = state
   useEffect(() => {
-    const decks = Object.keys(data)
+    const decks = Object.keys(shipData)
     const coords = decks.map(deck =>
-      createDeck(data[deck], parseInt(deck), selectedDeck)
+      createDeck(shipData[deck], parseInt(deck), selectedDeck)
     )
     setPlotdata(coords)
-  }, [selectedDeck])
-
-  return (
+  }, [selectedDeck, shipData])
+  return !plotData.length ? (
+    <Container />
+  ) : (
     <Plot
       data={plotData}
       layout={layout}

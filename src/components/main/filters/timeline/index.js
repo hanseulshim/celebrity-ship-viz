@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react'
-import { useQuery } from '@apollo/client'
+import { useQuery, useLazyQuery } from '@apollo/client'
 import { store } from 'context/store'
 import styled from 'styled-components'
 import moment from 'moment'
 
 // GQL
-import { GET_BOOKING_WEEK_LIST } from 'graphql/queries'
+import { GET_BOOKING_WEEK_LIST, GET_VISUAL_DECK_LIST } from 'graphql/queries'
 
 // Project Imports
 import Loader from 'components/common/Loader'
@@ -79,7 +79,7 @@ const NotificationContainer = styled.div`
 const Timeline = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { selectedSailDate, selectedBookingWeek } = state
+  const { selectedSailDate, selectedBookingWeek, selectedShip } = state
 
   const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
     variables: {
@@ -90,7 +90,21 @@ const Timeline = () => {
     fetchPolicy: 'network-only'
   })
 
+  const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
+    onCompleted: data => {
+      dispatch({ type: 'setShipData', value: data.deckVisualList })
+    },
+    fetchPolicy: 'network-only'
+  })
+
   const handleSelect = (e, value) => {
+    applyFilters({
+      variables: {
+        shipId: selectedShip,
+        sailingDateId: selectedSailDate.id,
+        weeks: value
+      }
+    })
     dispatch({ type: 'setSelectedBookingWeek', value })
   }
 
