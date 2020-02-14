@@ -10,13 +10,29 @@ export default {
         .orderBy('deck')
       return deckList.map(d => d.deck)
     },
-    deckVisualList: async (_, { shipId, sailingDateId, weeks }) => {
+    deckVisualList: async (
+      _,
+      {
+        shipId,
+        sailingDateId,
+        weeks,
+        bookedOccupancy,
+        bookingType,
+        cabinCategory,
+        cabinCategoryClass,
+        cabinClassRate,
+        channel,
+        pointOfSaleMarket,
+        rateCategory
+      }
+    ) => {
       if (!shipId || !sailingDateId || weeks === null) return {}
       const deckList = await Cabin.query()
         .distinct('deck')
         .where('shipId', shipId)
         .orderBy('deck')
-      const data = await Cabin.query().skipUndefined()
+      const data = await Cabin.query()
+        .skipUndefined()
         .select(
           'c.deck',
           'c.cabinNumber',
@@ -33,6 +49,14 @@ export default {
         .where('c.shipId', shipId)
         .andWhere('s.sailingDateId', sailingDateId)
         .andWhere('s.weeks', weeks)
+        .whereIn('s.bookedOccupancy', bookedOccupancy)
+        .whereIn('s.bookingType', bookingType)
+        .whereIn('c.cabinCategoryId', cabinCategory)
+        .whereIn('c.cabinCategoryClassId', cabinCategoryClass)
+        .whereIn('s.cabinClassRateId', cabinClassRate)
+        .whereIn('s.channelId', channel)
+        .whereIn('s.marketId', pointOfSaleMarket)
+        .whereIn('s.rateCategoryId', rateCategory)
         .orderBy(['c.deck', 'c.cabinNumber'])
       const deckObj = {}
       deckList.forEach(({ deck }) => {

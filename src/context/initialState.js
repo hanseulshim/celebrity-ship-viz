@@ -14,7 +14,7 @@ export default {
     cabinCategory: [],
     cabinClassRate: [],
     rateCategory: [],
-    maxOccupancy: [],
+    // maxOccupancy: [],
     bookedOccupancy: []
   },
   selectedBookingWeek: null,
