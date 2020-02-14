@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
-import deckView from 'assets/ship_nav.png'
+import { store } from 'context/store'
+import { DECK_LEGEND_SVG_URL } from './config'
 
 const Container = styled.div`
   flex: 1;
@@ -10,9 +11,12 @@ const Container = styled.div`
 `
 
 const DeckView = () => {
+  const globalState = useContext(store)
+  const { state } = globalState
+  const { selectedDeck } = state
   return (
     <Container>
-      <img src={deckView} alt="deck-view" />
+      {Number.isInteger(selectedDeck) && <img src={DECK_LEGEND_SVG_URL.replace('{SHIP_CLASS}', 3).replace('{DECK}', selectedDeck)} alt="deck-view" />}
     </Container>
   )
 }

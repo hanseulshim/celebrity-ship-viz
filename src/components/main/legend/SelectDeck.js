@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { store } from 'context/store'
 import styled from 'styled-components'
-import { SVG_URL } from './config'
+import { DECK_SLICE_SVG_URL } from './config'
 import { GET_DECK_LIST } from 'graphql/queries'
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
@@ -34,8 +34,8 @@ const DeckSvg = ({ deck, selectedDeck }) => {
   const [hover, setHover] = useState(false)
   const getSrc = () =>
     hover || selectedDeck === deck
-      ? SVG_URL.replace('{SHIP_CLASS}', 3).replace('{DECK}', `${deck}_ro`)
-      : SVG_URL.replace('{SHIP_CLASS}', 3).replace('{DECK}', deck)
+      ? DECK_SLICE_SVG_URL.replace('{SHIP_CLASS}', 3).replace('{DECK}', `${deck}_ro`)
+      : DECK_SLICE_SVG_URL.replace('{SHIP_CLASS}', 3).replace('{DECK}', deck)
   return (
     <img
       src={getSrc()}
