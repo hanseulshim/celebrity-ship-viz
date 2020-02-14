@@ -13,10 +13,10 @@ const Container = styled.div`
 const DeckView = () => {
   const globalState = useContext(store)
   const { state } = globalState
-  const { selectedDeck } = state
+  const { selectedDeck, selectedShip } = state
   return (
     <Container>
-      {Number.isInteger(selectedDeck) && <img src={DECK_LEGEND_SVG_URL.replace('{SHIP_CLASS}', 3).replace('{DECK}', selectedDeck)} alt="deck-view" />}
+      {Number.isInteger(selectedDeck) && <img src={DECK_LEGEND_SVG_URL.replace('{SHIP_CLASS}', selectedShip.classId).replace('{DECK}', selectedDeck)} alt="deck-view" />}
     </Container>
   )
 }

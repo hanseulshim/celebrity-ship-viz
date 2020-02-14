@@ -30,12 +30,21 @@ const Deck = styled.div`
   }
 `
 
-const DeckSvg = ({ deck, selectedDeck }) => {
+const DeckSvg = ({ deck }) => {
+  const globalState = useContext(store)
+  const { state } = globalState
+  const { selectedDeck, selectedShip } = state
   const [hover, setHover] = useState(false)
   const getSrc = () =>
     hover || selectedDeck === deck
-      ? DECK_SLICE_SVG_URL.replace('{SHIP_CLASS}', 3).replace('{DECK}', `${deck}_ro`)
-      : DECK_SLICE_SVG_URL.replace('{SHIP_CLASS}', 3).replace('{DECK}', deck)
+      ? DECK_SLICE_SVG_URL.replace('{SHIP_CLASS}', selectedShip.classId).replace(
+        '{DECK}',
+          `${deck}_ro`
+      )
+      : DECK_SLICE_SVG_URL.replace('{SHIP_CLASS}', selectedShip.classId).replace(
+        '{DECK}',
+        deck
+      )
   return (
     <img
       src={getSrc()}
@@ -52,7 +61,7 @@ const SelectDeck = () => {
   const { selectedDeck, selectedShip } = state
   const [deckList, setDeckList] = useState([])
   const { loading, error } = useQuery(GET_DECK_LIST, {
-    variables: { shipId: selectedShip },
+    variables: { shipId: selectedShip.id },
     onCompleted({ deckList }) {
       dispatch({ type: 'setSelectedDeck', value: Math.min(...deckList) })
       setDeckList(deckList)
@@ -63,8 +72,20 @@ const SelectDeck = () => {
     dispatch({ type: 'setSelectedDeck', value })
   }
 
-  if (loading) return <Container><Loader /></Container>
-  if (error) return <Container><Notification type="error" message={error.message} /></Container>
+  if (loading) {
+    return (
+      <Container>
+        <Loader />
+      </Container>
+    )
+  }
+  if (error) {
+    return (
+      <Container>
+        <Notification type="error" message={error.message} />
+      </Container>
+    )
+  }
 
   return (
     <Container>
@@ -76,7 +97,7 @@ const SelectDeck = () => {
             selected={selectedDeck === deck}
           >
             <span>Deck {numeral(deck).format('00')}</span>
-            <DeckSvg deck={deck} selectedDeck={selectedDeck} />
+            <DeckSvg deck={deck} />
           </Deck>
         )
       })}

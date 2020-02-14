@@ -16,7 +16,7 @@ const SelectItinerary = () => {
   const { selectedShip, selectedProduct, selectedItinerary } = state
 
   const { loading, error, data } = useQuery(GET_ITINERARY_LIST, {
-    variables: { shipId: selectedShip, productId: selectedProduct },
+    variables: { shipId: selectedShip.id, productId: selectedProduct },
     fetchPolicy: 'network-only'
   })
 

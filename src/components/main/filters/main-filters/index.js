@@ -64,7 +64,7 @@ const MainFilters = () => {
         onClick={() =>
           applyFilters({
             variables: {
-              shipId: selectedShip,
+              shipId: selectedShip.id,
               sailingDateId: selectedSailDate.id,
               weeks: selectedBookingWeek
             }

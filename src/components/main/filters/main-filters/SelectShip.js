@@ -17,8 +17,9 @@ const SelectShip = () => {
 
   const { loading, error, data } = useQuery(GET_SHIP_LIST)
 
-  const onChange = value => {
-    dispatch({ type: 'setSelectedShip', value })
+  const onChange = id => {
+    const ship = data.shipList.find(ship => ship.id === id)
+    dispatch({ type: 'setSelectedShip', value: ship })
   }
 
   if (loading) return <Loader />
@@ -29,7 +30,7 @@ const SelectShip = () => {
       displayKey="shipName"
       grouping="className"
       options={data.shipList}
-      value={selectedShip}
+      value={selectedShip.id}
       onChange={onChange}
     />
   )

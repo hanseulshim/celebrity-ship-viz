@@ -16,7 +16,7 @@ const SelectProduct = () => {
   const { selectedShip, selectedProduct } = state
   const { loading, error, data } = useQuery(GET_PRODUCT_LIST, {
     variables: {
-      shipId: selectedShip
+      shipId: selectedShip.id
     },
     fetchPolicy: 'network-only'
   })

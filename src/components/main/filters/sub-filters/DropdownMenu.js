@@ -75,7 +75,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
       setVisible(false)
       applyFilters({
         variables: {
-          shipId: selectedShip,
+          shipId: selectedShip.id,
           sailingDateId: selectedSailDate.id,
           weeks: selectedBookingWeek
         }
