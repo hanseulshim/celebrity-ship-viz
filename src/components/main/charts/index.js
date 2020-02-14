@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import SupplyBurndown from './SupplyBurndown'
 import CategoryClass from './CategoryClass'
+import Decks from './Decks'
 
 const Container = styled.div`
   flex: 1;
@@ -24,7 +25,7 @@ const Charts = () => {
       <Chart>
         <CategoryClass />
       </Chart>
-      <Chart>Chart 3</Chart>
+      <Decks />
     </Container>
   )
 }
