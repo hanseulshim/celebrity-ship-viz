@@ -6,6 +6,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   background-color: ${props => props.theme.black50};
   padding: 1em;
   color: ${props => props.theme.white};
