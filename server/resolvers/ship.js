@@ -13,29 +13,32 @@ export default {
         shipName: ship.shipName.replace('CELEBRITY ', '')
       }))
     },
-    productList: async (_, { shipId = null }) => {
+    productList: async (_, { shipId }) => {
       if (!shipId) return []
       return Product.query()
+        .skipUndefined()
         .joinRelated('ships')
         .where('ships.id', shipId)
     },
-    itineraryList: async (_, { shipId = null, productId = null }) => {
-      if (!shipId || !productId) return []
+    itineraryList: async (_, { shipId, productId }) => {
+      if (!shipId) return []
       return Itinerary.query()
+        .skipUndefined()
         .leftJoinRelated('[ships, products]')
         .where('ships.id', shipId)
         .andWhere('products.id', productId)
     },
-    sailingDateList: async (
-      _,
-      { shipId = null, productId = null, itineraryId = null }
-    ) => {
-      if (!shipId || !productId || !itineraryId) return []
+    sailingDateList: async (_, { shipId, productId, itineraryId }) => {
+      if (!shipId) return []
       return SailingDate.query()
+        .alias('d')
+        .distinct('d.id', 'd.sailingDate')
+        .skipUndefined()
         .leftJoinRelated('[ships, products, itineraries]')
         .where('ships.id', shipId)
         .andWhere('products.id', productId)
         .andWhere('itineraries.id', itineraryId)
+        .orderBy('d.sailingDate')
     },
     bookingWeekList: (_, { sailingDate = null }) => {
       if (!sailingDate) return []

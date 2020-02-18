@@ -21,8 +21,9 @@ const SelectProduct = () => {
     fetchPolicy: 'network-only'
   })
 
-  const onChange = value => {
-    dispatch({ type: 'setSelectedProduct', value })
+  const onChange = id => {
+    const product = data.productList.find(product => product.id === id)
+    dispatch({ type: 'setSelectedProduct', value: product })
   }
 
   if (loading) return <Loader />
@@ -32,7 +33,7 @@ const SelectProduct = () => {
       label="Product"
       displayKey="rdssProductCode"
       options={data.productList}
-      value={selectedProduct}
+      value={selectedProduct.id}
       onChange={onChange}
     />
   )

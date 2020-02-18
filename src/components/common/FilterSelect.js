@@ -54,6 +54,10 @@ const FilterSelect = ({
       <StyledSelect
         style={{ width: width || 150 }}
         value={value}
+        showSearch
+        filterOption={(input, option) =>
+          option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+        }
         onChange={value => onChange(value)}
         mode={props.mode}
       >

@@ -23,8 +23,8 @@ const SelectSailDate = () => {
   const { loading, error, data } = useQuery(GET_SAILING_DATE_LIST, {
     variables: {
       shipId: selectedShip.id,
-      productId: selectedProduct,
-      itineraryId: selectedItinerary
+      productId: selectedProduct.id,
+      itineraryId: selectedItinerary.id
     },
     fetchPolicy: 'network-only'
   })

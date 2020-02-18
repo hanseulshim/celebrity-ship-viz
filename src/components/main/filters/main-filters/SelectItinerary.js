@@ -16,12 +16,13 @@ const SelectItinerary = () => {
   const { selectedShip, selectedProduct, selectedItinerary } = state
 
   const { loading, error, data } = useQuery(GET_ITINERARY_LIST, {
-    variables: { shipId: selectedShip.id, productId: selectedProduct },
+    variables: { shipId: selectedShip.id, productId: selectedProduct.id },
     fetchPolicy: 'network-only'
   })
 
-  const onChange = value => {
-    dispatch({ type: 'setSelectedItinerary', value })
+  const onChange = id => {
+    const itinerary = data.itineraryList.find(itinerary => itinerary.id === id)
+    dispatch({ type: 'setSelectedItinerary', value: itinerary })
   }
 
   if (loading) return <Loader />
@@ -31,7 +32,7 @@ const SelectItinerary = () => {
       label="Itinerary"
       displayKey="itineraryDesc"
       options={data.itineraryList}
-      value={selectedItinerary}
+      value={selectedItinerary.id}
       onChange={onChange}
       width={250}
     />

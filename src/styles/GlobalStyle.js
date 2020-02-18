@@ -10,11 +10,11 @@ export default createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url(${bg}) no-repeat center center fixed; 
+    background: url(${bg}) no-repeat center center fixed;
      -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;;
+    background-size: cover;
     font-weight: 700;
     font-size: 12px;
     line-height: 20px;
@@ -26,6 +26,10 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
     color: initial;
+  }
+
+  .ant-select-search--inline .ant-select-search__field {
+    color: white;
   }
 
   button {
