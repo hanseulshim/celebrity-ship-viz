@@ -15,7 +15,7 @@ export default {
       {
         shipId,
         sailingDateId,
-        weeks,
+        interval,
         bookedOccupancy,
         bookingType,
         cabinCategory,
@@ -26,7 +26,7 @@ export default {
         rateCategory
       }
     ) => {
-      if (!shipId || !sailingDateId || weeks === null) return {}
+      if (!shipId || !sailingDateId || interval === null) return {}
       const deckList = await Cabin.query()
         .distinct('deck')
         .where('shipId', shipId)
@@ -45,10 +45,10 @@ export default {
           's.bookedOccupancy'
         )
         .alias('c')
-        .leftJoinRelated('bookingSnapshotWeeks', { alias: 's' })
+        .leftJoinRelated('snapshot', { alias: 's' })
         .where('c.shipId', shipId)
         .andWhere('s.sailingDateId', sailingDateId)
-        .andWhere('s.weeks', weeks)
+        .andWhere('s.interval', interval)
         .whereIn('s.bookedOccupancy', bookedOccupancy)
         .whereIn('s.bookingType', bookingType)
         .whereIn('c.cabinCategoryId', cabinCategory)

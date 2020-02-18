@@ -102,7 +102,7 @@ const Timeline = () => {
       variables: {
         shipId: selectedShip.id,
         sailingDateId: selectedSailDate.id,
-        weeks: value
+        interval: value
       }
     })
     dispatch({ type: 'setSelectedBookingWeek', value })

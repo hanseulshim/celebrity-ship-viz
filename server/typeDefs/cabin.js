@@ -3,7 +3,7 @@ extend type Query {
   deckVisualList(
     shipId: Int,
     sailingDateId: Int,
-    weeks: Int,
+    interval: Int,
     bookedOccupancy: [Int],
     bookingType: [Int],
     cabinCategory: [Int],

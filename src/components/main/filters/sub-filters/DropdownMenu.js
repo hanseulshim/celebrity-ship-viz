@@ -77,7 +77,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
         variables: {
           shipId: selectedShip.id,
           sailingDateId: selectedSailDate.id,
-          weeks: selectedBookingWeek
+          interval: selectedBookingWeek
         }
       })
     }
