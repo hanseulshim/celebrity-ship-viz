@@ -127,6 +127,7 @@ const Decks = () => {
             }
           }
         }}
+        config={{ displayModeBar: false }}
       />
     </>
   )

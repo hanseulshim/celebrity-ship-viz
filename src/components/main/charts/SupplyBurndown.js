@@ -95,6 +95,7 @@ const SupplyBurndown = () => {
             }
           }
         }}
+        config={{ displayModeBar: false }}
       />
     </>
   )

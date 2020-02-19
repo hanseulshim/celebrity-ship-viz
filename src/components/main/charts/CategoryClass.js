@@ -119,6 +119,7 @@ const CategoryClass = () => {
             }
           }
         }}
+        config={{ displayModeBar: false }}
       />
     </>
   )
