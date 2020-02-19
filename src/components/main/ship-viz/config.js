@@ -14,6 +14,13 @@ export const hoverInfo = {
 }
 
 export const layout = {
+  margin: {
+    l: 0,
+    r: 0,
+    t: 0,
+    b: 0,
+    pad: 0
+  },
   scene: {
     xaxis: {
       title: '',

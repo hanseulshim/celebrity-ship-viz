@@ -18,13 +18,6 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
 `
-const ChartColumn = styled.div`
-  display: flex;
-  flex: 2;
-  flex-direction: column;
-  justify-content: center;
-  background-color: ${props => props.theme.black50};
-`
 const VizContainer = styled.div`
   display: flex;
   flex: 5;
@@ -38,12 +31,10 @@ const Main = () => {
       <Header />
       <Filters />
       <Row>
-        <ChartColumn>
-          <Charts />
-        </ChartColumn>
+        <Charts />
         <VizContainer>
           <SubFilters />
-          <Row style={{ flex: '4' }}>
+          <Row style={{ flex: '3' }}>
             <ShipViz />
             <Legend />
           </Row>

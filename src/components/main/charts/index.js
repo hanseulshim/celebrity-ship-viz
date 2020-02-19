@@ -5,26 +5,22 @@ import CategoryClass from './CategoryClass'
 import Decks from './Decks'
 
 const Container = styled.div`
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
-  padding: 2em;
-`
+  padding: 1em 0em 1em 1em;
+  background-color: ${props => props.theme.black50};
 
-const Chart = styled.div`
-  flex: 1;
-  color: ${props => props.theme.white};
+  > div {
+    margin-bottom: 5%;
+  }
 `
 
 const Charts = () => {
   return (
     <Container>
-      <Chart>
-        <SupplyBurndown />
-      </Chart>
-      <Chart>
-        <CategoryClass />
-      </Chart>
+      <SupplyBurndown />
+      <CategoryClass />
       <Decks />
     </Container>
   )

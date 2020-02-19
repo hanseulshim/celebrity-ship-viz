@@ -63,15 +63,15 @@ const SupplyBurndown = () => {
             text: 'Supply Burndown',
             font: {
               color: colors.white,
-              size: 24
+              size: 21
             },
             x: 0
           },
           legend: {
-            y: 1.2,
+            y: 1.3,
             x: 1,
             xanchor: 'right',
-            orientation: 'h',
+            orientation: 'v',
             font: {
               size: 10,
               color: colors.white
@@ -95,6 +95,7 @@ const SupplyBurndown = () => {
             }
           }
         }}
+        config={{ displayModeBar: false }}
       />
     </>
   )
