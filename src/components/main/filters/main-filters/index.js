@@ -66,7 +66,7 @@ const MainFilters = () => {
             variables: {
               shipId: selectedShip.id,
               sailingDateId: selectedSailDate.id,
-              weeks: selectedBookingWeek
+              interval: selectedBookingWeek
             }
           })
         }

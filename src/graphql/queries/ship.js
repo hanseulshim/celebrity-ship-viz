@@ -4,7 +4,7 @@ export const GET_VISUAL_DECK_LIST = gql`
   query deckVisualList(
     $shipId: Int
     $sailingDateId: Int
-    $weeks: Int
+    $interval: Int
     $bookedOccupancy: [Int]
     $bookingType: [Int]
     $cabinCategory: [Int]
@@ -17,7 +17,7 @@ export const GET_VISUAL_DECK_LIST = gql`
     deckVisualList(
       shipId: $shipId
       sailingDateId: $sailingDateId
-      weeks: $weeks
+      interval: $interval
       bookedOccupancy: $bookedOccupancy
       bookingType: $bookingType
       cabinCategory: $cabinCategory

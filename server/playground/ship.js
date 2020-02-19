@@ -26,6 +26,13 @@ export default {
         sailingDate
       }
 
+      snapshotIntervalList {
+        id
+        interval
+        intervalLabel
+        weekMinimum
+      }
+
       bookingWeekList(sailingDate: null) {
         week
         date

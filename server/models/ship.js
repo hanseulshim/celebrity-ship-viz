@@ -153,3 +153,9 @@ export class StageImport extends Model {
     return 'stageImport'
   }
 }
+
+export class SnapshotInterval extends Model {
+  static get tableName() {
+    return 'snapshotInterval'
+  }
+}

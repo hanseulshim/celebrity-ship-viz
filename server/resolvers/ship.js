@@ -1,4 +1,4 @@
-import { Ship, Product, Itinerary, SailingDate, Filter } from '../models'
+import { Ship, Product, Itinerary, SailingDate, Filter, SnapshotInterval } from '../models'
 import moment from 'moment'
 
 export default {
@@ -40,6 +40,7 @@ export default {
         .andWhere('itineraries.id', itineraryId)
         .orderBy('d.sailingDate')
     },
+    snapshotIntervalList: () => SnapshotInterval.query().orderBy('interval'),
     bookingWeekList: (_, { sailingDate = null }) => {
       if (!sailingDate) return []
       const arr = []

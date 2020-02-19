@@ -7,20 +7,20 @@ export class Cabin extends Model {
 
   static get relationMappings() {
     return {
-      bookingSnapshotWeeks: {
+      snapshot: {
         relation: Model.HasManyRelation,
-        modelClass: BookingSnapshotWeeks,
+        modelClass: Snapshot,
         join: {
           from: 'cabin.id',
-          to: 'bookingSnapshotWeeks.cabinId'
+          to: 'snapshot.cabinId'
         }
       }
     }
   }
 }
 
-export class BookingSnapshotWeeks extends Model {
+export class Snapshot extends Model {
   static get tableName() {
-    return 'bookingSnapshotWeeks'
+    return 'snapshot'
   }
 }
