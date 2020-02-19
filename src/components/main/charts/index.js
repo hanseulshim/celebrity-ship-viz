@@ -11,20 +11,11 @@ const Container = styled.div`
   padding: 2em;
 `
 
-const Chart = styled.div`
-  flex: 1;
-  color: ${props => props.theme.white};
-`
-
 const Charts = () => {
   return (
     <Container>
-      <Chart>
-        <SupplyBurndown />
-      </Chart>
-      <Chart>
-        <CategoryClass />
-      </Chart>
+      <SupplyBurndown />
+      <CategoryClass />
       <Decks />
     </Container>
   )

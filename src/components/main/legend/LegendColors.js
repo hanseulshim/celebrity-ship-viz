@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1;
+  padding: 2em 0em;
   justify-content: center;
 `
 
@@ -12,11 +12,14 @@ const Title = styled.div`
   font-size: 1em;
   padding-bottom: 3px;
   color: ${props => props.theme.jungleMist};
-  text-decoration: underline;
+  border-bottom: 1px solid ${props => props.theme.jungleMist};
+  margin-bottom: 5px;
+  padding-bottom: 2px;
 `
 const ColorRow = styled.div`
   display: flex;
   justify-content: space-between;
+  flex: 1;
 `
 const ColorItem = styled.div`
   display: flex;
@@ -25,17 +28,19 @@ const ColorItem = styled.div`
   color: ${props => props.theme.jungleMist};
   min-width: 100px;
   max-height: 50px;
+  margin-right: 5px;
 
   > span {
     max-width: 100px;
+    line-height: 1.2;
   }
 `
 
 const Color = styled.div`
-  width: 12px;
+  width: 14px;
   height: 12px;
   border-radius: 1px;
-  margin-right: 1em;
+  margin-right: 5px;
   background-color: ${props => props.theme[props.fill]};
 `
 

@@ -9,10 +9,9 @@ import { useQuery } from '@apollo/client'
 import numeral from 'numeral'
 
 const Container = styled.div`
-  flex: 4;
   display: flex;
+  min-height: 500px;
   flex-direction: column;
-  justify-content: space-around;
   flex-flow: column-reverse;
   padding: 1em 1em;
   border: 2px solid ${props => props.theme.biscay};
@@ -22,6 +21,7 @@ const Deck = styled.div`
   justify-content: space-between;
   align-items: center;
   color: ${props => props.theme.jungleMist};
+  margin: 1em 0em;
   cursor: pointer;
 
   span {
@@ -37,14 +37,14 @@ const DeckSvg = ({ deck }) => {
   const [hover, setHover] = useState(false)
   const getSrc = () =>
     hover || selectedDeck === deck
-      ? DECK_SLICE_SVG_URL.replace('{SHIP_CLASS}', selectedShip.classId).replace(
-        '{DECK}',
-          `${deck}_ro`
-      )
-      : DECK_SLICE_SVG_URL.replace('{SHIP_CLASS}', selectedShip.classId).replace(
-        '{DECK}',
-        deck
-      )
+      ? DECK_SLICE_SVG_URL.replace(
+          '{SHIP_CLASS}',
+          selectedShip.classId
+        ).replace('{DECK}', `${deck}_ro`)
+      : DECK_SLICE_SVG_URL.replace(
+          '{SHIP_CLASS}',
+          selectedShip.classId
+        ).replace('{DECK}', deck)
   return (
     <img
       src={getSrc()}

@@ -13,7 +13,6 @@ import Notification from 'components/common/Notification'
 
 const Container = styled.div`
   display: flex;
-  margin-bottom: 1em;
   justify-content: flex-end;
 
   > button {
