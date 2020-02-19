@@ -88,7 +88,7 @@ const Decks = () => {
             text: 'Decks',
             font: {
               color: colors.white,
-              size: 24
+              size: 21
             },
             x: 0
           },

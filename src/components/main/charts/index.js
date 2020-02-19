@@ -5,11 +5,15 @@ import CategoryClass from './CategoryClass'
 import Decks from './Decks'
 
 const Container = styled.div`
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 2em;
+  padding: 1em 0em 1em 1em;
+  background-color: ${props => props.theme.black50};
+
+  > div {
+    margin-bottom: 5%;
+  }
 `
 
 const Charts = () => {

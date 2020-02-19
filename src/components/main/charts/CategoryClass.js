@@ -80,7 +80,7 @@ const CategoryClass = () => {
             text: 'Category Class',
             font: {
               color: colors.white,
-              size: 24
+              size: 21
             },
             x: 0
           },
