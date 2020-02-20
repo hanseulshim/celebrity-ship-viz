@@ -1,6 +1,7 @@
 export default {
   name: 'Ship',
   endpoint: '',
+  headers: { sessiontoken: process.env.SESSION_TOKEN },
   query: `
     {
       shipList {
