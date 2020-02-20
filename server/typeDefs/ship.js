@@ -35,9 +35,8 @@ type BookingWeek {
 }
 
 type FirstSailDate {
-  shipId: Int
-  sailingDateId: Int
-  sailingDate: Date
+  ship: Ship
+  sailingDate: SailingDate
 }
 
 type Filter {

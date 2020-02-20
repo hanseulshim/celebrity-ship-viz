@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import { store } from 'context/store'
+import { useQuery } from '@apollo/client'
 import styled from 'styled-components'
+
+import { GET_FIRST_SAIL_DATE } from 'graphql/queries'
 
 // Project Imports
 import Header from './Header'
@@ -26,6 +30,18 @@ const VizContainer = styled.div`
 `
 
 const Main = () => {
+  const globalState = useContext(store)
+  const { dispatch } = globalState
+
+  const { data } = useQuery(GET_FIRST_SAIL_DATE)
+
+  useEffect(() => {
+    if (data) {
+      dispatch({ type: 'setSelectedShip', value: data.firstSailDate.ship })
+      dispatch({ type: 'setSelectedSailDate', value: data.firstSailDate.sailingDate })
+    }
+  }, [data])
+
   return (
     <Container>
       <Header />

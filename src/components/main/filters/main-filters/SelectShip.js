@@ -19,6 +19,7 @@ const SelectShip = () => {
 
   const onChange = id => {
     const ship = data.shipList.find(ship => ship.id === id)
+    console.log(selectedShip, ship)
     dispatch({ type: 'setSelectedShip', value: ship })
   }
 

@@ -34,9 +34,17 @@ export default {
       }
 
       firstSailDate {
-        shipId
-        sailingDateId
-        sailingDate
+        ship {
+          id
+          shipName
+          shipCode
+          classId
+          className
+        }
+        sailingDate {
+          id
+          sailingDate
+        }
       }
 
       bookingWeekList(sailingDate: null) {

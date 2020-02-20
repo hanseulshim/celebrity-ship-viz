@@ -43,15 +43,19 @@ export default {
     },
     snapshotIntervalList: () => SnapshotInterval.query().orderBy('interval'),
     firstSailDate: async () => {
-      const sailDate = await SailingDate.query()
+      const sailingDate = await SailingDate.query()
         .alias('d')
         .leftJoinRelated('ships')
         .orderBy('d.sailingDate')
         .findOne('ships.id', EDGE)
+      const ship = await Ship.query()
+        .select('ship.*', 'class.name as className')
+        .joinRelated('class')
+        .findById(EDGE)
+      ship.shipName = ship.shipName.replace('CELEBRITY ', '')
       return {
-        shipId: EDGE,
-        sailingDateId: sailDate.id,
-        sailingDate: sailDate.sailingDate
+        ship,
+        sailingDate
       }
     },
     bookingWeekList: (_, { sailingDate = null }) => {

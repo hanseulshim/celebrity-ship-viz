@@ -29,3 +29,20 @@ export const GET_VISUAL_DECK_LIST = gql`
     )
   }
 `
+export const GET_FIRST_SAIL_DATE = gql`
+  {
+    firstSailDate {
+      ship {
+        id
+        shipName
+        shipCode
+        classId
+        className
+      }
+      sailingDate {
+        id
+        sailingDate
+      }
+    }
+  }
+`
