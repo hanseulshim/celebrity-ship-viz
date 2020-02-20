@@ -45,7 +45,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const [visible, setVisible] = useState(false)
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { filter, selectedShip, selectedSailDate, selectedBookingWeek } = state
+  const { filter, selectedShip, selectedSailDate, selectedInterval } = state
 
   const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
     onCompleted: data => {
@@ -77,7 +77,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
         variables: {
           shipId: selectedShip.id,
           sailingDateId: selectedSailDate.id,
-          interval: selectedBookingWeek
+          interval: selectedInterval
         }
       })
     }

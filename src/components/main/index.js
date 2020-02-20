@@ -34,7 +34,7 @@ const Main = () => {
         <Charts />
         <VizContainer>
           <SubFilters />
-          <Row style={{ flex: '3' }}>
+          <Row style={{ flex: '2' }}>
             <ShipViz />
             <Legend />
           </Row>

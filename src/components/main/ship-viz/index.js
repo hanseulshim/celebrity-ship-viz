@@ -8,7 +8,7 @@ import { createDeck } from './helper'
 
 const Container = styled.div`
   width: 100%;
-  height: 900px;
+  height: 700px;
 `
 
 const ShipViz = () => {
