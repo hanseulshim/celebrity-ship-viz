@@ -43,6 +43,7 @@ export const GET_FIRST_SAIL_DATE = gql`
         id
         sailingDate
       }
+      interval
     }
   }
 `

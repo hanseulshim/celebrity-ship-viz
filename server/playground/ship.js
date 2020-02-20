@@ -45,6 +45,7 @@ export default {
           id
           sailingDate
         }
+        interval
       }
 
       bookingWeekList(sailingDate: null) {

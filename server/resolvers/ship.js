@@ -53,9 +53,12 @@ export default {
         .joinRelated('class')
         .findById(EDGE)
       ship.shipName = ship.shipName.replace('CELEBRITY ', '')
+      const diff = moment(sailingDate.sailingDate).diff(moment(), 'weeks')
+      const interval = diff <= 0 ? 0 : diff
       return {
         ship,
-        sailingDate
+        sailingDate,
+        interval
       }
     },
     bookingWeekList: (_, { sailingDate = null }) => {

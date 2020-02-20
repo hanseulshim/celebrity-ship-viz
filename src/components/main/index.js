@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react'
 import { store } from 'context/store'
-import { useQuery } from '@apollo/client'
+import { useQuery, useLazyQuery } from '@apollo/client'
 import styled from 'styled-components'
 
-import { GET_FIRST_SAIL_DATE } from 'graphql/queries'
+import { GET_FIRST_SAIL_DATE, GET_VISUAL_DECK_LIST } from 'graphql/queries'
 
 // Project Imports
 import Header from './Header'
@@ -34,11 +34,24 @@ const Main = () => {
   const { dispatch } = globalState
 
   const { data } = useQuery(GET_FIRST_SAIL_DATE)
+  const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
+    onCompleted: data => {
+      dispatch({ type: 'setShipData', value: data.deckVisualList })
+    },
+    fetchPolicy: 'network-only'
+  })
 
   useEffect(() => {
     if (data) {
       dispatch({ type: 'setSelectedShip', value: data.firstSailDate.ship })
       dispatch({ type: 'setSelectedSailDate', value: data.firstSailDate.sailingDate })
+      applyFilters({
+        variables: {
+          shipId: data.firstSailDate.ship.id,
+          sailingDateId: data.firstSailDate.sailingDate.id,
+          interval: data.firstSailDate.interval
+        }
+      })
     }
   }, [data])
 
