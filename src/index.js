@@ -17,7 +17,7 @@ const httpLink = new HttpLink({ uri: getApi() })
 const authMiddleware = new ApolloLink((operation, forward) => {
   operation.setContext({
     headers: {
-      authorization: process.env.REACT_APP_SESSION_TOKEN
+      sessiontoken: process.env.REACT_APP_SESSION_TOKEN
     }
   })
 
