@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import theme from 'styles/colors'
 import GlobalStyle from 'styles/GlobalStyle'
@@ -17,12 +17,14 @@ import Login from 'components/Login'
 library.add(faDownload, faFilter)
 
 const App = () => {
+  const [password, setPassword] = useState('')
+  const validated = password === process.env.REACT_APP_PASSWORD
   return (
     <ThemeProvider theme={theme}>
       <StateProvider>
         <GlobalStyle />
-        {/* <Main /> */}
-        <Login />
+        {validated ? <Main />
+          : <Login setPassword={setPassword} />}
       </StateProvider>
     </ThemeProvider>
   )
