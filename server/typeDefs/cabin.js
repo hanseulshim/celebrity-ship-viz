@@ -11,7 +11,7 @@ extend type Query {
     cabinClassRate: [Int],
     channel: [Int],
     pointOfSaleMarket: [Int],
-    rateCategory: [Int]): JSON
-  deckList(shipId: Int): [Int]
+    rateCategory: [Int]): JSON @auth
+  deckList(shipId: Int): [Int] @auth
 }
 `

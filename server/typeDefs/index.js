@@ -5,6 +5,7 @@ import cabin from './cabin'
 export default gql`
   scalar Date
   scalar JSON
+  directive @auth on FIELD_DEFINITION
   ${ship}
   ${cabin}
   type Query {

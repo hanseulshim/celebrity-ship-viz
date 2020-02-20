@@ -1,6 +1,7 @@
 export default {
   name: 'Ship',
   endpoint: '',
+  headers: { sessiontoken: process.env.SESSION_TOKEN },
   query: `
     {
       shipList {
@@ -31,6 +32,21 @@ export default {
         interval
         intervalLabel
         weekMinimum
+      }
+
+      firstSailDate {
+        ship {
+          id
+          shipName
+          shipCode
+          classId
+          className
+        }
+        sailingDate {
+          id
+          sailingDate
+        }
+        interval
       }
 
       bookingWeekList(sailingDate: null) {

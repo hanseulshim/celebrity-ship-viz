@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import theme from 'styles/colors'
 import GlobalStyle from 'styles/GlobalStyle'
@@ -12,15 +12,19 @@ import { faDownload, faFilter } from '@fortawesome/free-solid-svg-icons'
 import { StateProvider } from 'context/store'
 
 import Main from 'components/main'
+import Login from 'components/Login'
 
 library.add(faDownload, faFilter)
 
 const App = () => {
+  const [password, setPassword] = useState('')
+  const validated = password === process.env.REACT_APP_PASSWORD
   return (
     <ThemeProvider theme={theme}>
       <StateProvider>
         <GlobalStyle />
-        <Main />
+        {validated ? <Main />
+          : <Login setPassword={setPassword} />}
       </StateProvider>
     </ThemeProvider>
   )

@@ -1,6 +1,7 @@
 export default {
   name: 'Cabin',
   endpoint: '',
+  headers: { sessiontoken: process.env.SESSION_TOKEN },
   query: `
     {
       deckList(shipId: 4)
