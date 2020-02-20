@@ -8,7 +8,7 @@ const Container = styled.div`
   flex: 2;
   display: flex;
   flex-direction: column;
-  padding: 1em 0em 1em 1em;
+  padding: 1em;
   background-color: ${props => props.theme.black50};
 
   > div {
