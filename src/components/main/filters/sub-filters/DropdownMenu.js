@@ -60,24 +60,27 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
     setSubFilter(filter[title])
   }, [filter, title])
 
-  const handleCheck = id => {
-    const index = subFilter.indexOf(id)
-    if (index === -1) {
-      setSubFilter([...subFilter, id])
+  const handleCheck = option => {
+    const foundFilter = subFilter.find(v => v.id === option.id)
+    if (foundFilter) {
+      setSubFilter(subFilter.filter(v => v.id !== option.id))
     } else {
-      setSubFilter(subFilter.filter(v => v !== id))
+      setSubFilter([...subFilter, option])
     }
   }
 
   const handleSave = e => {
     if (e.key === 'save') {
       dispatch({ type: 'setSelectedSubFilter', title, value: subFilter })
+      const filterCopy = { ...filter }
       setVisible(false)
+      filterCopy[title] = subFilter
       applyFilters({
         variables: {
           shipId: selectedShip.id,
           sailingDateId: selectedSailDate.id,
-          interval: selectedBookingWeek
+          interval: selectedBookingWeek,
+          ...filterCopy
         }
       })
     }
@@ -100,8 +103,8 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
       {options.map((option, i) => (
         <Menu.Item key={'option' + i}>
           <StyledCheckbox
-            onChange={e => handleCheck(option.id)}
-            checked={subFilter.includes(option.id)}
+            onChange={() => handleCheck(option)}
+            checked={!!subFilter.find(f => f.id === option.id)}
           >
             {option[displayKey]}
           </StyledCheckbox>

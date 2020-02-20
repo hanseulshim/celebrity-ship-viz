@@ -79,7 +79,7 @@ const NotificationContainer = styled.div`
 const Timeline = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { selectedSailDate, selectedBookingWeek, selectedShip } = state
+  const { selectedSailDate, selectedBookingWeek, selectedShip, filter } = state
 
   const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
     variables: {
@@ -102,7 +102,8 @@ const Timeline = () => {
       variables: {
         shipId: selectedShip.id,
         sailingDateId: selectedSailDate.id,
-        interval: value
+        interval: value,
+        ...filter
       }
     })
     dispatch({ type: 'setSelectedBookingWeek', value })

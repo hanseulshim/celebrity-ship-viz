@@ -39,7 +39,8 @@ const MainFilters = () => {
     selectedProduct,
     selectedItinerary,
     selectedSailDate,
-    selectedBookingWeek
+    selectedBookingWeek,
+    filter
   } = state
   const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
     onCompleted: data => {
@@ -66,7 +67,8 @@ const MainFilters = () => {
             variables: {
               shipId: selectedShip.id,
               sailingDateId: selectedSailDate.id,
-              interval: selectedBookingWeek
+              interval: selectedBookingWeek,
+              ...filter
             }
           })
         }
