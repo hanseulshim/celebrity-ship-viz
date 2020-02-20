@@ -1,4 +1,5 @@
 import { Ship, Product, Itinerary, SailingDate, Filter, SnapshotInterval } from '../models'
+import { EDGE } from '../constants'
 import moment from 'moment'
 
 export default {
@@ -41,6 +42,25 @@ export default {
         .orderBy('d.sailingDate')
     },
     snapshotIntervalList: () => SnapshotInterval.query().orderBy('interval'),
+    firstSailDate: async () => {
+      const sailingDate = await SailingDate.query()
+        .alias('d')
+        .leftJoinRelated('ships')
+        .orderBy('d.sailingDate')
+        .findOne('ships.id', EDGE)
+      const ship = await Ship.query()
+        .select('ship.*', 'class.name as className')
+        .joinRelated('class')
+        .findById(EDGE)
+      ship.shipName = ship.shipName.replace('CELEBRITY ', '')
+      const diff = moment(sailingDate.sailingDate).diff(moment(), 'weeks')
+      const interval = diff <= 0 ? 0 : diff
+      return {
+        ship,
+        sailingDate,
+        interval
+      }
+    },
     bookingWeekList: (_, { sailingDate = null }) => {
       if (!sailingDate) return []
       const arr = []

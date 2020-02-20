@@ -33,6 +33,21 @@ export default {
         weekMinimum
       }
 
+      firstSailDate {
+        ship {
+          id
+          shipName
+          shipCode
+          classId
+          className
+        }
+        sailingDate {
+          id
+          sailingDate
+        }
+        interval
+      }
+
       bookingWeekList(sailingDate: null) {
         week
         date
