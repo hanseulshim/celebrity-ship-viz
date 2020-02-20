@@ -48,11 +48,19 @@ export default {
         .leftJoinRelated('ships')
         .orderBy('d.sailingDate')
         .findOne('ships.id', EDGE)
+        .where('d.sailingDate', '>=', moment())
       const ship = await Ship.query()
         .select('ship.*', 'class.name as className')
         .joinRelated('class')
         .findById(EDGE)
       ship.shipName = ship.shipName.replace('CELEBRITY ', '')
+      if (!sailingDate) {
+        return {
+          ship,
+          sailingDate: null,
+          interval: 0
+        }
+      }
       const diff = moment(sailingDate.sailingDate).diff(moment(), 'weeks')
       const interval = diff <= 0 ? 0 : diff
       return {
