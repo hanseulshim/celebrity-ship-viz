@@ -1,1 +1,1 @@
-export const EDGE = 3
+export const EDGE = 4

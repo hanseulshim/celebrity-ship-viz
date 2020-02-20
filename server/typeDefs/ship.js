@@ -34,6 +34,12 @@ type BookingWeek {
   date: String
 }
 
+type FirstSailDate {
+  shipId: Int
+  sailingDateId: Int
+  sailingDate: Date
+}
+
 type Filter {
   channel: [SubFilter]
   bookingType: [SubFilter]
@@ -57,6 +63,7 @@ extend type Query {
  itineraryList(shipId: Int, productId: Int): [Itinerary]
  sailingDateList(shipId: Int, productId: Int, itineraryId: Int): [SailingDate]
  snapshotIntervalList: [SnapshotInterval]
+ firstSailDate: FirstSailDate
  bookingWeekList(sailingDate: String): [BookingWeek]
  filter: Filter
 }
