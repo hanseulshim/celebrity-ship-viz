@@ -12,6 +12,7 @@ import { faDownload, faFilter } from '@fortawesome/free-solid-svg-icons'
 import { StateProvider } from 'context/store'
 
 import Main from 'components/main'
+import Login from 'components/Login'
 
 library.add(faDownload, faFilter)
 
@@ -20,7 +21,8 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <StateProvider>
         <GlobalStyle />
-        <Main />
+        {/* <Main /> */}
+        <Login />
       </StateProvider>
     </ThemeProvider>
   )
