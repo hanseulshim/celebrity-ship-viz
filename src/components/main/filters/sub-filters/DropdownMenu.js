@@ -82,7 +82,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
           interval: selectedBookingWeek,
           ...filterCopy
         }
-      })3
+      })
     }
   }
 
