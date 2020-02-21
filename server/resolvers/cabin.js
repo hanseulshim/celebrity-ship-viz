@@ -45,18 +45,21 @@ export default {
           's.bookedOccupancy'
         )
         .alias('c')
-        .leftJoinRelated('snapshot', { alias: 's' })
+        .leftJoin('snapshot as s', function() {
+          this.on('c.id', '=', 's.cabinId')
+            .skipUndefined()
+            .andOn('s.sailingDateId', '=', sailingDateId)
+            .andOn('s.interval', '=', interval)
+            .andOnIn('s.bookedOccupancy', bookedOccupancy)
+            .andOnIn('s.bookingType', bookingType)
+            .andOnIn('c.cabinCategoryId', cabinCategory)
+            .andOnIn('c.cabinCategoryClassId', cabinCategoryClass)
+            .andOnIn('s.cabinClassRateId', cabinClassRate)
+            .andOnIn('s.channelId', channel)
+            .andOnIn('s.marketId', pointOfSaleMarket)
+            .andOnIn('s.rateCategoryId', rateCategory)
+        })
         .where('c.shipId', shipId)
-        .andWhere('s.sailingDateId', sailingDateId)
-        .andWhere('s.interval', interval)
-        .whereIn('s.bookedOccupancy', bookedOccupancy ? bookedOccupancy.map(v => v.value) : undefined)
-        .whereIn('s.bookingType', bookingType ? bookingType.map(v => v.value) : undefined)
-        .whereIn('c.cabinCategoryId', cabinCategory ? cabinCategory.map(v => v.id) : undefined)
-        // .whereIn('c.cabinCategoryClassId', cabinCategoryClass ? cabinCategoryClass.map(v => v.id) : undefined) // no work
-        // .whereIn('s.cabinClassRateId', cabinClassRate ? cabinClassRate.map(v => v.id) : undefined) // no work
-        .whereIn('s.channelId', channel ? channel.map(v => v.id) : undefined)
-        .whereIn('s.marketId', pointOfSaleMarket ? pointOfSaleMarket.map(v => v.id) : undefined)
-        // .whereIn('s.rateCategoryId', rateCategory ? rateCategory.map(v => v.id) : undefined) // no work
         .orderBy(['c.deck', 'c.cabinNumber'])
       const deckObj = {}
       deckList.forEach(({ deck }) => {
