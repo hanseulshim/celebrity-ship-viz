@@ -44,7 +44,10 @@ const Main = () => {
   useEffect(() => {
     if (data) {
       dispatch({ type: 'setSelectedShip', value: data.firstSailDate.ship })
-      dispatch({ type: 'setSelectedSailDate', value: data.firstSailDate.sailingDate })
+      dispatch({
+        type: 'setSelectedSailDate',
+        value: data.firstSailDate.sailingDate
+      })
       applyFilters({
         variables: {
           shipId: data.firstSailDate.ship.id,
@@ -63,11 +66,11 @@ const Main = () => {
         <Charts />
         <VizContainer>
           <SubFilters />
-          <Row style={{ flex: '2' }}>
+          <Row>
             <ShipViz />
             <Legend />
           </Row>
-          <Row style={{ flex: '1', minHeight: '150px' }}>
+          <Row>
             <Timeline />
             <DeckView />
           </Row>

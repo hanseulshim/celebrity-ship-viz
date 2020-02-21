@@ -103,7 +103,9 @@ const Timeline = () => {
       if (data.snapshotIntervalList.length) {
         dispatch({
           type: 'setselectedInterval',
-          value: data.snapshotIntervalList[0].interval
+          value:
+            data.snapshotIntervalList[data.snapshotIntervalList.length - 1]
+              .interval
         })
       }
     }
@@ -121,7 +123,7 @@ const Timeline = () => {
 
   const getWidth = () => {
     const { snapshotIntervalList } = data
-    const total = snapshotIntervalList[snapshotIntervalList.length - 1].interval
+    const total = snapshotIntervalList[0].interval
     console.log(total, selectedInterval)
 
     return `${(1 - selectedInterval / total) * 100}%`

@@ -5,14 +5,13 @@ import CategoryClass from './CategoryClass'
 import Decks from './Decks'
 
 const Container = styled.div`
-  flex: 2;
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 2em;
   background-color: ${props => props.theme.black50};
 
   > div {
-    margin-bottom: 5%;
+    margin-bottom: 2.5%;
   }
 `
 

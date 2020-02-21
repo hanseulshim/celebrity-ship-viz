@@ -50,8 +50,8 @@ const SupplyBurndown = () => {
           }
         ]}
         layout={{
-          width: 450,
-          height: 300,
+          width: 400,
+          height: 250,
           hovermode: 'closest',
           margin: {
             l: 25,
