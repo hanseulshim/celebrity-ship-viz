@@ -18,6 +18,7 @@ import Charts from './charts'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  min-width: 100%;
 `
 const Row = styled.div`
   display: flex;
@@ -70,7 +71,7 @@ const Main = () => {
             <ShipViz />
             <Legend />
           </Row>
-          <Row>
+          <Row style={{ padding: '2em 0em' }}>
             <Timeline />
             <DeckView />
           </Row>
