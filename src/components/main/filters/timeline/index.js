@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { useQuery, useLazyQuery } from '@apollo/client'
 import { store } from 'context/store'
 import styled from 'styled-components'
-import { Select } from 'antd'
+import { Select, Icon } from 'antd'
 
 // GQL
 import { GET_INTERVAL_LIST, GET_VISUAL_DECK_LIST } from 'graphql/queries'
@@ -17,8 +17,40 @@ const Container = styled.div`
   flex: 3;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0em 1em;
+  height: 100px;
+`
+
+const ChangeInterval = styled.div`
+  display: flex;
   justify-content: center;
   align-items: center;
+`
+
+const StyledIcon = styled(Icon)`
+  color: ${props => props.theme.white};
+  cursor: pointer;
+  font-size: 2em;
+`
+
+const IntervalMeter = styled.div`
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 10px;
+  border-radius: 3px;
+  background-color: ${props => props.theme.dusk};
+`
+
+const IntervalPosition = styled.div`
+  position: absolute;
+  left: 0;
+  height: 100%;
+  border-radius: 3px;
+  width: ${props => props.width}
+  background-color: ${props => props.theme.babyBlue};
 `
 
 const Timeline = () => {
@@ -48,6 +80,24 @@ const Timeline = () => {
     dispatch({ type: 'setselectedInterval', value })
   }
 
+  const handleStep = dir => {
+    const { snapshotIntervalList } = data
+    const getCurrent = snapshot => snapshot.interval === selectedInterval
+    const index = snapshotIntervalList.findIndex(getCurrent)
+    if (dir === 'prev' && index !== 0) {
+      dispatch({
+        type: 'setselectedInterval',
+        value: snapshotIntervalList[index - 1].interval
+      })
+    }
+    if (dir === 'next' && index !== snapshotIntervalList.length - 1) {
+      dispatch({
+        type: 'setselectedInterval',
+        value: snapshotIntervalList[index + 1].interval
+      })
+    }
+  }
+
   useEffect(() => {
     const onCompleted = data => {
       if (data.snapshotIntervalList.length) {
@@ -69,24 +119,47 @@ const Timeline = () => {
     }
   }, [loading, data, error, dispatch])
 
+  const getWidth = () => {
+    const { snapshotIntervalList } = data
+    const total = snapshotIntervalList[snapshotIntervalList.length - 1].interval
+    console.log(total, selectedInterval)
+
+    return `${(1 - selectedInterval / total) * 100}%`
+  }
+
   if (loading) return <Loader />
   if (error) {
     return <Notification type="error" message={error.message} />
   }
   return (
-    Object.entries(shipData).length && (
+    Object.entries(shipData).length > 0 && (
       <Container>
-        <Select
-          style={{ width: 400 }}
-          value={selectedInterval}
-          onChange={handleSelect}
-        >
-          {data.snapshotIntervalList.map((interval, i) => (
-            <Option value={interval.interval} key={'interval' + i}>
-              {interval.intervalLabel}
-            </Option>
-          ))}
-        </Select>
+        <ChangeInterval>
+          <StyledIcon
+            type="caret-left"
+            style={{ color: 'white' }}
+            onClick={() => handleStep('prev')}
+          />
+          <Select
+            style={{ width: 400 }}
+            value={selectedInterval}
+            onChange={handleSelect}
+          >
+            {data.snapshotIntervalList.map((snapshot, i) => (
+              <Option value={snapshot.interval} key={'interval' + i}>
+                {snapshot.intervalLabel + ' to departure'}
+              </Option>
+            ))}
+          </Select>
+          <StyledIcon
+            type="caret-right"
+            style={{ color: 'white' }}
+            onClick={() => handleStep('next')}
+          />
+        </ChangeInterval>
+        <IntervalMeter>
+          <IntervalPosition width={getWidth()} />
+        </IntervalMeter>
       </Container>
     )
   )
