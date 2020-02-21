@@ -41,7 +41,7 @@ export default {
         .andWhere('itineraries.id', itineraryId)
         .orderBy('d.sailingDate')
     },
-    snapshotIntervalList: () => SnapshotInterval.query().orderBy('interval'),
+    snapshotIntervalList: () => SnapshotInterval.query().orderBy('interval', 'desc'),
     firstSailDate: async () => {
       const sailingDate = await SailingDate.query()
         .alias('d')
