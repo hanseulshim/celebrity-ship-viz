@@ -60,12 +60,12 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
     setSubFilter(filter[title])
   }, [filter, title])
 
-  const handleCheck = option => {
-    const foundFilter = subFilter.find(v => v.id === option.id)
+  const handleCheck = ({ id, value }) => {
+    const foundFilter = subFilter.find(v => v.id === id)
     if (foundFilter) {
-      setSubFilter(subFilter.filter(v => v.id !== option.id))
+      setSubFilter(subFilter.filter(v => v.id !== id))
     } else {
-      setSubFilter([...subFilter, option])
+      setSubFilter([...subFilter, { id, value }])
     }
   }
 
@@ -82,7 +82,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
           interval: selectedBookingWeek,
           ...filterCopy
         }
-      })
+      })3
     }
   }
 
