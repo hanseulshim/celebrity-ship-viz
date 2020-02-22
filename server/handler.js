@@ -24,7 +24,7 @@ const server = new ApolloServer({
   resolvers,
   playground,
   context: async ({ event }) => {
-    const sessionToken = event.headers.authorization || ''
+    const sessionToken = event.headers.sessiontoken || ''
     return { sessionToken }
   },
   schemaDirectives: {
