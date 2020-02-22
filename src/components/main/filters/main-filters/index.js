@@ -11,6 +11,7 @@ import PeerGroupToggle from './PeerGroupToggle'
 import SelectSailDate from './SelectSailDate'
 import Button from 'components/common/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { getSubFilters } from 'helper'
 
 // Graphql
 import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
@@ -40,7 +41,8 @@ const MainFilters = () => {
     selectedItinerary,
     selectedSailDate,
     selectedBookingWeek,
-    filter
+    filter,
+    filterCount
   } = state
   const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
     onCompleted: data => {
@@ -68,7 +70,7 @@ const MainFilters = () => {
               shipId: selectedShip.id,
               sailingDateId: selectedSailDate.id,
               interval: selectedBookingWeek,
-              ...filter
+              ...getSubFilters(filter, filterCount)
             }
           })
         }

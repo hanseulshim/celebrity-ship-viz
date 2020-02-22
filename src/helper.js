@@ -10,3 +10,13 @@ export const getApi = () => {
           ? 'https://jfkbhc8dbl.execute-api.us-east-2.amazonaws.com/prod/graphql'
           : 'http://localhost:4000/graphql'
 }
+
+export const getSubFilters = (filter, filterCount) => {
+  const obj = {}
+  Object.keys(filter).filter(key => {
+    return filter[key].length !== filterCount[key]
+  }).forEach(key => {
+    obj[key] = filter[key]
+  })
+  return obj
+}

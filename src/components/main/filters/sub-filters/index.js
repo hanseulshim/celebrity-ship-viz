@@ -34,6 +34,11 @@ const SubFilters = () => {
             title: subFilter,
             value: arr
           })
+          dispatch({
+            type: 'setSelectedSubFilterCount',
+            title: subFilter,
+            value: arr.length
+          })
         })
     }
   })

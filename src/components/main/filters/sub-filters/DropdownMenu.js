@@ -4,6 +4,7 @@ import { store } from 'context/store'
 import { useLazyQuery } from '@apollo/client'
 import { Menu, Dropdown, Checkbox } from 'antd'
 import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
+import { getSubFilters } from 'helper'
 
 const Button = styled.button`
   display: flex;
@@ -45,7 +46,13 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const [visible, setVisible] = useState(false)
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { filter, selectedShip, selectedSailDate, selectedBookingWeek } = state
+  const {
+    filter,
+    filterCount,
+    selectedShip,
+    selectedSailDate,
+    selectedBookingWeek
+  } = state
 
   const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
     onCompleted: data => {
@@ -80,7 +87,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
           shipId: selectedShip.id,
           sailingDateId: selectedSailDate.id,
           interval: selectedBookingWeek,
-          ...filterCopy
+          ...getSubFilters(filterCopy, filterCount)
         }
       })
     }

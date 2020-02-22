@@ -6,7 +6,7 @@ import moment from 'moment'
 
 // GQL
 import { GET_BOOKING_WEEK_LIST, GET_VISUAL_DECK_LIST } from 'graphql/queries'
-
+import { getSubFilters } from 'helper'
 // Project Imports
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
@@ -79,7 +79,7 @@ const NotificationContainer = styled.div`
 const Timeline = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { selectedSailDate, selectedBookingWeek, selectedShip, filter } = state
+  const { selectedSailDate, selectedBookingWeek, selectedShip, filter, filterCount } = state
 
   const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
     variables: {
@@ -103,7 +103,7 @@ const Timeline = () => {
         shipId: selectedShip.id,
         sailingDateId: selectedSailDate.id,
         interval: value,
-        ...filter
+        ...getSubFilters(filter, filterCount)
       }
     })
     dispatch({ type: 'setSelectedBookingWeek', value })
