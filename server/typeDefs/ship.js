@@ -29,11 +29,6 @@ type SnapshotInterval {
   weekMinimum: Int
 }
 
-type BookingWeek {
-  week: Int
-  date: String
-}
-
 type FirstSailDate {
   ship: Ship
   sailingDate: SailingDate
@@ -64,7 +59,6 @@ extend type Query {
  sailingDateList(shipId: Int, productId: Int, itineraryId: Int): [SailingDate] @auth
  snapshotIntervalList: [SnapshotInterval] @auth
  firstSailDate: FirstSailDate @auth
- bookingWeekList(sailingDate: String): [BookingWeek] @auth
  filter: Filter @auth
 }
 `

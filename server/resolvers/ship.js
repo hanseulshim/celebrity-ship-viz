@@ -69,21 +69,6 @@ export default {
         interval
       }
     },
-    bookingWeekList: (_, { sailingDate = null }) => {
-      if (!sailingDate) return []
-      const arr = []
-      const diff = moment(sailingDate).diff(moment(), 'weeks')
-      const start = diff <= 0 ? 0 : diff
-      for (let i = 0; i < 11; i++) {
-        arr.push({
-          week: start + i,
-          date: moment(sailingDate)
-            .subtract(start + i, 'weeks')
-            .format('MM/DD/YY')
-        })
-      }
-      return arr
-    },
     filter: async () => {
       const filterPromiseList = [
         Filter.query().where('type', 1),
