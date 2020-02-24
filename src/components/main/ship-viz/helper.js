@@ -37,7 +37,7 @@ const getStatus = (point, colorCount) => {
       statusObj.color = colorCount.lastPartOdd ? colors.keyLimePie : colors.hokeyPokey
       colorCount.lastPartOdd = !colorCount.lastPartOdd
     }
-  } else if (point.bookedOccupancy === point.cabinCapacity) {
+  } else {
     if (even) {
       statusObj.color = colorCount.lastFullEven ? colors.silverTree : colors.aquaForest
       colorCount.lastFullEven = !colorCount.lastFullEven
