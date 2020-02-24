@@ -49,11 +49,6 @@ export default {
         interval
       }
 
-      bookingWeekList(sailingDate: null) {
-        week
-        date
-      }
-
       filter {
         channel {
           id
