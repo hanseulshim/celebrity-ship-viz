@@ -81,7 +81,7 @@ export const GET_SUB_FILTERS = gql`
   }
 `
 
-export const GET_BOOKING_WEEK_LIST = gql`
+export const GET_SNAPSHOT_INTERVAL_LIST = gql`
   {
     snapshotIntervalList {
       id

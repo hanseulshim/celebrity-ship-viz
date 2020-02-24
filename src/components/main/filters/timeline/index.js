@@ -6,7 +6,7 @@ import { Select, Icon } from 'antd'
 import { StyledSelect } from 'components/common/StyledComponents'
 
 // GQL
-import { GET_BOOKING_WEEK_LIST, GET_VISUAL_DECK_LIST } from 'graphql/queries'
+import { GET_SNAPSHOT_INTERVAL_LIST, GET_VISUAL_DECK_LIST } from 'graphql/queries'
 import { getSubFilters } from 'helper'
 // Project Imports
 import Loader from 'components/common/Loader'
@@ -67,7 +67,7 @@ const Timeline = () => {
     shipData
   } = state
 
-  const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
+  const { loading, error, data } = useQuery(GET_SNAPSHOT_INTERVAL_LIST, {
     fetchPolicy: 'network-only'
   })
 
