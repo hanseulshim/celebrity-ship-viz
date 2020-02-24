@@ -59,10 +59,18 @@ const StateProvider = ({ children }) => {
             [action.title]: action.value
           }
         }
-      case 'setselectedInterval':
+      case 'setSelectedSubFilterCount':
         return {
           ...state,
-          selectedInterval: action.value
+          filterCount: {
+            ...state.filterCount,
+            [action.title]: action.value
+          }
+        }
+      case 'setSelectedBookingWeek':
+        return {
+          ...state,
+          selectedBookingWeek: action.value
         }
       case 'setSelectedDeck':
         return {

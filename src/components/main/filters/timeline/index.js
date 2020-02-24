@@ -6,8 +6,8 @@ import { Select, Icon } from 'antd'
 import { StyledSelect } from 'components/common/StyledComponents'
 
 // GQL
-import { GET_INTERVAL_LIST, GET_VISUAL_DECK_LIST } from 'graphql/queries'
-
+import { GET_BOOKING_WEEK_LIST, GET_VISUAL_DECK_LIST } from 'graphql/queries'
+import { getSubFilters } from 'helper'
 // Project Imports
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
@@ -58,9 +58,16 @@ const IntervalPosition = styled.div`
 const Timeline = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { selectedInterval, selectedSailDate, selectedShip, shipData } = state
+  const {
+    selectedSailDate,
+    selectedBookingWeek,
+    selectedShip,
+    filter,
+    filterCount,
+    shipData
+  } = state
 
-  const { loading, error, data } = useQuery(GET_INTERVAL_LIST, {
+  const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
     fetchPolicy: 'network-only'
   })
 
@@ -71,11 +78,23 @@ const Timeline = () => {
     fetchPolicy: 'network-only'
   })
 
+  const handleSelect = (e, value) => {
+    applyFilters({
+      variables: {
+        shipId: selectedShip.id,
+        sailingDateId: selectedSailDate.id,
+        interval: value,
+        ...getSubFilters(filter, filterCount)
+      }
+    })
+    dispatch({ type: 'setSelectedBookingWeek', value })
+  }
+
   useEffect(() => {
     const onCompleted = data => {
       if (data.snapshotIntervalList.length) {
         dispatch({
-          type: 'setselectedInterval',
+          type: 'setSelectedBookingWeek',
           value:
             data.snapshotIntervalList[data.snapshotIntervalList.length - 1]
               .interval
@@ -94,24 +113,13 @@ const Timeline = () => {
     }
   }, [loading, data, error, dispatch])
 
-  const handleSelect = value => {
-    applyFilters({
-      variables: {
-        shipId: selectedShip.id,
-        sailingDateId: selectedSailDate.id,
-        interval: value
-      }
-    })
-    dispatch({ type: 'setselectedInterval', value })
-  }
-
   const handleStep = dir => {
     const { snapshotIntervalList } = data
-    const getCurrent = snapshot => snapshot.interval === selectedInterval
+    const getCurrent = snapshot => snapshot.interval === selectedBookingWeek
     const index = snapshotIntervalList.findIndex(getCurrent)
     if (dir === 'prev' && index !== 0) {
       dispatch({
-        type: 'setselectedInterval',
+        type: 'setSelectedBookingWeek',
         value: snapshotIntervalList[index - 1].interval
       })
       applyFilters({
@@ -124,7 +132,7 @@ const Timeline = () => {
     }
     if (dir === 'next' && index !== snapshotIntervalList.length - 1) {
       dispatch({
-        type: 'setselectedInterval',
+        type: 'setSelectedBookingWeek',
         value: snapshotIntervalList[index + 1].interval
       })
       applyFilters({
@@ -141,7 +149,7 @@ const Timeline = () => {
     const { snapshotIntervalList } = data
     const total = snapshotIntervalList[0].interval
 
-    return `${(1 - selectedInterval / total) * 100}%`
+    return `${(1 - selectedBookingWeek / total) * 100}%`
   }
 
   if (loading) return <Loader />
@@ -155,7 +163,7 @@ const Timeline = () => {
           <StyledIcon type="caret-left" onClick={() => handleStep('prev')} />
           <StyledSelect
             style={{ width: 250 }}
-            value={selectedInterval}
+            value={selectedBookingWeek}
             onChange={handleSelect}
             timeline
           >

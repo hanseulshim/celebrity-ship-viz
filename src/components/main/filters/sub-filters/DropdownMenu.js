@@ -4,6 +4,7 @@ import { store } from 'context/store'
 import { useLazyQuery } from '@apollo/client'
 import { Menu, Dropdown, Checkbox } from 'antd'
 import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
+import { getSubFilters } from 'helper'
 
 const Button = styled.button`
   display: flex;
@@ -45,7 +46,13 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const [visible, setVisible] = useState(false)
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { filter, selectedShip, selectedSailDate, selectedInterval } = state
+  const {
+    filter,
+    filterCount,
+    selectedShip,
+    selectedSailDate,
+    selectedBookingWeek
+  } = state
 
   const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
     onCompleted: data => {
@@ -60,24 +67,27 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
     setSubFilter(filter[title])
   }, [filter, title])
 
-  const handleCheck = id => {
-    const index = subFilter.indexOf(id)
-    if (index === -1) {
-      setSubFilter([...subFilter, id])
+  const handleCheck = ({ id, value }) => {
+    const foundFilter = subFilter.find(v => v.id === id)
+    if (foundFilter) {
+      setSubFilter(subFilter.filter(v => v.id !== id))
     } else {
-      setSubFilter(subFilter.filter(v => v !== id))
+      setSubFilter([...subFilter, { id, value }])
     }
   }
 
   const handleSave = e => {
     if (e.key === 'save') {
       dispatch({ type: 'setSelectedSubFilter', title, value: subFilter })
+      const filterCopy = { ...filter }
       setVisible(false)
+      filterCopy[title] = subFilter
       applyFilters({
         variables: {
           shipId: selectedShip.id,
           sailingDateId: selectedSailDate.id,
-          interval: selectedInterval
+          interval: selectedBookingWeek,
+          ...getSubFilters(filterCopy, filterCount)
         }
       })
     }
@@ -100,8 +110,8 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
       {options.map((option, i) => (
         <Menu.Item key={'option' + i}>
           <StyledCheckbox
-            onChange={e => handleCheck(option.id)}
-            checked={subFilter.includes(option.id)}
+            onChange={() => handleCheck(option)}
+            checked={!!subFilter.find(f => f.id === option.id)}
           >
             {option[displayKey]}
           </StyledCheckbox>
