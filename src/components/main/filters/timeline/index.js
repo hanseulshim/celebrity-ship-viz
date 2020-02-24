@@ -20,8 +20,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
-  padding: 0em 2em;
 `
 
 const ChangeInterval = styled.div`

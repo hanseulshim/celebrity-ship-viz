@@ -7,7 +7,7 @@ import Decks from './Decks'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 1em 2em;
   background-color: ${props => props.theme.black50};
 
   > div {

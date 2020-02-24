@@ -18,15 +18,14 @@ import Charts from './charts'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 100%;
 `
 const Row = styled.div`
   display: flex;
 `
 const VizContainer = styled.div`
   display: flex;
-  flex: 5;
   flex-direction: column;
+  flex: 1;
   padding-right: 2em;
 `
 
