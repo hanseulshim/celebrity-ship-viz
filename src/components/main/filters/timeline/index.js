@@ -126,7 +126,8 @@ const Timeline = () => {
         variables: {
           shipId: selectedShip.id,
           sailingDateId: selectedSailDate.id,
-          interval: snapshotIntervalList[index - 1].interval
+          interval: snapshotIntervalList[index - 1].interval,
+          ...getSubFilters(filter, filterCount)
         }
       })
     }
@@ -139,7 +140,8 @@ const Timeline = () => {
         variables: {
           shipId: selectedShip.id,
           sailingDateId: selectedSailDate.id,
-          interval: snapshotIntervalList[index + 1].interval
+          interval: snapshotIntervalList[index + 1].interval,
+          ...getSubFilters(filter, filterCount)
         }
       })
     }
