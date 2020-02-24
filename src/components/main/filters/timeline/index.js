@@ -78,7 +78,7 @@ const Timeline = () => {
     fetchPolicy: 'network-only'
   })
 
-  const handleSelect = (e, value) => {
+  const handleSelect = value => {
     applyFilters({
       variables: {
         shipId: selectedShip.id,
