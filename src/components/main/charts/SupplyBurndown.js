@@ -1,9 +1,28 @@
-import React from 'react'
-
+import React, { useState, useContext, useEffect } from 'react'
+import { store } from 'context/store'
+import { useQuery } from '@apollo/client'
 import colors from 'styles/colors'
 import Plot from 'react-plotly.js'
 
 const SupplyBurndown = () => {
+  const [plotData, setPlotdata] = useState([])
+  const globalState = useContext(store)
+  const { state } = globalState
+  const {
+    peerGroupFilters,
+    selectedShip,
+    selectedSailDate,
+    selectedBookingWeek
+  } = state
+
+  // useEffect(() => {
+  //   const decks = Object.keys(shipData)
+  //   const coords = decks.map(deck =>
+  //     createDeck(shipData[deck], parseInt(deck), selectedDeck)
+  //   )
+  //   setPlotdata(coords)
+  // }, [selectedDeck, shipData])
+
   return (
     <>
       <Plot
@@ -13,7 +32,7 @@ const SupplyBurndown = () => {
             y: [99, 81, 75, 61, 52, 46, 38, 29, 25, 21],
             type: 'line',
             mode: 'lines',
-            name: 'Selected Ship',
+            name: `${selectedShip.shipName}`,
             marker: {
               color: colors.aquaForest
             },
