@@ -24,8 +24,8 @@ const Row = styled.div`
 `
 const VizContainer = styled.div`
   display: flex;
-  flex: 5;
   flex-direction: column;
+  flex: 1;
   padding-right: 2em;
 `
 
@@ -44,7 +44,10 @@ const Main = () => {
   useEffect(() => {
     if (data) {
       dispatch({ type: 'setSelectedShip', value: data.firstSailDate.ship })
-      dispatch({ type: 'setSelectedSailDate', value: data.firstSailDate.sailingDate })
+      dispatch({
+        type: 'setSelectedSailDate',
+        value: data.firstSailDate.sailingDate
+      })
       applyFilters({
         variables: {
           shipId: data.firstSailDate.ship.id,
@@ -63,11 +66,11 @@ const Main = () => {
         <Charts />
         <VizContainer>
           <SubFilters />
-          <Row style={{ flex: '3' }}>
+          <Row>
             <ShipViz />
             <Legend />
           </Row>
-          <Row style={{ flex: '1', minHeight: '150px' }}>
+          <Row style={{ padding: '2em 0em' }}>
             <Timeline />
             <DeckView />
           </Row>

@@ -28,11 +28,13 @@ export default createGlobalStyle`
     color: initial;
   }
 
+  button {
+    border:none;
+  }
   .ant-select-search--inline .ant-select-search__field {
     color: white;
   }
 
-  button {
-    border:none;
-  }
+  
+
 `

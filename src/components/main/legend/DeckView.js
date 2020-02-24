@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  min-width: 315px;
 `
 
 const DeckView = () => {
@@ -16,7 +17,15 @@ const DeckView = () => {
   const { selectedDeck, selectedShip } = state
   return (
     <Container>
-      {Number.isInteger(selectedDeck) && <img src={DECK_LEGEND_SVG_URL.replace('{SHIP_CLASS}', selectedShip.classId).replace('{DECK}', selectedDeck)} alt="deck-view" />}
+      {Number.isInteger(selectedDeck) && (
+        <img
+          src={DECK_LEGEND_SVG_URL.replace(
+            '{SHIP_CLASS}',
+            selectedShip.classId
+          ).replace('{DECK}', selectedDeck)}
+          alt="deck-view"
+        />
+      )}
     </Container>
   )
 }

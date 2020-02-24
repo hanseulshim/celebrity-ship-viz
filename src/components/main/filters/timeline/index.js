@@ -2,7 +2,8 @@ import React, { useContext, useEffect } from 'react'
 import { useQuery, useLazyQuery } from '@apollo/client'
 import { store } from 'context/store'
 import styled from 'styled-components'
-import moment from 'moment'
+import { Select, Icon } from 'antd'
+import { StyledSelect } from 'components/common/StyledComponents'
 
 // GQL
 import { GET_BOOKING_WEEK_LIST, GET_VISUAL_DECK_LIST } from 'graphql/queries'
@@ -11,82 +12,62 @@ import { getSubFilters } from 'helper'
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
 
-const LineContainer = styled.div`
+const { Option } = Select
+
+const Container = styled.div`
   flex: 3;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+`
+
+const ChangeInterval = styled.div`
   display: flex;
   justify-content: center;
-
-  ::after {
-    content: '';
-    position: absolute;
-    height: 2.5px;
-    background-color: ${props => props.theme.lochmara};
-    top: 50%;
-    width: 90%;
-    border-radius: 3px;
-  }
-`
-
-const MarkerContainer = styled.div`
-  position: absolute;
-  top: 49%;
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  flex-flow: row-reverse;
-`
-
-const Marker = styled.div`
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  cursor: pointer;
 `
 
-const Label = styled.div`
+const StyledIcon = styled(Icon)`
+  font-size: 2em;
+
+  > svg {
+    color: ${props => props.theme.babyBlue};
+    cursor: pointer;
+  }
+`
+
+const IntervalMeter = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 0.75rem;
-
-  .week {
-    color: ${props => props.theme.white};
-  }
-
-  .date {
-    color: ${props => props.theme.jungleMist};
-  }
-`
-
-const Dot = styled.div`
-  border-radius: 50%;
-  height: ${props => (props.selected ? '12px' : '7px')};
-  width: ${props => (props.selected ? '12px' : '7px')};
-  border: 1px solid ${props => props.theme.lochmara};
   position: relative;
-  bottom: ${props => (props.selected ? '4px' : '')};
-  background-color: ${props => props.theme.white};
-  z-index: 3;
-  transition: all 0.1s ease;
+  width: 90%;
+  height: 10px;
+  border-radius: 3px;
+  background-color: ${props => props.theme.dusk};
 `
 
-const NotificationContainer = styled.div`
-  flex: 3;
-  padding: 3em;
+const IntervalPosition = styled.div`
+  position: absolute;
+  left: 0;
+  height: 100%;
+  border-radius: 3px;
+  width: ${props => props.width};
+  background-color: ${props => props.theme.babyBlue};
 `
 
 const Timeline = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { selectedSailDate, selectedBookingWeek, selectedShip, filter, filterCount } = state
+  const {
+    selectedSailDate,
+    selectedBookingWeek,
+    selectedShip,
+    filter,
+    filterCount,
+    shipData
+  } = state
 
   const { loading, error, data } = useQuery(GET_BOOKING_WEEK_LIST, {
-    variables: {
-      sailingDate: Object.keys(selectedSailDate).length
-        ? moment(selectedSailDate.sailingDate).format('MM-DD-YYYY')
-        : null
-    },
     fetchPolicy: 'network-only'
   })
 
@@ -97,7 +78,7 @@ const Timeline = () => {
     fetchPolicy: 'network-only'
   })
 
-  const handleSelect = (e, value) => {
+  const handleSelect = value => {
     applyFilters({
       variables: {
         shipId: selectedShip.id,
@@ -111,10 +92,12 @@ const Timeline = () => {
 
   useEffect(() => {
     const onCompleted = data => {
-      if (data.bookingWeekList.length) {
+      if (data.snapshotIntervalList.length) {
         dispatch({
           type: 'setSelectedBookingWeek',
-          value: data.bookingWeekList[0].week
+          value:
+            data.snapshotIntervalList[data.snapshotIntervalList.length - 1]
+              .interval
         })
       }
     }
@@ -130,35 +113,75 @@ const Timeline = () => {
     }
   }, [loading, data, error, dispatch])
 
-  if (loading) return <Loader />
-  if (error) {
-    return (
-      <NotificationContainer>
-        <Notification type="error" message={error.message} />
-      </NotificationContainer>
-    )
+  const handleStep = dir => {
+    const { snapshotIntervalList } = data
+    const getCurrent = snapshot => snapshot.interval === selectedBookingWeek
+    const index = snapshotIntervalList.findIndex(getCurrent)
+    if (dir === 'prev' && index !== 0) {
+      dispatch({
+        type: 'setSelectedBookingWeek',
+        value: snapshotIntervalList[index - 1].interval
+      })
+      applyFilters({
+        variables: {
+          shipId: selectedShip.id,
+          sailingDateId: selectedSailDate.id,
+          interval: snapshotIntervalList[index - 1].interval,
+          ...getSubFilters(filter, filterCount)
+        }
+      })
+    }
+    if (dir === 'next' && index !== snapshotIntervalList.length - 1) {
+      dispatch({
+        type: 'setSelectedBookingWeek',
+        value: snapshotIntervalList[index + 1].interval
+      })
+      applyFilters({
+        variables: {
+          shipId: selectedShip.id,
+          sailingDateId: selectedSailDate.id,
+          interval: snapshotIntervalList[index + 1].interval,
+          ...getSubFilters(filter, filterCount)
+        }
+      })
+    }
   }
 
-  return !data.bookingWeekList.length ? (
-    <NotificationContainer>
-      <Notification type="info" message={'Please select a sail date'} />
-    </NotificationContainer>
-  ) : (
-    <LineContainer>
-      <MarkerContainer>
-        {data.bookingWeekList.map((wk, i) => {
-          return (
-            <Marker key={'wk' + i} onClick={e => handleSelect(e, wk.week)}>
-              <Dot selected={selectedBookingWeek === wk.week} />
-              <Label>
-                <span className="week">{`${wk.week} wk`}</span>
-                <span className="date">{`${wk.date}`}</span>
-              </Label>
-            </Marker>
-          )
-        })}
-      </MarkerContainer>
-    </LineContainer>
+  const getWidth = () => {
+    const { snapshotIntervalList } = data
+    const total = snapshotIntervalList[0].interval
+
+    return `${(1 - selectedBookingWeek / total) * 100}%`
+  }
+
+  if (loading) return <Loader />
+  if (error) {
+    return <Notification type="error" message={error.message} />
+  }
+  return (
+    Object.entries(shipData).length > 0 && (
+      <Container>
+        <ChangeInterval>
+          <StyledIcon type="caret-left" onClick={() => handleStep('prev')} />
+          <StyledSelect
+            style={{ width: 250 }}
+            value={selectedBookingWeek}
+            onChange={handleSelect}
+            timeline
+          >
+            {data.snapshotIntervalList.map((snapshot, i) => (
+              <Option value={snapshot.interval} key={'interval' + i}>
+                {snapshot.intervalLabel + ' to departure'}
+              </Option>
+            ))}
+          </StyledSelect>
+          <StyledIcon type="caret-right" onClick={() => handleStep('next')} />
+        </ChangeInterval>
+        <IntervalMeter>
+          <IntervalPosition width={getWidth()} />
+        </IntervalMeter>
+      </Container>
+    )
   )
 }
 
