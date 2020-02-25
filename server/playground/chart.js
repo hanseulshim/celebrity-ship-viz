@@ -6,8 +6,7 @@ export default {
     {
       supplyBurndownChart(
         shipId:4,
-        sailingDateId:199,
-        interval:1
+        sailingDateId:199
       ) {
         selected {
           x,

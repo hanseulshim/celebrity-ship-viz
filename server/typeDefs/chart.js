@@ -7,21 +7,20 @@ type SupplyBurndown {
 
 type SupplyBurndownChart {
   x: [Int]
-  y: [Int]
+  y: [Float]
 }
 
 extend type Query {
   supplyBurndownChart(
     shipId: Int!,
     sailingDateId: Int!,
-    interval: Int!,
-    bookedOccupancy: [InputSubFilter],
-    bookingType: [InputSubFilter],
-    cabinCategory: [InputSubFilter],
-    cabinCategoryClass: [InputSubFilter],
-    cabinClassRate: [InputSubFilter],
-    channel: [InputSubFilter],
-    pointOfSaleMarket: [InputSubFilter],
-    rateCategory: [InputSubFilter]): SupplyBurndown @auth
+    bookedOccupancy: [String],
+    bookingType: [String],
+    cabinCategory: [Int],
+    cabinCategoryClass: [Int],
+    cabinClassRate: [Int],
+    channel: [Int],
+    pointOfSaleMarket: [Int],
+    rateCategory: [Int]): SupplyBurndown @auth
 }
 `

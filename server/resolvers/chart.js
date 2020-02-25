@@ -1,4 +1,4 @@
-import { Cabin } from '../models'
+import { Cabin, SnapshotInterval } from '../models'
 
 export default {
   Query: {
@@ -7,7 +7,6 @@ export default {
       {
         shipId,
         sailingDateId,
-        interval,
         bookedOccupancy,
         bookingType,
         cabinCategory,
@@ -18,47 +17,46 @@ export default {
         rateCategory
       }
     ) => {
-      if (!shipId || !sailingDateId || interval === null) return {}
-      const deckList = await Cabin.query()
-        .distinct('deck')
-        .where('shipId', shipId)
-        .orderBy('deck')
-      const data = await Cabin.query()
+      const { total } = await Cabin.query().sum('cabinCapacity as total')
+        .findOne('shipId', shipId)
+
+      const subQuery = Cabin.query()
         .skipUndefined()
-        .select(
-          'c.deck',
-          'c.cabinNumber',
-          'c.plotX0',
-          'c.plotY0',
-          'c.plotX1',
-          'c.plotY1',
-          's.bookingStatus',
-          'c.cabinCapacity',
-          's.bookedOccupancy'
-        )
+        .sum('s.bookedOccupancy')
         .alias('c')
         .leftJoin('snapshot as s', function() {
           this.on('c.id', '=', 's.cabinId')
             .skipUndefined()
             .andOn('s.sailingDateId', '=', sailingDateId)
-            .andOn('s.interval', '=', interval)
-            .andOnIn('s.bookedOccupancy', bookedOccupancy ? bookedOccupancy.map(v => v.value) : undefined)
-            .andOnIn('s.bookingType', bookingType ? bookingType.map(v => v.value) : undefined)
-            .andOnIn('c.cabinCategoryId', cabinCategory ? cabinCategory.map(v => v.id) : undefined)
-            .andOnIn('c.cabinCategoryClassId', cabinCategoryClass ? cabinCategoryClass.map(v => v.id) : undefined)
-            .andOnIn('s.cabinClassRateId', cabinClassRate ? cabinClassRate.map(v => v.id) : undefined)
-            .andOnIn('s.channelId', channel ? channel.map(v => v.id) : undefined)
-            .andOnIn('s.marketId', pointOfSaleMarket ? pointOfSaleMarket.map(v => v.id) : undefined)
-            .andOnIn('s.rateCategoryId', rateCategory ? rateCategory.map(v => v.id) : undefined)
+            .andOn('s.interval', '=', 'i.interval')
+            .andOnIn('s.bookedOccupancy', bookedOccupancy)
+            .andOnIn('s.bookingType', bookingType)
+            .andOnIn('c.cabinCategoryId', cabinCategory)
+            .andOnIn('c.cabinCategoryClassId', cabinCategoryClass)
+            .andOnIn('s.cabinClassRateId', cabinClassRate)
+            .andOnIn('s.channelId', channel)
+            .andOnIn('s.marketId', pointOfSaleMarket)
+            .andOnIn('s.rateCategoryId', rateCategory)
         })
         .where('c.shipId', shipId)
-        .orderBy(['c.deck', 'c.cabinNumber'])
+        .as('sum')
+
+      const selected = {
+        x: [],
+        y: []
+      }
+
+      const selectedShipIntervals = await SnapshotInterval.query().select(['i.interval', subQuery]).alias('i')
+        .orderBy('i.interval')
+
+      selectedShipIntervals.forEach(snapshot => {
+        const percent = Math.round((1 - (snapshot.sum / total)) * 100)
+        selected.x.push(snapshot.interval)
+        selected.y.push(percent)
+      })
 
       return {
-        selected: {
-          x: [],
-          y: []
-        },
+        selected,
         all: {
           x: [],
           y: []
