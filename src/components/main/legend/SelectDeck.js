@@ -28,6 +28,10 @@ const Deck = styled.div`
     border-bottom: ${props =>
       props.selected ? `1px solid ${props.theme.jungleMist}` : ''};
   }
+
+  img {
+    width: 200px;
+  }
 `
 
 const DeckSvg = ({ deck }) => {
