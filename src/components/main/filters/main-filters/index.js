@@ -10,7 +10,7 @@ import SelectShip from './SelectShip'
 import PeerGroupToggle from './PeerGroupToggle'
 import SelectSailDate from './SelectSailDate'
 import Button from 'components/common/Button'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Icon from 'components/common/Icon'
 import { getSubFilters } from 'helper'
 
 // Graphql
@@ -28,8 +28,14 @@ const Container = styled.div`
 `
 
 const Apply = styled(Button)`
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-  background-color
+  background-color: ${props => props.theme.lochmara};
+  color: ${props => props.theme.white};
+`
+
+const Download = styled(Button)`
+  background-color: ${props => props.theme.silverTree};
+  color: ${props => props.theme.black};
+  margin-left: auto;
 `
 
 const MainFilters = () => {
@@ -77,10 +83,10 @@ const MainFilters = () => {
       >
         Apply
       </Apply>
-      <Button style={{ marginLeft: 'auto' }}>
-        <FontAwesomeIcon icon="download" />
+      <Download>
+        <Icon icon="download" />
         Download
-      </Button>
+      </Download>
     </Container>
   )
 }

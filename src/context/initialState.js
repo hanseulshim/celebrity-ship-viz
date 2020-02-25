@@ -5,6 +5,7 @@ export default {
   selectedItinerary: {},
   selectedSailDate: {},
   selectedPeerShip: [],
+  selectedPeerProduct: [],
   selectedPeerSailingDates: [],
   filter: {
     channel: [],
@@ -18,6 +19,28 @@ export default {
     bookedOccupancy: []
   },
   filterCount: {
+    channel: 0,
+    bookingType: 0,
+    pointOfSaleMarket: 0,
+    cabinCategoryClass: 0,
+    cabinCategory: 0,
+    cabinClassRate: 0,
+    rateCategory: 0,
+    // maxOccupancy: 0,
+    bookedOccupancy: 0
+  },
+  peerFilter: {
+    channel: [],
+    bookingType: [],
+    pointOfSaleMarket: [],
+    cabinCategoryClass: [],
+    cabinCategory: [],
+    cabinClassRate: [],
+    rateCategory: [],
+    // maxOccupancy: [],
+    bookedOccupancy: []
+  },
+  peerFilterCount: {
     channel: 0,
     bookingType: 0,
     pointOfSaleMarket: 0,

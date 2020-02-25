@@ -3,7 +3,9 @@ import styled from 'styled-components'
 
 // Project Imports
 import SelectPeerShip from './SelectPeerShip'
+import SelectPeerProduct from './SelectPeerProduct'
 import SelectPeerSailingDates from './SelectPeerSailingDates'
+import PeerSubFilters from './PeerSubFilters'
 
 const Container = styled.div`
   display: flex;
@@ -26,7 +28,9 @@ const PeerGroupFilters = () => {
     <Container>
       <Title>Peer Group</Title>
       <SelectPeerShip />
+      <SelectPeerProduct />
       <SelectPeerSailingDates />
+      <PeerSubFilters />
     </Container>
   )
 }

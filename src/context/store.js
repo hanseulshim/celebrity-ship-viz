@@ -46,6 +46,11 @@ const StateProvider = ({ children }) => {
           ...state,
           selectedPeerShip: action.value
         }
+      case 'setSelectedPeerProduct':
+        return {
+          ...state,
+          selectedPeerProduct: action.value
+        }
       case 'setSelectedPeerSailingDates':
         return {
           ...state,
