@@ -13,7 +13,15 @@ const getStatus = (point, colorCount) => {
   statusObj.bookedOccupancy = point.bookedOccupancy ? point.bookedOccupancy : 'N/A'
   statusObj.cabinCapacity = point.cabinCapacity ? point.cabinCapacity : 'N/A'
   const even = point.cabinNumber % 2 === 0
-  if (point.bookingStatus === 'U' || point.bookingStatus === 'C') {
+  if (point.bookingStatus === null) {
+    if (even) {
+      statusObj.color = colorCount.lastInvalidEven ? colors.shuttleGray : colors.fiord
+      colorCount.lastInvalidEven = !colorCount.lastInvalidEven
+    } else {
+      statusObj.color = colorCount.lastInvalidOdd ? colors.shuttleGray : colors.fiord
+      colorCount.lastInvalidOdd = !colorCount.lastInvalidOdd
+    }
+  } else if (point.bookingStatus === 'U' || point.bookingStatus === 'C') {
     if (even) {
       statusObj.color = colorCount.lastUnbookedEven ? colors.cabaret : colors.mandy
       colorCount.lastUnbookedEven = !colorCount.lastUnbookedEven
@@ -28,14 +36,6 @@ const getStatus = (point, colorCount) => {
     } else {
       statusObj.color = colorCount.lastPartOdd ? colors.keyLimePie : colors.hokeyPokey
       colorCount.lastPartOdd = !colorCount.lastPartOdd
-    }
-  } else if (point.bookedOccupancy === point.cabinCapacity) {
-    if (even) {
-      statusObj.color = colorCount.lastFullEven ? colors.silverTree : colors.aquaForest
-      colorCount.lastFullEven = !colorCount.lastFullEven
-    } else {
-      statusObj.color = colorCount.lastFullOdd ? colors.silverTree : colors.aquaForest
-      colorCount.lastFullOdd = !colorCount.lastFullOdd
     }
   } else {
     if (even) {

@@ -14,6 +14,7 @@ provider:
     AWS_SES_ACCESS_KEY_ID: ${self:custom.environment.AWS_SES_ACCESS_KEY_ID}
     AWS_SES_SECRET_ACCESS_KEY: ${self:custom.environment.AWS_SES_SECRET_ACCESS_KEY}
     AWS_SES_REGION: ${self:custom.environment.AWS_SES_REGION}
+    SESSION_TOKEN: ${self:custom.environment.SESSION_TOKEN}
 
 functions:
   graphql:
@@ -26,6 +27,7 @@ functions:
           cors:
             origin: '*'
             headers:
+              - sessiontoken
               - Content-Type
             allowCredentials: false
       - http:
@@ -34,6 +36,7 @@ functions:
           cors:
             origin: '*'
             headers:
+              - sessiontoken
               - Content-Type
             allowCredentials: false
 

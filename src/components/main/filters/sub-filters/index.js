@@ -28,12 +28,16 @@ const SubFilters = () => {
       Object.keys(data.filter)
         .filter(v => v !== '__typename')
         .forEach(subFilter => {
-          const arr = []
-          data.filter[subFilter].map(v => arr.push(v.id))
+          const arr = data.filter[subFilter].map(v => ({ id: v.id, value: v.value }))
           dispatch({
             type: 'setSelectedSubFilter',
             title: subFilter,
             value: arr
+          })
+          dispatch({
+            type: 'setSelectedSubFilterCount',
+            title: subFilter,
+            value: arr.length
           })
         })
     }

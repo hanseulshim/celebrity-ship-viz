@@ -15,7 +15,7 @@ export default {
       {
         shipId,
         sailingDateId,
-        weeks,
+        interval,
         bookedOccupancy,
         bookingType,
         cabinCategory,
@@ -26,7 +26,7 @@ export default {
         rateCategory
       }
     ) => {
-      if (!shipId || !sailingDateId || weeks === null) return {}
+      if (!shipId || !sailingDateId || interval === null) return {}
       const deckList = await Cabin.query()
         .distinct('deck')
         .where('shipId', shipId)
@@ -45,18 +45,21 @@ export default {
           's.bookedOccupancy'
         )
         .alias('c')
-        .leftJoinRelated('bookingSnapshotWeeks', { alias: 's' })
+        .leftJoin('snapshot as s', function() {
+          this.on('c.id', '=', 's.cabinId')
+            .skipUndefined()
+            .andOn('s.sailingDateId', '=', sailingDateId)
+            .andOn('s.interval', '=', interval)
+            .andOnIn('s.bookedOccupancy', bookedOccupancy ? bookedOccupancy.map(v => v.value) : undefined)
+            .andOnIn('s.bookingType', bookingType ? bookingType.map(v => v.value) : undefined)
+            .andOnIn('c.cabinCategoryId', cabinCategory ? cabinCategory.map(v => v.id) : undefined)
+            .andOnIn('c.cabinCategoryClassId', cabinCategoryClass ? cabinCategoryClass.map(v => v.id) : undefined)
+            .andOnIn('s.cabinClassRateId', cabinClassRate ? cabinClassRate.map(v => v.id) : undefined)
+            .andOnIn('s.channelId', channel ? channel.map(v => v.id) : undefined)
+            .andOnIn('s.marketId', pointOfSaleMarket ? pointOfSaleMarket.map(v => v.id) : undefined)
+            .andOnIn('s.rateCategoryId', rateCategory ? rateCategory.map(v => v.id) : undefined)
+        })
         .where('c.shipId', shipId)
-        .andWhere('s.sailingDateId', sailingDateId)
-        .andWhere('s.weeks', weeks)
-        .whereIn('s.bookedOccupancy', bookedOccupancy)
-        .whereIn('s.bookingType', bookingType)
-        .whereIn('c.cabinCategoryId', cabinCategory)
-        .whereIn('c.cabinCategoryClassId', cabinCategoryClass)
-        .whereIn('s.cabinClassRateId', cabinClassRate)
-        .whereIn('s.channelId', channel)
-        .whereIn('s.marketId', pointOfSaleMarket)
-        .whereIn('s.rateCategoryId', rateCategory)
         .orderBy(['c.deck', 'c.cabinNumber'])
       const deckObj = {}
       deckList.forEach(({ deck }) => {

@@ -142,14 +142,14 @@ export class SailingDate extends Model {
   }
 }
 
-export class Filter extends Model {
-  static get tableName() {
-    return 'filter'
-  }
-}
-
 export class StageImport extends Model {
   static get tableName() {
     return 'stageImport'
+  }
+}
+
+export class SnapshotInterval extends Model {
+  static get tableName() {
+    return 'snapshotInterval'
   }
 }

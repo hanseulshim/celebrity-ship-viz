@@ -4,20 +4,20 @@ export const GET_VISUAL_DECK_LIST = gql`
   query deckVisualList(
     $shipId: Int
     $sailingDateId: Int
-    $weeks: Int
-    $bookedOccupancy: [Int]
-    $bookingType: [Int]
-    $cabinCategory: [Int]
-    $cabinCategoryClass: [Int]
-    $cabinClassRate: [Int]
-    $channel: [Int]
-    $pointOfSaleMarket: [Int]
-    $rateCategory: [Int]
+    $interval: Int
+    $bookedOccupancy: [InputSubFilter]
+    $bookingType: [InputSubFilter]
+    $cabinCategory: [InputSubFilter]
+    $cabinCategoryClass: [InputSubFilter]
+    $cabinClassRate: [InputSubFilter]
+    $channel: [InputSubFilter]
+    $pointOfSaleMarket: [InputSubFilter]
+    $rateCategory: [InputSubFilter]
   ) {
     deckVisualList(
       shipId: $shipId
       sailingDateId: $sailingDateId
-      weeks: $weeks
+      interval: $interval
       bookedOccupancy: $bookedOccupancy
       bookingType: $bookingType
       cabinCategory: $cabinCategory
@@ -27,5 +27,23 @@ export const GET_VISUAL_DECK_LIST = gql`
       pointOfSaleMarket: $pointOfSaleMarket
       rateCategory: $rateCategory
     )
+  }
+`
+export const GET_FIRST_SAIL_DATE = gql`
+  {
+    firstSailDate {
+      ship {
+        id
+        shipName
+        shipCode
+        classId
+        className
+      }
+      sailingDate {
+        id
+        sailingDate
+      }
+      interval
+    }
   }
 `

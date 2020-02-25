@@ -65,8 +65,8 @@ const CategoryClass = () => {
           }
         ]}
         layout={{
-          width: 450,
-          height: 300,
+          width: 400,
+          height: 250,
           barmode: 'stack',
           hovermode: 'closest',
           margin: {

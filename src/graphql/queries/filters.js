@@ -81,11 +81,13 @@ export const GET_SUB_FILTERS = gql`
   }
 `
 
-export const GET_BOOKING_WEEK_LIST = gql`
-  query bookingWeekList($sailingDate: String) {
-    bookingWeekList(sailingDate: $sailingDate) {
-      week
-      date
+export const GET_SNAPSHOT_INTERVAL_LIST = gql`
+  {
+    snapshotIntervalList {
+      id
+      interval
+      intervalLabel
+      weekMinimum
     }
   }
 `

@@ -22,34 +22,25 @@ type SailingDate {
   sailingDate: Date
 }
 
-type BookingWeek {
-  week: Int
-  date: String
-}
-
-type Filter {
-  channel: [SubFilter]
-  bookingType: [SubFilter]
-  pointOfSaleMarket: [SubFilter]
-  cabinCategoryClass: [SubFilter]
-  cabinCategory: [SubFilter]
-  cabinClassRate: [SubFilter]
-  rateCategory: [SubFilter]
-  maxOccupancy: [SubFilter]
-  bookedOccupancy: [SubFilter]
-}
-
-type SubFilter {
+type SnapshotInterval {
   id: Int
-  value: String
+  interval: Int
+  intervalLabel: String
+  weekMinimum: Int
+}
+
+type FirstSailDate {
+  ship: Ship
+  sailingDate: SailingDate
+  interval: Int
 }
 
 extend type Query {
- shipList: [Ship]
- productList(shipId: Int): [Product]
- itineraryList(shipId: Int, productId: Int): [Itinerary]
- sailingDateList(shipId: Int, productId: Int, itineraryId: Int): [SailingDate]
- bookingWeekList(sailingDate: String): [BookingWeek]
- filter: Filter
+ shipList: [Ship] @auth
+ productList(shipId: Int): [Product] @auth
+ itineraryList(shipId: Int, productId: Int): [Itinerary] @auth
+ sailingDateList(shipId: Int, productId: Int, itineraryId: Int): [SailingDate] @auth
+ snapshotIntervalList: [SnapshotInterval] @auth
+ firstSailDate: FirstSailDate @auth
 }
 `

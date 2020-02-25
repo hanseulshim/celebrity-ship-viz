@@ -6,15 +6,27 @@ import { getApi } from './helper'
 import {
   ApolloClient,
   ApolloProvider,
+  InMemoryCache,
   HttpLink,
-  InMemoryCache
+  ApolloLink,
+  concat
 } from '@apollo/client'
+
+const httpLink = new HttpLink({ uri: getApi() })
+
+const authMiddleware = new ApolloLink((operation, forward) => {
+  operation.setContext({
+    headers: {
+      sessiontoken: process.env.REACT_APP_SESSION_TOKEN
+    }
+  })
+
+  return forward(operation)
+})
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: new HttpLink({
-    uri: getApi()
-  })
+  link: concat(authMiddleware, httpLink)
 })
 
 ReactDOM.render(

@@ -2,13 +2,12 @@ import React, { useState, useEffect, useContext } from 'react'
 import styled from 'styled-components'
 import { store } from 'context/store'
 import Plot from 'react-plotly.js'
-// import data from './data' KEEP FOR NOW BUT EVENTUALLY DELETE
 import { layout } from './config'
 import { createDeck } from './helper'
 
 const Container = styled.div`
   width: 100%;
-  height: 900px;
+  height: 700px;
 `
 
 const ShipViz = () => {

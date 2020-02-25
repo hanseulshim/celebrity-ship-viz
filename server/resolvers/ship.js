@@ -1,4 +1,11 @@
-import { Ship, Product, Itinerary, SailingDate, Filter } from '../models'
+import {
+  Ship,
+  Product,
+  Itinerary,
+  SailingDate,
+  SnapshotInterval
+} from '../models'
+import { EDGE } from '../constants'
 import moment from 'moment'
 
 export default {
@@ -40,45 +47,33 @@ export default {
         .andWhere('itineraries.id', itineraryId)
         .orderBy('d.sailingDate')
     },
-    bookingWeekList: (_, { sailingDate = null }) => {
-      if (!sailingDate) return []
-      const arr = []
-      const diff = moment(sailingDate).diff(moment(), 'weeks')
-      const start = diff <= 0 ? 0 : diff
-      for (let i = 0; i < 11; i++) {
-        arr.push({
-          week: start + i,
-          date: moment(sailingDate)
-            .subtract(start + i, 'weeks')
-            .format('MM/DD/YY')
-        })
+    snapshotIntervalList: () =>
+      SnapshotInterval.query().orderBy('interval', 'desc'),
+    firstSailDate: async () => {
+      const sailingDate = await SailingDate.query()
+        .alias('d')
+        .leftJoinRelated('ships')
+        .orderBy('d.sailingDate')
+        .findOne('ships.id', EDGE)
+        .where('d.sailingDate', '>=', moment())
+      const ship = await Ship.query()
+        .select('ship.*', 'class.name as className')
+        .joinRelated('class')
+        .findById(EDGE)
+      ship.shipName = ship.shipName.replace('CELEBRITY ', '')
+      if (!sailingDate) {
+        return {
+          ship,
+          sailingDate: null,
+          interval: 0
+        }
       }
-      return arr
-    },
-    filter: async () => {
-      const filterPromiseList = [
-        Filter.query().where('type', 1),
-        Filter.query().where('type', 2),
-        Filter.query().where('type', 3),
-        Filter.query().where('type', 4),
-        Filter.query().where('type', 5),
-        Filter.query().where('type', 6),
-        Filter.query().where('type', 7),
-        Filter.query().where('type', 9)
-      ]
-
-      const filterList = await Promise.all(filterPromiseList)
-
+      const diff = moment(sailingDate.sailingDate).diff(moment(), 'weeks')
+      const interval = diff <= 0 ? 0 : diff
       return {
-        channel: filterList[0],
-        bookingType: filterList[1],
-        pointOfSaleMarket: filterList[2],
-        cabinCategoryClass: filterList[3],
-        cabinCategory: filterList[4],
-        cabinClassRate: filterList[5],
-        rateCategory: filterList[6],
-        maxOccupancy: [],
-        bookedOccupancy: filterList[7]
+        ship,
+        sailingDate,
+        interval
       }
     }
   }

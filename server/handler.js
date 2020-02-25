@@ -4,6 +4,7 @@ import resolvers from './resolvers'
 import playground from './playground'
 import Knex from 'knex'
 import { Model, knexSnakeCaseMappers } from 'objection'
+import requireAuthDirective from './directives'
 require('dotenv').config()
 
 const db = Knex({
@@ -21,7 +22,14 @@ Model.knex(db)
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  playground
+  playground,
+  context: async ({ event }) => {
+    const sessionToken = event.headers.sessiontoken || ''
+    return { sessionToken }
+  },
+  schemaDirectives: {
+    auth: requireAuthDirective
+  }
 })
 
 export const graphqlHandler = server.createHandler({
