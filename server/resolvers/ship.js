@@ -1,4 +1,10 @@
-import { Ship, Product, Itinerary, SailingDate, Filter, SnapshotInterval } from '../models'
+import {
+  Ship,
+  Product,
+  Itinerary,
+  SailingDate,
+  SnapshotInterval
+} from '../models'
 import { EDGE } from '../constants'
 import moment from 'moment'
 
@@ -41,7 +47,8 @@ export default {
         .andWhere('itineraries.id', itineraryId)
         .orderBy('d.sailingDate')
     },
-    snapshotIntervalList: () => SnapshotInterval.query().orderBy('interval', 'desc'),
+    snapshotIntervalList: () =>
+      SnapshotInterval.query().orderBy('interval', 'desc'),
     firstSailDate: async () => {
       const sailingDate = await SailingDate.query()
         .alias('d')
@@ -67,32 +74,6 @@ export default {
         ship,
         sailingDate,
         interval
-      }
-    },
-    filter: async () => {
-      const filterPromiseList = [
-        Filter.query().where('type', 1),
-        Filter.query().where('type', 2),
-        Filter.query().where('type', 3),
-        Filter.query().where('type', 4),
-        Filter.query().where('type', 5),
-        Filter.query().where('type', 6),
-        Filter.query().where('type', 7),
-        Filter.query().where('type', 9)
-      ]
-
-      const filterList = await Promise.all(filterPromiseList)
-
-      return {
-        channel: filterList[0],
-        bookingType: filterList[1],
-        pointOfSaleMarket: filterList[2],
-        cabinCategoryClass: filterList[3],
-        cabinCategory: filterList[4],
-        cabinClassRate: filterList[5],
-        rateCategory: filterList[6],
-        maxOccupancy: [],
-        bookedOccupancy: filterList[7]
       }
     }
   }
