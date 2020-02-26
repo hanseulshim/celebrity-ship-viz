@@ -1,124 +1,53 @@
-import React from 'react'
-import colors from 'styles/colors'
+import React, { useState, useContext, useEffect } from 'react'
+import { store } from 'context/store'
+import { useQuery } from '@apollo/client'
+import { GET_CABIN_CATEGORY_CLASS_CHART } from 'graphql/queries'
+import { categoryClassLayout } from './config'
+import { createCategoryClass } from './helper'
+import Loader from 'components/common/Loader'
+import Notification from 'components/common/Notification'
 import Plot from 'react-plotly.js'
 
 const CategoryClass = () => {
+  const globalState = useContext(store)
+  const { state } = globalState
+  const { selectedShip, selectedSailDate, selectedBookingWeek } = state
+
+  const { loading, error, data } = useQuery(GET_CABIN_CATEGORY_CLASS_CHART, {
+    variables: {
+      shipId: selectedShip.id,
+      sailingDateId: selectedSailDate.id,
+      interval: selectedBookingWeek
+    },
+    fetchPolicy: 'network-only'
+  })
+
+  // local state for plot data
+  const [plotData, setPlotdata] = useState([])
+
+  useEffect(() => {
+    if (data) {
+      const bars = Object.keys(data.cabinCategoryClassChart)
+      const barData = bars
+        .filter(v => v !== '__typename' && v !== 'y')
+        .map(bar =>
+          createCategoryClass(
+            data.cabinCategoryClassChart[bar],
+            bar,
+            data.cabinCategoryClassChart.y
+          )
+        )
+      setPlotdata(barData)
+    }
+  }, [selectedShip, selectedSailDate, selectedBookingWeek, data])
+
+  if (loading) return <Loader />
+  if (error) return <Notification type="error" message={error.message} />
   return (
     <>
       <Plot
-        data={[
-          {
-            x: [30, 110, 403, 890, 160, 520, 275],
-            y: [
-              'Aqua',
-              'Concierge',
-              'Inside',
-              'Outside',
-              'Suites',
-              'Veranda',
-              'GTY'
-            ],
-            type: 'bar',
-            orientation: 'h',
-            name: 'Booked',
-            marker: {
-              color: colors.lochmara
-            },
-            hoverinfo: 'text',
-            hoverlabel: {
-              bgcolor: colors.lochmara,
-              bordercolor: colors.lochmara,
-              font: {
-                color: colors.black,
-                size: 14
-              }
-            },
-            hovertemplate: '   %{x}<extra></extra>'
-          },
-          {
-            x: [50, 20, 120, 100, 160, 60, 40],
-            y: [
-              'Aqua',
-              'Concierge',
-              'Inside',
-              'Outside',
-              'Suites',
-              'Veranda',
-              'GTY'
-            ],
-            type: 'bar',
-            orientation: 'h',
-            name: 'Available',
-            marker: {
-              color: colors.babyBlue
-            },
-            hoverinfo: 'text',
-            hoverlabel: {
-              bgcolor: colors.babyBlue,
-              bordercolor: colors.babyBlue,
-              font: {
-                color: colors.black,
-                size: 14
-              }
-            },
-            hovertemplate: '   %{x}<extra></extra>'
-          }
-        ]}
-        layout={{
-          width: 400,
-          height: 250,
-          barmode: 'stack',
-          hovermode: 'closest',
-          margin: {
-            l: 55,
-            r: 0,
-            t: 0,
-            b: 30,
-            pad: 5
-          },
-          title: {
-            text: 'Category Class',
-            font: {
-              color: colors.white,
-              size: 21
-            },
-            x: 0
-          },
-          legend: {
-            y: 1.2,
-            x: 1,
-            xanchor: 'right',
-            orientation: 'h',
-            font: {
-              size: 10,
-              color: colors.white
-            }
-          },
-          paper_bgcolor: colors.black0,
-          plot_bgcolor: colors.black0,
-          xaxis: {
-            showgrid: true,
-            gridcolor: 'rgba(255, 255, 255, 0.3)',
-            layout: {
-              ticks: 'outside'
-            },
-            tickfont: {
-              size: 8,
-              color: colors.white
-            }
-          },
-          yaxis: {
-            showgrid: false,
-            zeroline: true,
-            layout: {
-              ticks: 'outside'
-            },
-            tickfont: {
-              size: 10,
-              color: colors.white
-            }
-          }
-        }}
+        data={plotData}
+        layout={categoryClassLayout}
         config={{ displayModeBar: false }}
       />
     </>

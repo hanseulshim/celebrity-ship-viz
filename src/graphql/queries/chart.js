@@ -18,3 +18,21 @@ export const GET_SUPPLY_BURNDOWN_CHART = gql`
     }
   }
 `
+
+export const GET_CABIN_CATEGORY_CLASS_CHART = gql`
+  query cabinCategoryClassChart(
+    $shipId: Int!
+    $sailingDateId: Int!
+    $interval: Int!
+  ) {
+    cabinCategoryClassChart(
+      shipId: $shipId
+      sailingDateId: $sailingDateId
+      interval: $interval
+    ) {
+      bookedX
+      availableX
+      y
+    }
+  }
+`

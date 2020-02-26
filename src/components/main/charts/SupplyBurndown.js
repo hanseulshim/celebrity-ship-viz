@@ -15,8 +15,8 @@ const SupplyBurndown = () => {
 
   const { loading, error, data } = useQuery(GET_SUPPLY_BURNDOWN_CHART, {
     variables: {
-      shipId: selectedShip.id || 0,
-      sailingDateId: selectedSailDate.id || 0
+      shipId: selectedShip.id,
+      sailingDateId: selectedSailDate.id
     },
     fetchPolicy: 'network-only'
   })
