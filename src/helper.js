@@ -11,12 +11,24 @@ export const getApi = () => {
           : 'http://localhost:4000/graphql'
 }
 
-export const getSubFilters = (filter, filterCount) => {
-  const obj = {}
+export const getFilterVariables = (
+  shipId,
+  sailingDateId,
+  interval,
+  filter = {},
+  filterCount = {}
+) => {
+  const variables = {
+    shipId,
+    sailingDateId,
+    interval
+  }
   Object.keys(filter).filter(key => {
     return filter[key].length !== filterCount[key]
   }).forEach(key => {
-    obj[key] = filter[key]
+    const filterKey = key === 'bookedOccupancy' || key === 'bookingType' ? 'value' : 'id'
+    const arr = filter[key].map(v => v[filterKey])
+    variables[key] = arr
   })
-  return obj
+  return variables
 }

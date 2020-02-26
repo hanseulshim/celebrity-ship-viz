@@ -7,7 +7,7 @@ import { StyledSelect } from 'components/common/StyledComponents'
 
 // GQL
 import { GET_SNAPSHOT_INTERVAL_LIST, GET_VISUAL_DECK_LIST } from 'graphql/queries'
-import { getSubFilters } from 'helper'
+import { getFilterVariables } from 'helper'
 // Project Imports
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
@@ -80,12 +80,7 @@ const Timeline = () => {
 
   const handleSelect = value => {
     applyFilters({
-      variables: {
-        shipId: selectedShip.id,
-        sailingDateId: selectedSailDate.id,
-        interval: value,
-        ...getSubFilters(filter, filterCount)
-      }
+      variables: getFilterVariables(selectedShip.id, selectedSailDate.id, value, filter, filterCount)
     })
     dispatch({ type: 'setSelectedBookingWeek', value })
   }
@@ -123,12 +118,7 @@ const Timeline = () => {
         value: snapshotIntervalList[index - 1].interval
       })
       applyFilters({
-        variables: {
-          shipId: selectedShip.id,
-          sailingDateId: selectedSailDate.id,
-          interval: snapshotIntervalList[index - 1].interval,
-          ...getSubFilters(filter, filterCount)
-        }
+        variables: getFilterVariables(selectedShip.id, selectedSailDate.id, snapshotIntervalList[index - 1].interval, filter, filterCount)
       })
     }
     if (dir === 'next' && index !== snapshotIntervalList.length - 1) {
@@ -137,12 +127,7 @@ const Timeline = () => {
         value: snapshotIntervalList[index + 1].interval
       })
       applyFilters({
-        variables: {
-          shipId: selectedShip.id,
-          sailingDateId: selectedSailDate.id,
-          interval: snapshotIntervalList[index + 1].interval,
-          ...getSubFilters(filter, filterCount)
-        }
+        variables: getFilterVariables(selectedShip.id, selectedSailDate.id, snapshotIntervalList[index + 1].interval, filter, filterCount)
       })
     }
   }

@@ -4,7 +4,7 @@ import { store } from 'context/store'
 import { useLazyQuery } from '@apollo/client'
 import { Menu, Dropdown, Checkbox } from 'antd'
 import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
-import { getSubFilters } from 'helper'
+import { getFilterVariables } from 'helper'
 
 const Button = styled.button`
   display: flex;
@@ -83,12 +83,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
       setVisible(false)
       filterCopy[title] = subFilter
       applyFilters({
-        variables: {
-          shipId: selectedShip.id,
-          sailingDateId: selectedSailDate.id,
-          interval: selectedBookingWeek,
-          ...getSubFilters(filterCopy, filterCount)
-        }
+        variables: getFilterVariables(selectedShip.id, selectedSailDate.id, selectedBookingWeek, filterCopy, filterCount)
       })
     }
   }

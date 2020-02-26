@@ -1,57 +1,57 @@
 export default `
 type Filter {
-  channel: [Channel]
-  bookingType: [BookingType]
-  pointOfSaleMarket: [PointOfSaleMarket]
-  cabinCategoryClass: [CabinCategoryClass]
-  cabinCategory: [CabinCategory]
-  cabinClassRate: [CabinClassRate]
-  rateCategory: [RateCategory]
-  maxOccupancy: [MaxOccupancy]
-  bookedOccupancy: [BookedOccupancy]
+  channel: [ChannelFilter]
+  bookingType: [BookingTypeFilter]
+  pointOfSaleMarket: [PointOfSaleMarketFilter]
+  cabinCategoryClass: [CabinCategoryClassFilter]
+  cabinCategory: [CabinCategoryFilter]
+  cabinClassRate: [CabinClassRateFilter]
+  rateCategory: [RateCategoryFilter]
+  maxOccupancy: [MaxOccupancyFilter]
+  bookedOccupancy: [BookedOccupancyFilter]
 }
 
-type Channel {
+type ChannelFilter {
   id: Int
   value: String
 }
 
-type BookingType {
+type BookingTypeFilter {
   id: Int
   value: String
 }
 
-type PointOfSaleMarket {
+type PointOfSaleMarketFilter {
   id: Int
   value: String
 }
 
-type CabinCategoryClass {
+type CabinCategoryClassFilter {
   id: Int
   value: String
 }
 
-type CabinCategory {
+type CabinCategoryFilter {
   id: Int
   value: String
 }
 
-type CabinClassRate {
+type CabinClassRateFilter {
   id: Int
   value: String
 }
 
-type RateCategory {
+type RateCategoryFilter {
   id: Int
   value: String
 }
 
-type MaxOccupancy {
+type MaxOccupancyFilter {
   id: Int
   value: String
 }
 
-type BookedOccupancy {
+type BookedOccupancyFilter {
   id: Int
   value: String
 }
