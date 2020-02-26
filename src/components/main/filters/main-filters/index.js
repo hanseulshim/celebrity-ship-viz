@@ -34,7 +34,7 @@ const Apply = styled(Button)`
 `
 
 const Download = styled(Button)`
-  background-color: ${props => props.theme.silverTree};
+  background-color: #80cbc4;
   margin-left: auto;
   color: ${props => props.theme.black};
 `
