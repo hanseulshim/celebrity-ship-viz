@@ -11,16 +11,6 @@ export const getApi = () => {
           : 'http://localhost:4000/graphql'
 }
 
-export const getSubFilters = (filter, filterCount) => {
-  const obj = {}
-  Object.keys(filter).filter(key => {
-    return filter[key].length !== filterCount[key]
-  }).forEach(key => {
-    obj[key] = filter[key]
-  })
-  return obj
-}
-
 export const getFilterVariables = (
   shipId,
   sailingDateId,
@@ -40,6 +30,5 @@ export const getFilterVariables = (
     const arr = filter[key].map(v => v[filterKey])
     variables[key] = arr
   })
-  console.log(variables)
   return variables
 }
