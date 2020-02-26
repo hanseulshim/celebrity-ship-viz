@@ -5,14 +5,14 @@ export const GET_VISUAL_DECK_LIST = gql`
     $shipId: Int
     $sailingDateId: Int
     $interval: Int
-    $bookedOccupancy: [InputSubFilter]
-    $bookingType: [InputSubFilter]
-    $cabinCategory: [InputSubFilter]
-    $cabinCategoryClass: [InputSubFilter]
-    $cabinClassRate: [InputSubFilter]
-    $channel: [InputSubFilter]
-    $pointOfSaleMarket: [InputSubFilter]
-    $rateCategory: [InputSubFilter]
+    $bookedOccupancy: [String]
+    $bookingType: [String]
+    $cabinCategory: [Int]
+    $cabinCategoryClass: [Int]
+    $cabinClassRate: [Int]
+    $channel: [Int]
+    $pointOfSaleMarket: [Int]
+    $rateCategory: [Int]
   ) {
     deckVisualList(
       shipId: $shipId

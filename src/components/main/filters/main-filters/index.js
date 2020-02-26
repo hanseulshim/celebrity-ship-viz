@@ -10,8 +10,8 @@ import SelectShip from './SelectShip'
 import PeerGroupToggle from './PeerGroupToggle'
 import SelectSailDate from './SelectSailDate'
 import Button from 'components/common/Button'
-import Icon from 'components/common/Icon'
-import { getSubFilters } from 'helper'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { getFilterVariables } from 'helper'
 
 // Graphql
 import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
@@ -28,14 +28,15 @@ const Container = styled.div`
 `
 
 const Apply = styled(Button)`
+  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   background-color: ${props => props.theme.lochmara};
   color: ${props => props.theme.white};
 `
 
 const Download = styled(Button)`
-  background-color: ${props => props.theme.silverTree};
-  color: ${props => props.theme.black};
+  background-color: #80cbc4;
   margin-left: auto;
+  color: ${props => props.theme.black};
 `
 
 const MainFilters = () => {
@@ -72,19 +73,20 @@ const MainFilters = () => {
         disabled={!enableApply()}
         onClick={() =>
           applyFilters({
-            variables: {
-              shipId: selectedShip.id,
-              sailingDateId: selectedSailDate.id,
-              interval: selectedBookingWeek,
-              ...getSubFilters(filter, filterCount)
-            }
+            variables: getFilterVariables(
+              selectedShip.id,
+              selectedSailDate.id,
+              selectedBookingWeek,
+              filter,
+              filterCount
+            )
           })
         }
       >
         Apply
       </Apply>
       <Download>
-        <Icon icon="download" />
+        <FontAwesomeIcon icon="download" />
         Download
       </Download>
     </Container>

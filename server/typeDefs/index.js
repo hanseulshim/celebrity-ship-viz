@@ -2,6 +2,7 @@ import { gql } from 'apollo-server-lambda'
 import ship from './ship'
 import cabin from './cabin'
 import filter from './filter'
+import chart from './chart'
 
 export default gql`
   scalar Date
@@ -10,6 +11,7 @@ export default gql`
   ${ship}
   ${cabin}
   ${filter}
+  ${chart}
   type Query {
     _empty: String
   }
