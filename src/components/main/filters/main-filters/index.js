@@ -29,7 +29,14 @@ const Container = styled.div`
 
 const Apply = styled(Button)`
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-  background-color
+  background-color: ${props => props.theme.lochmara};
+  color: ${props => props.theme.white};
+`
+
+const Download = styled(Button)`
+  background-color: ${props => props.theme.silverTree};
+  margin-left: auto;
+  color: ${props => props.theme.black};
 `
 
 const MainFilters = () => {
@@ -66,17 +73,22 @@ const MainFilters = () => {
         disabled={!enableApply()}
         onClick={() =>
           applyFilters({
-            variables:
-            getFilterVariables(selectedShip.id, selectedSailDate.id, selectedBookingWeek, filter, filterCount)
+            variables: getFilterVariables(
+              selectedShip.id,
+              selectedSailDate.id,
+              selectedBookingWeek,
+              filter,
+              filterCount
+            )
           })
         }
       >
         Apply
       </Apply>
-      <Button style={{ marginLeft: 'auto' }}>
+      <Download>
         <FontAwesomeIcon icon="download" />
         Download
-      </Button>
+      </Download>
     </Container>
   )
 }

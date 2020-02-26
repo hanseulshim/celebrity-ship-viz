@@ -5,11 +5,8 @@ const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: ${props =>
-    props.primary ? props.theme.lochmara : props.theme.silverTree};
   padding: 0.5em 1em;
-  color: ${props => (props.primary ? props.theme.white : props.theme.black)};
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1rem;
   border-radius: 2px;
   cursor: pointer;

@@ -10,7 +10,7 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.jungleMist};
   background-color: ${props => props.theme.biscay};
   padding: 0.5em 1em;
   font-weight: 500;
@@ -83,7 +83,13 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
       setVisible(false)
       filterCopy[title] = subFilter
       applyFilters({
-        variables: getFilterVariables(selectedShip.id, selectedSailDate.id, selectedBookingWeek, filterCopy, filterCount)
+        variables: getFilterVariables(
+          selectedShip.id,
+          selectedSailDate.id,
+          selectedBookingWeek,
+          filterCopy,
+          filterCount
+        )
       })
     }
   }
