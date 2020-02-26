@@ -19,6 +19,8 @@ const CategoryClass = () => {
       sailingDateId: selectedSailDate.id,
       interval: selectedBookingWeek
     },
+    skip:
+      !selectedShip.id || !selectedSailDate.id || selectedBookingWeek === null,
     fetchPolicy: 'network-only'
   })
 

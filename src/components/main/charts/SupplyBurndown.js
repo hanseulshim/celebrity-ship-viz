@@ -18,6 +18,7 @@ const SupplyBurndown = () => {
       shipId: selectedShip.id,
       sailingDateId: selectedSailDate.id
     },
+    skip: !selectedShip.id || !selectedSailDate.id,
     fetchPolicy: 'network-only'
   })
 
