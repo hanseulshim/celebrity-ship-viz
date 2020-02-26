@@ -16,6 +16,12 @@ type CabinCategoryClassChart {
   y: [String]
 }
 
+type DeckChart {
+  bookedX: [Int]
+  availableX: [Int]
+  y: [String]
+}
+
 extend type Query {
   supplyBurndownChart(
     shipId: Int!
@@ -33,5 +39,10 @@ extend type Query {
     sailingDateId: Int!
     interval: Int!
   ): CabinCategoryClassChart @auth
+  deckChart(
+    shipId: Int!
+    sailingDateId: Int!
+    interval: Int!
+  ): DeckChart @auth
 }
 `

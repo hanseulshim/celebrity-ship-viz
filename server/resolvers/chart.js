@@ -44,6 +44,45 @@ export default {
 
       return obj
     },
+    deckChart: async (
+      _,
+      { shipId, sailingDateId, interval }
+    ) => {
+      const bookedQuery = Cabin.query()
+        .skipUndefined()
+        .sum('s.bookedOccupancy')
+        .alias('c1')
+        .leftJoin('snapshot as s', function() {
+          this.on('c1.id', '=', 's.cabinId')
+            .skipUndefined()
+            .andOn('s.sailingDateId', '=', sailingDateId)
+            .andOn('s.interval', '=', interval)
+            .andOn('c1.deck', '=', 'c.deck')
+        })
+        .where('c1.shipId', shipId)
+        .as('booked')
+      const deckList = await Cabin.query().alias('c')
+        .select(['c.deck', bookedQuery])
+        .sum('c.cabinCapacity as available')
+        .where('c.shipId', shipId)
+        .groupBy('c.deck')
+        .orderBy('c.deck')
+
+      const obj = {
+        bookedX: [],
+        availableX: [],
+        y: []
+      }
+
+      deckList.forEach(deck => {
+        const percent = deck.available ? Math.round(deck.booked / deck.available * 100) : deck.booked ? 100 : 0
+        obj.bookedX.push(percent)
+        obj.availableX.push(100 - percent)
+        obj.y.push(`Deck ${deck.deck}`)
+      })
+
+      return obj
+    },
     supplyBurndownChart: async (
       _,
       {

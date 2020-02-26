@@ -22,7 +22,17 @@ export default {
       #   }
       # }
 
-      cabinCategoryClassChart(
+      # cabinCategoryClassChart(
+      #   shipId: 4,
+      #   sailingDateId: 199,
+      #   interval: 0
+      # ) {
+      #   bookedX
+      #   availableX
+      #   y
+      # }
+
+      deckChart(
         shipId: 4,
         sailingDateId: 199,
         interval: 0
