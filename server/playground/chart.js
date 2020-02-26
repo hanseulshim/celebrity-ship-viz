@@ -4,22 +4,32 @@ export default {
   headers: { sessiontoken: process.env.SESSION_TOKEN },
   query: `
     {
-      supplyBurndownChart(
-        shipId:4,
-        sailingDateId:199
+      # supplyBurndownChart(
+      #   shipId:4,
+      #   sailingDateId:199
+      # ) {
+      #   selected {
+      #     x,
+      #     y
+      #   },
+      #   all {
+      #     x,
+      #     y
+      #   },
+      #   peerGroup {
+      #     x,
+      #     y
+      #   }
+      # }
+
+      cabinCategoryClassChart(
+        shipId: 4,
+        sailingDateId: 199,
+        interval: 0
       ) {
-        selected {
-          x,
-          y
-        },
-        all {
-          x,
-          y
-        },
-        peerGroup {
-          x,
-          y
-        }
+        bookedX
+        availableX
+        y
       }
     }`
 }

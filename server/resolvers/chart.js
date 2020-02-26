@@ -1,7 +1,49 @@
-import { Cabin, SnapshotInterval } from '../models'
+import { Cabin, SnapshotInterval, CabinCategoryClass } from '../models'
+import { ref } from 'objection'
 
 export default {
   Query: {
+    cabinCategoryClassChart: async (
+      _,
+      { shipId, sailingDateId, interval }
+    ) => {
+      const availableQuery = Cabin.query()
+        .skipUndefined()
+        .sum('c.cabinCapacity')
+        .alias('c')
+        .where('c.shipId', shipId)
+        .andWhere('c.cabinCategoryClassId', ref('cc.id'))
+        .as('available')
+      const bookedQuery = Cabin.query()
+        .skipUndefined()
+        .sum('s.bookedOccupancy')
+        .alias('c')
+        .leftJoin('snapshot as s', function() {
+          this.on('c.id', '=', 's.cabinId')
+            .skipUndefined()
+            .andOn('s.sailingDateId', '=', sailingDateId)
+            .andOn('s.interval', '=', interval)
+            .andOn('c.cabinCategoryClassId', '=', 'cc.id')
+        })
+        .where('c.shipId', shipId)
+        .as('booked')
+      const cabinCategoryList = await CabinCategoryClass.query().alias('cc')
+        .select(['cc.cabinCategoryClass as category', availableQuery, bookedQuery])
+
+      const obj = {
+        bookedX: [],
+        availableX: [],
+        y: []
+      }
+
+      cabinCategoryList.forEach(cabinCategory => {
+        obj.bookedX.push(cabinCategory.booked)
+        obj.availableX.push(cabinCategory.available)
+        obj.y.push(cabinCategory.category)
+      })
+
+      return obj
+    },
     supplyBurndownChart: async (
       _,
       {
@@ -17,7 +59,8 @@ export default {
         rateCategory
       }
     ) => {
-      const { total } = await Cabin.query().sum('cabinCapacity as total')
+      const { total } = await Cabin.query()
+        .sum('cabinCapacity as total')
         .findOne('shipId', shipId)
 
       const subQuery = Cabin.query()
@@ -46,11 +89,13 @@ export default {
         y: []
       }
 
-      const selectedShipIntervals = await SnapshotInterval.query().select(['i.interval', subQuery]).alias('i')
+      const selectedShipIntervals = await SnapshotInterval.query()
+        .select(['i.interval', subQuery])
+        .alias('i')
         .orderBy('i.interval')
 
       selectedShipIntervals.forEach(snapshot => {
-        const percent = Math.round((1 - (snapshot.sum / total)) * 100)
+        const percent = Math.round((1 - snapshot.sum / total) * 100)
         selected.x.push(snapshot.interval)
         selected.y.push(percent)
       })
