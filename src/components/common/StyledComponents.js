@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import { Select } from 'antd'
 
 export const StyledSelect = styled(Select)`
-  .ant-select {
-    border: 1px ${props => props.theme.biscay};
+  .ant-select,
+  .ant-select-enabled {
+    border: 1px solid ${props => props.theme.babyBlue};
   }
   .ant-select-selection {
     background-color: ${props => props.theme.black50};
@@ -28,9 +29,5 @@ export const StyledSelect = styled(Select)`
   .ant-select-disabled,
   .ant-select-selection {
     background-color: ${props => props.theme.black50} !important;
-  }
-
-  .select-dropdown {
-    background-color: red;
   }
 `

@@ -6,7 +6,7 @@ export default {
   biscay: '#183157',
   lochmara: '#0088dd',
   jungleMist: '#bad0db',
-  silverTree: '#63c086',
+  silverTree: '#80cbc4',
   aquaForest: '#5aaf7b',
   keyLimePie: '#d0c32a',
   hokeyPokey: '#bcb226',
