@@ -24,4 +24,13 @@ export const StyledSelect = styled(Select)`
   .ant-select-selection-selected-value {
     color: ${props => props.theme.white};
   }
+
+  .ant-select-disabled,
+  .ant-select-selection {
+    background-color: ${props => props.theme.black50} !important;
+  }
+
+  .select-dropdown {
+    background-color: red;
+  }
 `

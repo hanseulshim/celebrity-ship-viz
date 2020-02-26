@@ -35,6 +35,7 @@ const SelectItinerary = () => {
       value={selectedItinerary.id}
       onChange={onChange}
       width={250}
+      disabled={!selectedProduct.id}
     />
   )
 }
