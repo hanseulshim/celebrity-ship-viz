@@ -26,9 +26,17 @@ const SupplyBurndown = () => {
 
   useEffect(() => {
     if (data) {
-      setPlotdata(
-        createSupplyBurndown(data.supplyBurndownChart, selectedShip.shipName)
-      )
+      const lines = Object.keys(data.supplyBurndownChart)
+      const lineData = lines
+        .filter(v => v !== '__typename')
+        .map(line =>
+          createSupplyBurndown(
+            data.supplyBurndownChart[line],
+            line,
+            selectedShip.shipName
+          )
+        )
+      setPlotdata(lineData)
     }
   }, [selectedShip, selectedSailDate, data])
 
