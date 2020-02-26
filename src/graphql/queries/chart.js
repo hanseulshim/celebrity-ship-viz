@@ -36,3 +36,17 @@ export const GET_CABIN_CATEGORY_CLASS_CHART = gql`
     }
   }
 `
+
+export const GET_DECK_CHART = gql`
+  query deckChart($shipId: Int!, $sailingDateId: Int!, $interval: Int!) {
+    deckChart(
+      shipId: $shipId
+      sailingDateId: $sailingDateId
+      interval: $interval
+    ) {
+      bookedX
+      availableX
+      y
+    }
+  }
+`
