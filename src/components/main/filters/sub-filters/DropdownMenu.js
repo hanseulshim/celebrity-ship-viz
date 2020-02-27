@@ -47,17 +47,23 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
   const {
-    filter,
-    filterCount,
     selectedShip,
+    selectedProduct,
+    selectedItinerary,
     selectedSailDate,
-    selectedBookingWeek
+    selectedBookingWeek,
+    selectedPeerShip,
+    selectedPeerProduct,
+    selectedPeerSailingDates,
+    filter,
+    peerFilter,
+    filterCount
   } = state
-
   const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
     onCompleted: data => {
       dispatch({ type: 'setShipData', value: data.deckVisualList })
-    }
+    },
+    fetchPolicy: 'network-only'
   })
 
   // keep local state array for save button
@@ -87,7 +93,14 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
           selectedShip.id,
           selectedSailDate.id,
           selectedBookingWeek,
-          filterCopy,
+          selectedProduct.id,
+          selectedItinerary.id,
+          selectedPeerShip,
+          selectedPeerProduct.id,
+          selectedPeerSailingDates[0],
+          selectedPeerSailingDates[1],
+          filter,
+          peerFilter,
           filterCount
         )
       })

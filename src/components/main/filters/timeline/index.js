@@ -6,7 +6,10 @@ import { Select, Icon } from 'antd'
 import { StyledSelect } from 'components/common/StyledComponents'
 
 // GQL
-import { GET_SNAPSHOT_INTERVAL_LIST, GET_VISUAL_DECK_LIST } from 'graphql/queries'
+import {
+  GET_SNAPSHOT_INTERVAL_LIST,
+  GET_VISUAL_DECK_LIST
+} from 'graphql/queries'
 import { getFilterVariables } from 'helper'
 // Project Imports
 import Loader from 'components/common/Loader'
@@ -59,10 +62,16 @@ const Timeline = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
   const {
+    selectedShip,
+    selectedProduct,
+    selectedItinerary,
     selectedSailDate,
     selectedBookingWeek,
-    selectedShip,
+    selectedPeerShip,
+    selectedPeerProduct,
+    selectedPeerSailingDates,
     filter,
+    peerFilter,
     filterCount,
     shipData
   } = state
@@ -79,10 +88,23 @@ const Timeline = () => {
   })
 
   const handleSelect = value => {
-    applyFilters({
-      variables: getFilterVariables(selectedShip.id, selectedSailDate.id, value, filter, filterCount)
-    })
     dispatch({ type: 'setSelectedBookingWeek', value })
+    applyFilters({
+      variables: getFilterVariables(
+        selectedShip.id,
+        selectedSailDate.id,
+        selectedBookingWeek,
+        selectedProduct.id,
+        selectedItinerary.id,
+        selectedPeerShip,
+        selectedPeerProduct.id,
+        selectedPeerSailingDates[0],
+        selectedPeerSailingDates[1],
+        filter,
+        peerFilter,
+        filterCount
+      )
+    })
   }
 
   useEffect(() => {
@@ -118,7 +140,20 @@ const Timeline = () => {
         value: snapshotIntervalList[index - 1].interval
       })
       applyFilters({
-        variables: getFilterVariables(selectedShip.id, selectedSailDate.id, snapshotIntervalList[index - 1].interval, filter, filterCount)
+        variables: getFilterVariables(
+          selectedShip.id,
+          selectedSailDate.id,
+          selectedBookingWeek,
+          selectedProduct.id,
+          selectedItinerary.id,
+          selectedPeerShip,
+          selectedPeerProduct.id,
+          selectedPeerSailingDates[0],
+          selectedPeerSailingDates[1],
+          filter,
+          peerFilter,
+          filterCount
+        )
       })
     }
     if (dir === 'next' && index !== snapshotIntervalList.length - 1) {
@@ -127,7 +162,20 @@ const Timeline = () => {
         value: snapshotIntervalList[index + 1].interval
       })
       applyFilters({
-        variables: getFilterVariables(selectedShip.id, selectedSailDate.id, snapshotIntervalList[index + 1].interval, filter, filterCount)
+        variables: getFilterVariables(
+          selectedShip.id,
+          selectedSailDate.id,
+          selectedBookingWeek,
+          selectedProduct.id,
+          selectedItinerary.id,
+          selectedPeerShip,
+          selectedPeerProduct.id,
+          selectedPeerSailingDates[0],
+          selectedPeerSailingDates[1],
+          filter,
+          peerFilter,
+          filterCount
+        )
       })
     }
   }

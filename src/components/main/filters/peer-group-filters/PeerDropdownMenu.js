@@ -4,7 +4,7 @@ import { store } from 'context/store'
 import { useLazyQuery } from '@apollo/client'
 import { Menu, Dropdown, Checkbox } from 'antd'
 import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
-import { getSubFilters } from 'helper'
+import { getFilterVariables } from 'helper'
 
 const Button = styled.button`
   display: flex;
@@ -47,17 +47,23 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
   const {
-    peerFilter,
-    peerFilterCount,
     selectedShip,
+    selectedProduct,
+    selectedItinerary,
     selectedSailDate,
-    selectedBookingWeek
+    selectedBookingWeek,
+    selectedPeerShip,
+    selectedPeerProduct,
+    selectedPeerSailingDates,
+    filter,
+    peerFilter,
+    filterCount
   } = state
-
   const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
     onCompleted: data => {
       dispatch({ type: 'setShipData', value: data.deckVisualList })
-    }
+    },
+    fetchPolicy: 'network-only'
   })
 
   // keep local state array for save button
@@ -82,14 +88,22 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
       const peerFilterCopy = { ...peerFilter }
       setVisible(false)
       peerFilterCopy[title] = subFilter
-      //   applyFilters({
-      //     variables: {
-      //       shipId: selectedShip.id,
-      //       sailingDateId: selectedSailDate.id,
-      //       interval: selectedBookingWeek,
-      //       ...getSubFilters(peerFilterCopy, peerFilterCount)
-      //     }
-      //   })
+      applyFilters({
+        variables: getFilterVariables(
+          selectedShip.id,
+          selectedSailDate.id,
+          selectedBookingWeek,
+          selectedProduct.id,
+          selectedItinerary.id,
+          selectedPeerShip,
+          selectedPeerProduct.id,
+          selectedPeerSailingDates[0],
+          selectedPeerSailingDates[1],
+          filter,
+          peerFilter,
+          filterCount
+        )
+      })
     }
   }
 
