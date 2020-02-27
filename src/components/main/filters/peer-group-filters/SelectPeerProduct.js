@@ -6,23 +6,24 @@ import { useQuery } from '@apollo/client'
 import FilterSelect from 'components/common/FilterSelect'
 
 // GQL
-import { GET_PRODUCT_LIST } from 'graphql/queries'
+import { GET_PEER_GROUP_PRODUCT_LIST } from 'graphql/queries'
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
 
 const SelectPeerProduct = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
-  const { selectedShip, selectedPeerProduct } = state
-  const { loading, error, data } = useQuery(GET_PRODUCT_LIST, {
+  const { selectedPeerShip, selectedPeerProduct } = state
+  const { loading, error, data } = useQuery(GET_PEER_GROUP_PRODUCT_LIST, {
     variables: {
-      shipId: selectedShip.id
+      shipIdList: selectedPeerShip
     },
     fetchPolicy: 'network-only'
   })
 
-  const onChange = value => {
-    dispatch({ type: 'setSelectedPeerProduct', value })
+  const onChange = id => {
+    const product = data.peerGroupProductList.find(product => product.id === id)
+    dispatch({ type: 'setSelectedPeerProduct', value: product })
   }
 
   if (loading) return <Loader />
@@ -30,11 +31,9 @@ const SelectPeerProduct = () => {
   return (
     <FilterSelect
       label="Product(s)"
-      mode="multiple"
-      width={300}
       displayKey="rdssProductCode"
-      options={data.productList}
-      value={selectedPeerProduct}
+      options={data.peerGroupProductList}
+      value={selectedPeerProduct.id}
       onChange={onChange}
     />
   )
