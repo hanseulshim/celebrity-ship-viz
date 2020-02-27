@@ -42,7 +42,7 @@ const StyledMenu = styled(Menu)`
 
 const StyledCheckbox = styled(Checkbox)``
 
-const DropdownMenu = ({ options, title, displayKey, ...props }) => {
+const PeerDropdownMenu = ({ options, title, displayKey, ...props }) => {
   const [visible, setVisible] = useState(false)
   const globalState = useContext(store)
   const { state, dispatch } = globalState
@@ -148,4 +148,4 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   )
 }
 
-export default DropdownMenu
+export default PeerDropdownMenu
