@@ -2,10 +2,14 @@ import React, { useState, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { store } from 'context/store'
 import { useLazyQuery } from '@apollo/client'
-import { Menu, Dropdown, Checkbox } from 'antd'
+
 import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
 import { getFilterVariables } from 'helper'
-import { StyledMenu, StyledCheckbox } from 'components/common/StyledComponents'
+import {
+  StyledMenu,
+  StyledCheckbox,
+  StyledDropdown
+} from 'components/common/StyledComponents'
 
 const Button = styled.button`
   display: flex;
@@ -132,13 +136,13 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   )
 
   return (
-    <Dropdown
+    <StyledDropdown
       overlay={menu}
       onVisibleChange={handleVisibleChange}
       visible={visible}
     >
       <Button>{formatTitle(title)}</Button>
-    </Dropdown>
+    </StyledDropdown>
   )
 }
 

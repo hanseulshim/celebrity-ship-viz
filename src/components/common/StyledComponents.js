@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Select } from 'antd'
+import { Select, Menu, Checkbox, Dropdown } from 'antd'
 
 export const StyledSelect = styled(Select)`
   .ant-select,
@@ -31,3 +31,19 @@ export const StyledSelect = styled(Select)`
     background-color: ${props => props.theme.black50} !important;
   }
 `
+export const StyledDropdown = styled(Dropdown)`
+  > ul {
+    background-color: ${props => props.theme.black50};
+  }
+`
+
+export const StyledMenu = styled(Menu)`
+  max-height: 300px;
+  overflow: scroll;
+  background-color: ${props => props.theme.black50} !important;
+  .ant-dropdown-menu {
+    background-color: ${props => props.theme.black50} !important;
+  }
+`
+
+export const StyledCheckbox = styled(Checkbox)``
