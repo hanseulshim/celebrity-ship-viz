@@ -9,6 +9,7 @@ import { Modal } from 'antd'
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
 import PeerDropdownMenu from './PeerDropdownMenu'
+import { StyledModal } from './StyledComponents'
 
 const OpenModal = styled(Button)`
   background-color: ${props => props.theme.babyBlue};
@@ -63,11 +64,12 @@ const PeerSubFilters = () => {
       <OpenModal onClick={() => openModal()}>
         0 Filters <Icon icon="edit" />
       </OpenModal>
-      <Modal
+      <StyledModal
         title="Peer Group Filters"
         visible={visible}
         onOk={handleApply}
         onCancel={handleCancel}
+        okText="Apply"
       >
         {Object.keys(data.filter)
           .filter(v => v !== '__typename')
@@ -82,7 +84,7 @@ const PeerSubFilters = () => {
               />
             )
           })}
-      </Modal>
+      </StyledModal>
     </>
   )
 }
