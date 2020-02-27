@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
+import styled from 'styled-components'
 import { store } from 'context/store'
 import { useQuery } from '@apollo/client'
 import { GET_SUPPLY_BURNDOWN_CHART } from 'graphql/queries'
@@ -8,6 +9,11 @@ import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
 import Plot from 'react-plotly.js'
 import { getFilterVariables } from 'helper'
+import supplyBurndownBlurry from 'assets/supplyBurndownBlurry.png'
+
+const Blurry = styled.img`
+  width: 400px;
+`
 
 const SupplyBurndown = () => {
   const globalState = useContext(store)
@@ -28,22 +34,21 @@ const SupplyBurndown = () => {
   } = state
 
   const { networkStatus, error, data } = useQuery(GET_SUPPLY_BURNDOWN_CHART, {
-    variables:
-      getFilterVariables(
-        selectedShip.id,
-        selectedSailDate.id,
-        selectedBookingWeek,
-        selectedProduct.id,
-        selectedItinerary.id,
-        peerGroupFilters,
-        selectedPeerShip,
-        selectedPeerProduct.id,
-        selectedPeerSailingDates[0],
-        selectedPeerSailingDates[1],
-        filter,
-        peerFilter,
-        filterCount
-      ),
+    variables: getFilterVariables(
+      selectedShip.id,
+      selectedSailDate.id,
+      selectedBookingWeek,
+      selectedProduct.id,
+      selectedItinerary.id,
+      peerGroupFilters,
+      selectedPeerShip,
+      selectedPeerProduct.id,
+      selectedPeerSailingDates[0],
+      selectedPeerSailingDates[1],
+      filter,
+      peerFilter,
+      filterCount
+    ),
     skip: !selectedShip.id || !selectedSailDate.id,
     fetchPolicy: 'network-only'
   })
@@ -67,7 +72,9 @@ const SupplyBurndown = () => {
     }
   }, [selectedShip, selectedSailDate, data])
 
-  if (!selectedShip.id || !selectedSailDate.id) return null
+  if (!selectedShip.id || !selectedSailDate.id) {
+    return <Blurry src={supplyBurndownBlurry} />
+  }
   if (networkStatus !== 2 && networkStatus !== 7) {
     return <Loader />
   }
