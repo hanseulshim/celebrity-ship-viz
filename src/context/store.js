@@ -64,6 +64,14 @@ const StateProvider = ({ children }) => {
             [action.title]: action.value
           }
         }
+      case 'setSelectedPeerSubFilter':
+        return {
+          ...state,
+          peerFilter: {
+            ...state.peerFilter,
+            [action.title]: action.value
+          }
+        }
       case 'setSelectedSubFilterCount':
         return {
           ...state,

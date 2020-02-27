@@ -5,7 +5,6 @@ import { GET_SUB_FILTERS } from 'graphql/queries'
 import styled from 'styled-components'
 import Button from 'components/common/Button'
 import Icon from 'components/common/Icon'
-import { Modal } from 'antd'
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
 import PeerDropdownMenu from './PeerDropdownMenu'
@@ -20,27 +19,27 @@ const PeerSubFilters = () => {
   const globalState = useContext(store)
   const { dispatch } = globalState
   const { loading, error, data } = useQuery(GET_SUB_FILTERS, {
-    fetchPolicy: 'network-only'
-    // onCompleted: data => {
-    //   Object.keys(data.filter)
-    //     .filter(v => v !== '__typename')
-    //     .forEach(subFilter => {
-    //       const arr = data.filter[subFilter].map(v => ({
-    //         id: v.id,
-    //         value: v.value
-    //       }))
-    //       dispatch({
-    //         type: 'setSelectedSubFilter',
-    //         title: subFilter,
-    //         value: arr
-    //       })
-    //       dispatch({
-    //         type: 'setSelectedSubFilterCount',
-    //         title: subFilter,
-    //         value: arr.length
-    //       })
-    //     })
-    // }
+    fetchPolicy: 'network-only',
+    onCompleted: data => {
+      Object.keys(data.filter)
+        .filter(v => v !== '__typename')
+        .forEach(subFilter => {
+          const arr = data.filter[subFilter].map(v => ({
+            id: v.id,
+            value: v.value
+          }))
+          dispatch({
+            type: 'setSelectedPeerSubFilter',
+            title: subFilter,
+            value: arr
+          })
+          dispatch({
+            type: 'setSelectedSubFilterCount',
+            title: subFilter,
+            value: arr.length
+          })
+        })
+    }
   })
 
   const [visible, setVisible] = useState(false)
