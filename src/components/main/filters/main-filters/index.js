@@ -80,9 +80,9 @@ const MainFilters = () => {
             variables: getFilterVariables(
               selectedShip.id,
               selectedSailDate.id,
+              selectedBookingWeek,
               selectedProduct.id,
               selectedItinerary.id,
-              selectedBookingWeek,
               selectedPeerShip,
               selectedPeerProduct.id,
               selectedPeerSailingDates[0],

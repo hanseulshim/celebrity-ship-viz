@@ -14,9 +14,9 @@ export const getApi = () => {
 export const getFilterVariables = (
   shipId,
   sailingDateId,
+  interval,
   productId,
   itineraryId,
-  interval,
   peerGroupShipIds,
   peerGroupProductId,
   peerGroupStartDate,
@@ -28,9 +28,9 @@ export const getFilterVariables = (
   const variables = {
     shipId,
     sailingDateId,
+    interval,
     productId,
     itineraryId,
-    interval,
     peerGroupShipIds,
     peerGroupProductId,
     peerGroupStartDate,
