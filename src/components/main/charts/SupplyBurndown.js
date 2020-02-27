@@ -13,7 +13,7 @@ const SupplyBurndown = () => {
   const { state } = globalState
   const { selectedShip, selectedSailDate } = state
 
-  const { loading, error, data } = useQuery(GET_SUPPLY_BURNDOWN_CHART, {
+  const { networkStatus, error, data } = useQuery(GET_SUPPLY_BURNDOWN_CHART, {
     variables: {
       shipId: selectedShip.id,
       sailingDateId: selectedSailDate.id
@@ -41,7 +41,7 @@ const SupplyBurndown = () => {
     }
   }, [selectedShip, selectedSailDate, data])
 
-  if (loading) return <Loader />
+  if (networkStatus !== 2 && networkStatus !== 7) return <Loader />
   if (error) return <Notification type="error" message={error.message} />
   return (
     <>

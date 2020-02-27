@@ -13,7 +13,7 @@ const Decks = () => {
   const { state } = globalState
   const { selectedShip, selectedSailDate, selectedBookingWeek } = state
 
-  const { loading, error, data } = useQuery(GET_DECK_CHART, {
+  const { networkStatus, error, data } = useQuery(GET_DECK_CHART, {
     variables: {
       shipId: selectedShip.id,
       sailingDateId: selectedSailDate.id,
@@ -35,9 +35,9 @@ const Decks = () => {
         .map(bar => createDecks(data.deckChart[bar], bar, data.deckChart.y))
       setPlotdata(barData)
     }
-  }, [selectedShip, selectedSailDate, selectedBookingWeek, data])
+  }, [selectedShip, selectedSailDate, selectedBookingWeek, data, networkStatus])
 
-  if (loading) return <Loader />
+  if (networkStatus !== 2 && networkStatus !== 7) return <Loader />
   if (error) return <Notification type="error" message={error.message} />
   return (
     <>
