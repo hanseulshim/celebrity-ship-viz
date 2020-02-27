@@ -44,7 +44,7 @@ export default {
     },
     sailingDateList: async (_, { shipId, productId, itineraryId }) => {
       if (!shipId) return []
-      return SailingDate.query()
+      const sailingDateList = await SailingDate.query()
         .alias('d')
         .distinct('d.id', 'd.sailingDate')
         .skipUndefined()
@@ -53,6 +53,10 @@ export default {
         .andWhere('products.id', productId)
         .andWhere('itineraries.id', itineraryId)
         .orderBy('d.sailingDate')
+      sailingDateList.forEach(sailingDate => {
+        sailingDate.sailingDate = moment.utc(sailingDate.sailingDate).format()
+      })
+      return sailingDateList
     },
     snapshotIntervalList: () =>
       SnapshotInterval.query().orderBy('interval', 'desc'),
@@ -63,6 +67,7 @@ export default {
         .orderBy('d.sailingDate')
         .findOne('ships.id', EDGE)
         .where('d.sailingDate', '>=', moment())
+      sailingDate.sailingDate = moment.utc(sailingDate.sailingDate).format()
       const ship = await Ship.query()
         .select('ship.*', 'class.name as className')
         .joinRelated('class')
