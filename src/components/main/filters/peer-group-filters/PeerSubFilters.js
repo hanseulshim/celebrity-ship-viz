@@ -8,7 +8,7 @@ import Icon from 'components/common/Icon'
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
 import PeerDropdownMenu from './PeerDropdownMenu'
-import { StyledModal } from './StyledComponents'
+import { StyledModal } from 'components/common/StyledComponents'
 
 const OpenModal = styled(Button)`
   background-color: ${props => props.theme.babyBlue};
