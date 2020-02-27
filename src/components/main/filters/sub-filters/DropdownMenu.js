@@ -5,6 +5,7 @@ import { useLazyQuery } from '@apollo/client'
 import { Menu, Dropdown, Checkbox } from 'antd'
 import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
 import { getFilterVariables } from 'helper'
+import { StyledMenu, StyledCheckbox } from 'components/common/StyledComponents'
 
 const Button = styled.button`
   display: flex;
@@ -34,13 +35,6 @@ const SaveButton = styled.button`
   min-width: 50px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
 `
-
-const StyledMenu = styled(Menu)`
-  max-height: 300px;
-  overflow: scroll;
-`
-
-const StyledCheckbox = styled(Checkbox)``
 
 const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const [visible, setVisible] = useState(false)
@@ -99,7 +93,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
           selectedPeerProduct.id,
           selectedPeerSailingDates[0],
           selectedPeerSailingDates[1],
-          filter,
+          filterCopy,
           peerFilter,
           filterCount
         )
@@ -122,18 +116,18 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const menu = (
     <StyledMenu onClick={handleSave}>
       {options.map((option, i) => (
-        <Menu.Item key={'option' + i}>
+        <StyledMenu.Item key={'option' + i}>
           <StyledCheckbox
             onChange={() => handleCheck(option)}
             checked={!!subFilter.find(f => f.id === option.id)}
           >
             {option[displayKey]}
           </StyledCheckbox>
-        </Menu.Item>
+        </StyledMenu.Item>
       ))}
-      <Menu.Item key="save">
+      <StyledMenu.Item key="save">
         <SaveButton>Save</SaveButton>
-      </Menu.Item>
+      </StyledMenu.Item>
     </StyledMenu>
   )
 

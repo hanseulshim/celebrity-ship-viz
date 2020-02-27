@@ -100,7 +100,7 @@ const PeerDropdownMenu = ({ options, title, displayKey, ...props }) => {
           selectedPeerSailingDates[0],
           selectedPeerSailingDates[1],
           filter,
-          peerFilter,
+          peerFilterCopy,
           filterCount
         )
       })
