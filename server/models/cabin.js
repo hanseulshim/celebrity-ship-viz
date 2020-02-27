@@ -24,3 +24,9 @@ export class Snapshot extends Model {
     return 'snapshot'
   }
 }
+
+export class BurndownGlobal extends Model {
+  static get tableName() {
+    return 'burndownGlobal'
+  }
+}
