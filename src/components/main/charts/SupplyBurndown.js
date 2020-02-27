@@ -7,17 +7,43 @@ import { createSupplyBurndown } from './helper'
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
 import Plot from 'react-plotly.js'
+import { getFilterVariables } from 'helper'
 
 const SupplyBurndown = () => {
   const globalState = useContext(store)
   const { state } = globalState
-  const { selectedShip, selectedSailDate } = state
+  const {
+    selectedShip,
+    selectedProduct,
+    selectedItinerary,
+    selectedSailDate,
+    selectedBookingWeek,
+    peerGroupFilters,
+    selectedPeerShip,
+    selectedPeerProduct,
+    selectedPeerSailingDates,
+    filter,
+    peerFilter,
+    filterCount
+  } = state
 
   const { networkStatus, error, data } = useQuery(GET_SUPPLY_BURNDOWN_CHART, {
-    variables: {
-      shipId: selectedShip.id,
-      sailingDateId: selectedSailDate.id
-    },
+    variables:
+      getFilterVariables(
+        selectedShip.id,
+        selectedSailDate.id,
+        selectedBookingWeek,
+        selectedProduct.id,
+        selectedItinerary.id,
+        peerGroupFilters,
+        selectedPeerShip,
+        selectedPeerProduct.id,
+        selectedPeerSailingDates[0],
+        selectedPeerSailingDates[1],
+        filter,
+        peerFilter,
+        filterCount
+      ),
     skip: !selectedShip.id || !selectedSailDate.id,
     fetchPolicy: 'network-only'
   })

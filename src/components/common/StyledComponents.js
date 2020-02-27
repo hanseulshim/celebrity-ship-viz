@@ -38,9 +38,9 @@ export const StyledDropdown = styled(Dropdown)`
 `
 
 export const StyledMenu = styled(Menu)`
-  /* max-height: 300px;
+  max-height: 300px;
   overflow: scroll;
-  background-color: ${props => props.theme.black50} !important;
+  /* background-color: ${props => props.theme.black50} !important;
   .ant-dropdown-menu {
     background-color: ${props => props.theme.black50} !important;
   } */

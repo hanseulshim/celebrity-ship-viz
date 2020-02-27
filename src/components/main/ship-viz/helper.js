@@ -1,59 +1,123 @@
 import colors from 'styles/colors'
 import { hoverInfo } from './config'
 
-const getStatus = (point, colorCount) => {
+const getStatus = (point, colorCount, peerGroupFilters) => {
   const statusObj = {}
-
-  statusObj.status =
-    point.bookingStatus === 'B'
-      ? 'BOOKED'
-      : point.bookingStatus === 'U'
-        ? 'UNBOOKED'
-        : 'CANCELLED'
-  statusObj.bookedOccupancy = point.bookedOccupancy ? point.bookedOccupancy : 'N/A'
-  statusObj.cabinCapacity = point.cabinCapacity ? point.cabinCapacity : 'N/A'
   const even = point.cabinNumber % 2 === 0
-  if (point.bookingStatus === null) {
-    if (even) {
-      statusObj.color = colorCount.lastInvalidEven ? colors.shuttleGray : colors.fiord
-      colorCount.lastInvalidEven = !colorCount.lastInvalidEven
+
+  if (!peerGroupFilters) {
+    statusObj.status =
+      point.bookingStatus === 'B'
+        ? 'BOOKED'
+        : point.bookingStatus === 'U'
+          ? 'UNBOOKED'
+          : 'CANCELLED'
+    statusObj.bookedOccupancy = point.bookedOccupancy
+      ? point.bookedOccupancy
+      : 'N/A'
+    statusObj.cabinCapacity = point.cabinCapacity ? point.cabinCapacity : 'N/A'
+    if (point.bookingStatus === null) {
+      if (even) {
+        statusObj.color = colorCount.lastInvalidEven
+          ? colors.shuttleGray
+          : colors.fiord
+        colorCount.lastInvalidEven = !colorCount.lastInvalidEven
+      } else {
+        statusObj.color = colorCount.lastInvalidOdd
+          ? colors.shuttleGray
+          : colors.fiord
+        colorCount.lastInvalidOdd = !colorCount.lastInvalidOdd
+      }
+    } else if (point.bookingStatus === 'U' || point.bookingStatus === 'C') {
+      if (even) {
+        statusObj.color = colorCount.lastUnbookedEven
+          ? colors.cabaret
+          : colors.mandy
+        colorCount.lastUnbookedEven = !colorCount.lastUnbookedEven
+      } else {
+        statusObj.color = colorCount.lastUnbookedOdd
+          ? colors.cabaret
+          : colors.mandy
+        colorCount.lastUnbookedOdd = !colorCount.lastUnbookedOdd
+      }
+    } else if (point.bookedOccupancy < point.cabinCapacity) {
+      if (even) {
+        statusObj.color = colorCount.lastPartEven
+          ? colors.keyLimePie
+          : colors.hokeyPokey
+        colorCount.lastPartEven = !colorCount.lastPartEven
+      } else {
+        statusObj.color = colorCount.lastPartOdd
+          ? colors.keyLimePie
+          : colors.hokeyPokey
+        colorCount.lastPartOdd = !colorCount.lastPartOdd
+      }
     } else {
-      statusObj.color = colorCount.lastInvalidOdd ? colors.shuttleGray : colors.fiord
-      colorCount.lastInvalidOdd = !colorCount.lastInvalidOdd
-    }
-  } else if (point.bookingStatus === 'U' || point.bookingStatus === 'C') {
-    if (even) {
-      statusObj.color = colorCount.lastUnbookedEven ? colors.cabaret : colors.mandy
-      colorCount.lastUnbookedEven = !colorCount.lastUnbookedEven
-    } else {
-      statusObj.color = colorCount.lastUnbookedOdd ? colors.cabaret : colors.mandy
-      colorCount.lastUnbookedOdd = !colorCount.lastUnbookedOdd
-    }
-  } else if (point.bookedOccupancy < point.cabinCapacity) {
-    if (even) {
-      statusObj.color = colorCount.lastPartEven ? colors.keyLimePie : colors.hokeyPokey
-      colorCount.lastPartEven = !colorCount.lastPartEven
-    } else {
-      statusObj.color = colorCount.lastPartOdd ? colors.keyLimePie : colors.hokeyPokey
-      colorCount.lastPartOdd = !colorCount.lastPartOdd
+      if (even) {
+        statusObj.color = colorCount.lastFullEven
+          ? colors.silverTree
+          : colors.aquaForest
+        colorCount.lastFullEven = !colorCount.lastFullEven
+      } else {
+        statusObj.color = colorCount.lastFullOdd
+          ? colors.silverTree
+          : colors.aquaForest
+        colorCount.lastFullOdd = !colorCount.lastFullOdd
+      }
     }
   } else {
-    if (even) {
-      statusObj.color = colorCount.lastFullEven ? colors.silverTree : colors.aquaForest
-      colorCount.lastFullEven = !colorCount.lastFullEven
-    } else {
-      statusObj.color = colorCount.lastFullOdd ? colors.silverTree : colors.aquaForest
-      colorCount.lastFullOdd = !colorCount.lastFullOdd
-    }
+    statusObj.category = point.category ? point.category : 'N/A'
+    statusObj.selectedPercent = point.selectedPercent ? point.selectedPercent : 'N/A'
+    statusObj.peerGroupPercent = point.peerGroupPercent ? point.peerGroupPercent : 'N/A'
+    statusObj.difference = point.difference ? point.difference : 'N/A'
+
+    const difference = parseInt(point.difference)
+    const offset = 100
+    const tick = 10
+    const index = Math.round((difference + offset) / tick) - 1
+    const colorArray = ['#D4F5E9',
+      '#BAEEED',
+      '#92E1F2',
+      '#83DDF4',
+      '#66D5F8',
+      '#4ACCFB',
+      '#35C6F2',
+      '#4FC8DE',
+      '#68CAC1',
+      '#7FCCA6',
+      '#98CE88',
+      '#B2D06B',
+      '#C9D250',
+      '#E3D533',
+      '#E1C43F',
+      '#DEB14A',
+      '#DC9F58',
+      '#D98D64',
+      '#D67B70',
+      '#D4697C']
+    statusObj.color = isNaN(index) ? colors.shuttleGray : colorArray[index]
   }
+
   return statusObj
 }
 
-const getPolygonCoordinates = (point, length, customdata, colorCount) => {
-  const { color, status, bookedOccupancy, cabinCapacity } = getStatus(
-    point,
-    colorCount
-  )
+const getPolygonCoordinates = (
+  point,
+  length,
+  customdata,
+  colorCount,
+  peerGroupFilters
+) => {
+  const {
+    color,
+    status,
+    bookedOccupancy,
+    cabinCapacity,
+    category,
+    selectedPercent,
+    peerGroupPercent,
+    difference
+  } = getStatus(point, colorCount, peerGroupFilters)
 
   const h0 = point.plotY0 * length // Starting Height
   const h1 = point.plotY1 * length // Ending Height
@@ -68,7 +132,11 @@ const getPolygonCoordinates = (point, length, customdata, colorCount) => {
     cabinNumber: point.cabinNumber,
     status,
     bookedOccupancy,
-    cabinCapacity
+    cabinCapacity,
+    category,
+    selectedPercent,
+    peerGroupPercent,
+    difference
   }
   customdata[v1] = customdata[v0]
 
@@ -80,7 +148,7 @@ const getPolygonCoordinates = (point, length, customdata, colorCount) => {
   }
 }
 
-export const createDeck = (data, deck, selectedDeck) => {
+export const createDeck = (data, deck, selectedDeck, peerGroupFilters) => {
   const x = []
   const y = []
   const z = []
@@ -94,7 +162,11 @@ export const createDeck = (data, deck, selectedDeck) => {
         cabinNumber: '',
         status: '',
         bookedOccupancy: '',
-        cabinCapacity: ''
+        cabinCapacity: '',
+        category: '',
+        selectedPercent: '',
+        peerGroupPercent: '',
+        difference: ''
       })
       z.push(deck)
     }
@@ -114,14 +186,21 @@ export const createDeck = (data, deck, selectedDeck) => {
     lastInvalidOdd: true
   }
   data.forEach(point => {
-    const coords = getPolygonCoordinates(point, length, customdata, colorCount)
+    const coords = getPolygonCoordinates(
+      point,
+      length,
+      customdata,
+      colorCount,
+      peerGroupFilters
+    )
     i.push(...coords.i)
     j.push(...coords.j)
     k.push(...coords.k)
     facecolor.push(...coords.facecolor)
   })
 
-  const hover = deck === selectedDeck ? hoverInfo : { hoverinfo: 'none' }
+  const hover =
+    deck === selectedDeck ? hoverInfo(peerGroupFilters) : { hoverinfo: 'none' }
   const opacity = deck === selectedDeck ? 1 : 0.3
   return {
     x,

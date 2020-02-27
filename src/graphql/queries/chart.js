@@ -1,8 +1,58 @@
 import gql from 'graphql-tag'
 
 export const GET_SUPPLY_BURNDOWN_CHART = gql`
-  query supplyBurndownChart($shipId: Int!, $sailingDateId: Int!) {
-    supplyBurndownChart(shipId: $shipId, sailingDateId: $sailingDateId) {
+  query supplyBurndownChart(
+    $shipId: Int!
+    $sailingDateId: Int!
+    $productId: Int
+    $itineraryId: Int
+    $bookedOccupancy: [String]
+    $bookingType: [String]
+    $cabinCategory: [Int]
+    $cabinCategoryClass: [Int]
+    $cabinClassRate: [Int]
+    $channel: [Int]
+    $pointOfSaleMarket: [Int]
+    $rateCategory: [Int]
+    $peerGroupShipIds: [Int]
+    $peerGroupProductId: Int
+    $peerGroupStartDate: String
+    $peerGroupEndDate: String
+    $peerGroupBookedOccupancy: [String]
+    $peerGroupBookingType: [String]
+    $peerGroupCabinCategory: [Int]
+    $peerGroupCabinCategoryClass: [Int]
+    $peerGroupCabinClassRate: [Int]
+    $peerGroupChannel: [Int]
+    $peerGroupPointOfSaleMarket: [Int]
+    $peerGroupRateCategory: [Int]
+    ) {
+    supplyBurndownChart(
+      shipId: $shipId
+      sailingDateId: $sailingDateId
+      productId: $productId
+      itineraryId: $itineraryId
+      bookedOccupancy: $bookedOccupancy
+      bookingType: $bookingType
+      cabinCategory: $cabinCategory
+      cabinCategoryClass: $cabinCategoryClass
+      cabinClassRate: $cabinClassRate
+      channel: $channel
+      pointOfSaleMarket: $pointOfSaleMarket
+      rateCategory: $rateCategory
+      peerGroupShipIds: $peerGroupShipIds
+      peerGroupProductId: $peerGroupProductId
+      peerGroupStartDate: $peerGroupStartDate
+      peerGroupEndDate: $peerGroupEndDate
+      peerGroupBookedOccupancy: $peerGroupBookedOccupancy
+      peerGroupBookingType: $peerGroupBookingType
+      peerGroupCabinCategory: $peerGroupCabinCategory
+      peerGroupCabinCategoryClass: $peerGroupCabinCategoryClass
+      peerGroupCabinClassRate: $peerGroupCabinClassRate
+      peerGroupChannel: $peerGroupChannel
+      peerGroupPointOfSaleMarket: $peerGroupPointOfSaleMarket
+      peerGroupRateCategory: $peerGroupRateCategory
+    ) {
       selected {
         x
         y
