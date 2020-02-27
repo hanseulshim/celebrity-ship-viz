@@ -27,6 +27,13 @@ export default {
         .joinRelated('ships')
         .where('ships.id', shipId)
     },
+    peerGroupProductList: async (_, { shipIdList }) => {
+      if (!shipIdList) return []
+      return Product.query()
+        .skipUndefined()
+        .joinRelated('ships')
+        .whereIn('ships.id', shipIdList)
+    },
     itineraryList: async (_, { shipId, productId }) => {
       if (!shipId) return []
       return Itinerary.query()
