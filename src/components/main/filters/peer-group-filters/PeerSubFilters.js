@@ -17,7 +17,8 @@ const OpenModal = styled(Button)`
 
 const PeerSubFilters = () => {
   const globalState = useContext(store)
-  const { dispatch } = globalState
+  const { state, dispatch } = globalState
+  const { peerFilter, filterCount } = state
   const { loading, error, data } = useQuery(GET_SUB_FILTERS, {
     fetchPolicy: 'network-only',
     onCompleted: data => {
@@ -61,7 +62,12 @@ const PeerSubFilters = () => {
   return (
     <>
       <OpenModal onClick={() => openModal()}>
-        0 Filters <Icon icon="edit" />
+        {
+          Object.keys(peerFilter).filter(key => {
+            return peerFilter[key].length !== filterCount[key]
+          }).length
+        }{' '}
+        Filters <Icon icon="edit" />
       </OpenModal>
       <StyledModal
         title="Peer Group Filters"
