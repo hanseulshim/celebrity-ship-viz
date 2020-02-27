@@ -48,7 +48,12 @@ const MainFilters = () => {
     selectedItinerary,
     selectedSailDate,
     selectedBookingWeek,
+    peerGroupFilters,
+    selectedPeerShip,
+    selectedPeerProduct,
+    selectedPeerSailingDates,
     filter,
+    peerFilter,
     filterCount
   } = state
   const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
@@ -77,7 +82,15 @@ const MainFilters = () => {
               selectedShip.id,
               selectedSailDate.id,
               selectedBookingWeek,
+              selectedProduct.id,
+              selectedItinerary.id,
+              peerGroupFilters,
+              selectedPeerShip,
+              selectedPeerProduct.id,
+              selectedPeerSailingDates[0],
+              selectedPeerSailingDates[1],
               filter,
+              peerFilter,
               filterCount
             )
           })

@@ -46,6 +46,11 @@ const StateProvider = ({ children }) => {
           ...state,
           selectedPeerShip: action.value
         }
+      case 'setSelectedPeerProduct':
+        return {
+          ...state,
+          selectedPeerProduct: action.value
+        }
       case 'setSelectedPeerSailingDates':
         return {
           ...state,
@@ -56,6 +61,14 @@ const StateProvider = ({ children }) => {
           ...state,
           filter: {
             ...state.filter,
+            [action.title]: action.value
+          }
+        }
+      case 'setSelectedPeerSubFilter':
+        return {
+          ...state,
+          peerFilter: {
+            ...state.peerFilter,
             [action.title]: action.value
           }
         }
