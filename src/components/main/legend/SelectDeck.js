@@ -100,7 +100,7 @@ const SelectDeck = () => {
             onClick={() => handleSelect(deck)}
             selected={selectedDeck === deck}
           >
-            <span>Deck {numeral(deck).format('00')}</span>
+            <span>D{numeral(deck).format('00')}</span>
             <DeckSvg deck={deck} />
           </Deck>
         )

@@ -29,7 +29,14 @@ const Container = styled.div`
 
 const Apply = styled(Button)`
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-  background-color
+  background-color: ${props => props.theme.lochmara};
+  color: ${props => props.theme.white};
+`
+
+const Download = styled(Button)`
+  background-color: #80cbc4;
+  margin-left: auto;
+  color: ${props => props.theme.black};
 `
 
 const MainFilters = () => {
@@ -41,7 +48,12 @@ const MainFilters = () => {
     selectedItinerary,
     selectedSailDate,
     selectedBookingWeek,
+    peerGroupFilters,
+    selectedPeerShip,
+    selectedPeerProduct,
+    selectedPeerSailingDates,
     filter,
+    peerFilter,
     filterCount
   } = state
   const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
@@ -66,17 +78,30 @@ const MainFilters = () => {
         disabled={!enableApply()}
         onClick={() =>
           applyFilters({
-            variables:
-            getFilterVariables(selectedShip.id, selectedSailDate.id, selectedBookingWeek, filter, filterCount)
+            variables: getFilterVariables(
+              selectedShip.id,
+              selectedSailDate.id,
+              selectedBookingWeek,
+              selectedProduct.id,
+              selectedItinerary.id,
+              peerGroupFilters,
+              selectedPeerShip,
+              selectedPeerProduct.id,
+              selectedPeerSailingDates[0],
+              selectedPeerSailingDates[1],
+              filter,
+              peerFilter,
+              filterCount
+            )
           })
         }
       >
         Apply
       </Apply>
-      <Button style={{ marginLeft: 'auto' }}>
+      <Download>
         <FontAwesomeIcon icon="download" />
         Download
-      </Button>
+      </Download>
     </Container>
   )
 }

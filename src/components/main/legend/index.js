@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { store } from 'context/store'
 import styled from 'styled-components'
+import peerGroupLegend from 'assets/peer-legend.png'
 
 // Project Imports
 import SelectDeck from './SelectDeck'
@@ -11,10 +13,23 @@ const LegendContainer = styled.div`
   flex-direction: column;
 `
 
+const PeerGroupLegend = styled.img`
+  width: 315px;
+  margin: 20px 0px;
+`
+
 const Legend = () => {
+  const globalState = useContext(store)
+  const { state } = globalState
+  const { peerGroupFilters } = state
+
   return (
     <LegendContainer>
-      <LegendColors />
+      {peerGroupFilters ? (
+        <PeerGroupLegend src={peerGroupLegend} />
+      ) : (
+        <LegendColors />
+      )}
       <SelectDeck />
     </LegendContainer>
   )

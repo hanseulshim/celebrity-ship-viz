@@ -37,6 +37,7 @@ const FilterSelect = ({
         }
         onChange={value => onChange(value)}
         mode={props.mode}
+        disabled={props.disabled}
       >
         {options &&
           options.map((option, i) => {

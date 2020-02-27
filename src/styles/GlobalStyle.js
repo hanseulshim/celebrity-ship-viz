@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import bg from 'assets/starry_night_sky.png'
+import colors from './colors'
 
 export default createGlobalStyle`
   html,
@@ -35,6 +36,10 @@ export default createGlobalStyle`
     color: white;
   }
 
+  .ant-select, .ant-select-enabled {
+    border: 1px solid ${colors.biscay};
+    border-radius:1px;
+  }
   
 
 `

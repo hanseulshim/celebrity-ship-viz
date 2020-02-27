@@ -13,16 +13,21 @@ const CategoryClass = () => {
   const { state } = globalState
   const { selectedShip, selectedSailDate, selectedBookingWeek } = state
 
-  const { loading, error, data } = useQuery(GET_CABIN_CATEGORY_CLASS_CHART, {
-    variables: {
-      shipId: selectedShip.id,
-      sailingDateId: selectedSailDate.id,
-      interval: selectedBookingWeek
-    },
-    skip:
-      !selectedShip.id || !selectedSailDate.id || selectedBookingWeek === null,
-    fetchPolicy: 'network-only'
-  })
+  const { networkStatus, error, data } = useQuery(
+    GET_CABIN_CATEGORY_CLASS_CHART,
+    {
+      variables: {
+        shipId: selectedShip.id,
+        sailingDateId: selectedSailDate.id,
+        interval: selectedBookingWeek
+      },
+      skip:
+        !selectedShip.id ||
+        !selectedSailDate.id ||
+        selectedBookingWeek === null,
+      fetchPolicy: 'network-only'
+    }
+  )
 
   // local state for plot data
   const [plotData, setPlotdata] = useState([])
@@ -43,7 +48,14 @@ const CategoryClass = () => {
     }
   }, [selectedShip, selectedSailDate, selectedBookingWeek, data])
 
-  if (loading) return <Loader />
+  if (
+    !selectedShip.id ||
+    !selectedSailDate.id ||
+    selectedBookingWeek === null
+  ) {
+    return null
+  }
+  if (networkStatus !== 2 && networkStatus !== 7) return <Loader />
   if (error) return <Notification type="error" message={error.message} />
   return (
     <>
