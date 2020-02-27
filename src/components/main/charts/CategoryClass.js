@@ -48,6 +48,13 @@ const CategoryClass = () => {
     }
   }, [selectedShip, selectedSailDate, selectedBookingWeek, data])
 
+  if (
+    !selectedShip.id ||
+    !selectedSailDate.id ||
+    selectedBookingWeek === null
+  ) {
+    return null
+  }
   if (networkStatus !== 2 && networkStatus !== 7) return <Loader />
   if (error) return <Notification type="error" message={error.message} />
   return (

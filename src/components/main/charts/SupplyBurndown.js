@@ -41,7 +41,10 @@ const SupplyBurndown = () => {
     }
   }, [selectedShip, selectedSailDate, data])
 
-  if (networkStatus !== 2 && networkStatus !== 7) return <Loader />
+  if (!selectedShip.id || !selectedSailDate.id) return null
+  if (networkStatus !== 2 && networkStatus !== 7) {
+    return <Loader />
+  }
   if (error) return <Notification type="error" message={error.message} />
   return (
     <>

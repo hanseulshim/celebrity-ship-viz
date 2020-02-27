@@ -32,18 +32,18 @@ export const StyledSelect = styled(Select)`
   }
 `
 export const StyledDropdown = styled(Dropdown)`
-  > ul {
+  /* > ul {
     background-color: ${props => props.theme.black50};
-  }
+  } */
 `
 
 export const StyledMenu = styled(Menu)`
-  max-height: 300px;
+  /* max-height: 300px;
   overflow: scroll;
   background-color: ${props => props.theme.black50} !important;
   .ant-dropdown-menu {
     background-color: ${props => props.theme.black50} !important;
-  }
+  } */
 `
 
 export const StyledCheckbox = styled(Checkbox)``

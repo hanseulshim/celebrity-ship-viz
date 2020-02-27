@@ -17,6 +17,7 @@ export const getFilterVariables = (
   interval,
   productId,
   itineraryId,
+  peerGroupFilters,
   peerGroupShipIds,
   peerGroupProductId,
   peerGroupStartDate,
@@ -25,17 +26,50 @@ export const getFilterVariables = (
   peerFilter = {},
   filterCount = {}
 ) => {
-  const variables = {
-    shipId,
-    sailingDateId,
-    interval,
-    productId,
-    itineraryId,
-    peerGroupShipIds,
-    peerGroupProductId,
-    peerGroupStartDate,
-    peerGroupEndDate
+  const variables = {}
+  if (peerGroupFilters) {
+    variables.peerGroupShipIds = peerGroupShipIds
+    variables.peerGroupProductId = peerGroupProductId
+    variables.peerGroupStartDate = peerGroupStartDate
+    variables.peerGroupEndDate = peerGroupEndDate
+
+    Object.keys(peerFilter)
+      .filter(key => {
+        return peerFilter[key].length !== filterCount[key]
+      })
+      .forEach(key => {
+        const filterKey =
+          key === 'bookedOccupancy' || key === 'bookingType' ? 'value' : 'id'
+        const arr = peerFilter[key].map(v => v[filterKey])
+        const variableName =
+          key === 'bookedOccupancy'
+            ? 'peerGroupBookedOccupancy'
+            : key === 'bookingType'
+            ? 'peerGroupBookingType'
+            : key === 'cabinCategory'
+            ? 'peerGroupCabinCategory'
+            : key === 'cabinClassRate'
+            ? 'peerGroupCabinClassRate'
+            : key === 'channel'
+            ? 'peerGroupChannel'
+            : key === 'pointOfSaleMarket'
+            ? 'peerGroupPointOfSaleMarket'
+            : key === 'rateCategory'
+            ? 'peerGroupRateCategory'
+            : null
+
+        if (key && key !== 'peerGroupCabinCategoryClass') {
+          variables[variableName] = arr
+        }
+      })
   }
+
+  variables.shipId = shipId
+  variables.sailingDateId = sailingDateId
+  variables.interval = interval
+  variables.productId = productId
+  variables.itineraryId = itineraryId
+
   Object.keys(filter)
     .filter(key => {
       return filter[key].length !== filterCount[key]
@@ -45,33 +79,6 @@ export const getFilterVariables = (
         key === 'bookedOccupancy' || key === 'bookingType' ? 'value' : 'id'
       const arr = filter[key].map(v => v[filterKey])
       variables[key] = arr
-    })
-  Object.keys(peerFilter)
-    .filter(key => {
-      return peerFilter[key].length !== filterCount[key]
-    })
-    .forEach(key => {
-      const filterKey =
-        key === 'bookedOccupancy' || key === 'bookingType' ? 'value' : 'id'
-      const arr = peerFilter[key].map(v => v[filterKey])
-      const variableName =
-        key === 'bookedOccupancy'
-          ? 'peerGroupBookedOccupancy'
-          : key === 'bookingType'
-          ? 'peerGroupBookingType'
-          : key === 'cabinCategory'
-          ? 'peerGroupCabinCategory'
-          : key === 'cabinCategoryClass'
-          ? 'peerGroupCabinCategoryClass'
-          : key === 'cabinClassRate'
-          ? 'peerGroupCabinClassRate'
-          : key === 'channel'
-          ? 'peerGroupChannel'
-          : key === 'pointOfSaleMarket'
-          ? 'peerGroupPointOfSaleMarket'
-          : 'peerGroupRateCategory'
-
-      variables[variableName] = arr
     })
 
   return variables
