@@ -21,12 +21,12 @@ export const supplyBurndownLayout = {
   },
   showlegend: true,
   legend: {
-    y: 1.3,
+    y: 1.5,
     x: 1,
     xanchor: 'right',
-    orientation: 'h',
+    orientation: 'v',
     font: {
-      size: 9,
+      size: 8,
       color: colors.white
     }
   },

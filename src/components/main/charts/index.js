@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1em 2em;
+  padding-top: 0;
   background-color: ${props => props.theme.black50};
   min-width: 450px;
 

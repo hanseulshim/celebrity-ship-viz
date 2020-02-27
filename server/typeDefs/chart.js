@@ -26,6 +26,8 @@ extend type Query {
   supplyBurndownChart(
     shipId: Int!
     sailingDateId: Int!
+    productId: Int
+    itineraryId: Int
     bookedOccupancy: [String]
     bookingType: [String]
     cabinCategory: [Int]
@@ -33,7 +35,20 @@ extend type Query {
     cabinClassRate: [Int]
     channel: [Int]
     pointOfSaleMarket: [Int]
-    rateCategory: [Int]): SupplyBurndownChart @auth
+    rateCategory: [Int]
+    peerGroupShipIds: [Int]
+    peerGroupProductId: Int
+    peerGroupStartDate: String
+    peerGroupEndDate: String
+    peerGroupBookedOccupancy: [String]
+    peerGroupBookingType: [String]
+    peerGroupCabinCategory: [Int]
+    peerGroupCabinCategoryClass: [Int]
+    peerGroupCabinClassRate: [Int]
+    peerGroupChannel: [Int]
+    peerGroupPointOfSaleMarket: [Int]
+    peerGroupRateCategory: [Int]
+  ): SupplyBurndownChart @auth
   cabinCategoryClassChart(
     shipId: Int!
     sailingDateId: Int!

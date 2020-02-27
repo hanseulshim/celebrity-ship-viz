@@ -14,11 +14,11 @@ const ShipViz = () => {
   const [plotData, setPlotdata] = useState([])
   const globalState = useContext(store)
   const { state } = globalState
-  const { selectedDeck, shipData } = state
+  const { selectedDeck, shipData, peerGroupFilters } = state
   useEffect(() => {
     const decks = Object.keys(shipData)
     const coords = decks.map(deck =>
-      createDeck(shipData[deck], parseInt(deck), selectedDeck)
+      createDeck(shipData[deck], parseInt(deck), selectedDeck, peerGroupFilters)
     )
     setPlotdata(coords)
   }, [selectedDeck, shipData])
