@@ -27,7 +27,7 @@ export default {
         channel,
         pointOfSaleMarket,
         rateCategory,
-        peerGroupShipIds,
+        peerGroupShipIds = [],
         peerGroupProductId,
         peerGroupStartDate,
         peerGroupEndDate,
@@ -40,7 +40,7 @@ export default {
         peerGroupRateCategory
       }
     ) => {
-      return !peerGroupShipIds ? getSelectedShipList(shipId,
+      return !peerGroupShipIds.length ? getSelectedShipList(shipId,
         sailingDateId,
         productId,
         itineraryId,

@@ -102,7 +102,7 @@ export default {
         channel,
         pointOfSaleMarket,
         rateCategory,
-        peerGroupShipIds,
+        peerGroupShipIds = [],
         peerGroupProductId,
         peerGroupStartDate,
         peerGroupEndDate,
@@ -196,7 +196,7 @@ export default {
         .whereIn('s.rateCategoryId', peerGroupRateCategory)
         .as('peerGroupBooked')
 
-      const select = peerGroupShipIds ? [
+      const select = peerGroupShipIds.length ? [
         'i.interval',
         selectedAvailableQuery,
         selectedBookedQuery,
@@ -233,7 +233,7 @@ export default {
         const selectedPercent = Math.round((1 - selectedBooked / selectedAvailable) * 100)
         selected.x.push(interval)
         selected.y.push(selectedPercent)
-        if (peerGroupShipIds) {
+        if (peerGroupShipIds.length) {
           const peerGroupPercent = Math.round((1 - peerGroupBooked / peerGroupAvailable) * 100)
           peerGroup.x.push(interval)
           peerGroup.y.push(peerGroupPercent)

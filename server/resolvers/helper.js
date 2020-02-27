@@ -234,7 +234,6 @@ export const getPeerGroupList = async (
       difference: isNaN(difference) ? null : difference
     }
   })
-  console.log(cabinCategoryObj)
   deckList.forEach(({ deck }) => {
     deckObj[deck] = data
       .filter(d => d.deck === deck)
