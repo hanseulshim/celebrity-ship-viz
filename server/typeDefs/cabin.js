@@ -25,6 +25,7 @@ extend type Query {
     peerGroupBookedOccupancy: [String]
     peerGroupBookingType: [String]
     peerGroupCabinCategory: [Int]
+    peerGroupCabinCategoryClass: [Int]
     peerGroupCabinClassRate: [Int]
     peerGroupChannel: [Int]
     peerGroupPointOfSaleMarket: [Int]

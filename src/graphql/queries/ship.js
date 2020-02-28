@@ -22,6 +22,7 @@ export const GET_VISUAL_DECK_LIST = gql`
     $peerGroupBookedOccupancy: [String]
     $peerGroupBookingType: [String]
     $peerGroupCabinCategory: [Int]
+    $peerGroupCabinCategoryClass: [Int]
     $peerGroupCabinClassRate: [Int]
     $peerGroupChannel: [Int]
     $peerGroupPointOfSaleMarket: [Int]
@@ -48,6 +49,7 @@ export const GET_VISUAL_DECK_LIST = gql`
       peerGroupBookedOccupancy: $peerGroupBookedOccupancy
       peerGroupBookingType: $peerGroupBookingType
       peerGroupCabinCategory: $peerGroupCabinCategory
+      peerGroupCabinCategoryClass: $peerGroupCabinCategoryClass
       peerGroupCabinClassRate: $peerGroupCabinClassRate
       peerGroupChannel: $peerGroupChannel
       peerGroupPointOfSaleMarket: $peerGroupPointOfSaleMarket

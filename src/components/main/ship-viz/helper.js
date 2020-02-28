@@ -90,7 +90,7 @@ const getStatus = (point, colorCount, peerGroupFilters) => {
       '#DC9F58',
       '#D98D64',
       '#D67B70',
-      '#D4697C']
+      '#D4697C'].reverse()
 
     const difference = parseInt(point.difference) >= 20 ? 20 : parseInt(point.difference) <= -20 ? -20 : parseInt(point.difference)
     const offset = 20

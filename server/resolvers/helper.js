@@ -81,6 +81,7 @@ export const getPeerGroupList = async (
   peerGroupEndDate,
   peerGroupBookedOccupancy,
   peerGroupBookingType,
+  peerGroupCabinCategoryClass,
   peerGroupCabinCategory,
   peerGroupCabinClassRate,
   peerGroupChannel,
@@ -168,6 +169,8 @@ export const getPeerGroupList = async (
     .as('peerGroupBooked')
   const cabinCategoryList = await CabinCategoryClass.query()
     .alias('cc')
+    .skipUndefined()
+    .whereIn('cc.id', peerGroupCabinCategoryClass)
     .select([
       'cc.id as id',
       'cc.cabinCategoryClass as category',
