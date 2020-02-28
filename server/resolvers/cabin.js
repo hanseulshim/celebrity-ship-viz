@@ -1,5 +1,5 @@
 import { Cabin } from '../models'
-import { getSelectedShipList, getPeerGroupList } from './helper'
+import { getSelectedShipList, getPeerGroupList, getItineraryIdList } from './helper'
 
 export default {
   Query: {
@@ -40,10 +40,11 @@ export default {
         peerGroupRateCategory
       }
     ) => {
+      const itineraryIdList = await getItineraryIdList(itineraryId)
       return !peerGroupShipIds.length ? getSelectedShipList(shipId,
         sailingDateId,
         productId,
-        itineraryId,
+        itineraryIdList,
         interval,
         bookedOccupancy,
         bookingType,
@@ -57,7 +58,7 @@ export default {
           shipId,
           sailingDateId,
           productId,
-          itineraryId,
+          itineraryIdList,
           interval,
           bookedOccupancy,
           bookingType,
