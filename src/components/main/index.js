@@ -54,7 +54,7 @@ const Main = () => {
         variables: getFilterVariables(data.firstSailDate.ship.id, data.firstSailDate.sailingDate.id, data.firstSailDate.interval)
       })
     }
-  }, [data])
+  }, [data, dispatch, applyFilters])
 
   return (
     <Container>

@@ -21,7 +21,7 @@ const ShipViz = () => {
       createDeck(shipData[deck], parseInt(deck), selectedDeck, peerGroupFilters)
     )
     setPlotdata(coords)
-  }, [selectedDeck, shipData])
+  }, [selectedDeck, peerGroupFilters, shipData])
   return !plotData.length ? (
     <Container />
   ) : (
