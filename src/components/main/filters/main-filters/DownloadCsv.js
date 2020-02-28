@@ -20,42 +20,9 @@ const DownloadCsv = () => {
 
   useEffect(() => {
     const decks = Object.keys(shipData)
-    if (decks.length) {
-      const csv = decks.map(deck => {
-        const deckData = shipData[deck]
-        if (!peerGroupFilters) {
-          return deckData.map((point, i) => {
-            return {
-              cabinNumber: point.cabinNumber,
-              deck: point.deck,
-              bookingStatus: point.bookingStatus,
-              cabinCapacity: point.cabinCapacity,
-              bookedOccupancy: point.bookedOccupancy
-            }
-          })
-        } else {
-          return deckData.map((point, i) => {
-            return {
-              cabinNumber: point.cabinNumber,
-              deck: point.deck,
-              bookingStatus: point.bookingStatus,
-              cabinCapacity: point.cabinCapacity,
-              bookedOccupancy: point.bookedOccupancy,
-              category: point.category,
-              selectedPercent: point.selectedPercent,
-              peerGroupPercent: point.peerGroupPercent,
-              difference: point.difference
-            }
-          })
-        }
-      })
-      const concat = (...args) => {
-        return args.reduce((acc, val) => [...acc, ...val])
-      }
-      const combined = [...concat(...csv)]
-      setData(combined)
-    }
-  }, [shipData, peerGroupFilters])
+    const csv = decks.map(deck => shipData[deck])
+    setData(csv.flat())
+  }, [shipData])
 
   const getheaders = peerGroupFilters => {
     if (!peerGroupFilters) {
