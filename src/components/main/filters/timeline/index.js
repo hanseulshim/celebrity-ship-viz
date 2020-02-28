@@ -112,6 +112,7 @@ const Timeline = () => {
   useEffect(() => {
     const onCompleted = data => {
       if (data.snapshotIntervalList.length) {
+        console.log('Firing')
         dispatch({
           type: 'setSelectedBookingWeek',
           value:
@@ -134,18 +135,22 @@ const Timeline = () => {
 
   const handleStep = dir => {
     const { snapshotIntervalList } = data
+
     const getCurrent = snapshot => snapshot.interval === selectedBookingWeek
     const index = snapshotIntervalList.findIndex(getCurrent)
+
     if (dir === 'prev' && index !== 0) {
+      const interval = snapshotIntervalList[index - 1].interval
       dispatch({
         type: 'setSelectedBookingWeek',
-        value: snapshotIntervalList[index - 1].interval
+        value: interval
       })
+
       applyFilters({
         variables: getFilterVariables(
           selectedShip.id,
           selectedSailDate.id,
-          selectedBookingWeek,
+          interval,
           selectedProduct.id,
           selectedItinerary.id,
           peerGroupFilters,
@@ -160,15 +165,16 @@ const Timeline = () => {
       })
     }
     if (dir === 'next' && index !== snapshotIntervalList.length - 1) {
+      const interval = snapshotIntervalList[index + 1].interval
       dispatch({
         type: 'setSelectedBookingWeek',
-        value: snapshotIntervalList[index + 1].interval
+        value: interval
       })
       applyFilters({
         variables: getFilterVariables(
           selectedShip.id,
           selectedSailDate.id,
-          selectedBookingWeek,
+          interval,
           selectedProduct.id,
           selectedItinerary.id,
           peerGroupFilters,
