@@ -23,7 +23,7 @@ const PeerSubFilters = () => {
     fetchPolicy: 'network-only',
     onCompleted: data => {
       Object.keys(data.filter)
-        .filter(v => v !== '__typename')
+        .filter(v => v !== '__typename' && v !== 'cabinCategoryClass')
         .forEach(subFilter => {
           const arr = data.filter[subFilter].map(v => ({
             id: v.id,
@@ -78,7 +78,7 @@ const PeerSubFilters = () => {
         footer={null}
       >
         {Object.keys(data.filter)
-          .filter(v => v !== '__typename')
+          .filter(v => v !== '__typename' && v !== 'cabinCategoryClass')
           .map((subFilter, i) => {
             const options = data.filter[subFilter]
             return (
