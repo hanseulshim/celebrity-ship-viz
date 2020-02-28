@@ -18,7 +18,8 @@ library.add(faDownload, faFilter, faEdit)
 
 const App = () => {
   const [password, setPassword] = useState('')
-  const validated = password === process.env.REACT_APP_PASSWORD
+  // const validated = password === process.env.REACT_APP_PASSWORD
+  const validated = true
   return (
     <ThemeProvider theme={theme}>
       <StateProvider>

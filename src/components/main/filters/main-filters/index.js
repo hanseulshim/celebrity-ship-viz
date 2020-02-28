@@ -10,7 +10,7 @@ import SelectShip from './SelectShip'
 import PeerGroupToggle from './PeerGroupToggle'
 import SelectSailDate from './SelectSailDate'
 import Button from 'components/common/Button'
-import DownloadCsv from './DownloadCsv'
+import CsvDownload from './CsvDownload'
 import { getFilterVariables } from 'helper'
 
 // Graphql
@@ -92,7 +92,7 @@ const MainFilters = () => {
       >
         Apply
       </Apply>
-      <DownloadCsv />
+      <CsvDownload />
     </Container>
   )
 }
