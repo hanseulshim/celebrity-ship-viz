@@ -22,7 +22,6 @@ export default {
     channel: [],
     bookingType: [],
     pointOfSaleMarket: [],
-    cabinCategoryClass: [],
     cabinCategory: [],
     cabinClassRate: [],
     rateCategory: [],
