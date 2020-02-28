@@ -1,4 +1,5 @@
 import { Cabin, SnapshotInterval, CabinCategoryClass, BurndownGlobal } from '../models'
+import { getItineraryIdList } from './helper'
 import { ref } from 'objection'
 
 export default {
@@ -117,6 +118,7 @@ export default {
       }
     ) => {
       if (!shipId || !sailingDateId) return {}
+      const itineraryIdList = await getItineraryIdList(itineraryId)
       const selectedAvailableQuery = Cabin.query()
         .skipUndefined()
         .sum('c.cabinCapacity')
@@ -126,7 +128,7 @@ export default {
         .andWhere('s.sailingDateId', sailingDateId)
         .andWhere('s.interval', ref('i.interval'))
         .andWhere('s.productId', productId)
-        .andWhere('s.itineraryId', itineraryId)
+        .whereIn('s.itineraryId', itineraryIdList)
         .whereIn('c.cabinCategoryClassId', cabinCategoryClass)
         .whereIn('s.bookedOccupancy', bookedOccupancy)
         .whereIn('s.bookingType', bookingType)
@@ -145,7 +147,7 @@ export default {
         .andWhere('s.sailingDateId', sailingDateId)
         .andWhere('s.interval', ref('i.interval'))
         .andWhere('s.productId', productId)
-        .andWhere('s.itineraryId', itineraryId)
+        .whereIn('s.itineraryId', itineraryIdList)
         .whereIn('c.cabinCategoryClassId', cabinCategoryClass)
         .whereIn('s.bookedOccupancy', bookedOccupancy)
         .whereIn('s.bookingType', bookingType)

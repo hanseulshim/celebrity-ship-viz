@@ -1,11 +1,11 @@
-import { Cabin, CabinCategoryClass } from '../models'
+import { Cabin, CabinCategoryClass, Itinerary } from '../models'
 import { ref } from 'objection'
 
 export const getSelectedShipList = async (
   shipId,
   sailingDateId,
   productId,
-  itineraryId,
+  itineraryIdList,
   interval,
   bookedOccupancy,
   bookingType,
@@ -41,7 +41,7 @@ export const getSelectedShipList = async (
         .andOn('s.sailingDateId', '=', sailingDateId)
         .andOn('s.interval', '=', interval)
         .andOn('s.productId', '=', productId)
-        .andOn('s.itineraryId', '=', itineraryId)
+        .andOnIn('s.itineraryId', itineraryIdList)
         .andOnIn('s.bookedOccupancy', bookedOccupancy)
         .andOnIn('s.bookingType', bookingType)
         .andOnIn('c.cabinCategoryId', cabinCategory)
@@ -65,7 +65,7 @@ export const getPeerGroupList = async (
   shipId,
   sailingDateId,
   productId,
-  itineraryId,
+  itineraryIdList,
   interval,
   bookedOccupancy,
   bookingType,
@@ -98,7 +98,7 @@ export const getPeerGroupList = async (
     .andWhere('s.sailingDateId', sailingDateId)
     .andWhere('s.interval', interval)
     .andWhere('s.productId', productId)
-    .andWhere('s.itineraryId', itineraryId)
+    .whereIn('s.itineraryId', itineraryIdList)
     .whereIn('s.bookedOccupancy', bookedOccupancy)
     .whereIn('s.bookingType', bookingType)
     .whereIn('c.cabinCategoryId', cabinCategory)
@@ -117,7 +117,7 @@ export const getPeerGroupList = async (
     .andWhere('s.sailingDateId', sailingDateId)
     .andWhere('s.interval', interval)
     .andWhere('s.productId', productId)
-    .andWhere('s.itineraryId', itineraryId)
+    .whereIn('s.itineraryId', itineraryIdList)
     .whereIn('s.bookedOccupancy', bookedOccupancy)
     .whereIn('s.bookingType', bookingType)
     .whereIn('c.cabinCategoryId', cabinCategory)
@@ -201,7 +201,7 @@ export const getPeerGroupList = async (
         .andOn('s.sailingDateId', '=', sailingDateId)
         .andOn('s.interval', '=', interval)
         .andOn('s.productId', '=', productId)
-        .andOn('s.itineraryId', '=', itineraryId)
+        .andOnIn('s.itineraryId', itineraryIdList)
         .andOnIn('s.bookedOccupancy', bookedOccupancy)
         .andOnIn('s.bookingType', bookingType)
         .andOnIn('c.cabinCategoryId', cabinCategory)
@@ -243,4 +243,11 @@ export const getPeerGroupList = async (
       }))
   })
   return deckObj
+}
+
+export const getItineraryIdList = async itineraryId => {
+  if (!itineraryId) return undefined
+  const itinerary = await Itinerary.query().findById(itineraryId)
+  const itineraryList = await Itinerary.query().where('itineraryDesc', itinerary.itineraryDesc)
+  return itineraryList.map(i => i.id)
 }
