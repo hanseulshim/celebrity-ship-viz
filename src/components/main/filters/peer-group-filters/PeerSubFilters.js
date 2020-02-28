@@ -75,6 +75,7 @@ const PeerSubFilters = () => {
         onOk={handleApply}
         onCancel={handleCancel}
         okText="Apply"
+        footer={null}
       >
         {Object.keys(data.filter)
           .filter(v => v !== '__typename')
