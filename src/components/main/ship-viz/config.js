@@ -1,6 +1,6 @@
 import colors from 'styles/colors'
 
-export const hoverInfo = {
+export const hoverInfo = peerGroupFilters => ({
   hoverlabel: {
     bgcolor: colors.biscay,
     bordercolor: colors.jungleMist,
@@ -10,8 +10,10 @@ export const hoverInfo = {
     }
   },
   hovertemplate:
-    '   Room %{customdata.cabinNumber}   <br />   %{customdata.status}   <br />   Max %{customdata.cabinCapacity}   <br />   Booked %{customdata.bookedOccupancy}   <br /><br /><extra></extra>'
-}
+    peerGroupFilters
+      ? '   %{customdata.category}   <br />   Booked %{customdata.selectedPercent}%   <br />   Average %{customdata.peerGroupPercent}%   <br />   Difference %{customdata.difference}%   <br /><br /><extra></extra>'
+      : '   Room %{customdata.cabinNumber}   <br />   %{customdata.status}   <br />   Max %{customdata.cabinCapacity}   <br />   Booked %{customdata.bookedOccupancy}   <br /><br /><extra></extra>'
+})
 
 export const layout = {
   margin: {

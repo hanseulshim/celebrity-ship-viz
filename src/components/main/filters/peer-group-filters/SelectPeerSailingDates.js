@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { DatePicker } from 'antd'
 import { store } from 'context/store'
+import moment from 'moment'
 
 const { RangePicker } = DatePicker
 
@@ -9,7 +10,7 @@ const StyledRangePicker = styled(RangePicker)`
   .ant-input {
     background-color: ${props => props.theme.black50};
     color: ${props => props.theme.white};
-    border: none;
+    border: 1px solid ${props => props.theme.biscay};
   }
   .ant-calendar-range-picker-separator {
     color: ${props => props.theme.white};
@@ -29,15 +30,24 @@ const SelectPeerSailingDates = () => {
   const { state, dispatch } = globalState
   const { selectedPeerSailingDates } = state
 
-  const onChange = date => {
-    dispatch({ type: 'setSelectedPeerSailingDates', value: date })
+  const onChange = (date, dateString) => {
+    if (date.length) {
+      dispatch({ type: 'setSelectedPeerSailingDates', value: dateString })
+    } else dispatch({ type: 'setSelectedPeerSailingDates', value: [] })
   }
 
   return (
     <StyledRangePicker
       format={'YYYY/MM/DD'}
       onChange={onChange}
-      value={selectedPeerSailingDates}
+      value={
+        selectedPeerSailingDates.length
+          ? [
+              moment(selectedPeerSailingDates[0]),
+              moment(selectedPeerSailingDates[1])
+            ]
+          : []
+      }
     />
   )
 }

@@ -2,20 +2,15 @@ import React, { useState, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { store } from 'context/store'
 import { useLazyQuery } from '@apollo/client'
-
+import { Menu, Dropdown, Checkbox } from 'antd'
 import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
 import { getFilterVariables } from 'helper'
-import {
-  StyledMenu,
-  StyledCheckbox,
-  StyledDropdown
-} from 'components/common/StyledComponents'
 
 const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${props => props.theme.jungleMist};
+  color: ${props => props.theme.white};
   background-color: ${props => props.theme.biscay};
   padding: 0.5em 1em;
   font-weight: 500;
@@ -40,7 +35,14 @@ const ApplyButton = styled.button`
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
 `
 
-const DropdownMenu = ({ options, title, displayKey, ...props }) => {
+const StyledMenu = styled(Menu)`
+  max-height: 300px;
+  overflow: scroll;
+`
+
+const StyledCheckbox = styled(Checkbox)``
+
+const PeerDropdownMenu = ({ options, title, displayKey, ...props }) => {
   const [visible, setVisible] = useState(false)
   const globalState = useContext(store)
   const { state, dispatch } = globalState
@@ -66,11 +68,11 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   })
 
   // keep local state array for save button
-  const [subFilter, setSubFilter] = useState(filter[title])
+  const [subFilter, setSubFilter] = useState(peerFilter[title])
 
   useEffect(() => {
-    setSubFilter(filter[title])
-  }, [filter, title])
+    setSubFilter(peerFilter[title])
+  }, [peerFilter, title])
 
   const handleCheck = ({ id, value }) => {
     const foundFilter = subFilter.find(v => v.id === id)
@@ -83,10 +85,10 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
 
   const handleSave = e => {
     if (e.key === 'save') {
-      dispatch({ type: 'setSelectedSubFilter', title, value: subFilter })
-      const filterCopy = { ...filter }
+      dispatch({ type: 'setSelectedPeerSubFilter', title, value: subFilter })
+      const peerFilterCopy = { ...peerFilter }
       setVisible(false)
-      filterCopy[title] = subFilter
+      peerFilterCopy[title] = subFilter
       applyFilters({
         variables: getFilterVariables(
           selectedShip.id,
@@ -99,8 +101,8 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
           selectedPeerProduct.id,
           selectedPeerSailingDates[0],
           selectedPeerSailingDates[1],
-          filterCopy,
-          peerFilter,
+          filter,
+          peerFilterCopy,
           filterCount
         )
       })
@@ -110,7 +112,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const handleVisibleChange = v => {
     setVisible(v)
     if (!v) {
-      setSubFilter(filter[title])
+      setSubFilter(peerFilter[title])
     }
   }
 
@@ -122,30 +124,30 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
   const menu = (
     <StyledMenu onClick={handleSave}>
       {options.map((option, i) => (
-        <StyledMenu.Item key={'option' + i}>
+        <Menu.Item key={'option' + i}>
           <StyledCheckbox
             onChange={() => handleCheck(option)}
             checked={!!subFilter.find(f => f.id === option.id)}
           >
             {option[displayKey]}
           </StyledCheckbox>
-        </StyledMenu.Item>
+        </Menu.Item>
       ))}
-      <StyledMenu.Item key="save">
+      <Menu.Item key="save">
         <ApplyButton>Apply</ApplyButton>
-      </StyledMenu.Item>
+      </Menu.Item>
     </StyledMenu>
   )
 
   return (
-    <StyledDropdown
+    <Dropdown
       overlay={menu}
       onVisibleChange={handleVisibleChange}
       visible={visible}
     >
       <Button>{formatTitle(title)}</Button>
-    </StyledDropdown>
+    </Dropdown>
   )
 }
 
-export default DropdownMenu
+export default PeerDropdownMenu

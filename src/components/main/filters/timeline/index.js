@@ -6,8 +6,11 @@ import { Select, Icon } from 'antd'
 import { StyledSelect } from 'components/common/StyledComponents'
 
 // GQL
-import { GET_SNAPSHOT_INTERVAL_LIST, GET_VISUAL_DECK_LIST } from 'graphql/queries'
-import { getSubFilters } from 'helper'
+import {
+  GET_SNAPSHOT_INTERVAL_LIST,
+  GET_VISUAL_DECK_LIST
+} from 'graphql/queries'
+import { getFilterVariables } from 'helper'
 // Project Imports
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
@@ -59,10 +62,17 @@ const Timeline = () => {
   const globalState = useContext(store)
   const { state, dispatch } = globalState
   const {
+    selectedShip,
+    selectedProduct,
+    selectedItinerary,
     selectedSailDate,
     selectedBookingWeek,
-    selectedShip,
+    peerGroupFilters,
+    selectedPeerShip,
+    selectedPeerProduct,
+    selectedPeerSailingDates,
     filter,
+    peerFilter,
     filterCount,
     shipData
   } = state
@@ -79,15 +89,25 @@ const Timeline = () => {
   })
 
   const handleSelect = value => {
-    applyFilters({
-      variables: {
-        shipId: selectedShip.id,
-        sailingDateId: selectedSailDate.id,
-        interval: value,
-        ...getSubFilters(filter, filterCount)
-      }
-    })
     dispatch({ type: 'setSelectedBookingWeek', value })
+
+    applyFilters({
+      variables: getFilterVariables(
+        selectedShip.id,
+        selectedSailDate.id,
+        value,
+        selectedProduct.id,
+        selectedItinerary.id,
+        peerGroupFilters,
+        selectedPeerShip,
+        selectedPeerProduct.id,
+        selectedPeerSailingDates[0],
+        selectedPeerSailingDates[1],
+        filter,
+        peerFilter,
+        filterCount
+      )
+    })
   }
 
   useEffect(() => {
@@ -115,34 +135,57 @@ const Timeline = () => {
 
   const handleStep = dir => {
     const { snapshotIntervalList } = data
+
     const getCurrent = snapshot => snapshot.interval === selectedBookingWeek
     const index = snapshotIntervalList.findIndex(getCurrent)
+
     if (dir === 'prev' && index !== 0) {
+      const interval = snapshotIntervalList[index - 1].interval
       dispatch({
         type: 'setSelectedBookingWeek',
-        value: snapshotIntervalList[index - 1].interval
+        value: interval
       })
+
       applyFilters({
-        variables: {
-          shipId: selectedShip.id,
-          sailingDateId: selectedSailDate.id,
-          interval: snapshotIntervalList[index - 1].interval,
-          ...getSubFilters(filter, filterCount)
-        }
+        variables: getFilterVariables(
+          selectedShip.id,
+          selectedSailDate.id,
+          interval,
+          selectedProduct.id,
+          selectedItinerary.id,
+          peerGroupFilters,
+          selectedPeerShip,
+          selectedPeerProduct.id,
+          selectedPeerSailingDates[0],
+          selectedPeerSailingDates[1],
+          filter,
+          peerFilter,
+          filterCount
+        )
       })
     }
     if (dir === 'next' && index !== snapshotIntervalList.length - 1) {
+      const interval = snapshotIntervalList[index + 1].interval
       dispatch({
         type: 'setSelectedBookingWeek',
-        value: snapshotIntervalList[index + 1].interval
+        value: interval
       })
       applyFilters({
-        variables: {
-          shipId: selectedShip.id,
-          sailingDateId: selectedSailDate.id,
-          interval: snapshotIntervalList[index + 1].interval,
-          ...getSubFilters(filter, filterCount)
-        }
+        variables: getFilterVariables(
+          selectedShip.id,
+          selectedSailDate.id,
+          interval,
+          selectedProduct.id,
+          selectedItinerary.id,
+          peerGroupFilters,
+          selectedPeerShip,
+          selectedPeerProduct.id,
+          selectedPeerSailingDates[0],
+          selectedPeerSailingDates[1],
+          filter,
+          peerFilter,
+          filterCount
+        )
       })
     }
   }

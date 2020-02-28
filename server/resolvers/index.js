@@ -1,13 +1,14 @@
 import ship from './ship'
 import cabin from './cabin'
 import filter from './filter'
+import chart from './chart'
 import merge from 'lodash/merge'
 import { GraphQLScalarType } from 'graphql'
 import { Kind } from 'graphql/language'
 import GraphQLJSON from 'graphql-type-json'
 
 export default {
-  ...merge(ship, cabin, filter),
+  ...merge(ship, cabin, filter, chart),
   Date: new GraphQLScalarType({
     name: 'Date',
     description: 'Date custom scalar type',

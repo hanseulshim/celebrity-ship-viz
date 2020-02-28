@@ -19,7 +19,7 @@ type Itinerary {
 
 type SailingDate {
   id: Int
-  sailingDate: Date
+  sailingDate: String
 }
 
 type SnapshotInterval {
@@ -36,11 +36,12 @@ type FirstSailDate {
 }
 
 extend type Query {
- shipList: [Ship] @auth
- productList(shipId: Int): [Product] @auth
- itineraryList(shipId: Int, productId: Int): [Itinerary] @auth
- sailingDateList(shipId: Int, productId: Int, itineraryId: Int): [SailingDate] @auth
- snapshotIntervalList: [SnapshotInterval] @auth
- firstSailDate: FirstSailDate @auth
+  shipList: [Ship] @auth
+  productList(shipId: Int): [Product] @auth
+  peerGroupProductList(shipIdList: [Int]): [Product] @auth
+  itineraryList(shipId: Int, productId: Int): [Itinerary] @auth
+  sailingDateList(shipId: Int, productId: Int, itineraryId: Int): [SailingDate] @auth
+  snapshotIntervalList: [SnapshotInterval] @auth
+  firstSailDate: FirstSailDate @auth
 }
 `

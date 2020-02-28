@@ -15,5 +15,6 @@ export default {
   dusk: '#4a627f',
   babyBlue: '#9dcbff',
   shuttleGray: '#586475',
-  fiord: '#425268'
+  fiord: '#425268',
+  cornflowerBlue: '#02132b'
 }

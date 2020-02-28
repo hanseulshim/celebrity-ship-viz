@@ -37,12 +37,13 @@ const FilterSelect = ({
         }
         onChange={value => onChange(value)}
         mode={props.mode}
+        disabled={props.disabled}
       >
         {options &&
           options.map((option, i) => {
             return displayKey === 'sailingDate' ? (
               <Option value={option.id} key={'option' + i}>
-                {moment(option[displayKey]).format('MM-DD-YYYY')}
+                {moment.utc(option[displayKey]).format('MM-DD-YYYY')}
               </Option>
             ) : (
               <Option value={option.id} key={'option' + i}>

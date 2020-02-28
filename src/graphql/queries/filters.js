@@ -20,6 +20,15 @@ export const GET_PRODUCT_LIST = gql`
   }
 `
 
+export const GET_PEER_GROUP_PRODUCT_LIST = gql`
+  query peerGroupProductList($shipIdList: [Int]) {
+    peerGroupProductList(shipIdList: $shipIdList) {
+      id
+      rdssProductCode
+    }
+  }
+`
+
 export const GET_ITINERARY_LIST = gql`
   query itineraryList($shipId: Int, $productId: Int) {
     itineraryList(shipId: $shipId, productId: $productId) {

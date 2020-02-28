@@ -28,6 +28,10 @@ const Deck = styled.div`
     border-bottom: ${props =>
       props.selected ? `1px solid ${props.theme.jungleMist}` : ''};
   }
+
+  img {
+    width: 200px;
+  }
 `
 
 const DeckSvg = ({ deck }) => {
@@ -96,7 +100,7 @@ const SelectDeck = () => {
             onClick={() => handleSelect(deck)}
             selected={selectedDeck === deck}
           >
-            <span>Deck {numeral(deck).format('00')}</span>
+            <span>D{numeral(deck).format('00')}</span>
             <DeckSvg deck={deck} />
           </Deck>
         )

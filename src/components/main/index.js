@@ -15,6 +15,8 @@ import Legend from './legend'
 import DeckView from './legend/DeckView'
 import Charts from './charts'
 
+import { getFilterVariables } from 'helper'
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -49,14 +51,10 @@ const Main = () => {
         value: data.firstSailDate.sailingDate
       })
       applyFilters({
-        variables: {
-          shipId: data.firstSailDate.ship.id,
-          sailingDateId: data.firstSailDate.sailingDate.id,
-          interval: data.firstSailDate.interval
-        }
+        variables: getFilterVariables(data.firstSailDate.ship.id, data.firstSailDate.sailingDate.id, data.firstSailDate.interval)
       })
     }
-  }, [data])
+  }, [data, dispatch, applyFilters])
 
   return (
     <Container>
