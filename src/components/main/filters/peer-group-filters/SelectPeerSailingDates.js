@@ -31,7 +31,9 @@ const SelectPeerSailingDates = () => {
   const { selectedPeerSailingDates } = state
 
   const onChange = (date, dateString) => {
-    dispatch({ type: 'setSelectedPeerSailingDates', value: dateString })
+    if (date.length) {
+      dispatch({ type: 'setSelectedPeerSailingDates', value: dateString })
+    } else dispatch({ type: 'setSelectedPeerSailingDates', value: [] })
   }
 
   return (

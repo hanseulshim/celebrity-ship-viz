@@ -8,8 +8,8 @@ export const createSupplyBurndown = (line, key, selectedShipName) => {
     key === 'selected'
       ? colors.aquaForest
       : key === 'all'
-        ? colors.lochmara
-        : colors.babyBlue
+      ? colors.lochmara
+      : colors.babyBlue
   const marker = {
     color: lineColor
   }
@@ -27,8 +27,8 @@ export const createSupplyBurndown = (line, key, selectedShipName) => {
     key === 'selected'
       ? selectedShipName
       : key === 'all'
-        ? 'All Ships Avg.'
-        : 'Peer Avg.'
+      ? 'All Ships Avg.'
+      : 'Peer Avg.'
 
   return {
     x,
@@ -63,7 +63,7 @@ export const createCategoryClass = (bar, key, categoryClasses) => {
       size: 14
     }
   }
-  const hovertemplate = '%{x}%<extra></extra>'
+  const hovertemplate = '%{x}<extra></extra>'
   return {
     x,
     y,
