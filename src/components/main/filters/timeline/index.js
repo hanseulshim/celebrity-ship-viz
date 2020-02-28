@@ -90,11 +90,12 @@ const Timeline = () => {
 
   const handleSelect = value => {
     dispatch({ type: 'setSelectedBookingWeek', value })
+
     applyFilters({
       variables: getFilterVariables(
         selectedShip.id,
         selectedSailDate.id,
-        selectedBookingWeek,
+        value,
         selectedProduct.id,
         selectedItinerary.id,
         peerGroupFilters,
