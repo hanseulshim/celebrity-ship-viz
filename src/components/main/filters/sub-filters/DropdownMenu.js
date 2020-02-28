@@ -25,7 +25,7 @@ const Button = styled.button`
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
 `
 
-const SaveButton = styled.button`
+const ApplyButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,7 +132,7 @@ const DropdownMenu = ({ options, title, displayKey, ...props }) => {
         </StyledMenu.Item>
       ))}
       <StyledMenu.Item key="save">
-        <SaveButton>Save</SaveButton>
+        <ApplyButton>Apply</ApplyButton>
       </StyledMenu.Item>
     </StyledMenu>
   )

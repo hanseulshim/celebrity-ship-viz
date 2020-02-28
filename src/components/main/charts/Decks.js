@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
+import styled from 'styled-components'
 import { store } from 'context/store'
 import { useQuery } from '@apollo/client'
 import { GET_DECK_CHART } from 'graphql/queries'
@@ -7,6 +8,11 @@ import { createDecks } from './helper'
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
 import Plot from 'react-plotly.js'
+import decksBlurry from 'assets/decksBlurry.png'
+
+const Blurry = styled.img`
+  width: 400px;
+`
 
 const Decks = () => {
   const globalState = useContext(store)
@@ -42,7 +48,7 @@ const Decks = () => {
     !selectedSailDate.id ||
     selectedBookingWeek === null
   ) {
-    return null
+    return <Blurry src={decksBlurry} />
   }
   if (networkStatus !== 2 && networkStatus !== 7) return <Loader />
   if (error) return <Notification type="error" message={error.message} />

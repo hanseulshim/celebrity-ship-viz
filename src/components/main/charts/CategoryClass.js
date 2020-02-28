@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
+import styled from 'styled-components'
 import { store } from 'context/store'
 import { useQuery } from '@apollo/client'
 import { GET_CABIN_CATEGORY_CLASS_CHART } from 'graphql/queries'
@@ -7,6 +8,11 @@ import { createCategoryClass } from './helper'
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
 import Plot from 'react-plotly.js'
+import categoryClassBlurry from 'assets/categoryClassBlurry.png'
+
+const Blurry = styled.img`
+  width: 400px;
+`
 
 const CategoryClass = () => {
   const globalState = useContext(store)
@@ -53,7 +59,7 @@ const CategoryClass = () => {
     !selectedSailDate.id ||
     selectedBookingWeek === null
   ) {
-    return null
+    return <Blurry src={categoryClassBlurry} />
   }
   if (networkStatus !== 2 && networkStatus !== 7) return <Loader />
   if (error) return <Notification type="error" message={error.message} />
