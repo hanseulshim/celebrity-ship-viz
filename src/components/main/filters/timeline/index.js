@@ -112,7 +112,6 @@ const Timeline = () => {
   useEffect(() => {
     const onCompleted = data => {
       if (data.snapshotIntervalList.length) {
-        console.log('Firing')
         dispatch({
           type: 'setSelectedBookingWeek',
           value:

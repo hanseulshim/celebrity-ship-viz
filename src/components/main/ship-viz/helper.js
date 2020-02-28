@@ -71,10 +71,6 @@ const getStatus = (point, colorCount, peerGroupFilters) => {
     statusObj.peerGroupPercent = point.peerGroupPercent ? point.peerGroupPercent : 'N/A'
     statusObj.difference = point.difference ? point.difference : 'N/A'
 
-    const difference = parseInt(point.difference)
-    const offset = 100
-    const tick = 10
-    const index = Math.round((difference + offset) / tick) - 1
     const colorArray = ['#D4F5E9',
       '#BAEEED',
       '#92E1F2',
@@ -95,6 +91,12 @@ const getStatus = (point, colorCount, peerGroupFilters) => {
       '#D98D64',
       '#D67B70',
       '#D4697C']
+
+    const difference = parseInt(point.difference) >= 20 ? 20 : parseInt(point.difference) <= -20 ? -20 : parseInt(point.difference)
+    const offset = 20
+    const tick = offset * 2 / colorArray.length
+    const num = Math.round((difference + offset) / tick) - 1
+    const index = num === -1 ? 0 : num
     statusObj.color = isNaN(index) ? colors.shuttleGray : colorArray[index]
   }
 
