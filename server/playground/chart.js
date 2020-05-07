@@ -1,12 +1,12 @@
 export default {
-  name: 'Chart',
-  endpoint: '',
-  headers: { sessiontoken: process.env.SESSION_TOKEN },
-  query: `
+	name: 'Chart',
+	endpoint: '',
+	headers: { sessiontoken: process.env.SESSION_TOKEN },
+	query: `
     {
       # supplyBurndownChart(
-      #   shipId:4,
-      #   sailingDateId:199
+      #   shipId: 2,
+      #   sailingDate: "03-01-2019",
       # ) {
       #   selected {
       #     x,
@@ -23,9 +23,9 @@ export default {
       # }
 
       # cabinCategoryClassChart(
-      #   shipId: 4,
-      #   sailingDateId: 199,
-      #   interval: 0
+      #  shipId: 2,
+      #  sailingDate: "03-01-2019",
+      #  interval: 0
       # ) {
       #   bookedX
       #   availableX
@@ -33,8 +33,8 @@ export default {
       # }
 
       deckChart(
-        shipId: 4,
-        sailingDateId: 199,
+        shipId: 2,
+        sailingDate: "03-01-2019",
         interval: 0
       ) {
         bookedX

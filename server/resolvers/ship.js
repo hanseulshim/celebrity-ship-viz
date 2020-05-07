@@ -3,7 +3,7 @@ import {
 	Product,
 	Itinerary,
 	SailingDate,
-	SnapshotInterval,
+	SnapshotInterval
 } from '../models'
 import { EDGE } from '../constants'
 import moment from 'moment'
@@ -17,7 +17,7 @@ export default {
 				.orderBy('ship.id')
 			return shipList.map((ship) => ({
 				...ship,
-				shipName: ship.shipName.replace('CELEBRITY ', ''),
+				shipName: ship.shipName.replace('CELEBRITY ', '')
 			}))
 		},
 		productList: async (_, { shipId }) => {
@@ -77,7 +77,7 @@ export default {
 				return {
 					ship,
 					sailingDate: null,
-					interval: 0,
+					interval: 0
 				}
 			}
 			const diff = moment(sailingDate.sailingDate).diff(moment(), 'weeks')
@@ -85,8 +85,8 @@ export default {
 			return {
 				ship,
 				sailingDate,
-				interval,
+				interval
 			}
-		},
-	},
+		}
+	}
 }
