@@ -1,6 +1,6 @@
-import { Cabin, CabinCategoryClass, Itinerary } from '../models'
-import { ref } from 'objection'
 import moment from 'moment'
+import { ref } from 'objection'
+import { Cabin, CabinCategoryClass, Itinerary } from '../models'
 
 export const getSelectedShipList = async (
 	shipId,
@@ -56,6 +56,7 @@ export const getSelectedShipList = async (
 		)
 		.where('c.shipId', shipId)
 		.orderBy(['c.deck', 'c.cabinNumber'])
+	console.log(data)
 	const deckObj = {}
 	deckList.forEach(({ deck }) => {
 		deckObj[deck] = data.filter((d) => d.deck === deck)

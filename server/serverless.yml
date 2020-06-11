@@ -18,7 +18,6 @@ provider:
 
 functions:
   graphql:
-    warmup: true
     handler: handler.graphqlHandler
     events:
       - http:
@@ -54,4 +53,3 @@ custom:
 plugins:
   - serverless-webpack
   - serverless-offline
-  - serverless-plugin-warmup

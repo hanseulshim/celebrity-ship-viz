@@ -1,13 +1,13 @@
 export const getApi = () => {
 	const REACT_APP_STAGE = process.env.REACT_APP_STAGE
 	return REACT_APP_STAGE === 'dev'
-		? 'https://sj9yv26472.execute-api.us-east-2.amazonaws.com/dev/graphql'
+		? 'https://5616b5axof.execute-api.us-east-2.amazonaws.com/beta/graphql'
 		: REACT_APP_STAGE === 'alpha'
-		? 'https://sk9ofwrp21.execute-api.us-east-2.amazonaws.com/alpha/graphql'
+		? 'https://5616b5axof.execute-api.us-east-2.amazonaws.com/beta/graphql'
 		: REACT_APP_STAGE === 'beta'
-		? 'https://carrhqe4gg.execute-api.us-east-2.amazonaws.com/beta/graphql'
+		? 'https://5616b5axof.execute-api.us-east-2.amazonaws.com/beta/graphql'
 		: REACT_APP_STAGE === 'prod'
-		? 'https://zarlfah6m2.execute-api.us-east-2.amazonaws.com/prod/graphql'
+		? 'https://5616b5axof.execute-api.us-east-2.amazonaws.com/beta/graphql'
 		: 'http://localhost:4000/graphql'
 }
 
