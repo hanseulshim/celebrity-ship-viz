@@ -1,20 +1,18 @@
-import React, { useContext } from 'react'
 import { useLazyQuery } from '@apollo/client'
-import { store } from 'context/store'
-import styled from 'styled-components'
-
-// Project Imports
-import SelectProduct from './SelectProduct'
-import SelectItinerary from './SelectItinerary'
-import SelectShip from './SelectShip'
-import PeerGroupToggle from './PeerGroupToggle'
-import SelectSailDate from './SelectSailDate'
 import Button from 'components/common/Button'
-import CsvDownload from './CsvDownload'
-import { getFilterVariables } from 'helper'
-
+import { store } from 'context/store'
 // Graphql
 import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
+import { getFilterVariables } from 'helper'
+import React, { useContext } from 'react'
+import styled from 'styled-components'
+import CsvDownload from './CsvDownload'
+import PeerGroupToggle from './PeerGroupToggle'
+import SelectItinerary from './SelectItinerary'
+// Project Imports
+import SelectProduct from './SelectProduct'
+import SelectSailDate from './SelectSailDate'
+import SelectShip from './SelectShip'
 
 const Container = styled.div`
 	display: flex;
@@ -45,7 +43,6 @@ const MainFilters = () => {
 		peerGroupFilters,
 		selectedPeerShip,
 		selectedPeerProduct,
-		selectedPeerSailingDates,
 		filter,
 		peerFilter,
 		filterCount
@@ -68,6 +65,7 @@ const MainFilters = () => {
 			<SelectItinerary />
 			<SelectSailDate />
 			<Apply
+				id="apply-ship-filter"
 				primary
 				disabled={!enableApply()}
 				onClick={() =>
@@ -81,8 +79,6 @@ const MainFilters = () => {
 							peerGroupFilters,
 							selectedPeerShip,
 							selectedPeerProduct.id,
-							selectedPeerSailingDates[0],
-							selectedPeerSailingDates[1],
 							filter,
 							peerFilter,
 							filterCount

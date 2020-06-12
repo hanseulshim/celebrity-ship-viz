@@ -10,8 +10,6 @@ export default {
         sailingDate: "03-01-2020",
         interval: 1,
         peerGroupShipIds: [4],
-        peerGroupStartDate: "2018-01-01",
-        peerGroupEndDate: "2019-01-01"
       )
     }`
 }

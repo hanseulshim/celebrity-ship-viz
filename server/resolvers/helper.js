@@ -81,8 +81,6 @@ export const getPeerGroupList = async (
 	rateCategory,
 	peerGroupShipIds,
 	peerGroupProductId,
-	peerGroupStartDate,
-	peerGroupEndDate,
 	peerGroupBookedOccupancy,
 	peerGroupBookingType,
 	peerGroupCabinCategory,
@@ -147,8 +145,6 @@ export const getPeerGroupList = async (
 		)
 		.leftJoin('sailingDate as sd', 'sd.id', 's.sailingDateId')
 		.whereIn('c.shipId', peerGroupShipIds)
-		.andWhere('sd.sailingDate', '>', peerGroupStartDate)
-		.andWhere('sd.sailingDate', '<', peerGroupEndDate)
 		.andWhere('s.interval', '=', interval)
 		.andWhere('s.productId', '=', peerGroupProductId)
 		.andWhere('c.cabinCategoryClassId', ref('cc.id'))
@@ -171,8 +167,6 @@ export const getPeerGroupList = async (
 		)
 		.leftJoin('sailingDate as sd', 'sd.id', 's.sailingDateId')
 		.whereIn('c.shipId', peerGroupShipIds)
-		.andWhere('sd.sailingDate', '>', peerGroupStartDate)
-		.andWhere('sd.sailingDate', '<', peerGroupEndDate)
 		.andWhere('s.interval', '=', interval)
 		.andWhere('s.productId', '=', peerGroupProductId)
 		.andWhere('c.cabinCategoryClassId', ref('cc.id'))

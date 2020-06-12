@@ -16,8 +16,6 @@ export const GET_SUPPLY_BURNDOWN_CHART = gql`
 		$rateCategory: [Int]
 		$peerGroupShipIds: [Int]
 		$peerGroupProductId: Int
-		$peerGroupStartDate: String
-		$peerGroupEndDate: String
 		$peerGroupBookedOccupancy: [String]
 		$peerGroupBookingType: [String]
 		$peerGroupCabinCategory: [Int]
@@ -42,8 +40,6 @@ export const GET_SUPPLY_BURNDOWN_CHART = gql`
 			rateCategory: $rateCategory
 			peerGroupShipIds: $peerGroupShipIds
 			peerGroupProductId: $peerGroupProductId
-			peerGroupStartDate: $peerGroupStartDate
-			peerGroupEndDate: $peerGroupEndDate
 			peerGroupBookedOccupancy: $peerGroupBookedOccupancy
 			peerGroupBookingType: $peerGroupBookingType
 			peerGroupCabinCategory: $peerGroupCabinCategory

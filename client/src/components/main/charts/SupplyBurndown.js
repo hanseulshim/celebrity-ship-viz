@@ -1,15 +1,15 @@
-import React, { useState, useContext, useEffect } from 'react'
-import styled from 'styled-components'
-import { store } from 'context/store'
 import { useQuery } from '@apollo/client'
-import { GET_SUPPLY_BURNDOWN_CHART } from 'graphql/queries'
-import { supplyBurndownLayout } from './config'
-import { createSupplyBurndown } from './helper'
+import supplyBurndownBlurry from 'assets/supplyBurndownBlurry.png'
 import Loader from 'components/common/Loader'
 import Notification from 'components/common/Notification'
-import Plot from 'react-plotly.js'
+import { store } from 'context/store'
+import { GET_SUPPLY_BURNDOWN_CHART } from 'graphql/queries'
 import { getFilterVariables } from 'helper'
-import supplyBurndownBlurry from 'assets/supplyBurndownBlurry.png'
+import React, { useContext, useEffect, useState } from 'react'
+import Plot from 'react-plotly.js'
+import styled from 'styled-components'
+import { supplyBurndownLayout } from './config'
+import { createSupplyBurndown } from './helper'
 
 const Blurry = styled.img`
 	width: 400px;
@@ -27,7 +27,6 @@ const SupplyBurndown = () => {
 		peerGroupFilters,
 		selectedPeerShip,
 		selectedPeerProduct,
-		selectedPeerSailingDates,
 		filter,
 		peerFilter,
 		filterCount
@@ -43,8 +42,6 @@ const SupplyBurndown = () => {
 			peerGroupFilters,
 			selectedPeerShip,
 			selectedPeerProduct.id,
-			selectedPeerSailingDates[0],
-			selectedPeerSailingDates[1],
 			filter,
 			peerFilter,
 			filterCount

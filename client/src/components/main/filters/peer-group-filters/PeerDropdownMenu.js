@@ -1,10 +1,10 @@
-import React, { useState, useContext, useEffect } from 'react'
-import styled from 'styled-components'
-import { store } from 'context/store'
 import { useLazyQuery } from '@apollo/client'
-import { Menu, Dropdown, Checkbox } from 'antd'
+import { Checkbox, Dropdown, Menu } from 'antd'
+import { store } from 'context/store'
 import { GET_VISUAL_DECK_LIST } from 'graphql/queries'
 import { getFilterVariables } from 'helper'
+import React, { useContext, useEffect, useState } from 'react'
+import styled from 'styled-components'
 
 const Button = styled.button`
 	display: flex;
@@ -55,7 +55,6 @@ const PeerDropdownMenu = ({ options, title, displayKey, ...props }) => {
 		peerGroupFilters,
 		selectedPeerShip,
 		selectedPeerProduct,
-		selectedPeerSailingDates,
 		filter,
 		peerFilter,
 		filterCount
@@ -99,8 +98,6 @@ const PeerDropdownMenu = ({ options, title, displayKey, ...props }) => {
 					peerGroupFilters,
 					selectedPeerShip,
 					selectedPeerProduct.id,
-					selectedPeerSailingDates[0],
-					selectedPeerSailingDates[1],
 					filter,
 					peerFilterCopy,
 					filterCount
