@@ -24,6 +24,13 @@ const Container = styled.div`
 const Row = styled.div`
 	display: flex;
 `
+
+const Column = styled.div`
+	display: flex;
+	flex-direction: column;
+	flex: 4;
+`
+
 const VizContainer = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -68,11 +75,11 @@ const Main = () => {
 				<Charts />
 				<VizContainer>
 					<SubFilters />
-					<Row style={{ padding: '2em 0em' }}>
-						<Timeline />
-					</Row>
 					<Row>
-						<ShipViz />
+						<Column>
+							<Timeline />
+							<ShipViz />
+						</Column>
 						<Legend />
 					</Row>
 					<Row style={{ padding: '2em 0em' }}>

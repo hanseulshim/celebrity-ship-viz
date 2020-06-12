@@ -17,11 +17,11 @@ import styled from 'styled-components'
 const { Option } = Select
 
 const Container = styled.div`
-	flex: 3;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	padding: 3em 0em;
 `
 
 const ChangeInterval = styled.div`
@@ -199,7 +199,7 @@ const Timeline = () => {
 				<ChangeInterval>
 					<StyledIcon type="caret-left" onClick={() => handleStep('prev')} />
 					<StyledSelect
-						style={{ width: 250 }}
+						style={{ width: 250, marginBottom: '1em' }}
 						value={selectedBookingWeek}
 						onChange={handleSelect}
 						timeline
