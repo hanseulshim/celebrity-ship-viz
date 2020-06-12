@@ -1,8 +1,8 @@
 import { Cabin } from '../models'
 import {
-	getSelectedShipList,
+	getItineraryIdList,
 	getPeerGroupList,
-	getItineraryIdList
+	getSelectedShipList
 } from './helper'
 
 export default {
@@ -33,8 +33,6 @@ export default {
 				rateCategory,
 				peerGroupShipIds = [],
 				peerGroupProductId,
-				peerGroupStartDate,
-				peerGroupEndDate,
 				peerGroupBookedOccupancy,
 				peerGroupBookingType,
 				peerGroupCabinCategory,
@@ -77,8 +75,6 @@ export default {
 						rateCategory,
 						peerGroupShipIds,
 						peerGroupProductId,
-						peerGroupStartDate,
-						peerGroupEndDate,
 						peerGroupBookedOccupancy,
 						peerGroupBookingType,
 						peerGroupCabinCategory,

@@ -1,12 +1,12 @@
+import moment from 'moment'
+import { ref } from 'objection'
 import {
+	BurndownGlobal,
 	Cabin,
-	SnapshotInterval,
 	CabinCategoryClass,
-	BurndownGlobal
+	SnapshotInterval
 } from '../models'
 import { getItineraryIdList } from './helper'
-import { ref } from 'objection'
-import moment from 'moment'
 
 export default {
 	Query: {
@@ -116,8 +116,6 @@ export default {
 				rateCategory,
 				peerGroupShipIds = [],
 				peerGroupProductId,
-				peerGroupStartDate,
-				peerGroupEndDate,
 				peerGroupBookedOccupancy,
 				peerGroupCabinCategoryClass,
 				peerGroupBookingType,
@@ -185,8 +183,6 @@ export default {
 				)
 				.leftJoin('sailingDate as sd', 'sd.id', 's.sailingDateId')
 				.whereIn('c.shipId', peerGroupShipIds)
-				.andWhere('sd.sailingDate', '>', peerGroupStartDate)
-				.andWhere('sd.sailingDate', '<', peerGroupEndDate)
 				.andWhere('s.interval', ref('i.interval'))
 				.andWhere('s.productId', peerGroupProductId)
 				.whereIn('c.cabinCategoryClassId', peerGroupCabinCategoryClass)
@@ -209,8 +205,6 @@ export default {
 				)
 				.leftJoin('sailingDate as sd', 'sd.id', 's.sailingDateId')
 				.whereIn('c.shipId', peerGroupShipIds)
-				.andWhere('sd.sailingDate', '>', peerGroupStartDate)
-				.andWhere('sd.sailingDate', '<', peerGroupEndDate)
 				.andWhere('s.interval', ref('i.interval'))
 				.andWhere('s.productId', peerGroupProductId)
 				.whereIn('c.cabinCategoryClassId', peerGroupCabinCategoryClass)

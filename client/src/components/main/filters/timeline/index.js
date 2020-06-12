@@ -1,19 +1,18 @@
-import React, { useContext, useEffect } from 'react'
-import { useQuery, useLazyQuery } from '@apollo/client'
-import { store } from 'context/store'
-import styled from 'styled-components'
-import { Select, Icon } from 'antd'
+import { useLazyQuery, useQuery } from '@apollo/client'
+import { Icon, Select } from 'antd'
+// Project Imports
+import Loader from 'components/common/Loader'
+import Notification from 'components/common/Notification'
 import { StyledSelect } from 'components/common/StyledComponents'
-
+import { store } from 'context/store'
 // GQL
 import {
 	GET_SNAPSHOT_INTERVAL_LIST,
 	GET_VISUAL_DECK_LIST
 } from 'graphql/queries'
 import { getFilterVariables } from 'helper'
-// Project Imports
-import Loader from 'components/common/Loader'
-import Notification from 'components/common/Notification'
+import React, { useContext, useEffect } from 'react'
+import styled from 'styled-components'
 
 const { Option } = Select
 
@@ -70,7 +69,6 @@ const Timeline = () => {
 		peerGroupFilters,
 		selectedPeerShip,
 		selectedPeerProduct,
-		selectedPeerSailingDates,
 		filter,
 		peerFilter,
 		filterCount,
@@ -101,8 +99,6 @@ const Timeline = () => {
 				peerGroupFilters,
 				selectedPeerShip,
 				selectedPeerProduct.id,
-				selectedPeerSailingDates[0],
-				selectedPeerSailingDates[1],
 				filter,
 				peerFilter,
 				filterCount
@@ -156,8 +152,6 @@ const Timeline = () => {
 					peerGroupFilters,
 					selectedPeerShip,
 					selectedPeerProduct.id,
-					selectedPeerSailingDates[0],
-					selectedPeerSailingDates[1],
 					filter,
 					peerFilter,
 					filterCount
@@ -180,8 +174,6 @@ const Timeline = () => {
 					peerGroupFilters,
 					selectedPeerShip,
 					selectedPeerProduct.id,
-					selectedPeerSailingDates[0],
-					selectedPeerSailingDates[1],
 					filter,
 					peerFilter,
 					filterCount

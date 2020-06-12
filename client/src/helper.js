@@ -20,8 +20,6 @@ export const getFilterVariables = (
 	peerGroupFilters,
 	peerGroupShipIds,
 	peerGroupProductId,
-	peerGroupStartDate,
-	peerGroupEndDate,
 	filter = {},
 	peerFilter = {},
 	filterCount = {}
@@ -30,8 +28,6 @@ export const getFilterVariables = (
 	if (peerGroupFilters) {
 		variables.peerGroupShipIds = peerGroupShipIds
 		variables.peerGroupProductId = peerGroupProductId
-		variables.peerGroupStartDate = peerGroupStartDate
-		variables.peerGroupEndDate = peerGroupEndDate
 
 		Object.keys(peerFilter)
 			.filter((key) => {

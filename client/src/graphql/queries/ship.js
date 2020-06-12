@@ -17,8 +17,6 @@ export const GET_VISUAL_DECK_LIST = gql`
 		$rateCategory: [Int]
 		$peerGroupShipIds: [Int]
 		$peerGroupProductId: Int
-		$peerGroupStartDate: String
-		$peerGroupEndDate: String
 		$peerGroupBookedOccupancy: [String]
 		$peerGroupBookingType: [String]
 		$peerGroupCabinCategory: [Int]
@@ -43,8 +41,6 @@ export const GET_VISUAL_DECK_LIST = gql`
 			rateCategory: $rateCategory
 			peerGroupShipIds: $peerGroupShipIds
 			peerGroupProductId: $peerGroupProductId
-			peerGroupStartDate: $peerGroupStartDate
-			peerGroupEndDate: $peerGroupEndDate
 			peerGroupBookedOccupancy: $peerGroupBookedOccupancy
 			peerGroupBookingType: $peerGroupBookingType
 			peerGroupCabinCategory: $peerGroupCabinCategory

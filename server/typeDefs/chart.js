@@ -38,8 +38,6 @@ extend type Query {
     rateCategory: [Int]
     peerGroupShipIds: [Int]
     peerGroupProductId: Int
-    peerGroupStartDate: String
-    peerGroupEndDate: String
     peerGroupBookedOccupancy: [String]
     peerGroupBookingType: [String]
     peerGroupCabinCategory: [Int]
