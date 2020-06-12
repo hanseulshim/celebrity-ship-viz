@@ -17,4 +17,11 @@ context('Window', () => {
 		)
 		cy.get('#apply-ship-filter').should('contain', 'Apply').click()
 	})
+	it('toggle peer group', () => {
+		cy.get('#peer-group-toggle').click()
+	})
+	it('click on peer group ship dropdown', () => {
+		cy.get('input#peer-group-ship-select').click().type('APEX').type('{enter}')
+		cy.get('#apply-ship-filter').should('contain', 'Apply').click()
+	})
 })
