@@ -18,64 +18,77 @@ import Charts from './charts'
 import { getFilterVariables } from 'helper'
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 `
 const Row = styled.div`
-  display: flex;
+	display: flex;
 `
+
+const Column = styled.div`
+	display: flex;
+	flex-direction: column;
+	flex: 4;
+`
+
 const VizContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding-right: 2em;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding-right: 2em;
 `
 
 const Main = () => {
-  const globalState = useContext(store)
-  const { dispatch } = globalState
+	const globalState = useContext(store)
+	const { dispatch } = globalState
 
-  const { data } = useQuery(GET_FIRST_SAIL_DATE)
-  const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
-    onCompleted: data => {
-      dispatch({ type: 'setShipData', value: data.deckVisualList })
-    },
-    fetchPolicy: 'network-only'
-  })
+	const { data } = useQuery(GET_FIRST_SAIL_DATE)
+	const [applyFilters] = useLazyQuery(GET_VISUAL_DECK_LIST, {
+		onCompleted: (data) => {
+			dispatch({ type: 'setShipData', value: data.deckVisualList })
+		},
+		fetchPolicy: 'network-only'
+	})
 
-  useEffect(() => {
-    if (data) {
-      dispatch({ type: 'setSelectedShip', value: data.firstSailDate.ship })
-      dispatch({
-        type: 'setSelectedSailDate',
-        value: data.firstSailDate.sailingDate
-      })
-      applyFilters({
-        variables: getFilterVariables(data.firstSailDate.ship.id, data.firstSailDate.sailingDate.id, data.firstSailDate.interval)
-      })
-    }
-  }, [data, dispatch, applyFilters])
+	useEffect(() => {
+		if (data) {
+			dispatch({ type: 'setSelectedShip', value: data.firstSailDate.ship })
+			dispatch({
+				type: 'setSelectedSailDate',
+				value: data.firstSailDate.sailingDate
+			})
+			applyFilters({
+				variables: getFilterVariables(
+					data.firstSailDate.ship.id,
+					data.firstSailDate.sailingDate.id,
+					data.firstSailDate.interval
+				)
+			})
+		}
+	}, [data, dispatch, applyFilters])
 
-  return (
-    <Container>
-      <Header />
-      <Filters />
-      <Row>
-        <Charts />
-        <VizContainer>
-          <SubFilters />
-          <Row>
-            <ShipViz />
-            <Legend />
-          </Row>
-          <Row style={{ padding: '2em 0em' }}>
-            <Timeline />
-            <DeckView />
-          </Row>
-        </VizContainer>
-      </Row>
-    </Container>
-  )
+	return (
+		<Container>
+			<Header />
+			<Filters />
+			<Row>
+				<Charts />
+				<VizContainer>
+					<SubFilters />
+					<Row>
+						<Column>
+							<Timeline />
+							<ShipViz />
+						</Column>
+						<Legend />
+					</Row>
+					<Row style={{ padding: '2em 0em' }}>
+						<DeckView />
+					</Row>
+				</VizContainer>
+			</Row>
+		</Container>
+	)
 }
 
 export default Main
