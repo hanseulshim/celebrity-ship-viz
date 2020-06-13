@@ -40,7 +40,8 @@ export default {
 				peerGroupChannel,
 				peerGroupPointOfSaleMarket,
 				peerGroupRateCategory
-			}
+			},
+			{ snapshotLimit }
 		) => {
 			const itineraryIdList = await getItineraryIdList(itineraryId)
 			return !peerGroupShipIds.length
@@ -81,7 +82,8 @@ export default {
 						peerGroupCabinClassRate,
 						peerGroupChannel,
 						peerGroupPointOfSaleMarket,
-						peerGroupRateCategory
+						peerGroupRateCategory,
+						snapshotLimit
 				  )
 		}
 	}

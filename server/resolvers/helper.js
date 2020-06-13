@@ -56,7 +56,6 @@ export const getSelectedShipList = async (
 		)
 		.where('c.shipId', shipId)
 		.orderBy(['c.deck', 'c.cabinNumber'])
-	console.log(data)
 	const deckObj = {}
 	deckList.forEach(({ deck }) => {
 		deckObj[deck] = data.filter((d) => d.deck === deck)
@@ -87,18 +86,18 @@ export const getPeerGroupList = async (
 	peerGroupCabinClassRate,
 	peerGroupChannel,
 	peerGroupPointOfSaleMarket,
-	peerGroupRateCategory
+	peerGroupRateCategory,
+	snapshotLimit
 ) => {
 	if (!shipId || !sailingDate || interval === null) return {}
+	const date = moment(sailingDate)
+	const date0 = moment(sailingDate).subtract(1, 'month')
+	const date1 = moment(sailingDate).add(1, 'month')
 	const selectedAvailableQuery = Cabin.query()
 		.skipUndefined()
 		.sum('c.cabinCapacity')
 		.alias('c')
-		.leftJoin(
-			`snapshot_${moment(sailingDate).format('YYYY_MM')} as s`,
-			'c.id',
-			's.cabinId'
-		)
+		.leftJoin(`snapshot_${date.format('YYYY_MM')} as s`, 'c.id', 's.cabinId')
 		.where('c.shipId', shipId)
 		.andWhere('c.cabinCategoryClassId', ref('cc.id'))
 		.andWhere('s.interval', interval)
@@ -116,11 +115,7 @@ export const getPeerGroupList = async (
 		.skipUndefined()
 		.sum('s.bookedOccupancy')
 		.alias('c')
-		.leftJoin(
-			`snapshot_${moment(sailingDate).format('YYYY_MM')} as s`,
-			'c.id',
-			's.cabinId'
-		)
+		.leftJoin(`snapshot_${date.format('YYYY_MM')} as s`, 'c.id', 's.cabinId')
 		.where('c.shipId', shipId)
 		.andWhere('c.cabinCategoryClassId', ref('cc.id'))
 		.andWhere('s.interval', interval)
@@ -138,11 +133,7 @@ export const getPeerGroupList = async (
 		.skipUndefined()
 		.sum('c.cabinCapacity')
 		.alias('c')
-		.leftJoin(
-			`snapshot_${moment(sailingDate).format('YYYY_MM')} as s`,
-			'c.id',
-			's.cabinId'
-		)
+		.leftJoin(`snapshot_${date.format('YYYY_MM')} as s`, 'c.id', 's.cabinId')
 		.leftJoin('sailingDate as sd', 'sd.id', 's.sailingDateId')
 		.whereIn('c.shipId', peerGroupShipIds)
 		.andWhere('s.interval', '=', interval)
@@ -160,11 +151,7 @@ export const getPeerGroupList = async (
 		.skipUndefined()
 		.sum('s.bookedOccupancy')
 		.alias('c')
-		.leftJoin(
-			`snapshot_${moment(sailingDate).format('YYYY_MM')} as s`,
-			'c.id',
-			's.cabinId'
-		)
+		.leftJoin(`snapshot_${date.format('YYYY_MM')} as s`, 'c.id', 's.cabinId')
 		.leftJoin('sailingDate as sd', 'sd.id', 's.sailingDateId')
 		.whereIn('c.shipId', peerGroupShipIds)
 		.andWhere('s.interval', '=', interval)
@@ -178,18 +165,119 @@ export const getPeerGroupList = async (
 		.whereIn('s.marketId', peerGroupPointOfSaleMarket)
 		.whereIn('s.rateCategoryId', peerGroupRateCategory)
 		.as('peerGroupBooked')
+	const select = [
+		'cc.id as id',
+		'cc.cabinCategoryClass as category',
+		selectedAvailableQuery,
+		selectedBookedQuery,
+		peerGroupAvailableQuery,
+		peerGroupBookedQuery
+	]
+	if (date0.diff(moment([snapshotLimit.minYear, snapshotLimit.month])) >= 0) {
+		select.push(
+			...[
+				Cabin.query()
+					.skipUndefined()
+					.sum('c.cabinCapacity')
+					.alias('c')
+					.leftJoin(
+						`snapshot_${date0.format('YYYY_MM')} as s`,
+						'c.id',
+						's.cabinId'
+					)
+					.leftJoin('sailingDate as sd', 'sd.id', 's.sailingDateId')
+					.whereIn('c.shipId', peerGroupShipIds)
+					.andWhere('s.interval', '=', interval)
+					.andWhere('s.productId', '=', peerGroupProductId)
+					.andWhere('c.cabinCategoryClassId', ref('cc.id'))
+					.whereIn('s.bookedOccupancy', peerGroupBookedOccupancy)
+					.whereIn('s.bookingType', peerGroupBookingType)
+					.whereIn('c.cabinCategoryId', peerGroupCabinCategory)
+					.whereIn('s.cabinClassRateId', peerGroupCabinClassRate)
+					.whereIn('s.channelId', peerGroupChannel)
+					.whereIn('s.marketId', peerGroupPointOfSaleMarket)
+					.whereIn('s.rateCategoryId', peerGroupRateCategory)
+					.as('peerGroupAvailable1'),
+				Cabin.query()
+					.skipUndefined()
+					.sum('s.bookedOccupancy')
+					.alias('c')
+					.leftJoin(
+						`snapshot_${date0.format('YYYY_MM')} as s`,
+						'c.id',
+						's.cabinId'
+					)
+					.leftJoin('sailingDate as sd', 'sd.id', 's.sailingDateId')
+					.whereIn('c.shipId', peerGroupShipIds)
+					.andWhere('s.interval', '=', interval)
+					.andWhere('s.productId', '=', peerGroupProductId)
+					.andWhere('c.cabinCategoryClassId', ref('cc.id'))
+					.whereIn('s.bookedOccupancy', peerGroupBookedOccupancy)
+					.whereIn('s.bookingType', peerGroupBookingType)
+					.whereIn('c.cabinCategoryId', peerGroupCabinCategory)
+					.whereIn('s.cabinClassRateId', peerGroupCabinClassRate)
+					.whereIn('s.channelId', peerGroupChannel)
+					.whereIn('s.marketId', peerGroupPointOfSaleMarket)
+					.whereIn('s.rateCategoryId', peerGroupRateCategory)
+					.as('peerGroupBooked1')
+			]
+		)
+	}
+	if (date1.diff(moment([snapshotLimit.maxYear, snapshotLimit.month])) <= 0) {
+		select.push(
+			...[
+				Cabin.query()
+					.skipUndefined()
+					.sum('c.cabinCapacity')
+					.alias('c')
+					.leftJoin(
+						`snapshot_${date1.format('YYYY_MM')} as s`,
+						'c.id',
+						's.cabinId'
+					)
+					.leftJoin('sailingDate as sd', 'sd.id', 's.sailingDateId')
+					.whereIn('c.shipId', peerGroupShipIds)
+					.andWhere('s.interval', '=', interval)
+					.andWhere('s.productId', '=', peerGroupProductId)
+					.andWhere('c.cabinCategoryClassId', ref('cc.id'))
+					.whereIn('s.bookedOccupancy', peerGroupBookedOccupancy)
+					.whereIn('s.bookingType', peerGroupBookingType)
+					.whereIn('c.cabinCategoryId', peerGroupCabinCategory)
+					.whereIn('s.cabinClassRateId', peerGroupCabinClassRate)
+					.whereIn('s.channelId', peerGroupChannel)
+					.whereIn('s.marketId', peerGroupPointOfSaleMarket)
+					.whereIn('s.rateCategoryId', peerGroupRateCategory)
+					.as('peerGroupAvailable2'),
+				Cabin.query()
+					.skipUndefined()
+					.sum('s.bookedOccupancy')
+					.alias('c')
+					.leftJoin(
+						`snapshot_${date1.format('YYYY_MM')} as s`,
+						'c.id',
+						's.cabinId'
+					)
+					.leftJoin('sailingDate as sd', 'sd.id', 's.sailingDateId')
+					.whereIn('c.shipId', peerGroupShipIds)
+					.andWhere('s.interval', '=', interval)
+					.andWhere('s.productId', '=', peerGroupProductId)
+					.andWhere('c.cabinCategoryClassId', ref('cc.id'))
+					.whereIn('s.bookedOccupancy', peerGroupBookedOccupancy)
+					.whereIn('s.bookingType', peerGroupBookingType)
+					.whereIn('c.cabinCategoryId', peerGroupCabinCategory)
+					.whereIn('s.cabinClassRateId', peerGroupCabinClassRate)
+					.whereIn('s.channelId', peerGroupChannel)
+					.whereIn('s.marketId', peerGroupPointOfSaleMarket)
+					.whereIn('s.rateCategoryId', peerGroupRateCategory)
+					.as('peerGroupBooked2')
+			]
+		)
+	}
 	const cabinCategoryList = await CabinCategoryClass.query()
 		.alias('cc')
 		.skipUndefined()
 		.whereIn('cc.id', cabinCategoryClass)
-		.select([
-			'cc.id as id',
-			'cc.cabinCategoryClass as category',
-			selectedAvailableQuery,
-			selectedBookedQuery,
-			peerGroupAvailableQuery,
-			peerGroupBookedQuery
-		])
+		.select(select)
 	const deckList = await Cabin.query()
 		.distinct('deck')
 		.where('shipId', shipId)
@@ -209,24 +297,21 @@ export const getPeerGroupList = async (
 			'c.cabinCategoryClassId'
 		)
 		.alias('c')
-		.leftJoin(
-			`snapshot_${moment(sailingDate).format('YYYY_MM')} as s`,
-			function () {
-				this.on('c.id', '=', 's.cabinId')
-					.skipUndefined()
-					.andOn('s.interval', '=', interval)
-					.andOn('s.productId', '=', productId)
-					.andOnIn('s.itineraryId', itineraryIdList)
-					.andOnIn('s.bookedOccupancy', bookedOccupancy)
-					.andOnIn('s.bookingType', bookingType)
-					.andOnIn('c.cabinCategoryId', cabinCategory)
-					.andOnIn('c.cabinCategoryClassId', cabinCategoryClass)
-					.andOnIn('s.cabinClassRateId', cabinClassRate)
-					.andOnIn('s.channelId', channel)
-					.andOnIn('s.marketId', pointOfSaleMarket)
-					.andOnIn('s.rateCategoryId', rateCategory)
-			}
-		)
+		.leftJoin(`snapshot_${date.format('YYYY_MM')} as s`, function () {
+			this.on('c.id', '=', 's.cabinId')
+				.skipUndefined()
+				.andOn('s.interval', '=', interval)
+				.andOn('s.productId', '=', productId)
+				.andOnIn('s.itineraryId', itineraryIdList)
+				.andOnIn('s.bookedOccupancy', bookedOccupancy)
+				.andOnIn('s.bookingType', bookingType)
+				.andOnIn('c.cabinCategoryId', cabinCategory)
+				.andOnIn('c.cabinCategoryClassId', cabinCategoryClass)
+				.andOnIn('s.cabinClassRateId', cabinClassRate)
+				.andOnIn('s.channelId', channel)
+				.andOnIn('s.marketId', pointOfSaleMarket)
+				.andOnIn('s.rateCategoryId', rateCategory)
+		})
 		.where('c.shipId', shipId)
 		.orderBy(['c.deck', 'c.cabinNumber'])
 	const cabinCategoryObj = {}
@@ -238,14 +323,19 @@ export const getPeerGroupList = async (
 			selectedAvailable,
 			selectedBooked,
 			peerGroupAvailable,
-			peerGroupBooked
+			peerGroupAvailable1 = 0,
+			peerGroupAvailable2 = 0,
+			peerGroupBooked,
+			peerGroupBooked1 = 0,
+			peerGroupBooked2 = 0
 		} = categoryClass
 		const selectedPercent = (
-			(selectedBooked / selectedAvailable) *
+			(+selectedBooked / +selectedAvailable) *
 			100
 		).toFixed(2)
 		const peerGroupPercent = (
-			(peerGroupBooked / peerGroupAvailable) *
+			((+peerGroupBooked + +peerGroupBooked1 + +peerGroupBooked2) /
+				(+peerGroupAvailable + +peerGroupAvailable1 + +peerGroupAvailable2)) *
 			100
 		).toFixed(2)
 		const difference = (selectedPercent - peerGroupPercent).toFixed(2)
