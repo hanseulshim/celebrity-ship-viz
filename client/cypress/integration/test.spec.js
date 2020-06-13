@@ -2,8 +2,8 @@
 
 context('Window', () => {
 	it('go to alpha site', () => {
-		// cy.visit('https://s3.amazonaws.com/alpha.boostlabs/celebrity/index.html')
-		cy.visit('localhost:3000')
+		cy.visit('https://s3.amazonaws.com/alpha.boostlabs/celebrity/index.html')
+		// cy.visit('localhost:3000')
 	})
 
 	it('get password field', () => {
