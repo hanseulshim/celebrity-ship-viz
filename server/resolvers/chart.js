@@ -57,26 +57,19 @@ export default {
 			return obj
 		},
 		deckChart: async (_, { shipId, sailingDate, interval }) => {
-			const bookedQuery = Cabin.query()
+			const deckList = await Cabin.query()
 				.skipUndefined()
-				.sum('s.bookedOccupancy')
-				.alias('c1')
+				.alias('c')
+				.select('c.deck')
+				.sum('c.cabinCapacity as available')
+				.sum('s.bookedOccupancy as booked')
 				.leftJoin(
 					`snapshot_${moment(sailingDate).format('YYYY_MM')} as s`,
-					function () {
-						this.on('c1.id', '=', 's.cabinId')
-							.skipUndefined()
-							.andOn('s.interval', '=', interval)
-							.andOn('c1.deck', '=', 'c.deck')
-					}
+					'c.id',
+					's.cabinId'
 				)
-				.where('c1.shipId', shipId)
-				.as('booked')
-			const deckList = await Cabin.query()
-				.alias('c')
-				.select(['c.deck', bookedQuery])
-				.sum('c.cabinCapacity as available')
 				.where('c.shipId', shipId)
+				.andWhere('s.interval', interval)
 				.groupBy('c.deck')
 				.orderBy('c.deck')
 

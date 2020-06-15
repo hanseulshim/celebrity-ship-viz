@@ -3,7 +3,7 @@ export const getApi = () => {
 	return REACT_APP_STAGE === 'dev'
 		? 'https://5616b5axof.execute-api.us-east-2.amazonaws.com/beta/graphql'
 		: REACT_APP_STAGE === 'alpha'
-		? 'https://5616b5axof.execute-api.us-east-2.amazonaws.com/beta/graphql'
+		? 'https://nt5pe1bpuj.execute-api.us-east-2.amazonaws.com/alpha/graphql'
 		: REACT_APP_STAGE === 'beta'
 		? 'https://5616b5axof.execute-api.us-east-2.amazonaws.com/beta/graphql'
 		: REACT_APP_STAGE === 'prod'
