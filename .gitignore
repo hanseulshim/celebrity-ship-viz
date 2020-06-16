@@ -21,6 +21,8 @@ env.yml
 .serverless
 .webpack
 _warmup
+build
+node_modules
 
 # misc
 .env
