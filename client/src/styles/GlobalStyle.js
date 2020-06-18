@@ -1,4 +1,3 @@
-import bg from 'assets/starry_night_sky.jpg'
 import { createGlobalStyle } from 'styled-components'
 import colors from './colors'
 
@@ -11,7 +10,7 @@ export default createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url(${bg}) no-repeat center center fixed;
+    background: url(https://s3.amazonaws.com/beta.boostlabs/celebrity/static/media/starry_night_sky.993bcc60.jpg) no-repeat center center fixed;
      -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
