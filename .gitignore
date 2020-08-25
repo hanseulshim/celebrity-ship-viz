@@ -8,7 +8,6 @@
 /server/node_modules
 
 # dependencies
-/node_modules
 /.pnp
 .pnp.js
 
@@ -16,12 +15,14 @@
 /coverage
 
 # production
-/build
-/server/env.yml
-/server/node_modules
-/server/.serverless
-/server/.webpack
-/server/_warmup
+/client/build
+env.yml
+/client/node_modules
+.serverless
+.webpack
+_warmup
+build
+node_modules
 
 # misc
 .env

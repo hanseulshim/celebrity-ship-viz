@@ -1,0 +1,78 @@
+{
+	"name": "celebrity-ship-viz",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@apollo/client": "^3.0.0-beta.19",
+		"@fortawesome/fontawesome-svg-core": "^1.2.26",
+		"@fortawesome/free-solid-svg-icons": "^5.12.0",
+		"@fortawesome/react-fontawesome": "^0.1.8",
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.3.2",
+		"@testing-library/user-event": "^7.1.2",
+		"antd": "^3.26.3",
+		"graphql": "^14.5.8",
+		"moment": "^2.24.0",
+		"numeral": "^2.0.6",
+		"plotly.js": "^1.51.2",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"react-plotly.js": "^2.4.0",
+		"react-scripts": "3.3.0",
+		"styled-components": "^4.4.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"start:alpha": "REACT_APP_STAGE=alpha react-scripts start",
+		"start:beta": "REACT_APP_STAGE=beta react-scripts start",
+		"start:dev": "REACT_APP_STAGE=dev react-scripts start",
+		"start:prod": "REACT_APP_STAGE=prod react-scripts start",
+		"build": "react-scripts build",
+		"test": "cypress open",
+		"server": "cd ./server && yarn start",
+		"server:prod": "cd ./server && yarn start:prod",
+		"eject": "react-scripts eject",
+		"deploy:alpha": "REACT_APP_STAGE=alpha react-scripts build && aws s3 rm s3://alpha.boostlabs/celebrity/index.html && aws s3 sync  ./build s3://alpha.boostlabs/celebrity/ --acl public-read --profile boost",
+		"deploy:alpha:server": "cd ./server && yarn alpha",
+		"deploy:alpha:all": "yarn deploy:alpha & yarn deploy:alpha:server",
+		"deploy:beta": "REACT_APP_STAGE=beta react-scripts build && aws s3 rm s3://beta.boostlabs/celebrity/index.html && aws s3 sync  ./build s3://beta.boostlabs/celebrity/ --acl public-read --profile boost",
+		"deploy:beta:server": "cd ./server && yarn beta",
+		"deploy:beta:all": "yarn deploy:beta & yarn deploy:beta:server",
+		"deploy:dev": "REACT_APP_STAGE=dev react-scripts build && aws s3 rm s3://dev.boostlabs/celebrity/index.html && aws s3 sync  ./build s3://dev.boostlabs/celebrity/ --acl public-read --profile boost",
+		"deploy:dev:server": "cd ./server && yarn dev",
+		"deploy:dev:all": "yarn deploy:dev & yarn deploy:dev:server",
+		"deploy:prod": "REACT_APP_STAGE=prod react-scripts build && aws s3 rm s3://prod.boostlabs/celebrity/index.html && aws s3 sync  ./build s3://prod.boostlabs/celebrity/ --acl public-read --profile boost",
+		"deploy:prod:server": "cd ./server && yarn prod",
+		"deploy:prod:all": "yarn deploy:prod & yarn deploy:prod:server",
+		"deploy:all:front": "yarn deploy:alpha && yarn deploy:beta && yarn deploy:dev && yarn deploy:prod",
+		"deploy:all:server": "cd ./server && yarn all",
+		"deploy:all": "yarn deploy:alpha:all && yarn deploy:beta:all && yarn deploy:dev:all && yarn deploy:prod:all"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"homepage": ".",
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"cypress": "^4.8.0",
+		"eslint": "^6.7.2",
+		"eslint-config-standard": "^14.1.0",
+		"eslint-plugin-cypress": "^2.11.1",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-node": "^10.0.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-react": "^7.19.0",
+		"eslint-plugin-standard": "^4.0.1"
+	}
+}

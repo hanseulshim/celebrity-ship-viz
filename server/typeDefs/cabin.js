@@ -6,7 +6,7 @@ input InputSubFilter {
 extend type Query {
   deckVisualList(
     shipId: Int
-    sailingDateId: Int
+    sailingDate: String
     productId: Int
     itineraryId: Int
     interval: Int
@@ -20,8 +20,6 @@ extend type Query {
     rateCategory: [Int]
     peerGroupShipIds: [Int]
     peerGroupProductId: Int
-    peerGroupStartDate: String
-    peerGroupEndDate: String
     peerGroupBookedOccupancy: [String]
     peerGroupBookingType: [String]
     peerGroupCabinCategory: [Int]

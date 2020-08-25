@@ -25,7 +25,7 @@ type DeckChart {
 extend type Query {
   supplyBurndownChart(
     shipId: Int!
-    sailingDateId: Int!
+    sailingDate: String!
     productId: Int
     itineraryId: Int
     bookedOccupancy: [String]
@@ -38,8 +38,6 @@ extend type Query {
     rateCategory: [Int]
     peerGroupShipIds: [Int]
     peerGroupProductId: Int
-    peerGroupStartDate: String
-    peerGroupEndDate: String
     peerGroupBookedOccupancy: [String]
     peerGroupBookingType: [String]
     peerGroupCabinCategory: [Int]
@@ -51,12 +49,12 @@ extend type Query {
   ): SupplyBurndownChart @auth
   cabinCategoryClassChart(
     shipId: Int!
-    sailingDateId: Int!
+    sailingDate: String!
     interval: Int!
   ): CabinCategoryClassChart @auth
   deckChart(
     shipId: Int!
-    sailingDateId: Int!
+    sailingDate: String!
     interval: Int!
   ): DeckChart @auth
 }
